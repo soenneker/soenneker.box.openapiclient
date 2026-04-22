@@ -1,16 +1,15 @@
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Box.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class BoxOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class BoxOpenApiClientTests : HostedUnitTest
 {
-    public BoxOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public BoxOpenApiClientTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
