@@ -58,7 +58,7 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
         {
         }
         /// <summary>
-        /// Deletes a user. By default, this operation fails if the userstill owns any content, was recently active, or recently joined the enterprise from a free account. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
+        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -132,7 +132,7 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.UserFull>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.UserFull.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a user. By default, this operation fails if the userstill owns any content, was recently active, or recently joined the enterprise from a free account. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
+        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -201,12 +201,12 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
             return new global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes a user. By default, this operation fails if the userstill owns any content, was recently active, or recently joined the enterprise from a free account. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
+        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUser_ItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Specifies whether to delete the user even if they still own files,were recently active, or recently joined the enterprise from a free account.</summary>
+            /// <summary>Specifies whether to delete the user even if they still own files.</summary>
             [QueryParameter("force")]
             public bool? Force { get; set; }
             /// <summary>Whether the user will receive email notification ofthe deletion.</summary>

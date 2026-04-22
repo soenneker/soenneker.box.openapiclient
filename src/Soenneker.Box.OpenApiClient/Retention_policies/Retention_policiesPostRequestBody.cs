@@ -37,6 +37,8 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
 #endif
         /// <summary>The disposition action of the retention policy.`permanently_delete` deletes the contentretained by the policy permanently.`remove_retention` lifts retention policyfrom the content, allowing it to be deletedby users once the retention policy has expired.</summary>
         public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_disposition_action? DispositionAction { get; set; }
+        /// <summary>The maximum extension length of the retention date.This value specifies the duration in days for whichthe retention date of the file under policy can be extended.It can be specified only for the &apos;finite&apos; policy typewhere the disposition action is &apos;permanently delete&apos;,otherwise the server will return status 400.If this value is &apos;none&apos;, it won&apos;t be possible to extendthe retention.</summary>
+        public global::Soenneker.Box.OpenApiClient.Models.Retention_policies? MaxExtensionLength { get; set; }
         /// <summary>The name for the retention policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,6 +89,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
                 { "custom_notification_recipients", n => { CustomNotificationRecipients = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.UserMini>(global::Soenneker.Box.OpenApiClient.Models.UserMini.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "disposition_action", n => { DispositionAction = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_disposition_action>(); } },
+                { "max_extension_length", n => { MaxExtensionLength = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Retention_policies>(); } },
                 { "policy_name", n => { PolicyName = n.GetStringValue(); } },
                 { "policy_type", n => { PolicyType = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_policy_type>(); } },
                 { "retention_length", n => { RetentionLength = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length>(global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length.CreateFromDiscriminatorValue); } },
@@ -105,6 +108,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.UserMini>("custom_notification_recipients", CustomNotificationRecipients);
             writer.WriteStringValue("description", Description);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_disposition_action>("disposition_action", DispositionAction);
+            writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.Retention_policies>("max_extension_length", MaxExtensionLength);
             writer.WriteStringValue("policy_name", PolicyName);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_policy_type>("policy_type", PolicyType);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length>("retention_length", RetentionLength);

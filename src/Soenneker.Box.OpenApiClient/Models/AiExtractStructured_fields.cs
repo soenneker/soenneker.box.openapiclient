@@ -39,7 +39,7 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string Key { get; set; }
 #endif
-        /// <summary>A list of options for this field. This is most often used in combination with the enum and multiSelect field types.</summary>
+        /// <summary>A list of options for this field. This is most often used in combination with the `enum` and `multiSelect` field types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields_options>? Options { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string Prompt { get; set; }
 #endif
-        /// <summary>The type of the field. It include but is not limited to string, float, date, enum, and multiSelect.</summary>
+        /// <summary>The type of the field. It can include but is not limited to `string`, `float`, `date`, `enum`, and `multiSelect`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
