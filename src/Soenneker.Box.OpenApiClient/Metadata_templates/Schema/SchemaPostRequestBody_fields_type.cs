@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Box.OpenApiClient.Metadata_templates.Schema
 {
-    /// <summary>The type of field. The basic fields are a `string` field for text, a`float` field for numbers, and a `date` field to present the user with adate-time picker.Additionally, metadata templates support an `enum` field for a basic listof items, and ` multiSelect` field for a similar list of items where theuser can select more than one value.Metadata taxonomies are also supported as a `taxonomy` field type with a specific set of additional properties, which describe its structure.</summary>
+    /// <summary>The type of field. The basic fields are a `string` field for text, a`float` field for numbers, and a `date` field to present the user with adate-time picker.Additionally, metadata templates support an `enum` field for a basic listof items, and `multiSelect` field for a similar list of items where theuser can select more than one value.Metadata taxonomies are also supported as a `taxonomy` field type with a specific set of additional properties, which describe its structure.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SchemaPostRequestBody_fields_type
     {

@@ -65,6 +65,14 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Schema
 #else
         public global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_optionsRules OptionsRules { get; set; }
 #endif
+        /// <summary>The unique ID of the metadata taxonomy to use for this taxonomy field.This property is required when the field `type` is set to `taxonomy`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TaxonomyId { get; set; }
+#nullable restore
+#else
+        public string TaxonomyId { get; set; }
+#endif
         /// <summary>The unique key of the metadata taxonomy to use for this taxonomy field.This property is required when the field `type` is set to `taxonomy`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,7 +81,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Schema
 #else
         public string TaxonomyKey { get; set; }
 #endif
-        /// <summary>The type of field. The basic fields are a `string` field for text, a`float` field for numbers, and a `date` field to present the user with adate-time picker.Additionally, metadata templates support an `enum` field for a basic listof items, and ` multiSelect` field for a similar list of items where theuser can select more than one value.Metadata taxonomies are also supported as a `taxonomy` field type with a specific set of additional properties, which describe its structure.</summary>
+        /// <summary>The type of field. The basic fields are a `string` field for text, a`float` field for numbers, and a `date` field to present the user with adate-time picker.Additionally, metadata templates support an `enum` field for a basic listof items, and `multiSelect` field for a similar list of items where theuser can select more than one value.Metadata taxonomies are also supported as a `taxonomy` field type with a specific set of additional properties, which describe its structure.</summary>
         public global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields"/> and sets the default values.
@@ -107,6 +115,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Schema
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_options>(global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_options.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "optionsRules", n => { OptionsRules = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_optionsRules>(global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_optionsRules.CreateFromDiscriminatorValue); } },
+                { "taxonomyId", n => { TaxonomyId = n.GetStringValue(); } },
                 { "taxonomyKey", n => { TaxonomyKey = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_type>(); } },
             };
@@ -125,6 +134,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Schema
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_options>("options", Options);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_optionsRules>("optionsRules", OptionsRules);
+            writer.WriteStringValue("taxonomyId", TaxonomyId);
             writer.WriteStringValue("taxonomyKey", TaxonomyKey);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Schema.SchemaPostRequestBody_fields_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

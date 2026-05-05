@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Box.OpenApiClient.Models
 {
-    /// <summary>The type of field. The basic fields are a `string` field for text, a`float` field for numbers, and a `date` fields to present the user with adate-time picker.Additionally, metadata templates support an `enum` field for a basic listof items, and ` multiSelect` field for a similar list of items where theuser can select more than one value.**Note**: The `integer` value is deprecated.It is still present in the response,but cannot be used in the POST request.</summary>
+    /// <summary>The type of field. The basic fields are a `string` field for text, a`float` field for numbers, and a `date` fields to present the user with adate-time picker.Additionally, metadata templates support an `enum` field for a basic listof items, and `multiSelect` field for a similar list of items where theuser can select more than one value.Metadata taxonomies are also supported as a `taxonomy` field type with a specific set of additional properties, which describe its structure.**Note**: The `integer` value is deprecated.It is still present in the response,but cannot be used in the POST request.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MetadataTemplate_fields_type
     {
@@ -27,13 +27,13 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         MultiSelect,
         #pragma warning restore CS1591
-        [EnumMember(Value = "integer")]
-        #pragma warning disable CS1591
-        Integer,
-        #pragma warning restore CS1591
         [EnumMember(Value = "taxonomy")]
         #pragma warning disable CS1591
         Taxonomy,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "integer")]
+        #pragma warning disable CS1591
+        Integer,
         #pragma warning restore CS1591
     }
 }

@@ -49,6 +49,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string Key { get; set; }
 #endif
+        /// <summary>The namespace of the metadata taxonomy to use for this taxonomy field.This property is required when the field `type` is set to `taxonomy`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Namespace { get; set; }
+#nullable restore
+#else
+        public string Namespace { get; set; }
+#endif
         /// <summary>A list of options for this field. This is used in combination with the`enum` and `multiSelect` field types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +65,31 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public List<global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_options> Options { get; set; }
 #endif
-        /// <summary>The type of field. The basic fields are a `string` field for text, a`float` field for numbers, and a `date` fields to present the user with adate-time picker.Additionally, metadata templates support an `enum` field for a basic listof items, and ` multiSelect` field for a similar list of items where theuser can select more than one value.**Note**: The `integer` value is deprecated.It is still present in the response,but cannot be used in the POST request.</summary>
+        /// <summary>An object defining additional rules for the options of the taxonomy field.This property is required when the field `type` is set to `taxonomy`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules? OptionsRules { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules OptionsRules { get; set; }
+#endif
+        /// <summary>The unique ID of the metadata taxonomy to use for this taxonomy field.This property is required when the field `type` is set to `taxonomy`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TaxonomyId { get; set; }
+#nullable restore
+#else
+        public string TaxonomyId { get; set; }
+#endif
+        /// <summary>The unique key of the metadata taxonomy to use for this taxonomy field.This property is required when the field `type` is set to `taxonomy`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TaxonomyKey { get; set; }
+#nullable restore
+#else
+        public string TaxonomyKey { get; set; }
+#endif
+        /// <summary>The type of field. The basic fields are a `string` field for text, a`float` field for numbers, and a `date` fields to present the user with adate-time picker.Additionally, metadata templates support an `enum` field for a basic listof items, and `multiSelect` field for a similar list of items where theuser can select more than one value.Metadata taxonomies are also supported as a `taxonomy` field type with a specific set of additional properties, which describe its structure.**Note**: The `integer` value is deprecated.It is still present in the response,but cannot be used in the POST request.</summary>
         public global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields"/> and sets the default values.
@@ -89,7 +121,11 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
+                { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_options>(global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_options.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "optionsRules", n => { OptionsRules = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules>(global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules.CreateFromDiscriminatorValue); } },
+                { "taxonomyId", n => { TaxonomyId = n.GetStringValue(); } },
+                { "taxonomyKey", n => { TaxonomyKey = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_type>(); } },
             };
         }
@@ -105,7 +141,11 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
+            writer.WriteStringValue("namespace", Namespace);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_options>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules>("optionsRules", OptionsRules);
+            writer.WriteStringValue("taxonomyId", TaxonomyId);
+            writer.WriteStringValue("taxonomyKey", TaxonomyKey);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
