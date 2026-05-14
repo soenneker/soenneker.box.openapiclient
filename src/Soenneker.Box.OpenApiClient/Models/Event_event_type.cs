@@ -27,6 +27,22 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         ADMIN_LOGIN,
         #pragma warning restore CS1591
+        [EnumMember(Value = "AI_SECURITY_DETECTION")]
+        #pragma warning disable CS1591
+        AI_SECURITY_DETECTION,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "ANNOTATIONV2_CREATE")]
+        #pragma warning disable CS1591
+        ANNOTATIONV2_CREATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "ANNOTATIONV2_DELETE")]
+        #pragma warning disable CS1591
+        ANNOTATIONV2_DELETE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "ANNOTATIONV2_EDIT")]
+        #pragma warning disable CS1591
+        ANNOTATIONV2_EDIT,
+        #pragma warning restore CS1591
         [EnumMember(Value = "APPLICATION_CREATED")]
         #pragma warning disable CS1591
         APPLICATION_CREATED,
@@ -38,6 +54,14 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "APPLICATION_PUBLIC_KEY_DELETED")]
         #pragma warning disable CS1591
         APPLICATION_PUBLIC_KEY_DELETED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "BOX_AI_USER_FAILED_REQUEST")]
+        #pragma warning disable CS1591
+        BOX_AI_USER_FAILED_REQUEST,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "BOX_AI_USER_REQUEST")]
+        #pragma warning disable CS1591
+        BOX_AI_USER_REQUEST,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHANGE_ADMIN_ROLE")]
         #pragma warning disable CS1591
@@ -83,6 +107,30 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         COLLAB_ROLE_CHANGE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "COLLECTION_CREATE")]
+        #pragma warning disable CS1591
+        COLLECTION_CREATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "COLLECTION_DELETE")]
+        #pragma warning disable CS1591
+        COLLECTION_DELETE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "COLLECTION_ITEM_CREATE")]
+        #pragma warning disable CS1591
+        COLLECTION_ITEM_CREATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "COLLECTION_ITEM_DELETE")]
+        #pragma warning disable CS1591
+        COLLECTION_ITEM_DELETE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "COLLECTION_ITEM_UPDATE")]
+        #pragma warning disable CS1591
+        COLLECTION_ITEM_UPDATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "COLLECTION_UPDATE")]
+        #pragma warning disable CS1591
+        COLLECTION_UPDATE,
+        #pragma warning restore CS1591
         [EnumMember(Value = "COMMENT_CREATE")]
         #pragma warning disable CS1591
         COMMENT_CREATE,
@@ -94,6 +142,18 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "CONTENT_ACCESS")]
         #pragma warning disable CS1591
         CONTENT_ACCESS,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CONTENT_RECOVERY_REPORT_CREATE")]
+        #pragma warning disable CS1591
+        CONTENT_RECOVERY_REPORT_CREATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CONTENT_RECOVERY_REPORT_DELETE")]
+        #pragma warning disable CS1591
+        CONTENT_RECOVERY_REPORT_DELETE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CONTENT_RECOVERY_REPORT_INITIATE")]
+        #pragma warning disable CS1591
+        CONTENT_RECOVERY_REPORT_INITIATE,
         #pragma warning restore CS1591
         [EnumMember(Value = "CONTENT_WORKFLOW_ABNORMAL_DOWNLOAD_ACTIVITY")]
         #pragma warning disable CS1591
@@ -143,6 +203,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         DEVICE_TRUST_CHECK_FAILED,
         #pragma warning restore CS1591
+        [EnumMember(Value = "DISABLE_MULTI_FACTOR_AUTH")]
+        #pragma warning disable CS1591
+        DISABLE_MULTI_FACTOR_AUTH,
+        #pragma warning restore CS1591
         [EnumMember(Value = "DOWNLOAD")]
         #pragma warning disable CS1591
         DOWNLOAD,
@@ -155,22 +219,6 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         EDIT_USER,
         #pragma warning restore CS1591
-        [EnumMember(Value = "EDR_CROWDSTRIKE_DEVICE_DETECTED")]
-        #pragma warning disable CS1591
-        EDR_CROWDSTRIKE_DEVICE_DETECTED,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "EDR_CROWDSTRIKE_NO_BOX_TOOLS")]
-        #pragma warning disable CS1591
-        EDR_CROWDSTRIKE_NO_BOX_TOOLS,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED")]
-        #pragma warning disable CS1591
-        EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "EDR_CROWDSTRIKE_DRIVE_OUTDATED")]
-        #pragma warning disable CS1591
-        EDR_CROWDSTRIKE_DRIVE_OUTDATED,
-        #pragma warning restore CS1591
         [EnumMember(Value = "EDR_CROWDSTRIKE_ACCESS_ALLOWED_NO_CROWDSTRIKE_DEVICE")]
         #pragma warning disable CS1591
         EDR_CROWDSTRIKE_ACCESS_ALLOWED_NO_CROWDSTRIKE_DEVICE,
@@ -178,6 +226,22 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "EDR_CROWDSTRIKE_ACCESS_REVOKED")]
         #pragma warning disable CS1591
         EDR_CROWDSTRIKE_ACCESS_REVOKED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED")]
+        #pragma warning disable CS1591
+        EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EDR_CROWDSTRIKE_DEVICE_DETECTED")]
+        #pragma warning disable CS1591
+        EDR_CROWDSTRIKE_DEVICE_DETECTED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EDR_CROWDSTRIKE_DRIVE_OUTDATED")]
+        #pragma warning disable CS1591
+        EDR_CROWDSTRIKE_DRIVE_OUTDATED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EDR_CROWDSTRIKE_NO_BOX_TOOLS")]
+        #pragma warning disable CS1591
+        EDR_CROWDSTRIKE_NO_BOX_TOOLS,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMAIL_ALIAS_CONFIRM")]
         #pragma warning disable CS1591
@@ -187,6 +251,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         EMAIL_ALIAS_REMOVE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ENABLE_MULTI_FACTOR_AUTH")]
+        #pragma warning disable CS1591
+        ENABLE_MULTI_FACTOR_AUTH,
+        #pragma warning restore CS1591
         [EnumMember(Value = "ENABLE_TWO_FACTOR_AUTH")]
         #pragma warning disable CS1591
         ENABLE_TWO_FACTOR_AUTH,
@@ -194,6 +262,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "ENTERPRISE_APP_AUTHORIZATION_UPDATE")]
         #pragma warning disable CS1591
         ENTERPRISE_APP_AUTHORIZATION_UPDATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EXTERNAL_COLLAB_SECURITY_SETTINGS")]
+        #pragma warning disable CS1591
+        EXTERNAL_COLLAB_SECURITY_SETTINGS,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAILED_LOGIN")]
         #pragma warning disable CS1591
@@ -215,6 +287,18 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         GROUP_ADD_USER,
         #pragma warning restore CS1591
+        [EnumMember(Value = "GROUP_ADMIN_CREATED")]
+        #pragma warning disable CS1591
+        GROUP_ADMIN_CREATED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "GROUP_ADMIN_DELETED")]
+        #pragma warning disable CS1591
+        GROUP_ADMIN_DELETED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "GROUP_ADMIN_PERMISSIONS_UPDATED")]
+        #pragma warning disable CS1591
+        GROUP_ADMIN_PERMISSIONS_UPDATED,
+        #pragma warning restore CS1591
         [EnumMember(Value = "GROUP_CREATION")]
         #pragma warning disable CS1591
         GROUP_CREATION,
@@ -234,6 +318,18 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "GROUP_REMOVE_USER")]
         #pragma warning disable CS1591
         GROUP_REMOVE_USER,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "ITEM_ASSOCIATION_CREATED")]
+        #pragma warning disable CS1591
+        ITEM_ASSOCIATION_CREATED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "ITEM_ASSOCIATION_DELETED")]
+        #pragma warning disable CS1591
+        ITEM_ASSOCIATION_DELETED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "ITEM_ASSOCIATION_UPDATED")]
+        #pragma warning disable CS1591
+        ITEM_ASSOCIATION_UPDATED,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_COPY")]
         #pragma warning disable CS1591
@@ -387,6 +483,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         NEW_USER,
         #pragma warning restore CS1591
+        [EnumMember(Value = "OAUTH2_ACCESS_TOKEN_REVOKE")]
+        #pragma warning disable CS1591
+        OAUTH2_ACCESS_TOKEN_REVOKE,
+        #pragma warning restore CS1591
         [EnumMember(Value = "PREVIEW")]
         #pragma warning disable CS1591
         PREVIEW,
@@ -411,6 +511,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         SHARE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT")]
+        #pragma warning disable CS1591
+        SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SHARED_LINK_SEND")]
         #pragma warning disable CS1591
         SHARED_LINK_SEND,
@@ -419,9 +523,25 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         SHARE_EXPIRATION,
         #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_ACCESS_POLICY_CREATED")]
+        #pragma warning disable CS1591
+        SHIELD_ACCESS_POLICY_CREATED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_ACCESS_POLICY_DELETED")]
+        #pragma warning disable CS1591
+        SHIELD_ACCESS_POLICY_DELETED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_ACCESS_POLICY_UPDATED")]
+        #pragma warning disable CS1591
+        SHIELD_ACCESS_POLICY_UPDATED,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SHIELD_ALERT")]
         #pragma warning disable CS1591
         SHIELD_ALERT,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_DOWNLOAD_BLOCKED")]
+        #pragma warning disable CS1591
+        SHIELD_DOWNLOAD_BLOCKED,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED")]
         #pragma warning disable CS1591
@@ -438,6 +558,46 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION")]
         #pragma warning disable CS1591
         SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED")]
+        #pragma warning disable CS1591
+        SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_DISABLED")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_DISABLED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_ENABLED")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_ENABLED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_PENDING")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_PENDING,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED")]
+        #pragma warning disable CS1591
+        SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIELD_JUSTIFICATION_APPROVAL")]
         #pragma warning disable CS1591
@@ -490,6 +650,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "SIGN_DOCUMENT_VIEWED_BY_SIGNED")]
         #pragma warning disable CS1591
         SIGN_DOCUMENT_VIEWED_BY_SIGNED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SIGN_DOCUMENT_VIEWED_BY_SIGNER")]
+        #pragma warning disable CS1591
+        SIGN_DOCUMENT_VIEWED_BY_SIGNER,
         #pragma warning restore CS1591
         [EnumMember(Value = "SIGNER_DOWNLOADED")]
         #pragma warning disable CS1591
