@@ -35,6 +35,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         Declined,
         #pragma warning restore CS1591
+        [EnumMember(Value = "error")]
+        #pragma warning disable CS1591
+        Error,
+        #pragma warning restore CS1591
         [EnumMember(Value = "error_converting")]
         #pragma warning disable CS1591
         Error_converting,
