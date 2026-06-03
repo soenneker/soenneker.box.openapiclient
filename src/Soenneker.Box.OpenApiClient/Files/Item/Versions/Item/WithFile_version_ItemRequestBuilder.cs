@@ -22,7 +22,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Versions.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFile_version_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/{file_id}/versions/{file_version_id}{?fields}", pathParameters)
+        public WithFile_version_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/{file_id}/versions/{file_version_id}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Versions.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFile_version_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/{file_id}/versions/{file_version_id}{?fields}", rawUrl)
+        public WithFile_version_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/{file_id}/versions/{file_version_id}", rawUrl)
         {
         }
         /// <summary>

@@ -35,7 +35,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Legal_hold_policy_assignmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/legal_hold_policy_assignments?policy_id={policy_id}{&assign_to_id*,assign_to_type*,fields,limit*,marker*}", pathParameters)
+        public Legal_hold_policy_assignmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Legal_hold_policy_assignmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/legal_hold_policy_assignments?policy_id={policy_id}{&assign_to_id*,assign_to_type*,fields,limit*,marker*}", rawUrl)
+        public Legal_hold_policy_assignmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsRequestBuilder.Legal_hold_policy_assignmentsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/legal_hold_policy_assignments?policy_id={policy_id}{&assign_to_id*,assign_to_type*,fields,limit*,marker*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

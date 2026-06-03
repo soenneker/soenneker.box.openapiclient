@@ -64,7 +64,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFolder_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/folders/{folder_id}{?direction*,fields,limit*,offset*,recursive*,sort*}", pathParameters)
+        public WithFolder_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/folders/{folder_id}{?fields}", pathParameters)
         {
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFolder_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/folders/{folder_id}{?direction*,fields,limit*,offset*,recursive*,sort*}", rawUrl)
+        public WithFolder_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/folders/{folder_id}{?fields}", rawUrl)
         {
         }
         /// <summary>

@@ -35,7 +35,7 @@ namespace Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Collaboration_whitelist_exempt_targetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collaboration_whitelist_exempt_targets{?limit*,marker*}", pathParameters)
+        public Collaboration_whitelist_exempt_targetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Collaboration_whitelist_exempt_targetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collaboration_whitelist_exempt_targets{?limit*,marker*}", rawUrl)
+        public Collaboration_whitelist_exempt_targetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

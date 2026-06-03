@@ -28,7 +28,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRetention_policy_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/retention_policies/{retention_policy_id}{?fields}", pathParameters)
+        public WithRetention_policy_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/retention_policies/{retention_policy_id}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRetention_policy_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/retention_policies/{retention_policy_id}{?fields}", rawUrl)
+        public WithRetention_policy_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/retention_policies/{retention_policy_id}", rawUrl)
         {
         }
         /// <summary>

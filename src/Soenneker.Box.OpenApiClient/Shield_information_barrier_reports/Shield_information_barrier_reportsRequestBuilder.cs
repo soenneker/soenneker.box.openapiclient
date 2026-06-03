@@ -35,7 +35,7 @@ namespace Soenneker.Box.OpenApiClient.Shield_information_barrier_reports
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Shield_information_barrier_reportsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shield_information_barrier_reports?shield_information_barrier_id={shield_information_barrier_id}{&limit*,marker*}", pathParameters)
+        public Shield_information_barrier_reportsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Box.OpenApiClient.Shield_information_barrier_reports
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Shield_information_barrier_reportsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shield_information_barrier_reports?shield_information_barrier_id={shield_information_barrier_id}{&limit*,marker*}", rawUrl)
+        public Shield_information_barrier_reportsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
@@ -114,7 +114,7 @@ namespace Soenneker.Box.OpenApiClient.Shield_information_barrier_reports
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Shield_information_barrier_reports.Shield_information_barrier_reportsRequestBuilder.Shield_information_barrier_reportsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/shield_information_barrier_reports?shield_information_barrier_id={shield_information_barrier_id}{&limit*,marker*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

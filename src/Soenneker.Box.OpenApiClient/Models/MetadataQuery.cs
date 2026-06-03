@@ -79,6 +79,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public MetadataQuery()
         {
             AdditionalData = new Dictionary<string, object>();
+            Limit = 100;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

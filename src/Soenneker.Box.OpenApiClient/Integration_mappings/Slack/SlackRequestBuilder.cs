@@ -35,7 +35,7 @@ namespace Soenneker.Box.OpenApiClient.Integration_mappings.Slack
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SlackRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/integration_mappings/slack{?box_item_id*,box_item_type*,is_manually_created*,limit*,marker*,partner_item_id*,partner_item_type*}", pathParameters)
+        public SlackRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Box.OpenApiClient.Integration_mappings.Slack
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SlackRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/integration_mappings/slack{?box_item_id*,box_item_type*,is_manually_created*,limit*,marker*,partner_item_id*,partner_item_type*}", rawUrl)
+        public SlackRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

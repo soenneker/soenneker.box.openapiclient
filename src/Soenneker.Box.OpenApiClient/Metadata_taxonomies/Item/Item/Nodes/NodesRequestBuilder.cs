@@ -35,7 +35,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NodesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes{?ancestor*,include%2Dtotal%2Dresult%2Dcount*,level*,limit*,marker*,parent*,query*}", pathParameters)
+        public NodesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NodesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes{?ancestor*,include%2Dtotal%2Dresult%2Dcount*,level*,limit*,marker*,parent*,query*}", rawUrl)
+        public NodesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

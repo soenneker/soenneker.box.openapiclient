@@ -56,6 +56,8 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Schema
         public SchemaPostRequestBody()
         {
             AdditionalData = new Dictionary<string, object>();
+            CopyInstanceOnItemCopy = false;
+            Hidden = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
