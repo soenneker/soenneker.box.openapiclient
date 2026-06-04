@@ -136,7 +136,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Versions.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Versions.Item.WithFile_version_ItemRequestBuilder.WithFile_version_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/files/{file_id}/versions/{file_version_id}{?fields}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

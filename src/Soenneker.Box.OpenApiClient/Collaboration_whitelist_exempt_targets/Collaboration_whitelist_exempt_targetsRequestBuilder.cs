@@ -108,7 +108,7 @@ namespace Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsRequestBuilder.Collaboration_whitelist_exempt_targetsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/collaboration_whitelist_exempt_targets{?limit*,marker*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -129,7 +129,7 @@ namespace Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/collaboration_whitelist_exempt_targets", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -116,7 +116,7 @@ namespace Soenneker.Box.OpenApiClient.Integration_mappings.Slack
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Integration_mappings.Slack.SlackRequestBuilder.SlackRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/integration_mappings/slack{?box_item_id*,box_item_type*,is_manually_created*,limit*,marker*,partner_item_id*,partner_item_type*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -137,7 +137,7 @@ namespace Soenneker.Box.OpenApiClient.Integration_mappings.Slack
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/integration_mappings/slack", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

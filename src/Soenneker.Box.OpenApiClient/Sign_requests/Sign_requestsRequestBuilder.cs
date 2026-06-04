@@ -108,7 +108,7 @@ namespace Soenneker.Box.OpenApiClient.Sign_requests
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Sign_requests.Sign_requestsRequestBuilder.Sign_requestsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/sign_requests{?limit*,marker*,senders*,shared_requests*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -129,7 +129,7 @@ namespace Soenneker.Box.OpenApiClient.Sign_requests
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/sign_requests", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

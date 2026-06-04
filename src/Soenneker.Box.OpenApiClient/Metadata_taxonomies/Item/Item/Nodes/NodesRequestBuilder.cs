@@ -114,7 +114,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes.NodesRequestBuilder.NodesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes{?ancestor*,include%2Dtotal%2Dresult%2Dcount*,level*,limit*,marker*,parent*,query*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -135,7 +135,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -183,7 +183,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Metadata.Item.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Metadata.Item.Item.WithTemplate_keyItemRequestBuilder.WithTemplate_keyItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/files/{file_id}/metadata/{scope}/{template_key}{?view*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
