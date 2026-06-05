@@ -64,7 +64,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFolder_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/folders/{folder_id}{?fields}", pathParameters)
+        public WithFolder_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/folders/{folder_id}{?direction*,fields,limit*,offset*,recursive*,sort*}", pathParameters)
         {
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFolder_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/folders/{folder_id}{?fields}", rawUrl)
+        public WithFolder_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/folders/{folder_id}{?direction*,fields,limit*,offset*,recursive*,sort*}", rawUrl)
         {
         }
         /// <summary>
@@ -220,7 +220,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_ItemRequestBuilder.WithFolder_ItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/folders/{folder_id}{?recursive*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -239,7 +239,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_ItemRequestBuilder.WithFolder_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/folders/{folder_id}{?direction*,fields,limit*,offset*,sort*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -35,7 +35,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NodesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public NodesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes{?ancestor*,include%2Dtotal%2Dresult%2Dcount*,level*,limit*,marker*,parent*,query*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NodesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public NodesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes{?ancestor*,include%2Dtotal%2Dresult%2Dcount*,level*,limit*,marker*,parent*,query*}", rawUrl)
         {
         }
         /// <summary>
@@ -114,7 +114,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes.NodesRequestBuilder.NodesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes{?ancestor*,include%2Dtotal%2Dresult%2Dcount*,level*,limit*,marker*,parent*,query*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -135,7 +135,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_taxonomies.Item.Item.Nodes
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

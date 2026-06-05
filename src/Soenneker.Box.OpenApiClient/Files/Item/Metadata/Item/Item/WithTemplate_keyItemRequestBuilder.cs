@@ -22,7 +22,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Metadata.Item.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTemplate_keyItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/{file_id}/metadata/{scope}/{template_key}", pathParameters)
+        public WithTemplate_keyItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/{file_id}/metadata/{scope}/{template_key}{?view*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Metadata.Item.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTemplate_keyItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/{file_id}/metadata/{scope}/{template_key}", rawUrl)
+        public WithTemplate_keyItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/files/{file_id}/metadata/{scope}/{template_key}{?view*}", rawUrl)
         {
         }
         /// <summary>
@@ -183,7 +183,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Metadata.Item.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Metadata.Item.Item.WithTemplate_keyItemRequestBuilder.WithTemplate_keyItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/files/{file_id}/metadata/{scope}/{template_key}{?view*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

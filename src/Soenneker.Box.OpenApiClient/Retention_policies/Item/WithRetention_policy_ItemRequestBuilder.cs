@@ -28,7 +28,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRetention_policy_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/retention_policies/{retention_policy_id}", pathParameters)
+        public WithRetention_policy_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/retention_policies/{retention_policy_id}{?fields}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRetention_policy_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/retention_policies/{retention_policy_id}", rawUrl)
+        public WithRetention_policy_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/retention_policies/{retention_policy_id}{?fields}", rawUrl)
         {
         }
         /// <summary>
@@ -152,7 +152,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Retention_policies.Item.WithRetention_policy_ItemRequestBuilder.WithRetention_policy_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/retention_policies/{retention_policy_id}{?fields}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
