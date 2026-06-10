@@ -70,7 +70,7 @@ namespace Soenneker.Box.OpenApiClient.Collaborations
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.CollaborationsOffsetPaginated>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.CollaborationsOffsetPaginated.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Adds a collaboration for a single user or a single group to a fileor folder.Collaborations can be created using email address, user IDs, or agroup IDs.If a collaboration is being created with a group, access tothis endpoint is dependent on the group&apos;s ability to be invited.If collaboration is in `pending` status, the following fieldsare redacted:- `login` and `name` are hidden if a collaboration was createdusing `user_id`,-  `name` is hidden if a collaboration was created using `login`.
+        /// Adds a collaboration for a single user or a single group to a fileor folder.Collaborations can be created using email address, user IDs, or agroup IDs.If a collaboration is being created with a group, access tothis endpoint is dependent on the group&apos;s ability to be invited.If collaboration is in `pending` status, field `name` is redacted when:- a collaboration was created using `user_id`,- a collaboration was created using `login`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Box.OpenApiClient.Models.Collaboration"/></returns>
         /// <param name="body">The request body</param>
@@ -116,7 +116,7 @@ namespace Soenneker.Box.OpenApiClient.Collaborations
             return requestInfo;
         }
         /// <summary>
-        /// Adds a collaboration for a single user or a single group to a fileor folder.Collaborations can be created using email address, user IDs, or agroup IDs.If a collaboration is being created with a group, access tothis endpoint is dependent on the group&apos;s ability to be invited.If collaboration is in `pending` status, the following fieldsare redacted:- `login` and `name` are hidden if a collaboration was createdusing `user_id`,-  `name` is hidden if a collaboration was created using `login`.
+        /// Adds a collaboration for a single user or a single group to a fileor folder.Collaborations can be created using email address, user IDs, or agroup IDs.If a collaboration is being created with a group, access tothis endpoint is dependent on the group&apos;s ability to be invited.If collaboration is in `pending` status, field `name` is redacted when:- a collaboration was created using `user_id`,- a collaboration was created using `login`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -173,7 +173,7 @@ namespace Soenneker.Box.OpenApiClient.Collaborations
             public global::Soenneker.Box.OpenApiClient.Collaborations.GetStatusQueryParameterType? Status { get; set; }
         }
         /// <summary>
-        /// Adds a collaboration for a single user or a single group to a fileor folder.Collaborations can be created using email address, user IDs, or agroup IDs.If a collaboration is being created with a group, access tothis endpoint is dependent on the group&apos;s ability to be invited.If collaboration is in `pending` status, the following fieldsare redacted:- `login` and `name` are hidden if a collaboration was createdusing `user_id`,-  `name` is hidden if a collaboration was created using `login`.
+        /// Adds a collaboration for a single user or a single group to a fileor folder.Collaborations can be created using email address, user IDs, or agroup IDs.If a collaboration is being created with a group, access tothis endpoint is dependent on the group&apos;s ability to be invited.If collaboration is in `pending` status, field `name` is redacted when:- a collaboration was created using `user_id`,- a collaboration was created using `login`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CollaborationsRequestBuilderPostQueryParameters 

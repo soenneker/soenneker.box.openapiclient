@@ -15,7 +15,7 @@ namespace Soenneker.Box.OpenApiClient.Models
     {
         /// <summary>If set to `false`, the user is either deactivated or deleted.</summary>
         public bool? IsActive { get; set; }
-        /// <summary>The primary email address of this user. If the collaboration status is `pending`, an empty string is returned.</summary>
+        /// <summary>The primary email address of this user. If the collaboration status is `pending`, a login value is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Login { get; set; }

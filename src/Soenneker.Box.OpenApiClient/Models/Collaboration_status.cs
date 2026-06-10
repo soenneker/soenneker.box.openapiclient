@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Box.OpenApiClient.Models
 {
-    /// <summary>The status of the collaboration invitation. If the statusis `pending`, `login` and `name` return an empty string.</summary>
+    /// <summary>The status of the collaboration invitation. If the statusis `pending`, `name` returns an empty string.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Collaboration_status
     {

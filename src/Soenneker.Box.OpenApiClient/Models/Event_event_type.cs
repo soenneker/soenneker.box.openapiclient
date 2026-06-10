@@ -27,6 +27,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         ADMIN_LOGIN,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ADVANCED_FOLDER_SETTINGS_UPDATE")]
+        #pragma warning disable CS1591
+        ADVANCED_FOLDER_SETTINGS_UPDATE,
+        #pragma warning restore CS1591
         [EnumMember(Value = "AI_SECURITY_DETECTION")]
         #pragma warning disable CS1591
         AI_SECURITY_DETECTION,
@@ -139,6 +143,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         COMMENT_DELETE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "COMMENT_EDIT")]
+        #pragma warning disable CS1591
+        COMMENT_EDIT,
+        #pragma warning restore CS1591
         [EnumMember(Value = "CONTENT_ACCESS")]
         #pragma warning disable CS1591
         CONTENT_ACCESS,
@@ -247,9 +255,21 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         EMAIL_ALIAS_CONFIRM,
         #pragma warning restore CS1591
+        [EnumMember(Value = "EMAIL_ALIAS_PRIMARY")]
+        #pragma warning disable CS1591
+        EMAIL_ALIAS_PRIMARY,
+        #pragma warning restore CS1591
         [EnumMember(Value = "EMAIL_ALIAS_REMOVE")]
         #pragma warning disable CS1591
         EMAIL_ALIAS_REMOVE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EMAIL_UPLOAD_DISABLED")]
+        #pragma warning disable CS1591
+        EMAIL_UPLOAD_DISABLED,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EMAIL_UPLOAD_ENABLED")]
+        #pragma warning disable CS1591
+        EMAIL_UPLOAD_ENABLED,
         #pragma warning restore CS1591
         [EnumMember(Value = "ENABLE_MULTI_FACTOR_AUTH")]
         #pragma warning disable CS1591
@@ -271,9 +291,29 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         FAILED_LOGIN,
         #pragma warning restore CS1591
+        [EnumMember(Value = "FAVORITE")]
+        #pragma warning disable CS1591
+        FAVORITE,
+        #pragma warning restore CS1591
         [EnumMember(Value = "FILE_MARKED_MALICIOUS")]
         #pragma warning disable CS1591
         FILE_MARKED_MALICIOUS,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "FILE_REQUEST_CREATE")]
+        #pragma warning disable CS1591
+        FILE_REQUEST_CREATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "FILE_REQUEST_DELETE")]
+        #pragma warning disable CS1591
+        FILE_REQUEST_DELETE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "FILE_REQUEST_UPDATE")]
+        #pragma warning disable CS1591
+        FILE_REQUEST_UPDATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "FILE_VERSION_RESTORE")]
+        #pragma warning disable CS1591
+        FILE_VERSION_RESTORE,
         #pragma warning restore CS1591
         [EnumMember(Value = "FILE_WATERMARKED_DOWNLOAD")]
         #pragma warning disable CS1591
@@ -318,6 +358,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "GROUP_REMOVE_USER")]
         #pragma warning disable CS1591
         GROUP_REMOVE_USER,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "ILLEGAL_ITEM_OWNERSHIP_TRANSFER_BY_USER")]
+        #pragma warning disable CS1591
+        ILLEGAL_ITEM_OWNERSHIP_TRANSFER_BY_USER,
         #pragma warning restore CS1591
         [EnumMember(Value = "ITEM_ASSOCIATION_CREATED")]
         #pragma warning disable CS1591
@@ -451,6 +495,18 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         MASTER_INVITE_REJECT,
         #pragma warning restore CS1591
+        [EnumMember(Value = "METADATA_CASCADE_POLICY_APPLY")]
+        #pragma warning disable CS1591
+        METADATA_CASCADE_POLICY_APPLY,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "METADATA_CASCADE_POLICY_CREATE")]
+        #pragma warning disable CS1591
+        METADATA_CASCADE_POLICY_CREATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "METADATA_INSTANCE_COPY")]
+        #pragma warning disable CS1591
+        METADATA_INSTANCE_COPY,
+        #pragma warning restore CS1591
         [EnumMember(Value = "METADATA_INSTANCE_CREATE")]
         #pragma warning disable CS1591
         METADATA_INSTANCE_CREATE,
@@ -486,6 +542,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "OAUTH2_ACCESS_TOKEN_REVOKE")]
         #pragma warning disable CS1591
         OAUTH2_ACCESS_TOKEN_REVOKE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "OAUTH2_REFRESH_TOKEN_REVOKE")]
+        #pragma warning disable CS1591
+        OAUTH2_REFRESH_TOKEN_REVOKE,
         #pragma warning restore CS1591
         [EnumMember(Value = "PREVIEW")]
         #pragma warning disable CS1591
@@ -703,6 +763,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         UNDELETE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "UNFAVORITE")]
+        #pragma warning disable CS1591
+        UNFAVORITE,
+        #pragma warning restore CS1591
         [EnumMember(Value = "UNLOCK")]
         #pragma warning disable CS1591
         UNLOCK,
@@ -734,6 +798,18 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "WATERMARK_LABEL_DELETE")]
         #pragma warning disable CS1591
         WATERMARK_LABEL_DELETE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "WORKFLOW_AUTOMATION_CREATE")]
+        #pragma warning disable CS1591
+        WORKFLOW_AUTOMATION_CREATE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "WORKFLOW_AUTOMATION_DELETE")]
+        #pragma warning disable CS1591
+        WORKFLOW_AUTOMATION_DELETE,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "WORKFLOW_AUTOMATION_UPDATE")]
+        #pragma warning disable CS1591
+        WORKFLOW_AUTOMATION_UPDATE,
         #pragma warning restore CS1591
     }
 }

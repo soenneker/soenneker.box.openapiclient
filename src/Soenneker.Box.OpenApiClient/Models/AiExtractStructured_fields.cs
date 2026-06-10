@@ -31,6 +31,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string DisplayName { get; set; }
 #endif
+        /// <summary>The nested fields for this field. Used with `struct` and `table` field types to define the nested structure.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractSubField>? Fields { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractSubField> Fields { get; set; }
+#endif
         /// <summary>A unique identifier for the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,6 +46,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #nullable restore
 #else
         public string Key { get; set; }
+#endif
+        /// <summary>The namespace of the taxonomy source. Required if using `taxonomy` type field from an existing taxonomy.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Namespace { get; set; }
+#nullable restore
+#else
+        public string Namespace { get; set; }
 #endif
         /// <summary>A list of options for this field. This is most often used in combination with the `enum` and `multiSelect` field types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,6 +63,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields_options> Options { get; set; }
 #endif
+        /// <summary>The options_rules property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Box.OpenApiClient.Models.AiOptionsRules? OptionsRules { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Box.OpenApiClient.Models.AiOptionsRules OptionsRules { get; set; }
+#endif
         /// <summary>The context about the key that may include how to find and format it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +79,15 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string Prompt { get; set; }
 #endif
-        /// <summary>The type of the field. It can include but is not limited to `string`, `float`, `date`, `enum`, and `multiSelect`.</summary>
+        /// <summary>The identifier for a taxonomy, which corresponds to the `key` of the taxonomy source. Required if using `taxonomy` type field.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TaxonomyKey { get; set; }
+#nullable restore
+#else
+        public string TaxonomyKey { get; set; }
+#endif
+        /// <summary>The type of the field. It can include but is not limited to `string`, `float`, `date`, `enum`, `multiSelect`,`taxonomy`, `struct`, and `table`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -90,9 +122,13 @@ namespace Soenneker.Box.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiExtractSubField>(global::Soenneker.Box.OpenApiClient.Models.AiExtractSubField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
+                { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields_options>(global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields_options.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options_rules", n => { OptionsRules = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiOptionsRules>(global::Soenneker.Box.OpenApiClient.Models.AiOptionsRules.CreateFromDiscriminatorValue); } },
                 { "prompt", n => { Prompt = n.GetStringValue(); } },
+                { "taxonomy_key", n => { TaxonomyKey = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -105,9 +141,13 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("displayName", DisplayName);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiExtractSubField>("fields", Fields);
             writer.WriteStringValue("key", Key);
+            writer.WriteStringValue("namespace", Namespace);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields_options>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiOptionsRules>("options_rules", OptionsRules);
             writer.WriteStringValue("prompt", Prompt);
+            writer.WriteStringValue("taxonomy_key", TaxonomyKey);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -25,6 +25,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #endif
         /// <summary>Timestamp marking when the sign request was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>When the sign request is in an error state, identifies the specificreason. Null when no error code applies.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ErrorCode { get; private set; }
+#nullable restore
+#else
+        public string ErrorCode { get; private set; }
+#endif
         /// <summary>Timestamp indicating when all signing actions completed.</summary>
         public DateTimeOffset? FinishedAt { get; set; }
         /// <summary>Box Sign request ID.</summary>
@@ -134,6 +142,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "auto_expire_at", n => { AutoExpireAt = n.GetDateTimeOffsetValue(); } },
                 { "collaborator_level", n => { CollaboratorLevel = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "error_code", n => { ErrorCode = n.GetStringValue(); } },
                 { "finished_at", n => { FinishedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "parent_folder", n => { ParentFolder = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.FolderMini>(global::Soenneker.Box.OpenApiClient.Models.FolderMini.CreateFromDiscriminatorValue); } },

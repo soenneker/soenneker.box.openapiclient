@@ -51,6 +51,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template MetadataTemplate { get; set; }
 #endif
+        /// <summary>The taxonomy sources to be used for the structured extraction. They can either be an existing file or a taxonomy.For your request to work, `fields` must also be provided. `taxonomy_sources` is not supported with `metadata_template`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource>? TaxonomySources { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource> TaxonomySources { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured"/> and sets the default values.
         /// </summary>
@@ -82,6 +90,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "include_reference", n => { IncludeReference = n.GetBoolValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiItemBase>(global::Soenneker.Box.OpenApiClient.Models.AiItemBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata_template", n => { MetadataTemplate = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template>(global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template.CreateFromDiscriminatorValue); } },
+                { "taxonomy_sources", n => { TaxonomySources = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource>(global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -97,6 +106,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteBoolValue("include_reference", IncludeReference);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiItemBase>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template>("metadata_template", MetadataTemplate);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource>("taxonomy_sources", TaxonomySources);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

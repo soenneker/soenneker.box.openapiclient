@@ -83,7 +83,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public DateTimeOffset? ModifiedAt { get; set; }
         /// <summary>The level of access granted.</summary>
         public global::Soenneker.Box.OpenApiClient.Models.Collaboration_role? Role { get; set; }
-        /// <summary>The status of the collaboration invitation. If the statusis `pending`, `login` and `name` return an empty string.</summary>
+        /// <summary>The status of the collaboration invitation. If the statusis `pending`, `name` returns an empty string.</summary>
         public global::Soenneker.Box.OpenApiClient.Models.Collaboration_status? Status { get; set; }
         /// <summary>The value will always be `collaboration`.</summary>
         public global::Soenneker.Box.OpenApiClient.Models.Collaboration_type? Type { get; set; }
