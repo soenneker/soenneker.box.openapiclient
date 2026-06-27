@@ -2,7 +2,7 @@
   "descriptionHash": "6AB83A5FAC724BC5F05E79B2EDB8AFDB16ACD14DDA43BC3661CF941AB82C00C7BE428A8B45C69376A25DC8C991854DB4B3A7313DDF14E656ACDA0A75B26342CD",
   "descriptionLocation": "../../openapi.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.32.3",
+  "kiotaVersion": "1.32.4",
   "clientClassName": "BoxOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Box.OpenApiClient",
