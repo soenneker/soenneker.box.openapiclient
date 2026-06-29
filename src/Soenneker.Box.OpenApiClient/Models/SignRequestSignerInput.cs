@@ -15,10 +15,20 @@ namespace Soenneker.Box.OpenApiClient.Models
     {
         /// <summary>Content type of input.</summary>
         public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_content_type? ContentType { get; set; }
+        /// <summary>Indicates whether the signer&apos;s input has been validated through re-authentication.Applicable only for signature or initial content types in a `cfr11` request flow.The value is `null` for standard request flows or non-applicable input types.</summary>
+        public bool? IsValidated { get; set; }
         /// <summary>Index of page that the input is on.</summary>
         public int? PageIndex { get; set; }
         /// <summary>Indicates whether this input is read-only (cannot be modified by signers).</summary>
         public bool? ReadOnly { get; set; }
+        /// <summary>The reason for the signer&apos;s input, applicable to signature or initial content typesin a `cfr11` request flow. The value is `null` when not applicable.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reason { get; set; }
+#nullable restore
+#else
+        public string Reason { get; set; }
+#endif
         /// <summary>Type of input.</summary>
         public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_type? Type { get; set; }
         /// <summary>Specifies the formatting rules that signers must follow for text field inputs.If set, this validation is mandatory.</summary>
@@ -48,8 +58,10 @@ namespace Soenneker.Box.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
                 { "content_type", n => { ContentType = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_content_type>(); } },
+                { "is_validated", n => { IsValidated = n.GetBoolValue(); } },
                 { "page_index", n => { PageIndex = n.GetIntValue(); } },
                 { "read_only", n => { ReadOnly = n.GetBoolValue(); } },
+                { "reason", n => { Reason = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_type>(); } },
                 { "validation", n => { Validation = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation>(global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation.CreateFromDiscriminatorValue); } },
             };
@@ -63,8 +75,10 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_content_type>("content_type", ContentType);
+            writer.WriteBoolValue("is_validated", IsValidated);
             writer.WriteIntValue("page_index", PageIndex);
             writer.WriteBoolValue("read_only", ReadOnly);
+            writer.WriteStringValue("reason", Reason);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_type>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation>("validation", Validation);
         }

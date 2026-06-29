@@ -33,7 +33,7 @@ namespace Soenneker.Box.OpenApiClient.Models
 #endif
         /// <summary>A flag to indicate whether citations should be returned.</summary>
         public bool? IncludeCitations { get; set; }
-        /// <summary>The items to be processed by the LLM, often files.</summary>
+        /// <summary>The items to be processed by the LLM, often files.To search across and ask questions about the contents of a Box Hub,pass a single item with `type` set to `hubs`. See the item `type`property for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Box.OpenApiClient.Models.AiItemAsk>? Items { get; set; }

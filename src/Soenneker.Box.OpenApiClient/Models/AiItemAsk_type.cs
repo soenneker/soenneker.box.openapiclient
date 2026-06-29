@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Box.OpenApiClient.Models
 {
-    /// <summary>The type of the item. A `hubs` item must be used as a single item.</summary>
+    /// <summary>The type of the item. Use `file` to ask a question about a file, or `hubs` tosearch across and ask a question about the entire contents of a Box Hub.A `hubs` item must be the only item in the request.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AiItemAsk_type
     {

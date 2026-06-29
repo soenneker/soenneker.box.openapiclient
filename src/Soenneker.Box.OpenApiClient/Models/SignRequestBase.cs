@@ -87,6 +87,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string RedirectUrl { get; set; }
 #endif
+        /// <summary>The flow type of the sign request. Values can include `standard` or `cfr11`.When not specified during creation, a default is chosen based on admin settings.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RequestFlow { get; set; }
+#nullable restore
+#else
+        public string RequestFlow { get; set; }
+#endif
         /// <summary>When a signature request is created from a template this field will indicate the id of that template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,6 +141,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "prefill_tags", n => { PrefillTags = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag>(global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "redirect_url", n => { RedirectUrl = n.GetStringValue(); } },
+                { "request_flow", n => { RequestFlow = n.GetStringValue(); } },
                 { "template_id", n => { TemplateId = n.GetStringValue(); } },
             };
         }
@@ -155,6 +164,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag>("prefill_tags", PrefillTags);
             writer.WriteStringValue("redirect_url", RedirectUrl);
+            writer.WriteStringValue("request_flow", RequestFlow);
             writer.WriteStringValue("template_id", TemplateId);
             writer.WriteAdditionalData(AdditionalData);
         }
