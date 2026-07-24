@@ -21,6 +21,22 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles?> AllowedInviteeRoles { get; set; }
 #endif
+        /// <summary>The shared link access levels the authenticated user is allowed touse when creating or updating a shared link for this file.The list depends on item policy and user authorization, so it may benarrower than the levels available to the owner. An empty array meansno access level is available to this user.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels?> AllowedSharedLinkAccessLevels { get; set; }
+#endif
+        /// <summary>A stable API URL for the file content endpoint,`/2.0/files/{id}/content`. Unlike `download_url`, authorization isevaluated when the URL is requested with a valid access token.This field is only returned for files, not folders or web links.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AuthenticatedDownloadUrl { get; set; }
+#nullable restore
+#else
+        public string AuthenticatedDownloadUrl { get; set; }
+#endif
         /// <summary>The classification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,10 +45,26 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public global::Soenneker.Box.OpenApiClient.Models.FileFull_classification Classification { get; set; }
 #endif
+        /// <summary>The collections that this file belongs to.For more information, see the[collections guide](https://developer.box.com/guides/collections).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get; set; }
+#endif
         /// <summary>The number of comments on this file.</summary>
         public int? CommentCount { get; set; }
         /// <summary>The retention expiration timestamp for the given file.</summary>
         public DateTimeOffset? DispositionAt { get; set; }
+        /// <summary>A pre-authorized, expiring URL for directly downloading the file&apos;scontent. Requires authentication and is valid only for the currentsession.This field is only returned for files, not folders or web links.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DownloadUrl { get; set; }
+#nullable restore
+#else
+        public string DownloadUrl { get; set; }
+#endif
         /// <summary>When the file will automatically be deleted.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
         /// <summary>The expiring_embed_link property</summary>
@@ -57,6 +89,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         public bool? IsAccessibleViaSharedLink { get; set; }
         /// <summary>This field will return true if the file or any ancestor of the fileis associated with at least one app item. Note that this will returntrue even if the context user does not have access to the app item(s)associated with the file.</summary>
         public bool? IsAssociatedWithAppItem { get; set; }
+        /// <summary>Whether the file&apos;s binary content is eligible to be downloaded.This is a content-level flag and does not reflect whether thecurrent user is authorized to download the file. Use`permissions.can_download`, when available, for that.</summary>
+        public bool? IsDownloadAvailable { get; set; }
         /// <summary>Specifies if this file is owned by a user outside of theauthenticated enterprise.</summary>
         public bool? IsExternallyOwned { get; set; }
         /// <summary>Indicates if the file is a package. Packages are commonly usedby Mac Applications and can include iWork files.</summary>
@@ -152,15 +186,20 @@ namespace Soenneker.Box.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
                 { "allowed_invitee_roles", n => { AllowedInviteeRoles = n.GetCollectionOfEnumValues<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles>()?.AsList(); } },
+                { "allowed_shared_link_access_levels", n => { AllowedSharedLinkAccessLevels = n.GetCollectionOfEnumValues<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels>()?.AsList(); } },
+                { "authenticated_download_url", n => { AuthenticatedDownloadUrl = n.GetStringValue(); } },
                 { "classification", n => { Classification = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_classification>(global::Soenneker.Box.OpenApiClient.Models.FileFull_classification.CreateFromDiscriminatorValue); } },
+                { "collections", n => { Collections = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.Collection>(global::Soenneker.Box.OpenApiClient.Models.Collection.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "comment_count", n => { CommentCount = n.GetIntValue(); } },
                 { "disposition_at", n => { DispositionAt = n.GetDateTimeOffsetValue(); } },
+                { "download_url", n => { DownloadUrl = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "expiring_embed_link", n => { ExpiringEmbedLink = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "extension", n => { Extension = n.GetStringValue(); } },
                 { "has_collaborations", n => { HasCollaborations = n.GetBoolValue(); } },
                 { "is_accessible_via_shared_link", n => { IsAccessibleViaSharedLink = n.GetBoolValue(); } },
                 { "is_associated_with_app_item", n => { IsAssociatedWithAppItem = n.GetBoolValue(); } },
+                { "is_download_available", n => { IsDownloadAvailable = n.GetBoolValue(); } },
                 { "is_externally_owned", n => { IsExternallyOwned = n.GetBoolValue(); } },
                 { "is_package", n => { IsPackage = n.GetBoolValue(); } },
                 { "lock", n => { Lock = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_lock>(global::Soenneker.Box.OpenApiClient.Models.FileFull_lock.CreateFromDiscriminatorValue); } },
@@ -183,15 +222,20 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles>("allowed_invitee_roles", AllowedInviteeRoles);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels>("allowed_shared_link_access_levels", AllowedSharedLinkAccessLevels);
+            writer.WriteStringValue("authenticated_download_url", AuthenticatedDownloadUrl);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_classification>("classification", Classification);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.Collection>("collections", Collections);
             writer.WriteIntValue("comment_count", CommentCount);
             writer.WriteDateTimeOffsetValue("disposition_at", DispositionAt);
+            writer.WriteStringValue("download_url", DownloadUrl);
             writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
             writer.WriteObjectValue<UntypedNode>("expiring_embed_link", ExpiringEmbedLink);
             writer.WriteStringValue("extension", Extension);
             writer.WriteBoolValue("has_collaborations", HasCollaborations);
             writer.WriteBoolValue("is_accessible_via_shared_link", IsAccessibleViaSharedLink);
             writer.WriteBoolValue("is_associated_with_app_item", IsAssociatedWithAppItem);
+            writer.WriteBoolValue("is_download_available", IsDownloadAvailable);
             writer.WriteBoolValue("is_externally_owned", IsExternallyOwned);
             writer.WriteBoolValue("is_package", IsPackage);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_lock>("lock", Lock);

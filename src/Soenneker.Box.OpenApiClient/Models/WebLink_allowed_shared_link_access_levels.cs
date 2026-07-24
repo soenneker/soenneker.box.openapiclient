@@ -5,7 +5,7 @@ namespace Soenneker.Box.OpenApiClient.Models
 {
     /// <summary>The access level for a shared link.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum FolderFull_allowed_shared_link_access_levels
+    public enum WebLink_allowed_shared_link_access_levels
     {
         [EnumMember(Value = "open")]
         #pragma warning disable CS1591

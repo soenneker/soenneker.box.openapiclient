@@ -21,7 +21,7 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_invitee_roles?> AllowedInviteeRoles { get; set; }
 #endif
-        /// <summary>A list of access levels that are availablefor this folder.For some folders, like the root folder, this will alwaysbe an empty list as sharing is not allowed at that level.</summary>
+        /// <summary>The shared link access levels the authenticated user is allowed touse when creating or updating a shared link for this folder.The list depends on item policy and user authorization. For somefolders, like the root folder, this is always empty as sharing isnot allowed at that level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get; set; }
@@ -40,6 +40,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification Classification { get; set; }
+#endif
+        /// <summary>The collections that this folder belongs to.For more information, see the[collections guide](https://developer.box.com/guides/collections).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get; set; }
 #endif
         /// <summary>Specifies if this folder has any other collaborators.</summary>
         public bool? HasCollaborations { get; set; }
@@ -108,6 +116,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "can_non_owners_invite", n => { CanNonOwnersInvite = n.GetBoolValue(); } },
                 { "can_non_owners_view_collaborators", n => { CanNonOwnersViewCollaborators = n.GetBoolValue(); } },
                 { "classification", n => { Classification = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification>(global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification.CreateFromDiscriminatorValue); } },
+                { "collections", n => { Collections = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.Collection>(global::Soenneker.Box.OpenApiClient.Models.Collection.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_collaborations", n => { HasCollaborations = n.GetBoolValue(); } },
                 { "is_accessible_via_shared_link", n => { IsAccessibleViaSharedLink = n.GetBoolValue(); } },
                 { "is_associated_with_app_item", n => { IsAssociatedWithAppItem = n.GetBoolValue(); } },
@@ -133,6 +142,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteBoolValue("can_non_owners_invite", CanNonOwnersInvite);
             writer.WriteBoolValue("can_non_owners_view_collaborators", CanNonOwnersViewCollaborators);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification>("classification", Classification);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.Collection>("collections", Collections);
             writer.WriteBoolValue("has_collaborations", HasCollaborations);
             writer.WriteBoolValue("is_accessible_via_shared_link", IsAccessibleViaSharedLink);
             writer.WriteBoolValue("is_associated_with_app_item", IsAssociatedWithAppItem);

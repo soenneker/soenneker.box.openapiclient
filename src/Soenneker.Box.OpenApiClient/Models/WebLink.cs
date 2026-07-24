@@ -13,6 +13,22 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WebLink : global::Soenneker.Box.OpenApiClient.Models.WebLinkMini, IParsable
     {
+        /// <summary>The shared link access levels the authenticated user is allowed touse when creating or updating a shared link for this web link.The list depends on item policy and user authorization, so it may benarrower than the levels available to the owner. An empty array meansno access level is available to this user.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels?> AllowedSharedLinkAccessLevels { get; set; }
+#endif
+        /// <summary>The collections that this web link belongs to.For more information, see the[collections guide](https://developer.box.com/guides/collections).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get; set; }
+#endif
         /// <summary>When this file was created on Box’s servers.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The created_by property</summary>
@@ -97,6 +113,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
+                { "allowed_shared_link_access_levels", n => { AllowedSharedLinkAccessLevels = n.GetCollectionOfEnumValues<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels>()?.AsList(); } },
+                { "collections", n => { Collections = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.Collection>(global::Soenneker.Box.OpenApiClient.Models.Collection.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>(global::Soenneker.Box.OpenApiClient.Models.UserMini.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -119,6 +137,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels>("allowed_shared_link_access_levels", AllowedSharedLinkAccessLevels);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.Collection>("collections", Collections);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>("created_by", CreatedBy);
             writer.WriteStringValue("description", Description);
