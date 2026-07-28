@@ -663,6 +663,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         SHIELD_JUSTIFICATION_APPROVAL,
         #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_PREVIEW_BLOCKED")]
+        #pragma warning disable CS1591
+        SHIELD_PREVIEW_BLOCKED,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SHIELD_SHARED_LINK_ACCESS_BLOCKED")]
         #pragma warning disable CS1591
         SHIELD_SHARED_LINK_ACCESS_BLOCKED,
