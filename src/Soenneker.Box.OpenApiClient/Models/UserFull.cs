@@ -39,6 +39,8 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string Hostname { get; set; }
 #endif
+        /// <summary>Whether collaborators can access content owned by the user when theuser is inactive. This setting preserves existing collaborator accessand does not grant new permissions.</summary>
+        public bool? IsCollaboratedContentAvailableWhenOwnerInactive { get; set; }
         /// <summary>Whether to exempt the user from Enterprise device limits.</summary>
         public bool? IsExemptFromDeviceLimits { get; set; }
         /// <summary>Whether the user must use two-factor authentication.</summary>
@@ -89,6 +91,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "enterprise", n => { Enterprise = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise>(global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise.CreateFromDiscriminatorValue); } },
                 { "external_app_user_id", n => { ExternalAppUserId = n.GetStringValue(); } },
                 { "hostname", n => { Hostname = n.GetStringValue(); } },
+                { "is_collaborated_content_available_when_owner_inactive", n => { IsCollaboratedContentAvailableWhenOwnerInactive = n.GetBoolValue(); } },
                 { "is_exempt_from_device_limits", n => { IsExemptFromDeviceLimits = n.GetBoolValue(); } },
                 { "is_exempt_from_login_verification", n => { IsExemptFromLoginVerification = n.GetBoolValue(); } },
                 { "is_external_collab_restricted", n => { IsExternalCollabRestricted = n.GetBoolValue(); } },
@@ -111,6 +114,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise>("enterprise", Enterprise);
             writer.WriteStringValue("external_app_user_id", ExternalAppUserId);
             writer.WriteStringValue("hostname", Hostname);
+            writer.WriteBoolValue("is_collaborated_content_available_when_owner_inactive", IsCollaboratedContentAvailableWhenOwnerInactive);
             writer.WriteBoolValue("is_exempt_from_device_limits", IsExemptFromDeviceLimits);
             writer.WriteBoolValue("is_exempt_from_login_verification", IsExemptFromLoginVerification);
             writer.WriteBoolValue("is_external_collab_restricted", IsExternalCollabRestricted);

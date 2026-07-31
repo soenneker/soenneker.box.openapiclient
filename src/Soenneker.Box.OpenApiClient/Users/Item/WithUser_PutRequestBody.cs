@@ -41,6 +41,8 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
 #else
         public string ExternalAppUserId { get; set; }
 #endif
+        /// <summary>Whether collaborators can access content owned by the user whenthe user is inactive. This setting preserves existingcollaborator access and does not grant new permissions.</summary>
+        public bool? IsCollaboratedContentAvailableWhenOwnerInactive { get; set; }
         /// <summary>Whether to exempt the user from enterprise device limits.</summary>
         public bool? IsExemptFromDeviceLimits { get; set; }
         /// <summary>Whether the user must use two-factor authentication.</summary>
@@ -152,6 +154,7 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
                 { "can_see_managed_users", n => { CanSeeManagedUsers = n.GetBoolValue(); } },
                 { "enterprise", n => { Enterprise = n.GetStringValue(); } },
                 { "external_app_user_id", n => { ExternalAppUserId = n.GetStringValue(); } },
+                { "is_collaborated_content_available_when_owner_inactive", n => { IsCollaboratedContentAvailableWhenOwnerInactive = n.GetBoolValue(); } },
                 { "is_exempt_from_device_limits", n => { IsExemptFromDeviceLimits = n.GetBoolValue(); } },
                 { "is_exempt_from_login_verification", n => { IsExemptFromLoginVerification = n.GetBoolValue(); } },
                 { "is_external_collab_restricted", n => { IsExternalCollabRestricted = n.GetBoolValue(); } },
@@ -182,6 +185,7 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
             writer.WriteBoolValue("can_see_managed_users", CanSeeManagedUsers);
             writer.WriteStringValue("enterprise", Enterprise);
             writer.WriteStringValue("external_app_user_id", ExternalAppUserId);
+            writer.WriteBoolValue("is_collaborated_content_available_when_owner_inactive", IsCollaboratedContentAvailableWhenOwnerInactive);
             writer.WriteBoolValue("is_exempt_from_device_limits", IsExemptFromDeviceLimits);
             writer.WriteBoolValue("is_exempt_from_login_verification", IsExemptFromLoginVerification);
             writer.WriteBoolValue("is_external_collab_restricted", IsExternalCollabRestricted);
