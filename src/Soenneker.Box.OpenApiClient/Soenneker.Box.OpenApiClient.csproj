@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Description>A .NET client generated from the Box OpenAPI schema, updated daily</Description>
+        <Description>A Kiota-generated .NET client for the Box API.</Description>
         <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Box.OpenApiClient</AssemblyName>
