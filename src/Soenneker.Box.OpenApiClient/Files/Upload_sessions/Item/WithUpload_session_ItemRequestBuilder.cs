@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit;
 using Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Parts;
+using Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Plan;
 using Soenneker.Box.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -28,6 +29,11 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item
         public global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Parts.PartsRequestBuilder Parts
         {
             get => new global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Parts.PartsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The plan property</summary>
+        public global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Plan.PlanRequestBuilder Plan
+        {
+            get => new global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Plan.PlanRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.WithUpload_session_ItemRequestBuilder"/> and sets the default values.

@@ -47,6 +47,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string LogEvent { get; set; }
 #endif
+        /// <summary>The URL used to plan the upload session by checking which partsalready exist on the server.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Plan { get; set; }
+#nullable restore
+#else
+        public string Plan { get; set; }
+#endif
         /// <summary>The URL used to get the status of the upload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,6 +100,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "commit", n => { Commit = n.GetStringValue(); } },
                 { "list_parts", n => { ListParts = n.GetStringValue(); } },
                 { "log_event", n => { LogEvent = n.GetStringValue(); } },
+                { "plan", n => { Plan = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "upload_part", n => { UploadPart = n.GetStringValue(); } },
             };
@@ -107,6 +116,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("commit", Commit);
             writer.WriteStringValue("list_parts", ListParts);
             writer.WriteStringValue("log_event", LogEvent);
+            writer.WriteStringValue("plan", Plan);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("upload_part", UploadPart);
             writer.WriteAdditionalData(AdditionalData);

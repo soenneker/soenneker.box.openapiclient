@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Box.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateAsiaValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateISOValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateUSValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputEmailValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputNumberWithCommaValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputNumberWithPeriodValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputSSNValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIP4Validation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPValidation"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateAsiaValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateISOValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateUSValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputEmailValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputNumberWithCommaValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputNumberWithPeriodValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputSSNValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIP4Validation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPValidation"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequestSignerInputValidation : IComposedTypeWrapper, IParsable
@@ -93,6 +93,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIP4Validation SignRequestSignerInputZIP4Validation { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation? SignRequestSignerInputZIPJPValidation { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation SignRequestSignerInputZIPJPValidation { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPValidation"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -151,6 +159,10 @@ namespace Soenneker.Box.OpenApiClient.Models
             {
                 result.SignRequestSignerInputZIP4Validation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIP4Validation();
             }
+            else if("SignRequestSignerInputZIPJPValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SignRequestSignerInputZIPJPValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation();
+            }
             else if("SignRequestSignerInputZIPValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.SignRequestSignerInputZIPValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPValidation();
@@ -202,6 +214,10 @@ namespace Soenneker.Box.OpenApiClient.Models
             else if(SignRequestSignerInputZIP4Validation != null)
             {
                 return SignRequestSignerInputZIP4Validation.GetFieldDeserializers();
+            }
+            else if(SignRequestSignerInputZIPJPValidation != null)
+            {
+                return SignRequestSignerInputZIPJPValidation.GetFieldDeserializers();
             }
             else if(SignRequestSignerInputZIPValidation != null)
             {
@@ -255,6 +271,10 @@ namespace Soenneker.Box.OpenApiClient.Models
             else if(SignRequestSignerInputZIP4Validation != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIP4Validation>(null, SignRequestSignerInputZIP4Validation);
+            }
+            else if(SignRequestSignerInputZIPJPValidation != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation>(null, SignRequestSignerInputZIPJPValidation);
             }
             else if(SignRequestSignerInputZIPValidation != null)
             {
