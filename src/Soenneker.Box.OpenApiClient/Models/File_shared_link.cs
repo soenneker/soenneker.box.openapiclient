@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Box.OpenApiClient.Models
 {
+    /// <summary>
+    /// Shared links provide direct, read-only access to files or folder on Box.Shared links with open access level allow anyone with the URLto access the item, while shared links with company or collaborators accesslevels can only be accessed by appropriately authenticated Box users.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class File_shared_link : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>The access level for this shared link.* `open` - provides access to this item to anyone with this link* `company` - only provides access to this item to people the same company* `collaborators` - only provides access to this item to people who are   collaborators on this itemIf this field is omitted when creating the shared link, the access levelwill be set to the default access level specified by the enterprise admin.</summary>
         public global::Soenneker.Box.OpenApiClient.Models.File_shared_link_access? Access { get; set; }
