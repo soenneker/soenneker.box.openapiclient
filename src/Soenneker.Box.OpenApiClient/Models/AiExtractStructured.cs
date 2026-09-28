@@ -31,9 +31,9 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields> Fields { get; set; }
 #endif
-        /// <summary>A flag to indicate whether confidence scores for every extracted field should be returned.</summary>
+        /// <summary>A flag to indicate whether confidence scores for every extracted field should be returned. Estimates the likelihood that an extracted metadata field value is accurate and correct. Displays a numerical and categorical confidence score to help users and automated systems quickly determine extraction reliability.</summary>
         public bool? IncludeConfidenceScore { get; set; }
-        /// <summary>A flag to indicate whether references for every extracted field should be returned.</summary>
+        /// <summary>A flag to indicate whether references for every extracted field should be returned. References and bounding boxes show where the agent extracted the metadata from. They help you check for accuracy and fix any mistakes. References are short, exact quotes from the original document used to verify results. Bounding boxes highlight the specific areas on the page where that text is found.</summary>
         public bool? IncludeReference { get; set; }
         /// <summary>The items to be processed by the LLM. Currently you can use files only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

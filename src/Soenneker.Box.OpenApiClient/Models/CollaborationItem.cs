@@ -8,34 +8,34 @@ using System;
 namespace Soenneker.Box.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Box.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.Folder"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.WebLink"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Box.OpenApiClient.Models.FileMini"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.FolderMini"/>, <see cref="global::Soenneker.Box.OpenApiClient.Models.WebLinkMini"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CollaborationItem : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.FileObject"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.FileMini"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileObject? File { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileMini? FileMini { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileObject File { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileMini FileMini { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.Folder"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.FolderMini"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.Folder? Folder { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderMini? FolderMini { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.Folder Folder { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderMini FolderMini { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.WebLink"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.WebLinkMini"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.WebLink? WebLink { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.WebLinkMini? WebLinkMini { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.WebLink WebLink { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.WebLinkMini WebLinkMini { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -47,17 +47,17 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Box.OpenApiClient.Models.CollaborationItem();
-            if("File".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("File--Mini".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.File = new global::Soenneker.Box.OpenApiClient.Models.FileObject();
+                result.FileMini = new global::Soenneker.Box.OpenApiClient.Models.FileMini();
             }
-            else if("Folder".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("Folder--Mini".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Folder = new global::Soenneker.Box.OpenApiClient.Models.Folder();
+                result.FolderMini = new global::Soenneker.Box.OpenApiClient.Models.FolderMini();
             }
-            else if("WebLink".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("WebLink--Mini".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.WebLink = new global::Soenneker.Box.OpenApiClient.Models.WebLink();
+                result.WebLinkMini = new global::Soenneker.Box.OpenApiClient.Models.WebLinkMini();
             }
             return result;
         }
@@ -67,17 +67,17 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(File != null)
+            if(FileMini != null)
             {
-                return File.GetFieldDeserializers();
+                return FileMini.GetFieldDeserializers();
             }
-            else if(Folder != null)
+            else if(FolderMini != null)
             {
-                return Folder.GetFieldDeserializers();
+                return FolderMini.GetFieldDeserializers();
             }
-            else if(WebLink != null)
+            else if(WebLinkMini != null)
             {
-                return WebLink.GetFieldDeserializers();
+                return WebLinkMini.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -88,17 +88,17 @@ namespace Soenneker.Box.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(File != null)
+            if(FileMini != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileObject>(null, File);
+                writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileMini>(null, FileMini);
             }
-            else if(Folder != null)
+            else if(FolderMini != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.Folder>(null, Folder);
+                writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FolderMini>(null, FolderMini);
             }
-            else if(WebLink != null)
+            else if(WebLinkMini != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLink>(null, WebLink);
+                writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLinkMini>(null, WebLinkMini);
             }
         }
     }
