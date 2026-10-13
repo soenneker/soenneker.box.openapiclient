@@ -34,7 +34,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Plan
         {
         }
         /// <summary>
-        /// Plan an upload session by checking which parts already exist on the server.This endpoint allows clients to optimize uploads by skipping parts thathave already been uploaded (cache hits) and only uploading missing parts.The actual endpoint URL is returned by the [`Create upload session`](e://post-files-upload-sessions)and [`Get upload session`](e://get-files-upload-sessions-id) endpoints.
+        /// Plan an upload session by checking which parts already exist on the server.This endpoint allows clients to optimize uploads by skipping parts thathave already been uploaded (cache hits) and only uploading missing parts.The actual endpoint URL is returned by the [`Create upload session`](https://developer.box.com/reference/post-files-upload-sessions)and [`Get upload session`](https://developer.box.com/reference/get-files-upload-sessions-id) endpoints.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Box.OpenApiClient.Models.UploadSessionPlanResponse"/></returns>
         /// <param name="body">Request body for planning an upload session.This allows checking which parts already existon the server before uploading.</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Plan
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.UploadSessionPlanResponse>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.UploadSessionPlanResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Plan an upload session by checking which parts already exist on the server.This endpoint allows clients to optimize uploads by skipping parts thathave already been uploaded (cache hits) and only uploading missing parts.The actual endpoint URL is returned by the [`Create upload session`](e://post-files-upload-sessions)and [`Get upload session`](e://get-files-upload-sessions-id) endpoints.
+        /// Plan an upload session by checking which parts already exist on the server.This endpoint allows clients to optimize uploads by skipping parts thathave already been uploaded (cache hits) and only uploading missing parts.The actual endpoint URL is returned by the [`Create upload session`](https://developer.box.com/reference/post-files-upload-sessions)and [`Get upload session`](https://developer.box.com/reference/get-files-upload-sessions-id) endpoints.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request body for planning an upload session.This allows checking which parts already existon the server before uploading.</param>

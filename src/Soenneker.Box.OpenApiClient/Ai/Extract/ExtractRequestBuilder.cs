@@ -40,6 +40,7 @@ namespace Soenneker.Box.OpenApiClient.Ai.Extract
         /// <param name="body">AI metadata freeform extraction request object.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 500 status code</exception>
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,6 +56,7 @@ namespace Soenneker.Box.OpenApiClient.Ai.Extract
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "422", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
             };

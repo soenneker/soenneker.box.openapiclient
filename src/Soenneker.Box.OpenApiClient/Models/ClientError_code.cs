@@ -55,6 +55,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         Precondition_failed,
         #pragma warning restore CS1591
+        [EnumMember(Value = "unprocessable_entity")]
+        #pragma warning disable CS1591
+        Unprocessable_entity,
+        #pragma warning restore CS1591
         [EnumMember(Value = "too_many_requests")]
         #pragma warning disable CS1591
         Too_many_requests,

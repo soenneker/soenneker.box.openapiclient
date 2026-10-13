@@ -34,7 +34,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_queries.Execute_read
         {
         }
         /// <summary>
-        /// Create a search using SQL-like syntax to return items that match specificmetadata.By default, this endpoint returns only the most basic info about the items forwhich the query matches. To get additional fields for each item, including anyof the metadata, use the `fields` attribute in the query.
+        /// For new integrations, use the [v2026.0 Query API](https://developer.box.com/reference/v2026.0/query-resources).This is the latest version of the Query API, with advanced capabilities including multi-template queries andQuery Insights, and is the API we will continue to enhance with new Query capabilities.Create a search using SQL-like syntax to return items that match specificmetadata.By default, this endpoint returns only the most basic info about the items forwhich the query matches. To get additional fields for each item, including anyof the metadata, use the `fields` attribute in the query.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Box.OpenApiClient.Models.MetadataQueryResults"/></returns>
         /// <param name="body">Create a search using SQL-like syntax to return items that match specificmetadata.</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_queries.Execute_read
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.MetadataQueryResults>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.MetadataQueryResults.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a search using SQL-like syntax to return items that match specificmetadata.By default, this endpoint returns only the most basic info about the items forwhich the query matches. To get additional fields for each item, including anyof the metadata, use the `fields` attribute in the query.
+        /// For new integrations, use the [v2026.0 Query API](https://developer.box.com/reference/v2026.0/query-resources).This is the latest version of the Query API, with advanced capabilities including multi-template queries andQuery Insights, and is the API we will continue to enhance with new Query capabilities.Create a search using SQL-like syntax to return items that match specificmetadata.By default, this endpoint returns only the most basic info about the items forwhich the query matches. To get additional fields for each item, including anyof the metadata, use the `fields` attribute in the query.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Create a search using SQL-like syntax to return items that match specificmetadata.</param>

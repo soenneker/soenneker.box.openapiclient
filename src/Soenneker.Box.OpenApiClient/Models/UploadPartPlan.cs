@@ -17,7 +17,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The offset of the chunk within the filein bytes. The lower bound of the positionof the chunk within the file.</summary>
         public long? Offset { get; set; }
-        /// <summary>The `SHA-512` hash of the chunk.</summary>
+        /// <summary>The `SHA-512` hash of the chunk, as a hex stringof 128 lower case characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sha512 { get; set; }

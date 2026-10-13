@@ -25,7 +25,7 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string PartId { get; set; }
 #endif
-        /// <summary>The `SHA-512` hash of the chunk.</summary>
+        /// <summary>The `SHA-512` hash of the chunk, as a hex stringof 128 lower case characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sha512 { get; set; }

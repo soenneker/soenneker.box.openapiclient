@@ -21,6 +21,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string Sha1 { get; set; }
 #endif
+        /// <summary>The `SHA-512` hash of the chunk, as a hex stringof 128 lower case characters.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Sha512 { get; set; }
+#nullable restore
+#else
+        public string Sha512 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -40,6 +48,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
                 { "sha1", n => { Sha1 = n.GetStringValue(); } },
+                { "sha512", n => { Sha512 = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -51,6 +60,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteStringValue("sha1", Sha1);
+            writer.WriteStringValue("sha512", Sha512);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The list details for the uploaded parts.</summary>
+        /// <summary>The list details for the uploaded parts.Each entry can include `sha1` or `sha512`. Include `sha512`on every entry or on none of them. A request where onlysome entries include `sha512` is rejected.Include parts that the server already has, returned as`hits` by the [`Plan upload session`](https://developer.box.com/reference/post-files-upload-sessions-id-plan)endpoint. Use the `part_id`, `offset`, and `size` from theplan response. If the other entries include `sha512`,include the `sha512` value from the plan response.Otherwise, leave the hash out of these entries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart>? Parts { get; set; }

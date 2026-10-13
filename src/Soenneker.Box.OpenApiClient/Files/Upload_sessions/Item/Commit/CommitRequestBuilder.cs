@@ -40,6 +40,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 409 status code</exception>
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 412 status code</exception>
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 4XX or 5XX status code</exception>
@@ -56,6 +57,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "400", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "412", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
