@@ -33,6 +33,14 @@ namespace Soenneker.Box.OpenApiClient.Models
         public global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_effective_permission? EffectivePermission { get; set; }
         /// <summary>Defines if the shared link requires a password to access the item.</summary>
         public bool? IsPasswordEnabled { get; set; }
+        /// <summary>The one_time_passcode property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_one_time_passcode? OneTimePasscode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_one_time_passcode OneTimePasscode { get; set; }
+#endif
         /// <summary>Defines if this link allows a user to preview, edit, and download an item.These permissions refer to the shared link only anddo not supersede permissions applied to the item itself.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,6 +108,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "effective_access", n => { EffectiveAccess = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_effective_access>(); } },
                 { "effective_permission", n => { EffectivePermission = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_effective_permission>(); } },
                 { "is_password_enabled", n => { IsPasswordEnabled = n.GetBoolValue(); } },
+                { "one_time_passcode", n => { OneTimePasscode = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_one_time_passcode>(global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_one_time_passcode.CreateFromDiscriminatorValue); } },
                 { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_permissions>(global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_permissions.CreateFromDiscriminatorValue); } },
                 { "preview_count", n => { PreviewCount = n.GetIntValue(); } },
                 { "unshared_at", n => { UnsharedAt = n.GetDateTimeOffsetValue(); } },
@@ -121,6 +130,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_effective_access>("effective_access", EffectiveAccess);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_effective_permission>("effective_permission", EffectivePermission);
             writer.WriteBoolValue("is_password_enabled", IsPasswordEnabled);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_one_time_passcode>("one_time_passcode", OneTimePasscode);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link_permissions>("permissions", Permissions);
             writer.WriteIntValue("preview_count", PreviewCount);
             writer.WriteDateTimeOffsetValue("unshared_at", UnsharedAt);

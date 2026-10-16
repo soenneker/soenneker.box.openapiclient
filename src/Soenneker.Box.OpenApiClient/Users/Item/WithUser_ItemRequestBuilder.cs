@@ -58,10 +58,11 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
         {
         }
         /// <summary>
-        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
+        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.If the enterprise has a retention policy, including a retired one, or alegal hold that is not fully released, you can&apos;t delete a user who ownscontent, even with `force`. Transfer the user&apos;s content first by using the[Transfer owned folders](https://developer.box.com/reference/put-users-id-folders-0)endpoint.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,6 +76,7 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "403", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
@@ -132,7 +134,7 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.UserFull>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.UserFull.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
+        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.If the enterprise has a retention policy, including a retired one, or alegal hold that is not fully released, you can&apos;t delete a user who ownscontent, even with `force`. Transfer the user&apos;s content first by using the[Transfer owned folders](https://developer.box.com/reference/put-users-id-folders-0)endpoint.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -201,12 +203,12 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
             return new global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.
+        /// Deletes a user. By default, this operation fails if the userstill owns any content. To proceed, move their owned content first, or use the `force` parameter to deletethe user and their files.If the enterprise has a retention policy, including a retired one, or alegal hold that is not fully released, you can&apos;t delete a user who ownscontent, even with `force`. Transfer the user&apos;s content first by using the[Transfer owned folders](https://developer.box.com/reference/put-users-id-folders-0)endpoint.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUser_ItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Specifies whether to delete the user even if they still own files.</summary>
+            /// <summary>Specifies whether to delete the user even if they still own files.If the user owns content and the enterprise has a retention policy,including a retired one, or a legal hold that is not fully released,setting `force` to `true` doesn&apos;t delete the user. The request returnsa `403` error, and you must transfer the user&apos;s content before deletingthe user.</summary>
             [QueryParameter("force")]
             public bool? Force { get; set; }
             /// <summary>Whether the user will receive email notification ofthe deletion.</summary>

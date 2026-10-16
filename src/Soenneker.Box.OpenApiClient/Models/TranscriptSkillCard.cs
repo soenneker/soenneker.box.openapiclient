@@ -19,7 +19,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>An optional total duration in seconds.Used with a `skill_card_type` of `transcript` or`timeline`.</summary>
         public int? Duration { get; set; }
-        /// <summary>An list of entries for the card. This represents the individual entries ofthe transcription.</summary>
+        /// <summary>A list of entries for the card. This represents the individual entries ofthe transcription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries>? Entries { get; set; }

@@ -23,9 +23,9 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The number of parts that have been uploaded and processedby the server. This starts at `0`.When committing a file files, inspecting this property canprovide insight if all parts have been uploaded correctly.</summary>
+        /// <summary>The number of parts that have been uploaded and processedby the server. This starts at `0`.When committing a file, inspecting this property canprovide insight if all parts have been uploaded correctly.</summary>
         public int? NumPartsProcessed { get; set; }
-        /// <summary>The  size in bytes that must be used for all parts of of theupload.Only the last part is allowed to be of a smaller size.</summary>
+        /// <summary>The size in bytes that must be used for all parts of theupload.Only the last part is allowed to be of a smaller size.</summary>
         public long? PartSize { get; set; }
         /// <summary>The session_endpoints property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

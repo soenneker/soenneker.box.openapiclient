@@ -17,7 +17,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The optional date and time this card was created at.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>An list of entries in the metadata card.</summary>
+        /// <summary>A list of entries in the metadata card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Box.OpenApiClient.Models.KeywordSkillCard_entries>? Entries { get; set; }

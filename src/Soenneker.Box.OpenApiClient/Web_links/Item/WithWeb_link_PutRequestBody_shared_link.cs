@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
+using Soenneker.Box.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -17,6 +18,14 @@ namespace Soenneker.Box.OpenApiClient.Web_links.Item
         public global::Soenneker.Box.OpenApiClient.Web_links.Item.WithWeb_link_PutRequestBody_shared_link_access? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The one_time_passcode property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable? OneTimePasscode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable OneTimePasscode { get; set; }
+#endif
         /// <summary>The password required to access the shared link. Set thepassword to `null` to remove it.Passwords must now be at least eight characterslong and include a number, upper case letter, ora non-numeric or non-alphabetic character.A password can only be set when `access` is set to `open`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,6 +70,7 @@ namespace Soenneker.Box.OpenApiClient.Web_links.Item
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access", n => { Access = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Web_links.Item.WithWeb_link_PutRequestBody_shared_link_access>(); } },
+                { "one_time_passcode", n => { OneTimePasscode = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable>(global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable.CreateFromDiscriminatorValue); } },
                 { "password", n => { Password = n.GetStringValue(); } },
                 { "unshared_at", n => { UnsharedAt = n.GetDateTimeOffsetValue(); } },
                 { "vanity_name", n => { VanityName = n.GetStringValue(); } },
@@ -74,6 +84,7 @@ namespace Soenneker.Box.OpenApiClient.Web_links.Item
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Web_links.Item.WithWeb_link_PutRequestBody_shared_link_access>("access", Access);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable>("one_time_passcode", OneTimePasscode);
             writer.WriteStringValue("password", Password);
             writer.WriteDateTimeOffsetValue("unshared_at", UnsharedAt);
             writer.WriteStringValue("vanity_name", VanityName);
