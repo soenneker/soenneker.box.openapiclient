@@ -571,6 +571,14 @@ namespace Soenneker.Box.OpenApiClient.Models
         #pragma warning disable CS1591
         SHARE,
         #pragma warning restore CS1591
+        [EnumMember(Value = "SHARED_LINK_ONE_TIME_PASSCODE_ACCESS")]
+        #pragma warning disable CS1591
+        SHARED_LINK_ONE_TIME_PASSCODE_ACCESS,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHARED_LINK_ONE_TIME_PASSCODE_CHALLENGE")]
+        #pragma warning disable CS1591
+        SHARED_LINK_ONE_TIME_PASSCODE_CHALLENGE,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT")]
         #pragma warning disable CS1591
         SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT,
@@ -610,6 +618,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         [EnumMember(Value = "SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION")]
         #pragma warning disable CS1591
         SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SHIELD_EXTERNAL_COLLAB_ACCESS_JUSTIFIED")]
+        #pragma warning disable CS1591
+        SHIELD_EXTERNAL_COLLAB_ACCESS_JUSTIFIED,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED")]
         #pragma warning disable CS1591
