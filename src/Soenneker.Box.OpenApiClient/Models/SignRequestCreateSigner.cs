@@ -79,7 +79,7 @@ namespace Soenneker.Box.OpenApiClient.Models
 #else
         public string SignerGroupId { get; set; }
 #endif
-        /// <summary>If true, no emails about the sign request will be sent.</summary>
+        /// <summary>If true, no emails about the sign request are sent.The `embed_url_external_user_id` parameter is required when using`suppress_notifications` for a signer.</summary>
         public bool? SuppressNotifications { get; set; }
         /// <summary>If set, this phone number will be used to verify the signervia two-factor authentication before they are able to sign the document.Cannot be selected in combination with `login_required`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
