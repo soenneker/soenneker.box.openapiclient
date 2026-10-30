@@ -19,38 +19,42 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checkbox_value") is { } nullNodeCheckboxValue && nullNodeCheckboxValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckboxValue = null;
-            if (parseNode.GetChildNode("date_value") is { } nullNodeDateValue && nullNodeDateValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateValue = null;
-            if (parseNode.GetChildNode("document_tag_id") is { } nullNodeDocumentTagId && nullNodeDocumentTagId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentTagId = null;
-            if (parseNode.GetChildNode("text_value") is { } nullNodeTextValue && nullNodeTextValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextValue = null;
+            if (parseNode.GetChildNode("checkbox_value") is null) { _explicitNullValueCheckboxValue = default!; _explicitNullProperties?.Remove("checkbox_value"); }
+            else if (parseNode.GetChildNode("checkbox_value") is { } nullNodeCheckboxValue && nullNodeCheckboxValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckboxValue = null;
+            if (parseNode.GetChildNode("date_value") is null) { _explicitNullValueDateValue = default!; _explicitNullProperties?.Remove("date_value"); }
+            else if (parseNode.GetChildNode("date_value") is { } nullNodeDateValue && nullNodeDateValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateValue = null;
+            if (parseNode.GetChildNode("document_tag_id") is null) { _explicitNullValueDocumentTagId = default!; _explicitNullProperties?.Remove("document_tag_id"); }
+            else if (parseNode.GetChildNode("document_tag_id") is { } nullNodeDocumentTagId && nullNodeDocumentTagId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentTagId = null;
+            if (parseNode.GetChildNode("text_value") is null) { _explicitNullValueTextValue = default!; _explicitNullProperties?.Remove("text_value"); }
+            else if (parseNode.GetChildNode("text_value") is { } nullNodeTextValue && nullNodeTextValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Checkbox prefill value.</summary>
-        public bool? CheckboxValue { get => _explicitNullValueCheckboxValue; set { _explicitNullValueCheckboxValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox_value"); else _explicitNullProperties?.Remove("checkbox_value"); } }
+        public bool? CheckboxValue { get => _explicitNullValueCheckboxValue; set { _explicitNullValueCheckboxValue = value; AdditionalData?.Remove("checkbox_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox_value"); else _explicitNullProperties?.Remove("checkbox_value"); } }
         private bool? _explicitNullValueCheckboxValue = default!;
         /// <summary>Date prefill value.</summary>
-        public Date? DateValue { get => _explicitNullValueDateValue; set { _explicitNullValueDateValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_value"); else _explicitNullProperties?.Remove("date_value"); } }
+        public Date? DateValue { get => _explicitNullValueDateValue; set { _explicitNullValueDateValue = value; AdditionalData?.Remove("date_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_value"); else _explicitNullProperties?.Remove("date_value"); } }
         private Date? _explicitNullValueDateValue = default!;
         /// <summary>This references the ID of a specific tag contained in a file of the signature request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentTagId { get => _explicitNullValueDocumentTagId; set { _explicitNullValueDocumentTagId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_tag_id"); else _explicitNullProperties?.Remove("document_tag_id"); } }
+        public string? DocumentTagId { get => _explicitNullValueDocumentTagId; set { _explicitNullValueDocumentTagId = value; AdditionalData?.Remove("document_tag_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_tag_id"); else _explicitNullProperties?.Remove("document_tag_id"); } }
         private string? _explicitNullValueDocumentTagId = default!;
 #nullable restore
 #else
-        public string DocumentTagId { get => _explicitNullValueDocumentTagId; set { _explicitNullValueDocumentTagId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_tag_id"); else _explicitNullProperties?.Remove("document_tag_id"); } }
+        public string DocumentTagId { get => _explicitNullValueDocumentTagId; set { _explicitNullValueDocumentTagId = value; AdditionalData?.Remove("document_tag_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_tag_id"); else _explicitNullProperties?.Remove("document_tag_id"); } }
         private string _explicitNullValueDocumentTagId = default!;
 #endif
         /// <summary>Text prefill value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_value"); else _explicitNullProperties?.Remove("text_value"); } }
+        public string? TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; AdditionalData?.Remove("text_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_value"); else _explicitNullProperties?.Remove("text_value"); } }
         private string? _explicitNullValueTextValue = default!;
 #nullable restore
 #else
-        public string TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_value"); else _explicitNullProperties?.Remove("text_value"); } }
+        public string TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; AdditionalData?.Remove("text_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_value"); else _explicitNullProperties?.Remove("text_value"); } }
         private string _explicitNullValueTextValue = default!;
 #endif
         /// <summary>

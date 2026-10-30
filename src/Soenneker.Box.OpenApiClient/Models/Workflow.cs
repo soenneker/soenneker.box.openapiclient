@@ -19,7 +19,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("flows") is { } nullNodeFlows && nullNodeFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flows = null;
+            if (parseNode.GetChildNode("flows") is null) { _explicitNullValueFlows = default!; _explicitNullProperties?.Remove("flows"); }
+            else if (parseNode.GetChildNode("flows") is { } nullNodeFlows && nullNodeFlows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flows = null;
         }
 
         /// <summary>A list of flows assigned to a workflow.</summary>

@@ -18,11 +18,12 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("access") is { } nullNodeAccess && nullNodeAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Access = null;
+            if (parseNode.GetChildNode("access") is null) { _explicitNullValueAccess = default!; _explicitNullProperties?.Remove("access"); }
+            else if (parseNode.GetChildNode("access") is { } nullNodeAccess && nullNodeAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Access = null;
         }
 
         /// <summary>When this parameter has been set, users can email filesto the email address that has been automaticallycreated for this folder.To create an email address, set this property either whencreating or updating the folder.When set to `collaborators`, only emails from registered emailaddresses for collaborators will be accepted. This includesany email aliases a user might have registered.When set to `open` it will accept emails from any emailaddress.</summary>
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email_access? Access { get => _explicitNullValueAccess; set { _explicitNullValueAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access"); else _explicitNullProperties?.Remove("access"); } }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email_access? Access { get => _explicitNullValueAccess; set { _explicitNullValueAccess = value; AdditionalData?.Remove("access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access"); else _explicitNullProperties?.Remove("access"); } }
         private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email_access? _explicitNullValueAccess = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -51,7 +52,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access", n => { Access = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email_access>(); } },
+                { "access", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email_access>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccess = default; _explicitNullProperties?.Remove("access"); AdditionalData["access"] = unknown; } else { Access = parsed; AdditionalData.Remove("access"); } } },
             };
         }
         /// <summary>

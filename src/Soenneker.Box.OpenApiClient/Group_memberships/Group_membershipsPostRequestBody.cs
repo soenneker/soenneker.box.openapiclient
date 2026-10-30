@@ -17,10 +17,14 @@ namespace Soenneker.Box.OpenApiClient.Group_memberships
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("configurable_permissions") is { } nullNodeConfigurablePermissions && nullNodeConfigurablePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurablePermissions = null;
-            if (parseNode.GetChildNode("group") is { } nullNodeGroup && nullNodeGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Group = null;
-            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
-            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+            if (parseNode.GetChildNode("configurable_permissions") is null) { _explicitNullValueConfigurablePermissions = default!; _explicitNullProperties?.Remove("configurable_permissions"); }
+            else if (parseNode.GetChildNode("configurable_permissions") is { } nullNodeConfigurablePermissions && nullNodeConfigurablePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurablePermissions = null;
+            if (parseNode.GetChildNode("group") is null) { _explicitNullValueGroup = default!; _explicitNullProperties?.Remove("group"); }
+            else if (parseNode.GetChildNode("group") is { } nullNodeGroup && nullNodeGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Group = null;
+            if (parseNode.GetChildNode("role") is null) { _explicitNullValueRole = default!; _explicitNullProperties?.Remove("role"); }
+            else if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("user") is null) { _explicitNullValueUser = default!; _explicitNullProperties?.Remove("user"); }
+            else if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,34 +32,34 @@ namespace Soenneker.Box.OpenApiClient.Group_memberships
         /// <summary>Custom configuration for the permissions an adminif a group will receive. This option has no effecton members with a role of `member`.Setting these permissions overwrites the defaultaccess levels of an admin.Specifying a value of `null` for this object will disableall configurable permissions. Specifying permissions will setthem accordingly, omitted permissions will be enabled by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions? ConfigurablePermissions { get => _explicitNullValueConfigurablePermissions; set { _explicitNullValueConfigurablePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configurable_permissions"); else _explicitNullProperties?.Remove("configurable_permissions"); } }
+        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions? ConfigurablePermissions { get => _explicitNullValueConfigurablePermissions; set { _explicitNullValueConfigurablePermissions = value; AdditionalData?.Remove("configurable_permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configurable_permissions"); else _explicitNullProperties?.Remove("configurable_permissions"); } }
         private global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions? _explicitNullValueConfigurablePermissions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions ConfigurablePermissions { get => _explicitNullValueConfigurablePermissions; set { _explicitNullValueConfigurablePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configurable_permissions"); else _explicitNullProperties?.Remove("configurable_permissions"); } }
+        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions ConfigurablePermissions { get => _explicitNullValueConfigurablePermissions; set { _explicitNullValueConfigurablePermissions = value; AdditionalData?.Remove("configurable_permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configurable_permissions"); else _explicitNullProperties?.Remove("configurable_permissions"); } }
         private global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions _explicitNullValueConfigurablePermissions = default!;
 #endif
         /// <summary>The group to add the user to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group? Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group? Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; AdditionalData?.Remove("group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
         private global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group? _explicitNullValueGroup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; AdditionalData?.Remove("group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
         private global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group _explicitNullValueGroup = default!;
 #endif
         /// <summary>The role of the user in the group.</summary>
-        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
         private global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_role? _explicitNullValueRole = default!;
         /// <summary>The user to add to the group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_user? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_user? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_user? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_user User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_user User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_user _explicitNullValueUser = default!;
 #endif
         /// <summary>
@@ -85,7 +89,7 @@ namespace Soenneker.Box.OpenApiClient.Group_memberships
             {
                 { "configurable_permissions", n => { ConfigurablePermissions = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions>(global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions.CreateFromDiscriminatorValue); } },
                 { "group", n => { Group = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group>(global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group.CreateFromDiscriminatorValue); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_role>(); } },
+                { "role", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_role>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRole = default; _explicitNullProperties?.Remove("role"); AdditionalData["role"] = unknown; } else { Role = parsed; AdditionalData.Remove("role"); } } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_user>(global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_user.CreateFromDiscriminatorValue); } },
             };
         }

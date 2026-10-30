@@ -17,10 +17,14 @@ namespace Soenneker.Box.OpenApiClient.Retention_policy_assignments
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assign_to") is { } nullNodeAssignTo && nullNodeAssignTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignTo = null;
-            if (parseNode.GetChildNode("filter_fields") is { } nullNodeFilterFields && nullNodeFilterFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterFields = null;
-            if (parseNode.GetChildNode("policy_id") is { } nullNodePolicyId && nullNodePolicyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyId = null;
-            if (parseNode.GetChildNode("start_date_field") is { } nullNodeStartDateField && nullNodeStartDateField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDateField = null;
+            if (parseNode.GetChildNode("assign_to") is null) { _explicitNullValueAssignTo = default!; _explicitNullProperties?.Remove("assign_to"); }
+            else if (parseNode.GetChildNode("assign_to") is { } nullNodeAssignTo && nullNodeAssignTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignTo = null;
+            if (parseNode.GetChildNode("filter_fields") is null) { _explicitNullValueFilterFields = default!; _explicitNullProperties?.Remove("filter_fields"); }
+            else if (parseNode.GetChildNode("filter_fields") is { } nullNodeFilterFields && nullNodeFilterFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterFields = null;
+            if (parseNode.GetChildNode("policy_id") is null) { _explicitNullValuePolicyId = default!; _explicitNullProperties?.Remove("policy_id"); }
+            else if (parseNode.GetChildNode("policy_id") is { } nullNodePolicyId && nullNodePolicyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyId = null;
+            if (parseNode.GetChildNode("start_date_field") is null) { _explicitNullValueStartDateField = default!; _explicitNullProperties?.Remove("start_date_field"); }
+            else if (parseNode.GetChildNode("start_date_field") is { } nullNodeStartDateField && nullNodeStartDateField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDateField = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Box.OpenApiClient.Retention_policy_assignments
         /// <summary>The item to assign the policy to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_assign_to? AssignTo { get => _explicitNullValueAssignTo; set { _explicitNullValueAssignTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assign_to"); else _explicitNullProperties?.Remove("assign_to"); } }
+        public global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_assign_to? AssignTo { get => _explicitNullValueAssignTo; set { _explicitNullValueAssignTo = value; AdditionalData?.Remove("assign_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assign_to"); else _explicitNullProperties?.Remove("assign_to"); } }
         private global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_assign_to? _explicitNullValueAssignTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_assign_to AssignTo { get => _explicitNullValueAssignTo; set { _explicitNullValueAssignTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assign_to"); else _explicitNullProperties?.Remove("assign_to"); } }
+        public global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_assign_to AssignTo { get => _explicitNullValueAssignTo; set { _explicitNullValueAssignTo = value; AdditionalData?.Remove("assign_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assign_to"); else _explicitNullProperties?.Remove("assign_to"); } }
         private global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_assign_to _explicitNullValueAssignTo = default!;
 #endif
         /// <summary>If the `assign_to` type is `metadata_template`,then optionally add the `filter_fields` parameter which willrequire an array of objects with a field entry and a value entry.Currently only one object of `field` and `value` is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_filter_fields>? FilterFields { get => _explicitNullValueFilterFields; set { _explicitNullValueFilterFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_fields"); else _explicitNullProperties?.Remove("filter_fields"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_filter_fields>? FilterFields { get => _explicitNullValueFilterFields; set { _explicitNullValueFilterFields = value; AdditionalData?.Remove("filter_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_fields"); else _explicitNullProperties?.Remove("filter_fields"); } }
         private List<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_filter_fields>? _explicitNullValueFilterFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_filter_fields> FilterFields { get => _explicitNullValueFilterFields; set { _explicitNullValueFilterFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_fields"); else _explicitNullProperties?.Remove("filter_fields"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_filter_fields> FilterFields { get => _explicitNullValueFilterFields; set { _explicitNullValueFilterFields = value; AdditionalData?.Remove("filter_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_fields"); else _explicitNullProperties?.Remove("filter_fields"); } }
         private List<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_filter_fields> _explicitNullValueFilterFields = default!;
 #endif
         /// <summary>The ID of the retention policy to assign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyId { get => _explicitNullValuePolicyId; set { _explicitNullValuePolicyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_id"); else _explicitNullProperties?.Remove("policy_id"); } }
+        public string? PolicyId { get => _explicitNullValuePolicyId; set { _explicitNullValuePolicyId = value; AdditionalData?.Remove("policy_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_id"); else _explicitNullProperties?.Remove("policy_id"); } }
         private string? _explicitNullValuePolicyId = default!;
 #nullable restore
 #else
-        public string PolicyId { get => _explicitNullValuePolicyId; set { _explicitNullValuePolicyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_id"); else _explicitNullProperties?.Remove("policy_id"); } }
+        public string PolicyId { get => _explicitNullValuePolicyId; set { _explicitNullValuePolicyId = value; AdditionalData?.Remove("policy_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_id"); else _explicitNullProperties?.Remove("policy_id"); } }
         private string _explicitNullValuePolicyId = default!;
 #endif
         /// <summary>The date the retention policy assignment begins.If the `assigned_to` type is `metadata_template`,this field can be a date field&apos;s metadata attribute key id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDateField { get => _explicitNullValueStartDateField; set { _explicitNullValueStartDateField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_field"); else _explicitNullProperties?.Remove("start_date_field"); } }
+        public string? StartDateField { get => _explicitNullValueStartDateField; set { _explicitNullValueStartDateField = value; AdditionalData?.Remove("start_date_field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_field"); else _explicitNullProperties?.Remove("start_date_field"); } }
         private string? _explicitNullValueStartDateField = default!;
 #nullable restore
 #else
-        public string StartDateField { get => _explicitNullValueStartDateField; set { _explicitNullValueStartDateField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_field"); else _explicitNullProperties?.Remove("start_date_field"); } }
+        public string StartDateField { get => _explicitNullValueStartDateField; set { _explicitNullValueStartDateField = value; AdditionalData?.Remove("start_date_field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_field"); else _explicitNullProperties?.Remove("start_date_field"); } }
         private string _explicitNullValueStartDateField = default!;
 #endif
         /// <summary>

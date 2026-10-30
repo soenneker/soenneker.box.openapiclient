@@ -19,7 +19,8 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cards") is { } nullNodeCards && nullNodeCards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cards = null;
+            if (parseNode.GetChildNode("cards") is null) { _explicitNullValueCards = default!; _explicitNullProperties?.Remove("cards"); }
+            else if (parseNode.GetChildNode("cards") is { } nullNodeCards && nullNodeCards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cards = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,11 +28,11 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
         /// <summary>A list of Box Skill cards to apply to this file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.SkillCard>? Cards { get => _explicitNullValueCards; set { _explicitNullValueCards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cards"); else _explicitNullProperties?.Remove("cards"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SkillCard>? Cards { get => _explicitNullValueCards; set { _explicitNullValueCards = value; AdditionalData?.Remove("cards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cards"); else _explicitNullProperties?.Remove("cards"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.SkillCard>? _explicitNullValueCards = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.SkillCard> Cards { get => _explicitNullValueCards; set { _explicitNullValueCards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cards"); else _explicitNullProperties?.Remove("cards"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SkillCard> Cards { get => _explicitNullValueCards; set { _explicitNullValueCards = value; AdditionalData?.Remove("cards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cards"); else _explicitNullProperties?.Remove("cards"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.SkillCard> _explicitNullValueCards = default!;
 #endif
         /// <summary>

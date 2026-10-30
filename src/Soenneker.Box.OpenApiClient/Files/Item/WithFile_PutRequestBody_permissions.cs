@@ -18,13 +18,14 @@ namespace Soenneker.Box.OpenApiClient.Files.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("can_download") is { } nullNodeCanDownload && nullNodeCanDownload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanDownload = null;
+            if (parseNode.GetChildNode("can_download") is null) { _explicitNullValueCanDownload = default!; _explicitNullProperties?.Remove("can_download"); }
+            else if (parseNode.GetChildNode("can_download") is { } nullNodeCanDownload && nullNodeCanDownload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanDownload = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines who is allowed to download this file. The possiblevalues are either `open` for everyone or `company` forthe other members of the user&apos;s enterprise.This setting overrides the download permissions that arenormally part of the `role` of a collaboration. When set to`company`, this essentially removes the download option forexternal users with `viewer` or `editor` a roles.</summary>
-        public global::Soenneker.Box.OpenApiClient.Files.Item.WithFile_PutRequestBody_permissions_can_download? CanDownload { get => _explicitNullValueCanDownload; set { _explicitNullValueCanDownload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_download"); else _explicitNullProperties?.Remove("can_download"); } }
+        public global::Soenneker.Box.OpenApiClient.Files.Item.WithFile_PutRequestBody_permissions_can_download? CanDownload { get => _explicitNullValueCanDownload; set { _explicitNullValueCanDownload = value; AdditionalData?.Remove("can_download"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_download"); else _explicitNullProperties?.Remove("can_download"); } }
         private global::Soenneker.Box.OpenApiClient.Files.Item.WithFile_PutRequestBody_permissions_can_download? _explicitNullValueCanDownload = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Files.Item.WithFile_PutRequestBody_permissions"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "can_download", n => { CanDownload = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Files.Item.WithFile_PutRequestBody_permissions_can_download>(); } },
+                { "can_download", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Files.Item.WithFile_PutRequestBody_permissions_can_download>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCanDownload = default; _explicitNullProperties?.Remove("can_download"); AdditionalData["can_download"] = unknown; } else { CanDownload = parsed; AdditionalData.Remove("can_download"); } } },
             };
         }
         /// <summary>

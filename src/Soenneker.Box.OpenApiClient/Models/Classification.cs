@@ -18,14 +18,22 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Box__Security__Classification__Key") is { } nullNodeBoxSecurityClassificationKey && nullNodeBoxSecurityClassificationKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxSecurityClassificationKey = null;
-            if (parseNode.GetChildNode("$canEdit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
-            if (parseNode.GetChildNode("$parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
-            if (parseNode.GetChildNode("$scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
-            if (parseNode.GetChildNode("$template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
-            if (parseNode.GetChildNode("$type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("$typeVersion") is { } nullNodeTypeVersion && nullNodeTypeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypeVersion = null;
-            if (parseNode.GetChildNode("$version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+            if (parseNode.GetChildNode("Box__Security__Classification__Key") is null) { _explicitNullValueBoxSecurityClassificationKey = default!; _explicitNullProperties?.Remove("Box__Security__Classification__Key"); }
+            else if (parseNode.GetChildNode("Box__Security__Classification__Key") is { } nullNodeBoxSecurityClassificationKey && nullNodeBoxSecurityClassificationKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxSecurityClassificationKey = null;
+            if (parseNode.GetChildNode("$canEdit") is null) { _explicitNullValueCanEdit = default!; _explicitNullProperties?.Remove("$canEdit"); }
+            else if (parseNode.GetChildNode("$canEdit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
+            if (parseNode.GetChildNode("$parent") is null) { _explicitNullValueParent = default!; _explicitNullProperties?.Remove("$parent"); }
+            else if (parseNode.GetChildNode("$parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
+            if (parseNode.GetChildNode("$scope") is null) { _explicitNullValueScope = default!; _explicitNullProperties?.Remove("$scope"); }
+            else if (parseNode.GetChildNode("$scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
+            if (parseNode.GetChildNode("$template") is null) { _explicitNullValueTemplate = default!; _explicitNullProperties?.Remove("$template"); }
+            else if (parseNode.GetChildNode("$template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+            if (parseNode.GetChildNode("$type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("$type"); }
+            else if (parseNode.GetChildNode("$type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("$typeVersion") is null) { _explicitNullValueTypeVersion = default!; _explicitNullProperties?.Remove("$typeVersion"); }
+            else if (parseNode.GetChildNode("$typeVersion") is { } nullNodeTypeVersion && nullNodeTypeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypeVersion = null;
+            if (parseNode.GetChildNode("$version") is null) { _explicitNullValueVersion = default!; _explicitNullProperties?.Remove("$version"); }
+            else if (parseNode.GetChildNode("$version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,54 +41,54 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The name of the classification applied to the item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
+        public string? BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; AdditionalData?.Remove("Box__Security__Classification__Key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
         private string? _explicitNullValueBoxSecurityClassificationKey = default!;
 #nullable restore
 #else
-        public string BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
+        public string BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; AdditionalData?.Remove("Box__Security__Classification__Key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
         private string _explicitNullValueBoxSecurityClassificationKey = default!;
 #endif
         /// <summary>Whether an end user can change the classification.</summary>
-        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$canEdit"); else _explicitNullProperties?.Remove("$canEdit"); } }
+        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; AdditionalData?.Remove("$canEdit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$canEdit"); else _explicitNullProperties?.Remove("$canEdit"); } }
         private bool? _explicitNullValueCanEdit = default!;
         /// <summary>The identifier of the item that this metadata instancehas been attached to. This combines the `type` and the `id`of the parent in the form `{type}_{id}`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$parent"); else _explicitNullProperties?.Remove("$parent"); } }
+        public string? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("$parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$parent"); else _explicitNullProperties?.Remove("$parent"); } }
         private string? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public string Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$parent"); else _explicitNullProperties?.Remove("$parent"); } }
+        public string Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("$parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$parent"); else _explicitNullProperties?.Remove("$parent"); } }
         private string _explicitNullValueParent = default!;
 #endif
         /// <summary>The scope of the enterprise that this classification has beenapplied for.This will be in the format `enterprise_{enterprise_id}`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$scope"); else _explicitNullProperties?.Remove("$scope"); } }
+        public string? Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; AdditionalData?.Remove("$scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$scope"); else _explicitNullProperties?.Remove("$scope"); } }
         private string? _explicitNullValueScope = default!;
 #nullable restore
 #else
-        public string Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$scope"); else _explicitNullProperties?.Remove("$scope"); } }
+        public string Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; AdditionalData?.Remove("$scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$scope"); else _explicitNullProperties?.Remove("$scope"); } }
         private string _explicitNullValueScope = default!;
 #endif
         /// <summary>The value will always be `securityClassification-6VMVochwUWo`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.Classification_Template? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$template"); else _explicitNullProperties?.Remove("$template"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.Classification_Template? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("$template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$template"); else _explicitNullProperties?.Remove("$template"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Classification_Template? _explicitNullValueTemplate = default!;
         /// <summary>The unique ID of this classification instance. This will be includethe name of the classification template and a unique ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$type"); else _explicitNullProperties?.Remove("$type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("$type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$type"); else _explicitNullProperties?.Remove("$type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$type"); else _explicitNullProperties?.Remove("$type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("$type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$type"); else _explicitNullProperties?.Remove("$type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>The version of the metadata template. This version starts at 0 andincreases every time the template is updated. This is mostly for internaluse.</summary>
-        public double? TypeVersion { get => _explicitNullValueTypeVersion; set { _explicitNullValueTypeVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$typeVersion"); else _explicitNullProperties?.Remove("$typeVersion"); } }
+        public double? TypeVersion { get => _explicitNullValueTypeVersion; set { _explicitNullValueTypeVersion = value; AdditionalData?.Remove("$typeVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$typeVersion"); else _explicitNullProperties?.Remove("$typeVersion"); } }
         private double? _explicitNullValueTypeVersion = default!;
         /// <summary>The version of the metadata instance. This version starts at 0 andincreases every time a classification is updated.</summary>
-        public int? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$version"); else _explicitNullProperties?.Remove("$version"); } }
+        public int? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("$version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("$version"); else _explicitNullProperties?.Remove("$version"); } }
         private int? _explicitNullValueVersion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.Classification"/> and sets the default values.
@@ -111,7 +119,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "$canEdit", n => { CanEdit = n.GetBoolValue(); } },
                 { "$parent", n => { Parent = n.GetStringValue(); } },
                 { "$scope", n => { Scope = n.GetStringValue(); } },
-                { "$template", n => { Template = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Classification_Template>(); } },
+                { "$template", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Classification_Template>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTemplate = default; _explicitNullProperties?.Remove("$template"); AdditionalData["$template"] = unknown; } else { Template = parsed; AdditionalData.Remove("$template"); } } },
                 { "$type", n => { Type = n.GetStringValue(); } },
                 { "$typeVersion", n => { TypeVersion = n.GetDoubleValue(); } },
                 { "$version", n => { Version = n.GetIntValue(); } },

@@ -19,7 +19,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("content_template") is { } nullNodeContentTemplate && nullNodeContentTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentTemplate = null;
+            if (parseNode.GetChildNode("content_template") is null) { _explicitNullValueContentTemplate = default!; _explicitNullProperties?.Remove("content_template"); }
+            else if (parseNode.GetChildNode("content_template") is { } nullNodeContentTemplate && nullNodeContentTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentTemplate = null;
         }
 
         /// <summary>How the content should be included in a request to the LLM.Input for `{content}` is optional, depending on the use.</summary>

@@ -19,7 +19,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("is_custom_instructions_included") is { } nullNodeIsCustomInstructionsIncluded && nullNodeIsCustomInstructionsIncluded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCustomInstructionsIncluded = null;
+            if (parseNode.GetChildNode("is_custom_instructions_included") is null) { _explicitNullValueIsCustomInstructionsIncluded = default!; _explicitNullProperties?.Remove("is_custom_instructions_included"); }
+            else if (parseNode.GetChildNode("is_custom_instructions_included") is { } nullNodeIsCustomInstructionsIncluded && nullNodeIsCustomInstructionsIncluded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCustomInstructionsIncluded = null;
         }
 
         /// <summary>True if system message contains custom instructions placeholder, false otherwise.</summary>

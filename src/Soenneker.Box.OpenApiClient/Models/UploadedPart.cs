@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("part") is { } nullNodePart && nullNodePart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Part = null;
+            if (parseNode.GetChildNode("part") is null) { _explicitNullValuePart = default!; _explicitNullProperties?.Remove("part"); }
+            else if (parseNode.GetChildNode("part") is { } nullNodePart && nullNodePart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Part = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The representation of an uploadsession chunk.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UploadPart? Part { get => _explicitNullValuePart; set { _explicitNullValuePart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("part"); else _explicitNullProperties?.Remove("part"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UploadPart? Part { get => _explicitNullValuePart; set { _explicitNullValuePart = value; AdditionalData?.Remove("part"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("part"); else _explicitNullProperties?.Remove("part"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UploadPart? _explicitNullValuePart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UploadPart Part { get => _explicitNullValuePart; set { _explicitNullValuePart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("part"); else _explicitNullProperties?.Remove("part"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UploadPart Part { get => _explicitNullValuePart; set { _explicitNullValuePart = value; AdditionalData?.Remove("part"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("part"); else _explicitNullProperties?.Remove("part"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UploadPart _explicitNullValuePart = default!;
 #endif
         /// <summary>

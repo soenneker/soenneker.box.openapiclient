@@ -77,7 +77,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.ThumbnailWithExtension
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.ThumbnailWithExtension.ThumbnailWithExtensionRequestBuilder.ThumbnailWithExtensionRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.box.com/2.0", "/files/{file_id}/thumbnail.{extension}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "image/jpg, image/png, application/json");
             return requestInfo;

@@ -17,13 +17,14 @@ namespace Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conflict_resolution") is { } nullNodeConflictResolution && nullNodeConflictResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictResolution = null;
+            if (parseNode.GetChildNode("conflict_resolution") is null) { _explicitNullValueConflictResolution = default!; _explicitNullProperties?.Remove("conflict_resolution"); }
+            else if (parseNode.GetChildNode("conflict_resolution") is { } nullNodeConflictResolution && nullNodeConflictResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictResolution = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Describes the desired behavior when dealing with the conflictwhere a metadata template already has an instance appliedto a child.* `none` will preserve the existing value on the file* `overwrite` will force-apply the templates values over  any existing values.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution? ConflictResolution { get => _explicitNullValueConflictResolution; set { _explicitNullValueConflictResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflict_resolution"); else _explicitNullProperties?.Remove("conflict_resolution"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution? ConflictResolution { get => _explicitNullValueConflictResolution; set { _explicitNullValueConflictResolution = value; AdditionalData?.Remove("conflict_resolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflict_resolution"); else _explicitNullProperties?.Remove("conflict_resolution"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution? _explicitNullValueConflictResolution = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conflict_resolution", n => { ConflictResolution = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution>(); } },
+                { "conflict_resolution", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConflictResolution = default; _explicitNullProperties?.Remove("conflict_resolution"); AdditionalData["conflict_resolution"] = unknown; } else { ConflictResolution = parsed; AdditionalData.Remove("conflict_resolution"); } } },
             };
         }
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("parts") is { } nullNodeParts && nullNodeParts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parts = null;
+            if (parseNode.GetChildNode("parts") is null) { _explicitNullValueParts = default!; _explicitNullProperties?.Remove("parts"); }
+            else if (parseNode.GetChildNode("parts") is { } nullNodeParts && nullNodeParts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit
         /// <summary>The list details for the uploaded parts.Each entry can include `sha1` or `sha512`. Include `sha512`on every entry or on none of them. A request where onlysome entries include `sha512` is rejected.Include parts that the server already has, returned as`hits` by the [`Plan upload session`](https://developer.box.com/reference/post-files-upload-sessions-id-plan)endpoint. Use the `part_id`, `offset`, and `size` from theplan response. If the other entries include `sha512`,include the `sha512` value from the plan response.Otherwise, leave the hash out of these entries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart>? Parts { get => _explicitNullValueParts; set { _explicitNullValueParts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parts"); else _explicitNullProperties?.Remove("parts"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart>? Parts { get => _explicitNullValueParts; set { _explicitNullValueParts = value; AdditionalData?.Remove("parts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parts"); else _explicitNullProperties?.Remove("parts"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.UploadPart>? _explicitNullValueParts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart> Parts { get => _explicitNullValueParts; set { _explicitNullValueParts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parts"); else _explicitNullProperties?.Remove("parts"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart> Parts { get => _explicitNullValueParts; set { _explicitNullValueParts = value; AdditionalData?.Remove("parts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parts"); else _explicitNullProperties?.Remove("parts"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.UploadPart> _explicitNullValueParts = default!;
 #endif
         /// <summary>

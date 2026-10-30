@@ -19,8 +19,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("restricted_segment") is { } nullNodeRestrictedSegment && nullNodeRestrictedSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictedSegment = null;
-            if (parseNode.GetChildNode("shield_information_barrier_segment") is { } nullNodeShieldInformationBarrierSegment && nullNodeShieldInformationBarrierSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldInformationBarrierSegment = null;
+            if (parseNode.GetChildNode("restricted_segment") is null) { _explicitNullValueRestrictedSegment = default!; _explicitNullProperties?.Remove("restricted_segment"); }
+            else if (parseNode.GetChildNode("restricted_segment") is { } nullNodeRestrictedSegment && nullNodeRestrictedSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictedSegment = null;
+            if (parseNode.GetChildNode("shield_information_barrier_segment") is null) { _explicitNullValueShieldInformationBarrierSegment = default!; _explicitNullProperties?.Remove("shield_information_barrier_segment"); }
+            else if (parseNode.GetChildNode("shield_information_barrier_segment") is { } nullNodeShieldInformationBarrierSegment && nullNodeShieldInformationBarrierSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldInformationBarrierSegment = null;
         }
 
         /// <summary>The `type` and `id` of therestricted shield information barrier segment.</summary>

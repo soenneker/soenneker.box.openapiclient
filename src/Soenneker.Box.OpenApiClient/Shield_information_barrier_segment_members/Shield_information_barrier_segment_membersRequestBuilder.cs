@@ -110,7 +110,7 @@ namespace Soenneker.Box.OpenApiClient.Shield_information_barrier_segment_members
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Shield_information_barrier_segment_members.Shield_information_barrier_segment_membersRequestBuilder.Shield_information_barrier_segment_membersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/shield_information_barrier_segment_members?shield_information_barrier_segment_id={shield_information_barrier_segment_id}{&limit*,marker*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/shield_information_barrier_segment_members?shield_information_barrier_segment_id={shield_information_barrier_segment_id}{&limit*,marker*}", RequestAdapter.BaseUrl, "https://api.box.com/2.0", "/shield_information_barrier_segment_members", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -131,7 +131,7 @@ namespace Soenneker.Box.OpenApiClient.Shield_information_barrier_segment_members
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.box.com/2.0", "/shield_information_barrier_segment_members", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

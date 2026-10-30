@@ -19,8 +19,10 @@ namespace Soenneker.Box.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("prompt_template") is { } nullNodePromptTemplate && nullNodePromptTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromptTemplate = null;
-            if (parseNode.GetChildNode("system_message") is { } nullNodeSystemMessage && nullNodeSystemMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemMessage = null;
+            if (parseNode.GetChildNode("prompt_template") is null) { _explicitNullValuePromptTemplate = default!; _explicitNullProperties?.Remove("prompt_template"); }
+            else if (parseNode.GetChildNode("prompt_template") is { } nullNodePromptTemplate && nullNodePromptTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromptTemplate = null;
+            if (parseNode.GetChildNode("system_message") is null) { _explicitNullValueSystemMessage = default!; _explicitNullProperties?.Remove("system_message"); }
+            else if (parseNode.GetChildNode("system_message") is { } nullNodeSystemMessage && nullNodeSystemMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemMessage = null;
         }
 
         /// <summary>The prompt template contains contextual information of the request and the user prompt.When passing `prompt_template` parameters, you **must include** inputs for `{user_question}` and `{content}`.`{current_date}` is optional, depending on the use.</summary>

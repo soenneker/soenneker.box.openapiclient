@@ -17,8 +17,10 @@ namespace Soenneker.Box.OpenApiClient.Task_assignments.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("resolution_state") is { } nullNodeResolutionState && nullNodeResolutionState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionState = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("resolution_state") is null) { _explicitNullValueResolutionState = default!; _explicitNullProperties?.Remove("resolution_state"); }
+            else if (parseNode.GetChildNode("resolution_state") is { } nullNodeResolutionState && nullNodeResolutionState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionState = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Box.OpenApiClient.Task_assignments.Item
         /// <summary>An optional message by the assignee that can be added to the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The state of the task assigned to the user.* For a task with an `action` value of `complete` this can be`incomplete` or `completed`.* For a task with an `action` of `review` this can be`incomplete`, `approved`, or `rejected`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Task_assignments.Item.WithTask_assignment_PutRequestBody_resolution_state? ResolutionState { get => _explicitNullValueResolutionState; set { _explicitNullValueResolutionState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolution_state"); else _explicitNullProperties?.Remove("resolution_state"); } }
+        public global::Soenneker.Box.OpenApiClient.Task_assignments.Item.WithTask_assignment_PutRequestBody_resolution_state? ResolutionState { get => _explicitNullValueResolutionState; set { _explicitNullValueResolutionState = value; AdditionalData?.Remove("resolution_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolution_state"); else _explicitNullProperties?.Remove("resolution_state"); } }
         private global::Soenneker.Box.OpenApiClient.Task_assignments.Item.WithTask_assignment_PutRequestBody_resolution_state? _explicitNullValueResolutionState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Task_assignments.Item.WithTask_assignment_PutRequestBody"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Box.OpenApiClient.Task_assignments.Item
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "resolution_state", n => { ResolutionState = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Task_assignments.Item.WithTask_assignment_PutRequestBody_resolution_state>(); } },
+                { "resolution_state", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Task_assignments.Item.WithTask_assignment_PutRequestBody_resolution_state>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResolutionState = default; _explicitNullProperties?.Remove("resolution_state"); AdditionalData["resolution_state"] = unknown; } else { ResolutionState = parsed; AdditionalData.Remove("resolution_state"); } } },
             };
         }
         /// <summary>

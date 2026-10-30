@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Versions.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("trashed_at") is { } nullNodeTrashedAt && nullNodeTrashedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrashedAt = null;
+            if (parseNode.GetChildNode("trashed_at") is null) { _explicitNullValueTrashedAt = default!; _explicitNullProperties?.Remove("trashed_at"); }
+            else if (parseNode.GetChildNode("trashed_at") is { } nullNodeTrashedAt && nullNodeTrashedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrashedAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Versions.Item
         /// <summary>Set this to `null` to clearthe date and restore the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrashedAt { get => _explicitNullValueTrashedAt; set { _explicitNullValueTrashedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trashed_at"); else _explicitNullProperties?.Remove("trashed_at"); } }
+        public string? TrashedAt { get => _explicitNullValueTrashedAt; set { _explicitNullValueTrashedAt = value; AdditionalData?.Remove("trashed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trashed_at"); else _explicitNullProperties?.Remove("trashed_at"); } }
         private string? _explicitNullValueTrashedAt = default!;
 #nullable restore
 #else
-        public string TrashedAt { get => _explicitNullValueTrashedAt; set { _explicitNullValueTrashedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trashed_at"); else _explicitNullProperties?.Remove("trashed_at"); } }
+        public string TrashedAt { get => _explicitNullValueTrashedAt; set { _explicitNullValueTrashedAt = value; AdditionalData?.Remove("trashed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trashed_at"); else _explicitNullProperties?.Remove("trashed_at"); } }
         private string _explicitNullValueTrashedAt = default!;
 #endif
         /// <summary>

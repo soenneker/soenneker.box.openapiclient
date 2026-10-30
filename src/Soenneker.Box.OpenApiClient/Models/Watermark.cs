@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("watermark") is { } nullNodeWatermarkProp && nullNodeWatermarkProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WatermarkProp = null;
+            if (parseNode.GetChildNode("watermark") is null) { _explicitNullValueWatermarkProp = default!; _explicitNullProperties?.Remove("watermark"); }
+            else if (parseNode.GetChildNode("watermark") is { } nullNodeWatermarkProp && nullNodeWatermarkProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WatermarkProp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The watermark property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.Watermark_watermark? WatermarkProp { get => _explicitNullValueWatermarkProp; set { _explicitNullValueWatermarkProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watermark"); else _explicitNullProperties?.Remove("watermark"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.Watermark_watermark? WatermarkProp { get => _explicitNullValueWatermarkProp; set { _explicitNullValueWatermarkProp = value; AdditionalData?.Remove("watermark"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watermark"); else _explicitNullProperties?.Remove("watermark"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Watermark_watermark? _explicitNullValueWatermarkProp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.Watermark_watermark WatermarkProp { get => _explicitNullValueWatermarkProp; set { _explicitNullValueWatermarkProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watermark"); else _explicitNullProperties?.Remove("watermark"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.Watermark_watermark WatermarkProp { get => _explicitNullValueWatermarkProp; set { _explicitNullValueWatermarkProp = value; AdditionalData?.Remove("watermark"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watermark"); else _explicitNullProperties?.Remove("watermark"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Watermark_watermark _explicitNullValueWatermarkProp = default!;
 #endif
         /// <summary>

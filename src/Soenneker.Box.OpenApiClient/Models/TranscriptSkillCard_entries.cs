@@ -18,8 +18,10 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("appears") is { } nullNodeAppears && nullNodeAppears.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Appears = null;
-            if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("appears") is null) { _explicitNullValueAppears = default!; _explicitNullProperties?.Remove("appears"); }
+            else if (parseNode.GetChildNode("appears") is { } nullNodeAppears && nullNodeAppears.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Appears = null;
+            if (parseNode.GetChildNode("text") is null) { _explicitNullValueText = default!; _explicitNullProperties?.Remove("text"); }
+            else if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>Defines when a transcribed bit of text appears. This only includes astart time and no end time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries_appears>? Appears { get => _explicitNullValueAppears; set { _explicitNullValueAppears = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appears"); else _explicitNullProperties?.Remove("appears"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries_appears>? Appears { get => _explicitNullValueAppears; set { _explicitNullValueAppears = value; AdditionalData?.Remove("appears"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appears"); else _explicitNullProperties?.Remove("appears"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries_appears>? _explicitNullValueAppears = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries_appears> Appears { get => _explicitNullValueAppears; set { _explicitNullValueAppears = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appears"); else _explicitNullProperties?.Remove("appears"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries_appears> Appears { get => _explicitNullValueAppears; set { _explicitNullValueAppears = value; AdditionalData?.Remove("appears"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appears"); else _explicitNullProperties?.Remove("appears"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries_appears> _explicitNullValueAppears = default!;
 #endif
         /// <summary>The text of the entry. This would be the transcribed text assignedto the entry on the timeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
         private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
         private string _explicitNullValueText = default!;
 #endif
         /// <summary>

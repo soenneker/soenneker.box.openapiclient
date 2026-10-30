@@ -18,9 +18,12 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("large") is { } nullNodeLarge && nullNodeLarge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Large = null;
-            if (parseNode.GetChildNode("preview") is { } nullNodePreview && nullNodePreview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preview = null;
-            if (parseNode.GetChildNode("small") is { } nullNodeSmall && nullNodeSmall.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Small = null;
+            if (parseNode.GetChildNode("large") is null) { _explicitNullValueLarge = default!; _explicitNullProperties?.Remove("large"); }
+            else if (parseNode.GetChildNode("large") is { } nullNodeLarge && nullNodeLarge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Large = null;
+            if (parseNode.GetChildNode("preview") is null) { _explicitNullValuePreview = default!; _explicitNullProperties?.Remove("preview"); }
+            else if (parseNode.GetChildNode("preview") is { } nullNodePreview && nullNodePreview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preview = null;
+            if (parseNode.GetChildNode("small") is null) { _explicitNullValueSmall = default!; _explicitNullProperties?.Remove("small"); }
+            else if (parseNode.GetChildNode("small") is { } nullNodeSmall && nullNodeSmall.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Small = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The location of a large-sized avatar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Large { get => _explicitNullValueLarge; set { _explicitNullValueLarge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large"); else _explicitNullProperties?.Remove("large"); } }
+        public string? Large { get => _explicitNullValueLarge; set { _explicitNullValueLarge = value; AdditionalData?.Remove("large"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large"); else _explicitNullProperties?.Remove("large"); } }
         private string? _explicitNullValueLarge = default!;
 #nullable restore
 #else
-        public string Large { get => _explicitNullValueLarge; set { _explicitNullValueLarge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large"); else _explicitNullProperties?.Remove("large"); } }
+        public string Large { get => _explicitNullValueLarge; set { _explicitNullValueLarge = value; AdditionalData?.Remove("large"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large"); else _explicitNullProperties?.Remove("large"); } }
         private string _explicitNullValueLarge = default!;
 #endif
         /// <summary>The location of the avatar preview.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Preview { get => _explicitNullValuePreview; set { _explicitNullValuePreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview"); else _explicitNullProperties?.Remove("preview"); } }
+        public string? Preview { get => _explicitNullValuePreview; set { _explicitNullValuePreview = value; AdditionalData?.Remove("preview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview"); else _explicitNullProperties?.Remove("preview"); } }
         private string? _explicitNullValuePreview = default!;
 #nullable restore
 #else
-        public string Preview { get => _explicitNullValuePreview; set { _explicitNullValuePreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview"); else _explicitNullProperties?.Remove("preview"); } }
+        public string Preview { get => _explicitNullValuePreview; set { _explicitNullValuePreview = value; AdditionalData?.Remove("preview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview"); else _explicitNullProperties?.Remove("preview"); } }
         private string _explicitNullValuePreview = default!;
 #endif
         /// <summary>The location of a small-sized avatar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Small { get => _explicitNullValueSmall; set { _explicitNullValueSmall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("small"); else _explicitNullProperties?.Remove("small"); } }
+        public string? Small { get => _explicitNullValueSmall; set { _explicitNullValueSmall = value; AdditionalData?.Remove("small"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("small"); else _explicitNullProperties?.Remove("small"); } }
         private string? _explicitNullValueSmall = default!;
 #nullable restore
 #else
-        public string Small { get => _explicitNullValueSmall; set { _explicitNullValueSmall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("small"); else _explicitNullProperties?.Remove("small"); } }
+        public string Small { get => _explicitNullValueSmall; set { _explicitNullValueSmall = value; AdditionalData?.Remove("small"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("small"); else _explicitNullProperties?.Remove("small"); } }
         private string _explicitNullValueSmall = default!;
 #endif
         /// <summary>

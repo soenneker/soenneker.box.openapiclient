@@ -17,8 +17,10 @@ namespace Soenneker.Box.OpenApiClient.Folder_locks
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("folder") is { } nullNodeFolder && nullNodeFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Folder = null;
-            if (parseNode.GetChildNode("locked_operations") is { } nullNodeLockedOperations && nullNodeLockedOperations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockedOperations = null;
+            if (parseNode.GetChildNode("folder") is null) { _explicitNullValueFolder = default!; _explicitNullProperties?.Remove("folder"); }
+            else if (parseNode.GetChildNode("folder") is { } nullNodeFolder && nullNodeFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Folder = null;
+            if (parseNode.GetChildNode("locked_operations") is null) { _explicitNullValueLockedOperations = default!; _explicitNullProperties?.Remove("locked_operations"); }
+            else if (parseNode.GetChildNode("locked_operations") is { } nullNodeLockedOperations && nullNodeLockedOperations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockedOperations = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Box.OpenApiClient.Folder_locks
         /// <summary>The folder to apply the lock to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_folder? Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
+        public global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_folder? Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; AdditionalData?.Remove("folder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
         private global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_folder? _explicitNullValueFolder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_folder Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
+        public global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_folder Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; AdditionalData?.Remove("folder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
         private global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_folder _explicitNullValueFolder = default!;
 #endif
         /// <summary>The operations to lock for the folder. If `locked_operations` isincluded in the request, both `move` and `delete` must also beincluded and both set to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_locked_operations? LockedOperations { get => _explicitNullValueLockedOperations; set { _explicitNullValueLockedOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked_operations"); else _explicitNullProperties?.Remove("locked_operations"); } }
+        public global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_locked_operations? LockedOperations { get => _explicitNullValueLockedOperations; set { _explicitNullValueLockedOperations = value; AdditionalData?.Remove("locked_operations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked_operations"); else _explicitNullProperties?.Remove("locked_operations"); } }
         private global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_locked_operations? _explicitNullValueLockedOperations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_locked_operations LockedOperations { get => _explicitNullValueLockedOperations; set { _explicitNullValueLockedOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked_operations"); else _explicitNullProperties?.Remove("locked_operations"); } }
+        public global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_locked_operations LockedOperations { get => _explicitNullValueLockedOperations; set { _explicitNullValueLockedOperations = value; AdditionalData?.Remove("locked_operations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked_operations"); else _explicitNullProperties?.Remove("locked_operations"); } }
         private global::Soenneker.Box.OpenApiClient.Folder_locks.Folder_locksPostRequestBody_locked_operations _explicitNullValueLockedOperations = default!;
 #endif
         /// <summary>

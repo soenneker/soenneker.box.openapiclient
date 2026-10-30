@@ -18,9 +18,12 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dimensions") is { } nullNodeDimensions && nullNodeDimensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dimensions = null;
-            if (parseNode.GetChildNode("paged") is { } nullNodePaged && nullNodePaged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paged = null;
-            if (parseNode.GetChildNode("thumb") is { } nullNodeThumb && nullNodeThumb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb = null;
+            if (parseNode.GetChildNode("dimensions") is null) { _explicitNullValueDimensions = default!; _explicitNullProperties?.Remove("dimensions"); }
+            else if (parseNode.GetChildNode("dimensions") is { } nullNodeDimensions && nullNodeDimensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dimensions = null;
+            if (parseNode.GetChildNode("paged") is null) { _explicitNullValuePaged = default!; _explicitNullProperties?.Remove("paged"); }
+            else if (parseNode.GetChildNode("paged") is { } nullNodePaged && nullNodePaged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paged = null;
+            if (parseNode.GetChildNode("thumb") is null) { _explicitNullValueThumb = default!; _explicitNullProperties?.Remove("thumb"); }
+            else if (parseNode.GetChildNode("thumb") is { } nullNodeThumb && nullNodeThumb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The width by height size of this representation in pixels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensions"); else _explicitNullProperties?.Remove("dimensions"); } }
+        public string? Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; AdditionalData?.Remove("dimensions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensions"); else _explicitNullProperties?.Remove("dimensions"); } }
         private string? _explicitNullValueDimensions = default!;
 #nullable restore
 #else
-        public string Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensions"); else _explicitNullProperties?.Remove("dimensions"); } }
+        public string Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; AdditionalData?.Remove("dimensions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensions"); else _explicitNullProperties?.Remove("dimensions"); } }
         private string _explicitNullValueDimensions = default!;
 #endif
         /// <summary>Indicates if the representation is build up out of multiplepages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Paged { get => _explicitNullValuePaged; set { _explicitNullValuePaged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paged"); else _explicitNullProperties?.Remove("paged"); } }
+        public string? Paged { get => _explicitNullValuePaged; set { _explicitNullValuePaged = value; AdditionalData?.Remove("paged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paged"); else _explicitNullProperties?.Remove("paged"); } }
         private string? _explicitNullValuePaged = default!;
 #nullable restore
 #else
-        public string Paged { get => _explicitNullValuePaged; set { _explicitNullValuePaged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paged"); else _explicitNullProperties?.Remove("paged"); } }
+        public string Paged { get => _explicitNullValuePaged; set { _explicitNullValuePaged = value; AdditionalData?.Remove("paged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paged"); else _explicitNullProperties?.Remove("paged"); } }
         private string _explicitNullValuePaged = default!;
 #endif
         /// <summary>Indicates if the representation can be used as a thumbnail ofthe file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Thumb { get => _explicitNullValueThumb; set { _explicitNullValueThumb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb"); else _explicitNullProperties?.Remove("thumb"); } }
+        public string? Thumb { get => _explicitNullValueThumb; set { _explicitNullValueThumb = value; AdditionalData?.Remove("thumb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb"); else _explicitNullProperties?.Remove("thumb"); } }
         private string? _explicitNullValueThumb = default!;
 #nullable restore
 #else
-        public string Thumb { get => _explicitNullValueThumb; set { _explicitNullValueThumb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb"); else _explicitNullProperties?.Remove("thumb"); } }
+        public string Thumb { get => _explicitNullValueThumb; set { _explicitNullValueThumb = value; AdditionalData?.Remove("thumb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb"); else _explicitNullProperties?.Remove("thumb"); } }
         private string _explicitNullValueThumb = default!;
 #endif
         /// <summary>

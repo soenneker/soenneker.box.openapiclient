@@ -18,12 +18,18 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("collaborators") is { } nullNodeCollaborators && nullNodeCollaborators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collaborators = null;
-            if (parseNode.GetChildNode("completion_rule") is { } nullNodeCompletionRule && nullNodeCompletionRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletionRule = null;
-            if (parseNode.GetChildNode("file_collaborator_role") is { } nullNodeFileCollaboratorRole && nullNodeFileCollaboratorRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileCollaboratorRole = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
-            if (parseNode.GetChildNode("task_collaborators") is { } nullNodeTaskCollaborators && nullNodeTaskCollaborators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskCollaborators = null;
+            if (parseNode.GetChildNode("collaborators") is null) { _explicitNullValueCollaborators = default!; _explicitNullProperties?.Remove("collaborators"); }
+            else if (parseNode.GetChildNode("collaborators") is { } nullNodeCollaborators && nullNodeCollaborators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collaborators = null;
+            if (parseNode.GetChildNode("completion_rule") is null) { _explicitNullValueCompletionRule = default!; _explicitNullProperties?.Remove("completion_rule"); }
+            else if (parseNode.GetChildNode("completion_rule") is { } nullNodeCompletionRule && nullNodeCompletionRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletionRule = null;
+            if (parseNode.GetChildNode("file_collaborator_role") is null) { _explicitNullValueFileCollaboratorRole = default!; _explicitNullProperties?.Remove("file_collaborator_role"); }
+            else if (parseNode.GetChildNode("file_collaborator_role") is { } nullNodeFileCollaboratorRole && nullNodeFileCollaboratorRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileCollaboratorRole = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("role") is null) { _explicitNullValueRole = default!; _explicitNullProperties?.Remove("role"); }
+            else if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("task_collaborators") is null) { _explicitNullValueTaskCollaborators = default!; _explicitNullProperties?.Remove("task_collaborators"); }
+            else if (parseNode.GetChildNode("task_collaborators") is { } nullNodeTaskCollaborators && nullNodeTaskCollaborators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskCollaborators = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,61 +37,61 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The collaborators property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable? Collaborators { get => _explicitNullValueCollaborators; set { _explicitNullValueCollaborators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collaborators"); else _explicitNullProperties?.Remove("collaborators"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable? Collaborators { get => _explicitNullValueCollaborators; set { _explicitNullValueCollaborators = value; AdditionalData?.Remove("collaborators"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collaborators"); else _explicitNullProperties?.Remove("collaborators"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable? _explicitNullValueCollaborators = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable Collaborators { get => _explicitNullValueCollaborators; set { _explicitNullValueCollaborators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collaborators"); else _explicitNullProperties?.Remove("collaborators"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable Collaborators { get => _explicitNullValueCollaborators; set { _explicitNullValueCollaborators = value; AdditionalData?.Remove("collaborators"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collaborators"); else _explicitNullProperties?.Remove("collaborators"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable _explicitNullValueCollaborators = default!;
 #endif
         /// <summary>The completion_rule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.CompletionRuleVariable? CompletionRule { get => _explicitNullValueCompletionRule; set { _explicitNullValueCompletionRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completion_rule"); else _explicitNullProperties?.Remove("completion_rule"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CompletionRuleVariable? CompletionRule { get => _explicitNullValueCompletionRule; set { _explicitNullValueCompletionRule = value; AdditionalData?.Remove("completion_rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completion_rule"); else _explicitNullProperties?.Remove("completion_rule"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CompletionRuleVariable? _explicitNullValueCompletionRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.CompletionRuleVariable CompletionRule { get => _explicitNullValueCompletionRule; set { _explicitNullValueCompletionRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completion_rule"); else _explicitNullProperties?.Remove("completion_rule"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CompletionRuleVariable CompletionRule { get => _explicitNullValueCompletionRule; set { _explicitNullValueCompletionRule = value; AdditionalData?.Remove("completion_rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completion_rule"); else _explicitNullProperties?.Remove("completion_rule"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CompletionRuleVariable _explicitNullValueCompletionRule = default!;
 #endif
         /// <summary>The file_collaborator_role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.RoleVariable? FileCollaboratorRole { get => _explicitNullValueFileCollaboratorRole; set { _explicitNullValueFileCollaboratorRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_collaborator_role"); else _explicitNullProperties?.Remove("file_collaborator_role"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RoleVariable? FileCollaboratorRole { get => _explicitNullValueFileCollaboratorRole; set { _explicitNullValueFileCollaboratorRole = value; AdditionalData?.Remove("file_collaborator_role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_collaborator_role"); else _explicitNullProperties?.Remove("file_collaborator_role"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RoleVariable? _explicitNullValueFileCollaboratorRole = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.RoleVariable FileCollaboratorRole { get => _explicitNullValueFileCollaboratorRole; set { _explicitNullValueFileCollaboratorRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_collaborator_role"); else _explicitNullProperties?.Remove("file_collaborator_role"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RoleVariable FileCollaboratorRole { get => _explicitNullValueFileCollaboratorRole; set { _explicitNullValueFileCollaboratorRole = value; AdditionalData?.Remove("file_collaborator_role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_collaborator_role"); else _explicitNullProperties?.Remove("file_collaborator_role"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RoleVariable _explicitNullValueFileCollaboratorRole = default!;
 #endif
         /// <summary>ID of a specific outcome.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.RoleVariable? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RoleVariable? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RoleVariable? _explicitNullValueRole = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.RoleVariable Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RoleVariable Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RoleVariable _explicitNullValueRole = default!;
 #endif
         /// <summary>The task_collaborators property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable? TaskCollaborators { get => _explicitNullValueTaskCollaborators; set { _explicitNullValueTaskCollaborators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_collaborators"); else _explicitNullProperties?.Remove("task_collaborators"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable? TaskCollaborators { get => _explicitNullValueTaskCollaborators; set { _explicitNullValueTaskCollaborators = value; AdditionalData?.Remove("task_collaborators"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_collaborators"); else _explicitNullProperties?.Remove("task_collaborators"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable? _explicitNullValueTaskCollaborators = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable TaskCollaborators { get => _explicitNullValueTaskCollaborators; set { _explicitNullValueTaskCollaborators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_collaborators"); else _explicitNullProperties?.Remove("task_collaborators"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable TaskCollaborators { get => _explicitNullValueTaskCollaborators; set { _explicitNullValueTaskCollaborators = value; AdditionalData?.Remove("task_collaborators"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_collaborators"); else _explicitNullProperties?.Remove("task_collaborators"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CollaboratorVariable _explicitNullValueTaskCollaborators = default!;
 #endif
         /// <summary>

@@ -18,12 +18,18 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ai_agent") is { } nullNodeAiAgent && nullNodeAiAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiAgent = null;
-            if (parseNode.GetChildNode("dialogue_history") is { } nullNodeDialogueHistory && nullNodeDialogueHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DialogueHistory = null;
-            if (parseNode.GetChildNode("include_citations") is { } nullNodeIncludeCitations && nullNodeIncludeCitations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeCitations = null;
-            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
-            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
-            if (parseNode.GetChildNode("prompt") is { } nullNodePrompt && nullNodePrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prompt = null;
+            if (parseNode.GetChildNode("ai_agent") is null) { _explicitNullValueAiAgent = default!; _explicitNullProperties?.Remove("ai_agent"); }
+            else if (parseNode.GetChildNode("ai_agent") is { } nullNodeAiAgent && nullNodeAiAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiAgent = null;
+            if (parseNode.GetChildNode("dialogue_history") is null) { _explicitNullValueDialogueHistory = default!; _explicitNullProperties?.Remove("dialogue_history"); }
+            else if (parseNode.GetChildNode("dialogue_history") is { } nullNodeDialogueHistory && nullNodeDialogueHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DialogueHistory = null;
+            if (parseNode.GetChildNode("include_citations") is null) { _explicitNullValueIncludeCitations = default!; _explicitNullProperties?.Remove("include_citations"); }
+            else if (parseNode.GetChildNode("include_citations") is { } nullNodeIncludeCitations && nullNodeIncludeCitations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeCitations = null;
+            if (parseNode.GetChildNode("items") is null) { _explicitNullValueItems = default!; _explicitNullProperties?.Remove("items"); }
+            else if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("mode") is null) { _explicitNullValueMode = default!; _explicitNullProperties?.Remove("mode"); }
+            else if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("prompt") is null) { _explicitNullValuePrompt = default!; _explicitNullProperties?.Remove("prompt"); }
+            else if (parseNode.GetChildNode("prompt") is { } nullNodePrompt && nullNodePrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prompt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,47 +37,47 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The ai_agent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiAskAgent? AiAgent { get => _explicitNullValueAiAgent; set { _explicitNullValueAiAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_agent"); else _explicitNullProperties?.Remove("ai_agent"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AiAskAgent? AiAgent { get => _explicitNullValueAiAgent; set { _explicitNullValueAiAgent = value; AdditionalData?.Remove("ai_agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_agent"); else _explicitNullProperties?.Remove("ai_agent"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AiAskAgent? _explicitNullValueAiAgent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiAskAgent AiAgent { get => _explicitNullValueAiAgent; set { _explicitNullValueAiAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_agent"); else _explicitNullProperties?.Remove("ai_agent"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AiAskAgent AiAgent { get => _explicitNullValueAiAgent; set { _explicitNullValueAiAgent = value; AdditionalData?.Remove("ai_agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_agent"); else _explicitNullProperties?.Remove("ai_agent"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AiAskAgent _explicitNullValueAiAgent = default!;
 #endif
         /// <summary>The history of prompts and answers previously passed to the LLM. This provides additional context to the LLM in generating the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory>? DialogueHistory { get => _explicitNullValueDialogueHistory; set { _explicitNullValueDialogueHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dialogue_history"); else _explicitNullProperties?.Remove("dialogue_history"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory>? DialogueHistory { get => _explicitNullValueDialogueHistory; set { _explicitNullValueDialogueHistory = value; AdditionalData?.Remove("dialogue_history"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dialogue_history"); else _explicitNullProperties?.Remove("dialogue_history"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory>? _explicitNullValueDialogueHistory = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory> DialogueHistory { get => _explicitNullValueDialogueHistory; set { _explicitNullValueDialogueHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dialogue_history"); else _explicitNullProperties?.Remove("dialogue_history"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory> DialogueHistory { get => _explicitNullValueDialogueHistory; set { _explicitNullValueDialogueHistory = value; AdditionalData?.Remove("dialogue_history"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dialogue_history"); else _explicitNullProperties?.Remove("dialogue_history"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory> _explicitNullValueDialogueHistory = default!;
 #endif
         /// <summary>A flag to indicate whether citations should be returned.</summary>
-        public bool? IncludeCitations { get => _explicitNullValueIncludeCitations; set { _explicitNullValueIncludeCitations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_citations"); else _explicitNullProperties?.Remove("include_citations"); } }
+        public bool? IncludeCitations { get => _explicitNullValueIncludeCitations; set { _explicitNullValueIncludeCitations = value; AdditionalData?.Remove("include_citations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_citations"); else _explicitNullProperties?.Remove("include_citations"); } }
         private bool? _explicitNullValueIncludeCitations = default!;
         /// <summary>The items to be processed by the LLM, often files.To search across and ask questions about the contents of a Box Hub,pass a single item with `type` set to `hubs`. See the item `type`property for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiItemAsk>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiItemAsk>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.AiItemAsk>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiItemAsk> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiItemAsk> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.AiItemAsk> _explicitNullValueItems = default!;
 #endif
         /// <summary>Box AI handles text documents with text representations up to 2MB in size, or a maximum of 25 files,whichever comes first. If the text file size exceeds 2MB, the first 2MB of text representation will be processed.Box AI handles image documents with a resolution of 1024 x 1024 pixels, with a maximum of 5 images or 5 pagesfor multi-page images. If the number of image or image pages exceeds 5, the first 5 images or pages willbe processed. If you set mode parameter to `single_item_qa`, the items array can have one element only.Currently Box AI does not support multi-modal requests. If both images and text are sent Box AI will onlyprocess the text.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.AiAsk_mode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AiAsk_mode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AiAsk_mode? _explicitNullValueMode = default!;
         /// <summary>The prompt provided by the client to be answered by the LLM.The prompt&apos;s length is limited to 10000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Prompt { get => _explicitNullValuePrompt; set { _explicitNullValuePrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt"); else _explicitNullProperties?.Remove("prompt"); } }
+        public string? Prompt { get => _explicitNullValuePrompt; set { _explicitNullValuePrompt = value; AdditionalData?.Remove("prompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt"); else _explicitNullProperties?.Remove("prompt"); } }
         private string? _explicitNullValuePrompt = default!;
 #nullable restore
 #else
-        public string Prompt { get => _explicitNullValuePrompt; set { _explicitNullValuePrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt"); else _explicitNullProperties?.Remove("prompt"); } }
+        public string Prompt { get => _explicitNullValuePrompt; set { _explicitNullValuePrompt = value; AdditionalData?.Remove("prompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt"); else _explicitNullProperties?.Remove("prompt"); } }
         private string _explicitNullValuePrompt = default!;
 #endif
         /// <summary>
@@ -103,7 +109,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "dialogue_history", n => { DialogueHistory = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory>(global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "include_citations", n => { IncludeCitations = n.GetBoolValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiItemAsk>(global::Soenneker.Box.OpenApiClient.Models.AiItemAsk.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.AiAsk_mode>(); } },
+                { "mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.AiAsk_mode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMode = default; _explicitNullProperties?.Remove("mode"); AdditionalData["mode"] = unknown; } else { Mode = parsed; AdditionalData.Remove("mode"); } } },
                 { "prompt", n => { Prompt = n.GetStringValue(); } },
             };
         }

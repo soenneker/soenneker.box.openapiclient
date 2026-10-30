@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Integration_mappings.Teams.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("box_item") is { } nullNodeBoxItem && nullNodeBoxItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxItem = null;
+            if (parseNode.GetChildNode("box_item") is null) { _explicitNullValueBoxItem = default!; _explicitNullProperties?.Remove("box_item"); }
+            else if (parseNode.GetChildNode("box_item") is { } nullNodeBoxItem && nullNodeBoxItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxItem = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Integration_mappings.Teams.Item
         /// <summary>The box_item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FolderReference? BoxItem { get => _explicitNullValueBoxItem; set { _explicitNullValueBoxItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_item"); else _explicitNullProperties?.Remove("box_item"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderReference? BoxItem { get => _explicitNullValueBoxItem; set { _explicitNullValueBoxItem = value; AdditionalData?.Remove("box_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_item"); else _explicitNullProperties?.Remove("box_item"); } }
         private global::Soenneker.Box.OpenApiClient.Models.FolderReference? _explicitNullValueBoxItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FolderReference BoxItem { get => _explicitNullValueBoxItem; set { _explicitNullValueBoxItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_item"); else _explicitNullProperties?.Remove("box_item"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderReference BoxItem { get => _explicitNullValueBoxItem; set { _explicitNullValueBoxItem = value; AdditionalData?.Remove("box_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_item"); else _explicitNullProperties?.Remove("box_item"); } }
         private global::Soenneker.Box.OpenApiClient.Models.FolderReference _explicitNullValueBoxItem = default!;
 #endif
         /// <summary>

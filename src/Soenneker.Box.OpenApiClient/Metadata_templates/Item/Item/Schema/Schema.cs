@@ -18,14 +18,22 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
-            if (parseNode.GetChildNode("enumOptionKey") is { } nullNodeEnumOptionKey && nullNodeEnumOptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOptionKey = null;
-            if (parseNode.GetChildNode("enumOptionKeys") is { } nullNodeEnumOptionKeys && nullNodeEnumOptionKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOptionKeys = null;
-            if (parseNode.GetChildNode("fieldKey") is { } nullNodeFieldKey && nullNodeFieldKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKey = null;
-            if (parseNode.GetChildNode("fieldKeys") is { } nullNodeFieldKeys && nullNodeFieldKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKeys = null;
-            if (parseNode.GetChildNode("multiSelectOptionKey") is { } nullNodeMultiSelectOptionKey && nullNodeMultiSelectOptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiSelectOptionKey = null;
-            if (parseNode.GetChildNode("multiSelectOptionKeys") is { } nullNodeMultiSelectOptionKeys && nullNodeMultiSelectOptionKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiSelectOptionKeys = null;
-            if (parseNode.GetChildNode("op") is { } nullNodeOp && nullNodeOp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Op = null;
+            if (parseNode.GetChildNode("data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("data"); }
+            else if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("enumOptionKey") is null) { _explicitNullValueEnumOptionKey = default!; _explicitNullProperties?.Remove("enumOptionKey"); }
+            else if (parseNode.GetChildNode("enumOptionKey") is { } nullNodeEnumOptionKey && nullNodeEnumOptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOptionKey = null;
+            if (parseNode.GetChildNode("enumOptionKeys") is null) { _explicitNullValueEnumOptionKeys = default!; _explicitNullProperties?.Remove("enumOptionKeys"); }
+            else if (parseNode.GetChildNode("enumOptionKeys") is { } nullNodeEnumOptionKeys && nullNodeEnumOptionKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOptionKeys = null;
+            if (parseNode.GetChildNode("fieldKey") is null) { _explicitNullValueFieldKey = default!; _explicitNullProperties?.Remove("fieldKey"); }
+            else if (parseNode.GetChildNode("fieldKey") is { } nullNodeFieldKey && nullNodeFieldKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKey = null;
+            if (parseNode.GetChildNode("fieldKeys") is null) { _explicitNullValueFieldKeys = default!; _explicitNullProperties?.Remove("fieldKeys"); }
+            else if (parseNode.GetChildNode("fieldKeys") is { } nullNodeFieldKeys && nullNodeFieldKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKeys = null;
+            if (parseNode.GetChildNode("multiSelectOptionKey") is null) { _explicitNullValueMultiSelectOptionKey = default!; _explicitNullProperties?.Remove("multiSelectOptionKey"); }
+            else if (parseNode.GetChildNode("multiSelectOptionKey") is { } nullNodeMultiSelectOptionKey && nullNodeMultiSelectOptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiSelectOptionKey = null;
+            if (parseNode.GetChildNode("multiSelectOptionKeys") is null) { _explicitNullValueMultiSelectOptionKeys = default!; _explicitNullProperties?.Remove("multiSelectOptionKeys"); }
+            else if (parseNode.GetChildNode("multiSelectOptionKeys") is { } nullNodeMultiSelectOptionKeys && nullNodeMultiSelectOptionKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiSelectOptionKeys = null;
+            if (parseNode.GetChildNode("op") is null) { _explicitNullValueOp = default!; _explicitNullProperties?.Remove("op"); }
+            else if (parseNode.GetChildNode("op") is { } nullNodeOp && nullNodeOp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Op = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,75 +41,75 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema
         /// <summary>The data for the operation. This will vary depending on theoperation being performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data _explicitNullValueData = default!;
 #endif
         /// <summary>For operations that affect a single `enum` option this definesthe key of the option that is affected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnumOptionKey { get => _explicitNullValueEnumOptionKey; set { _explicitNullValueEnumOptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKey"); else _explicitNullProperties?.Remove("enumOptionKey"); } }
+        public string? EnumOptionKey { get => _explicitNullValueEnumOptionKey; set { _explicitNullValueEnumOptionKey = value; AdditionalData?.Remove("enumOptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKey"); else _explicitNullProperties?.Remove("enumOptionKey"); } }
         private string? _explicitNullValueEnumOptionKey = default!;
 #nullable restore
 #else
-        public string EnumOptionKey { get => _explicitNullValueEnumOptionKey; set { _explicitNullValueEnumOptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKey"); else _explicitNullProperties?.Remove("enumOptionKey"); } }
+        public string EnumOptionKey { get => _explicitNullValueEnumOptionKey; set { _explicitNullValueEnumOptionKey = value; AdditionalData?.Remove("enumOptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKey"); else _explicitNullProperties?.Remove("enumOptionKey"); } }
         private string _explicitNullValueEnumOptionKey = default!;
 #endif
         /// <summary>For operations that affect multiple `enum` options this definesthe keys of the options that are affected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EnumOptionKeys { get => _explicitNullValueEnumOptionKeys; set { _explicitNullValueEnumOptionKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKeys"); else _explicitNullProperties?.Remove("enumOptionKeys"); } }
+        public List<string>? EnumOptionKeys { get => _explicitNullValueEnumOptionKeys; set { _explicitNullValueEnumOptionKeys = value; AdditionalData?.Remove("enumOptionKeys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKeys"); else _explicitNullProperties?.Remove("enumOptionKeys"); } }
         private List<string>? _explicitNullValueEnumOptionKeys = default!;
 #nullable restore
 #else
-        public List<string> EnumOptionKeys { get => _explicitNullValueEnumOptionKeys; set { _explicitNullValueEnumOptionKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKeys"); else _explicitNullProperties?.Remove("enumOptionKeys"); } }
+        public List<string> EnumOptionKeys { get => _explicitNullValueEnumOptionKeys; set { _explicitNullValueEnumOptionKeys = value; AdditionalData?.Remove("enumOptionKeys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKeys"); else _explicitNullProperties?.Remove("enumOptionKeys"); } }
         private List<string> _explicitNullValueEnumOptionKeys = default!;
 #endif
         /// <summary>For operations that affect a single field this defines the key ofthe field that is affected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
+        public string? FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; AdditionalData?.Remove("fieldKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
         private string? _explicitNullValueFieldKey = default!;
 #nullable restore
 #else
-        public string FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
+        public string FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; AdditionalData?.Remove("fieldKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
         private string _explicitNullValueFieldKey = default!;
 #endif
         /// <summary>For operations that affect multiple fields this defines the keysof the fields that are affected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FieldKeys { get => _explicitNullValueFieldKeys; set { _explicitNullValueFieldKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKeys"); else _explicitNullProperties?.Remove("fieldKeys"); } }
+        public List<string>? FieldKeys { get => _explicitNullValueFieldKeys; set { _explicitNullValueFieldKeys = value; AdditionalData?.Remove("fieldKeys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKeys"); else _explicitNullProperties?.Remove("fieldKeys"); } }
         private List<string>? _explicitNullValueFieldKeys = default!;
 #nullable restore
 #else
-        public List<string> FieldKeys { get => _explicitNullValueFieldKeys; set { _explicitNullValueFieldKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKeys"); else _explicitNullProperties?.Remove("fieldKeys"); } }
+        public List<string> FieldKeys { get => _explicitNullValueFieldKeys; set { _explicitNullValueFieldKeys = value; AdditionalData?.Remove("fieldKeys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKeys"); else _explicitNullProperties?.Remove("fieldKeys"); } }
         private List<string> _explicitNullValueFieldKeys = default!;
 #endif
         /// <summary>For operations that affect a single multi select option thisdefines the key of the option that is affected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MultiSelectOptionKey { get => _explicitNullValueMultiSelectOptionKey; set { _explicitNullValueMultiSelectOptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectOptionKey"); else _explicitNullProperties?.Remove("multiSelectOptionKey"); } }
+        public string? MultiSelectOptionKey { get => _explicitNullValueMultiSelectOptionKey; set { _explicitNullValueMultiSelectOptionKey = value; AdditionalData?.Remove("multiSelectOptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectOptionKey"); else _explicitNullProperties?.Remove("multiSelectOptionKey"); } }
         private string? _explicitNullValueMultiSelectOptionKey = default!;
 #nullable restore
 #else
-        public string MultiSelectOptionKey { get => _explicitNullValueMultiSelectOptionKey; set { _explicitNullValueMultiSelectOptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectOptionKey"); else _explicitNullProperties?.Remove("multiSelectOptionKey"); } }
+        public string MultiSelectOptionKey { get => _explicitNullValueMultiSelectOptionKey; set { _explicitNullValueMultiSelectOptionKey = value; AdditionalData?.Remove("multiSelectOptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectOptionKey"); else _explicitNullProperties?.Remove("multiSelectOptionKey"); } }
         private string _explicitNullValueMultiSelectOptionKey = default!;
 #endif
         /// <summary>For operations that affect multiple multi select options thisdefines the keys of the options that are affected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MultiSelectOptionKeys { get => _explicitNullValueMultiSelectOptionKeys; set { _explicitNullValueMultiSelectOptionKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectOptionKeys"); else _explicitNullProperties?.Remove("multiSelectOptionKeys"); } }
+        public List<string>? MultiSelectOptionKeys { get => _explicitNullValueMultiSelectOptionKeys; set { _explicitNullValueMultiSelectOptionKeys = value; AdditionalData?.Remove("multiSelectOptionKeys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectOptionKeys"); else _explicitNullProperties?.Remove("multiSelectOptionKeys"); } }
         private List<string>? _explicitNullValueMultiSelectOptionKeys = default!;
 #nullable restore
 #else
-        public List<string> MultiSelectOptionKeys { get => _explicitNullValueMultiSelectOptionKeys; set { _explicitNullValueMultiSelectOptionKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectOptionKeys"); else _explicitNullProperties?.Remove("multiSelectOptionKeys"); } }
+        public List<string> MultiSelectOptionKeys { get => _explicitNullValueMultiSelectOptionKeys; set { _explicitNullValueMultiSelectOptionKeys = value; AdditionalData?.Remove("multiSelectOptionKeys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectOptionKeys"); else _explicitNullProperties?.Remove("multiSelectOptionKeys"); } }
         private List<string> _explicitNullValueMultiSelectOptionKeys = default!;
 #endif
         /// <summary>The type of change to perform on the template. Someof these are hazardous as they will change existing templates.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_op? Op { get => _explicitNullValueOp; set { _explicitNullValueOp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("op"); else _explicitNullProperties?.Remove("op"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_op? Op { get => _explicitNullValueOp; set { _explicitNullValueOp = value; AdditionalData?.Remove("op"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("op"); else _explicitNullProperties?.Remove("op"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_op? _explicitNullValueOp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema"/> and sets the default values.
@@ -135,7 +143,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema
                 { "fieldKeys", n => { FieldKeys = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "multiSelectOptionKey", n => { MultiSelectOptionKey = n.GetStringValue(); } },
                 { "multiSelectOptionKeys", n => { MultiSelectOptionKeys = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "op", n => { Op = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_op>(); } },
+                { "op", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_op>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOp = default; _explicitNullProperties?.Remove("op"); AdditionalData["op"] = unknown; } else { Op = parsed; AdditionalData.Remove("op"); } } },
             };
         }
         /// <summary>

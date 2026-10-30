@@ -17,12 +17,18 @@ namespace Soenneker.Box.OpenApiClient.Groups
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("external_sync_identifier") is { } nullNodeExternalSyncIdentifier && nullNodeExternalSyncIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSyncIdentifier = null;
-            if (parseNode.GetChildNode("invitability_level") is { } nullNodeInvitabilityLevel && nullNodeInvitabilityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitabilityLevel = null;
-            if (parseNode.GetChildNode("member_viewability_level") is { } nullNodeMemberViewabilityLevel && nullNodeMemberViewabilityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberViewabilityLevel = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("provenance") is { } nullNodeProvenance && nullNodeProvenance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provenance = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("external_sync_identifier") is null) { _explicitNullValueExternalSyncIdentifier = default!; _explicitNullProperties?.Remove("external_sync_identifier"); }
+            else if (parseNode.GetChildNode("external_sync_identifier") is { } nullNodeExternalSyncIdentifier && nullNodeExternalSyncIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSyncIdentifier = null;
+            if (parseNode.GetChildNode("invitability_level") is null) { _explicitNullValueInvitabilityLevel = default!; _explicitNullProperties?.Remove("invitability_level"); }
+            else if (parseNode.GetChildNode("invitability_level") is { } nullNodeInvitabilityLevel && nullNodeInvitabilityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitabilityLevel = null;
+            if (parseNode.GetChildNode("member_viewability_level") is null) { _explicitNullValueMemberViewabilityLevel = default!; _explicitNullProperties?.Remove("member_viewability_level"); }
+            else if (parseNode.GetChildNode("member_viewability_level") is { } nullNodeMemberViewabilityLevel && nullNodeMemberViewabilityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberViewabilityLevel = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("provenance") is null) { _explicitNullValueProvenance = default!; _explicitNullProperties?.Remove("provenance"); }
+            else if (parseNode.GetChildNode("provenance") is { } nullNodeProvenance && nullNodeProvenance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provenance = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,47 +36,47 @@ namespace Soenneker.Box.OpenApiClient.Groups
         /// <summary>A human readable description of the group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>An arbitrary identifier that can be used byexternal group sync tools to link this Box Group toan external group.Example values of this fieldcould be an **Active Directory Object ID** or a **GoogleGroup ID**.We recommend you use of this field inorder to avoid issues when group names are updated ineither Box or external systems.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalSyncIdentifier { get => _explicitNullValueExternalSyncIdentifier; set { _explicitNullValueExternalSyncIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_sync_identifier"); else _explicitNullProperties?.Remove("external_sync_identifier"); } }
+        public string? ExternalSyncIdentifier { get => _explicitNullValueExternalSyncIdentifier; set { _explicitNullValueExternalSyncIdentifier = value; AdditionalData?.Remove("external_sync_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_sync_identifier"); else _explicitNullProperties?.Remove("external_sync_identifier"); } }
         private string? _explicitNullValueExternalSyncIdentifier = default!;
 #nullable restore
 #else
-        public string ExternalSyncIdentifier { get => _explicitNullValueExternalSyncIdentifier; set { _explicitNullValueExternalSyncIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_sync_identifier"); else _explicitNullProperties?.Remove("external_sync_identifier"); } }
+        public string ExternalSyncIdentifier { get => _explicitNullValueExternalSyncIdentifier; set { _explicitNullValueExternalSyncIdentifier = value; AdditionalData?.Remove("external_sync_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_sync_identifier"); else _explicitNullProperties?.Remove("external_sync_identifier"); } }
         private string _explicitNullValueExternalSyncIdentifier = default!;
 #endif
         /// <summary>Specifies who can invite the group to collaborateon folders.When set to `admins_only` the enterprise admin, co-admins,and the group&apos;s admin can invite the group.When set to `admins_and_members` all the admins listedabove and group members can invite the group.When set to `all_managed_users` all managed users in theenterprise can invite the group.</summary>
-        public global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_invitability_level? InvitabilityLevel { get => _explicitNullValueInvitabilityLevel; set { _explicitNullValueInvitabilityLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invitability_level"); else _explicitNullProperties?.Remove("invitability_level"); } }
+        public global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_invitability_level? InvitabilityLevel { get => _explicitNullValueInvitabilityLevel; set { _explicitNullValueInvitabilityLevel = value; AdditionalData?.Remove("invitability_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invitability_level"); else _explicitNullProperties?.Remove("invitability_level"); } }
         private global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_invitability_level? _explicitNullValueInvitabilityLevel = default!;
         /// <summary>Specifies who can see the members of the group.* `admins_only` - the enterprise admin, co-admins, group&apos;s  group admin.* `admins_and_members` - all admins and group members.* `all_managed_users` - all managed users in the  enterprise.</summary>
-        public global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_member_viewability_level? MemberViewabilityLevel { get => _explicitNullValueMemberViewabilityLevel; set { _explicitNullValueMemberViewabilityLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_viewability_level"); else _explicitNullProperties?.Remove("member_viewability_level"); } }
+        public global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_member_viewability_level? MemberViewabilityLevel { get => _explicitNullValueMemberViewabilityLevel; set { _explicitNullValueMemberViewabilityLevel = value; AdditionalData?.Remove("member_viewability_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_viewability_level"); else _explicitNullProperties?.Remove("member_viewability_level"); } }
         private global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_member_viewability_level? _explicitNullValueMemberViewabilityLevel = default!;
         /// <summary>The name of the new group to be created. This name must be uniquewithin the enterprise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Keeps track of which external source this group iscoming, for example `Active Directory`, or `Okta`.Setting this will also prevent Box admins from editingthe group name and its members directly via the Boxweb application.This is desirable for one-way syncing of groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Provenance { get => _explicitNullValueProvenance; set { _explicitNullValueProvenance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provenance"); else _explicitNullProperties?.Remove("provenance"); } }
+        public string? Provenance { get => _explicitNullValueProvenance; set { _explicitNullValueProvenance = value; AdditionalData?.Remove("provenance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provenance"); else _explicitNullProperties?.Remove("provenance"); } }
         private string? _explicitNullValueProvenance = default!;
 #nullable restore
 #else
-        public string Provenance { get => _explicitNullValueProvenance; set { _explicitNullValueProvenance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provenance"); else _explicitNullProperties?.Remove("provenance"); } }
+        public string Provenance { get => _explicitNullValueProvenance; set { _explicitNullValueProvenance = value; AdditionalData?.Remove("provenance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provenance"); else _explicitNullProperties?.Remove("provenance"); } }
         private string _explicitNullValueProvenance = default!;
 #endif
         /// <summary>
@@ -100,8 +106,8 @@ namespace Soenneker.Box.OpenApiClient.Groups
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "external_sync_identifier", n => { ExternalSyncIdentifier = n.GetStringValue(); } },
-                { "invitability_level", n => { InvitabilityLevel = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_invitability_level>(); } },
-                { "member_viewability_level", n => { MemberViewabilityLevel = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_member_viewability_level>(); } },
+                { "invitability_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_invitability_level>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInvitabilityLevel = default; _explicitNullProperties?.Remove("invitability_level"); AdditionalData["invitability_level"] = unknown; } else { InvitabilityLevel = parsed; AdditionalData.Remove("invitability_level"); } } },
+                { "member_viewability_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Groups.GroupsPostRequestBody_member_viewability_level>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMemberViewabilityLevel = default; _explicitNullProperties?.Remove("member_viewability_level"); AdditionalData["member_viewability_level"] = unknown; } else { MemberViewabilityLevel = parsed; AdditionalData.Remove("member_viewability_level"); } } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "provenance", n => { Provenance = n.GetStringValue(); } },
             };

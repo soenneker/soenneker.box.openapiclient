@@ -17,11 +17,16 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("file") is { } nullNodeFile && nullNodeFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) File = null;
-            if (parseNode.GetChildNode("file_version") is { } nullNodeFileVersion && nullNodeFileVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileVersion = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
+            if (parseNode.GetChildNode("file") is null) { _explicitNullValueFile = default!; _explicitNullProperties?.Remove("file"); }
+            else if (parseNode.GetChildNode("file") is { } nullNodeFile && nullNodeFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) File = null;
+            if (parseNode.GetChildNode("file_version") is null) { _explicitNullValueFileVersion = default!; _explicitNullProperties?.Remove("file_version"); }
+            else if (parseNode.GetChildNode("file_version") is { } nullNodeFileVersion && nullNodeFileVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileVersion = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("usage") is null) { _explicitNullValueUsage = default!; _explicitNullProperties?.Remove("usage"); }
+            else if (parseNode.GetChildNode("usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
         /// <summary>The file to assign the cards to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file? _explicitNullValueFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file _explicitNullValueFile = default!;
 #endif
         /// <summary>The optional file version to assign the cards to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version? FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version? FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; AdditionalData?.Remove("file_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version? _explicitNullValueFileVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; AdditionalData?.Remove("file_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version _explicitNullValueFileVersion = default!;
 #endif
         /// <summary>The metadata to set for this skill. This is a list ofBox Skills cards. These cards will overwrite any existing Boxskill cards on the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Defines the status of this invocation. Set this to `success` when setting Skill cards.</summary>
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status? _explicitNullValueStatus = default!;
         /// <summary>A descriptor that defines what items are affected by this call.Set this to the default values when setting a card to a `success`state, and leave it out in most other situations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; AdditionalData?.Remove("usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage? _explicitNullValueUsage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; AdditionalData?.Remove("usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
         private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage _explicitNullValueUsage = default!;
 #endif
         /// <summary>
@@ -97,7 +102,7 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
                 { "file", n => { File = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file>(global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file.CreateFromDiscriminatorValue); } },
                 { "file_version", n => { FileVersion = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version>(global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata>(global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "usage", n => { Usage = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage>(global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage.CreateFromDiscriminatorValue); } },
             };
         }

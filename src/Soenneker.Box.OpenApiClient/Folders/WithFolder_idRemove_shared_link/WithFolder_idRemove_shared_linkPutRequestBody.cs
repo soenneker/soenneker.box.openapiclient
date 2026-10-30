@@ -17,7 +17,8 @@ namespace Soenneker.Box.OpenApiClient.Folders.WithFolder_idRemove_shared_link
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shared_link") is { } nullNodeSharedLink && nullNodeSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedLink = null;
+            if (parseNode.GetChildNode("shared_link") is null) { _explicitNullValueSharedLink = default!; _explicitNullProperties?.Remove("shared_link"); }
+            else if (parseNode.GetChildNode("shared_link") is { } nullNodeSharedLink && nullNodeSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedLink = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Box.OpenApiClient.Folders.WithFolder_idRemove_shared_link
         /// <summary>By setting this value to `null`, the shared linkis removed from the folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folders.WithFolder_idRemove_shared_link.WithFolder_idRemove_shared_linkPutRequestBody_shared_link? SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
+        public global::Soenneker.Box.OpenApiClient.Folders.WithFolder_idRemove_shared_link.WithFolder_idRemove_shared_linkPutRequestBody_shared_link? SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; AdditionalData?.Remove("shared_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
         private global::Soenneker.Box.OpenApiClient.Folders.WithFolder_idRemove_shared_link.WithFolder_idRemove_shared_linkPutRequestBody_shared_link? _explicitNullValueSharedLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folders.WithFolder_idRemove_shared_link.WithFolder_idRemove_shared_linkPutRequestBody_shared_link SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
+        public global::Soenneker.Box.OpenApiClient.Folders.WithFolder_idRemove_shared_link.WithFolder_idRemove_shared_linkPutRequestBody_shared_link SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; AdditionalData?.Remove("shared_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
         private global::Soenneker.Box.OpenApiClient.Folders.WithFolder_idRemove_shared_link.WithFolder_idRemove_shared_linkPutRequestBody_shared_link _explicitNullValueSharedLink = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shield_information_barrier") is { } nullNodeShieldInformationBarrier && nullNodeShieldInformationBarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldInformationBarrier = null;
+            if (parseNode.GetChildNode("shield_information_barrier") is null) { _explicitNullValueShieldInformationBarrier = default!; _explicitNullProperties?.Remove("shield_information_barrier"); }
+            else if (parseNode.GetChildNode("shield_information_barrier") is { } nullNodeShieldInformationBarrier && nullNodeShieldInformationBarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldInformationBarrier = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>A base representation of ashield information barrier object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierBase? ShieldInformationBarrier { get => _explicitNullValueShieldInformationBarrier; set { _explicitNullValueShieldInformationBarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shield_information_barrier"); else _explicitNullProperties?.Remove("shield_information_barrier"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierBase? ShieldInformationBarrier { get => _explicitNullValueShieldInformationBarrier; set { _explicitNullValueShieldInformationBarrier = value; AdditionalData?.Remove("shield_information_barrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shield_information_barrier"); else _explicitNullProperties?.Remove("shield_information_barrier"); } }
         private global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierBase? _explicitNullValueShieldInformationBarrier = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierBase ShieldInformationBarrier { get => _explicitNullValueShieldInformationBarrier; set { _explicitNullValueShieldInformationBarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shield_information_barrier"); else _explicitNullProperties?.Remove("shield_information_barrier"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierBase ShieldInformationBarrier { get => _explicitNullValueShieldInformationBarrier; set { _explicitNullValueShieldInformationBarrier = value; AdditionalData?.Remove("shield_information_barrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shield_information_barrier"); else _explicitNullProperties?.Remove("shield_information_barrier"); } }
         private global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierBase _explicitNullValueShieldInformationBarrier = default!;
 #endif
         /// <summary>

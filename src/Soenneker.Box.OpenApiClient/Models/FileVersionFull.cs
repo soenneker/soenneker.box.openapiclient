@@ -19,7 +19,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("version_number") is { } nullNodeVersionNumber && nullNodeVersionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionNumber = null;
+            if (parseNode.GetChildNode("version_number") is null) { _explicitNullValueVersionNumber = default!; _explicitNullProperties?.Remove("version_number"); }
+            else if (parseNode.GetChildNode("version_number") is { } nullNodeVersionNumber && nullNodeVersionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionNumber = null;
         }
 
         /// <summary>The version number of this file version.</summary>

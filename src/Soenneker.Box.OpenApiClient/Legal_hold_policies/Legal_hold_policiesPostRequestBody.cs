@@ -17,11 +17,16 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policies
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("filter_ended_at") is { } nullNodeFilterEndedAt && nullNodeFilterEndedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterEndedAt = null;
-            if (parseNode.GetChildNode("filter_started_at") is { } nullNodeFilterStartedAt && nullNodeFilterStartedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterStartedAt = null;
-            if (parseNode.GetChildNode("is_ongoing") is { } nullNodeIsOngoing && nullNodeIsOngoing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOngoing = null;
-            if (parseNode.GetChildNode("policy_name") is { } nullNodePolicyName && nullNodePolicyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyName = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("filter_ended_at") is null) { _explicitNullValueFilterEndedAt = default!; _explicitNullProperties?.Remove("filter_ended_at"); }
+            else if (parseNode.GetChildNode("filter_ended_at") is { } nullNodeFilterEndedAt && nullNodeFilterEndedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterEndedAt = null;
+            if (parseNode.GetChildNode("filter_started_at") is null) { _explicitNullValueFilterStartedAt = default!; _explicitNullProperties?.Remove("filter_started_at"); }
+            else if (parseNode.GetChildNode("filter_started_at") is { } nullNodeFilterStartedAt && nullNodeFilterStartedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterStartedAt = null;
+            if (parseNode.GetChildNode("is_ongoing") is null) { _explicitNullValueIsOngoing = default!; _explicitNullProperties?.Remove("is_ongoing"); }
+            else if (parseNode.GetChildNode("is_ongoing") is { } nullNodeIsOngoing && nullNodeIsOngoing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOngoing = null;
+            if (parseNode.GetChildNode("policy_name") is null) { _explicitNullValuePolicyName = default!; _explicitNullProperties?.Remove("policy_name"); }
+            else if (parseNode.GetChildNode("policy_name") is { } nullNodePolicyName && nullNodePolicyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,30 +34,30 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policies
         /// <summary>A description for the policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The filter end date.When this policy is applied using a `custodian` legalhold assignments, it will only apply to file versionscreated or uploaded inside of thedate range. Other assignment types, such as folders andfiles, will ignore the date filter.Required if `is_ongoing` is set to `false`.</summary>
-        public DateTimeOffset? FilterEndedAt { get => _explicitNullValueFilterEndedAt; set { _explicitNullValueFilterEndedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_ended_at"); else _explicitNullProperties?.Remove("filter_ended_at"); } }
+        public DateTimeOffset? FilterEndedAt { get => _explicitNullValueFilterEndedAt; set { _explicitNullValueFilterEndedAt = value; AdditionalData?.Remove("filter_ended_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_ended_at"); else _explicitNullProperties?.Remove("filter_ended_at"); } }
         private DateTimeOffset? _explicitNullValueFilterEndedAt = default!;
         /// <summary>The filter start date.When this policy is applied using a `custodian` legalhold assignments, it will only apply to file versionscreated or uploaded inside of thedate range. Other assignment types, such as folders andfiles, will ignore the date filter.Required if `is_ongoing` is set to `false`.</summary>
-        public DateTimeOffset? FilterStartedAt { get => _explicitNullValueFilterStartedAt; set { _explicitNullValueFilterStartedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_started_at"); else _explicitNullProperties?.Remove("filter_started_at"); } }
+        public DateTimeOffset? FilterStartedAt { get => _explicitNullValueFilterStartedAt; set { _explicitNullValueFilterStartedAt = value; AdditionalData?.Remove("filter_started_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_started_at"); else _explicitNullProperties?.Remove("filter_started_at"); } }
         private DateTimeOffset? _explicitNullValueFilterStartedAt = default!;
         /// <summary>Whether new assignments under this policy shouldcontinue applying to files even after initialization.When this policy is applied using a legal hold assignment,it will continue applying the policy to any new file versionseven after it has been applied.For example, if a legal hold assignment is placed on a usertoday, and that user uploads a file tomorrow, that file willget held. This will continue until the policy is retired.Required if no filter dates are set.</summary>
-        public bool? IsOngoing { get => _explicitNullValueIsOngoing; set { _explicitNullValueIsOngoing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_ongoing"); else _explicitNullProperties?.Remove("is_ongoing"); } }
+        public bool? IsOngoing { get => _explicitNullValueIsOngoing; set { _explicitNullValueIsOngoing = value; AdditionalData?.Remove("is_ongoing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_ongoing"); else _explicitNullProperties?.Remove("is_ongoing"); } }
         private bool? _explicitNullValueIsOngoing = default!;
         /// <summary>The name of the policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
+        public string? PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; AdditionalData?.Remove("policy_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
         private string? _explicitNullValuePolicyName = default!;
 #nullable restore
 #else
-        public string PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
+        public string PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; AdditionalData?.Remove("policy_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
         private string _explicitNullValuePolicyName = default!;
 #endif
         /// <summary>

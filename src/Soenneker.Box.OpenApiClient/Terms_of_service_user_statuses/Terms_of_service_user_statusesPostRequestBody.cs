@@ -17,34 +17,37 @@ namespace Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_accepted") is { } nullNodeIsAccepted && nullNodeIsAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccepted = null;
-            if (parseNode.GetChildNode("tos") is { } nullNodeTos && nullNodeTos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tos = null;
-            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+            if (parseNode.GetChildNode("is_accepted") is null) { _explicitNullValueIsAccepted = default!; _explicitNullProperties?.Remove("is_accepted"); }
+            else if (parseNode.GetChildNode("is_accepted") is { } nullNodeIsAccepted && nullNodeIsAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccepted = null;
+            if (parseNode.GetChildNode("tos") is null) { _explicitNullValueTos = default!; _explicitNullProperties?.Remove("tos"); }
+            else if (parseNode.GetChildNode("tos") is { } nullNodeTos && nullNodeTos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tos = null;
+            if (parseNode.GetChildNode("user") is null) { _explicitNullValueUser = default!; _explicitNullProperties?.Remove("user"); }
+            else if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the user has accepted the terms.</summary>
-        public bool? IsAccepted { get => _explicitNullValueIsAccepted; set { _explicitNullValueIsAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_accepted"); else _explicitNullProperties?.Remove("is_accepted"); } }
+        public bool? IsAccepted { get => _explicitNullValueIsAccepted; set { _explicitNullValueIsAccepted = value; AdditionalData?.Remove("is_accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_accepted"); else _explicitNullProperties?.Remove("is_accepted"); } }
         private bool? _explicitNullValueIsAccepted = default!;
         /// <summary>The terms of service to set the status for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_tos? Tos { get => _explicitNullValueTos; set { _explicitNullValueTos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos"); else _explicitNullProperties?.Remove("tos"); } }
+        public global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_tos? Tos { get => _explicitNullValueTos; set { _explicitNullValueTos = value; AdditionalData?.Remove("tos"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos"); else _explicitNullProperties?.Remove("tos"); } }
         private global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_tos? _explicitNullValueTos = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_tos Tos { get => _explicitNullValueTos; set { _explicitNullValueTos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos"); else _explicitNullProperties?.Remove("tos"); } }
+        public global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_tos Tos { get => _explicitNullValueTos; set { _explicitNullValueTos = value; AdditionalData?.Remove("tos"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos"); else _explicitNullProperties?.Remove("tos"); } }
         private global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_tos _explicitNullValueTos = default!;
 #endif
         /// <summary>The user to set the status for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_user? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_user? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_user? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_user User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_user User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Terms_of_service_user_statusesPostRequestBody_user _explicitNullValueUser = default!;
 #endif
         /// <summary>

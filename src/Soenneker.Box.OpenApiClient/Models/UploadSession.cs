@@ -18,13 +18,20 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("num_parts_processed") is { } nullNodeNumPartsProcessed && nullNodeNumPartsProcessed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumPartsProcessed = null;
-            if (parseNode.GetChildNode("part_size") is { } nullNodePartSize && nullNodePartSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartSize = null;
-            if (parseNode.GetChildNode("session_endpoints") is { } nullNodeSessionEndpoints && nullNodeSessionEndpoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionEndpoints = null;
-            if (parseNode.GetChildNode("session_expires_at") is { } nullNodeSessionExpiresAt && nullNodeSessionExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionExpiresAt = null;
-            if (parseNode.GetChildNode("total_parts") is { } nullNodeTotalParts && nullNodeTotalParts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalParts = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("num_parts_processed") is null) { _explicitNullValueNumPartsProcessed = default!; _explicitNullProperties?.Remove("num_parts_processed"); }
+            else if (parseNode.GetChildNode("num_parts_processed") is { } nullNodeNumPartsProcessed && nullNodeNumPartsProcessed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumPartsProcessed = null;
+            if (parseNode.GetChildNode("part_size") is null) { _explicitNullValuePartSize = default!; _explicitNullProperties?.Remove("part_size"); }
+            else if (parseNode.GetChildNode("part_size") is { } nullNodePartSize && nullNodePartSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartSize = null;
+            if (parseNode.GetChildNode("session_endpoints") is null) { _explicitNullValueSessionEndpoints = default!; _explicitNullProperties?.Remove("session_endpoints"); }
+            else if (parseNode.GetChildNode("session_endpoints") is { } nullNodeSessionEndpoints && nullNodeSessionEndpoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionEndpoints = null;
+            if (parseNode.GetChildNode("session_expires_at") is null) { _explicitNullValueSessionExpiresAt = default!; _explicitNullProperties?.Remove("session_expires_at"); }
+            else if (parseNode.GetChildNode("session_expires_at") is { } nullNodeSessionExpiresAt && nullNodeSessionExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionExpiresAt = null;
+            if (parseNode.GetChildNode("total_parts") is null) { _explicitNullValueTotalParts = default!; _explicitNullProperties?.Remove("total_parts"); }
+            else if (parseNode.GetChildNode("total_parts") is { } nullNodeTotalParts && nullNodeTotalParts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalParts = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,37 +39,37 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The unique identifier for this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The number of parts that have been uploaded and processedby the server. This starts at `0`.When committing a file, inspecting this property canprovide insight if all parts have been uploaded correctly.</summary>
-        public int? NumPartsProcessed { get => _explicitNullValueNumPartsProcessed; set { _explicitNullValueNumPartsProcessed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_parts_processed"); else _explicitNullProperties?.Remove("num_parts_processed"); } }
+        public int? NumPartsProcessed { get => _explicitNullValueNumPartsProcessed; set { _explicitNullValueNumPartsProcessed = value; AdditionalData?.Remove("num_parts_processed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_parts_processed"); else _explicitNullProperties?.Remove("num_parts_processed"); } }
         private int? _explicitNullValueNumPartsProcessed = default!;
         /// <summary>The size in bytes that must be used for all parts of theupload.Only the last part is allowed to be of a smaller size.</summary>
-        public long? PartSize { get => _explicitNullValuePartSize; set { _explicitNullValuePartSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("part_size"); else _explicitNullProperties?.Remove("part_size"); } }
+        public long? PartSize { get => _explicitNullValuePartSize; set { _explicitNullValuePartSize = value; AdditionalData?.Remove("part_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("part_size"); else _explicitNullProperties?.Remove("part_size"); } }
         private long? _explicitNullValuePartSize = default!;
         /// <summary>The session_endpoints property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UploadSession_session_endpoints? SessionEndpoints { get => _explicitNullValueSessionEndpoints; set { _explicitNullValueSessionEndpoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_endpoints"); else _explicitNullProperties?.Remove("session_endpoints"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UploadSession_session_endpoints? SessionEndpoints { get => _explicitNullValueSessionEndpoints; set { _explicitNullValueSessionEndpoints = value; AdditionalData?.Remove("session_endpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_endpoints"); else _explicitNullProperties?.Remove("session_endpoints"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UploadSession_session_endpoints? _explicitNullValueSessionEndpoints = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UploadSession_session_endpoints SessionEndpoints { get => _explicitNullValueSessionEndpoints; set { _explicitNullValueSessionEndpoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_endpoints"); else _explicitNullProperties?.Remove("session_endpoints"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UploadSession_session_endpoints SessionEndpoints { get => _explicitNullValueSessionEndpoints; set { _explicitNullValueSessionEndpoints = value; AdditionalData?.Remove("session_endpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_endpoints"); else _explicitNullProperties?.Remove("session_endpoints"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UploadSession_session_endpoints _explicitNullValueSessionEndpoints = default!;
 #endif
         /// <summary>The date and time when this session expires.</summary>
-        public DateTimeOffset? SessionExpiresAt { get => _explicitNullValueSessionExpiresAt; set { _explicitNullValueSessionExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_expires_at"); else _explicitNullProperties?.Remove("session_expires_at"); } }
+        public DateTimeOffset? SessionExpiresAt { get => _explicitNullValueSessionExpiresAt; set { _explicitNullValueSessionExpiresAt = value; AdditionalData?.Remove("session_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_expires_at"); else _explicitNullProperties?.Remove("session_expires_at"); } }
         private DateTimeOffset? _explicitNullValueSessionExpiresAt = default!;
         /// <summary>The total number of parts expected in this upload session,as determined by the file size and part size.</summary>
-        public int? TotalParts { get => _explicitNullValueTotalParts; set { _explicitNullValueTotalParts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_parts"); else _explicitNullProperties?.Remove("total_parts"); } }
+        public int? TotalParts { get => _explicitNullValueTotalParts; set { _explicitNullValueTotalParts = value; AdditionalData?.Remove("total_parts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_parts"); else _explicitNullProperties?.Remove("total_parts"); } }
         private int? _explicitNullValueTotalParts = default!;
         /// <summary>The value will always be `upload_session`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.UploadSession_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UploadSession_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UploadSession_type? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.UploadSession"/> and sets the default values.
@@ -95,7 +102,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "session_endpoints", n => { SessionEndpoints = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.UploadSession_session_endpoints>(global::Soenneker.Box.OpenApiClient.Models.UploadSession_session_endpoints.CreateFromDiscriminatorValue); } },
                 { "session_expires_at", n => { SessionExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "total_parts", n => { TotalParts = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.UploadSession_type>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.UploadSession_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

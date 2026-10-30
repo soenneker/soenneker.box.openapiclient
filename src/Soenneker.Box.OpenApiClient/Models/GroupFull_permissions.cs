@@ -18,13 +18,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("can_invite_as_collaborator") is { } nullNodeCanInviteAsCollaborator && nullNodeCanInviteAsCollaborator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanInviteAsCollaborator = null;
+            if (parseNode.GetChildNode("can_invite_as_collaborator") is null) { _explicitNullValueCanInviteAsCollaborator = default!; _explicitNullProperties?.Remove("can_invite_as_collaborator"); }
+            else if (parseNode.GetChildNode("can_invite_as_collaborator") is { } nullNodeCanInviteAsCollaborator && nullNodeCanInviteAsCollaborator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanInviteAsCollaborator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies if the user can invite the group to collaborate on any items.</summary>
-        public bool? CanInviteAsCollaborator { get => _explicitNullValueCanInviteAsCollaborator; set { _explicitNullValueCanInviteAsCollaborator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_invite_as_collaborator"); else _explicitNullProperties?.Remove("can_invite_as_collaborator"); } }
+        public bool? CanInviteAsCollaborator { get => _explicitNullValueCanInviteAsCollaborator; set { _explicitNullValueCanInviteAsCollaborator = value; AdditionalData?.Remove("can_invite_as_collaborator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_invite_as_collaborator"); else _explicitNullProperties?.Remove("can_invite_as_collaborator"); } }
         private bool? _explicitNullValueCanInviteAsCollaborator = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.GroupFull_permissions"/> and sets the default values.

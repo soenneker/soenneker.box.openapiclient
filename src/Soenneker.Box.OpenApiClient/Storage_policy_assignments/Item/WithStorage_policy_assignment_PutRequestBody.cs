@@ -17,7 +17,8 @@ namespace Soenneker.Box.OpenApiClient.Storage_policy_assignments.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("storage_policy") is { } nullNodeStoragePolicy && nullNodeStoragePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoragePolicy = null;
+            if (parseNode.GetChildNode("storage_policy") is null) { _explicitNullValueStoragePolicy = default!; _explicitNullProperties?.Remove("storage_policy"); }
+            else if (parseNode.GetChildNode("storage_policy") is { } nullNodeStoragePolicy && nullNodeStoragePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoragePolicy = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Box.OpenApiClient.Storage_policy_assignments.Item
         /// <summary>The storage policy to assign to the user orenterprise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Storage_policy_assignments.Item.WithStorage_policy_assignment_PutRequestBody_storage_policy? StoragePolicy { get => _explicitNullValueStoragePolicy; set { _explicitNullValueStoragePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_policy"); else _explicitNullProperties?.Remove("storage_policy"); } }
+        public global::Soenneker.Box.OpenApiClient.Storage_policy_assignments.Item.WithStorage_policy_assignment_PutRequestBody_storage_policy? StoragePolicy { get => _explicitNullValueStoragePolicy; set { _explicitNullValueStoragePolicy = value; AdditionalData?.Remove("storage_policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_policy"); else _explicitNullProperties?.Remove("storage_policy"); } }
         private global::Soenneker.Box.OpenApiClient.Storage_policy_assignments.Item.WithStorage_policy_assignment_PutRequestBody_storage_policy? _explicitNullValueStoragePolicy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Storage_policy_assignments.Item.WithStorage_policy_assignment_PutRequestBody_storage_policy StoragePolicy { get => _explicitNullValueStoragePolicy; set { _explicitNullValueStoragePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_policy"); else _explicitNullProperties?.Remove("storage_policy"); } }
+        public global::Soenneker.Box.OpenApiClient.Storage_policy_assignments.Item.WithStorage_policy_assignment_PutRequestBody_storage_policy StoragePolicy { get => _explicitNullValueStoragePolicy; set { _explicitNullValueStoragePolicy = value; AdditionalData?.Remove("storage_policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_policy"); else _explicitNullProperties?.Remove("storage_policy"); } }
         private global::Soenneker.Box.OpenApiClient.Storage_policy_assignments.Item.WithStorage_policy_assignment_PutRequestBody_storage_policy _explicitNullValueStoragePolicy = default!;
 #endif
         /// <summary>

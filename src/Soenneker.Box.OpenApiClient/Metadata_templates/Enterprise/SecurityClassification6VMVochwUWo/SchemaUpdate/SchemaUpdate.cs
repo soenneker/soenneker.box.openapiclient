@@ -18,10 +18,14 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
-            if (parseNode.GetChildNode("enumOptionKey") is { } nullNodeEnumOptionKey && nullNodeEnumOptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOptionKey = null;
-            if (parseNode.GetChildNode("fieldKey") is { } nullNodeFieldKey && nullNodeFieldKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKey = null;
-            if (parseNode.GetChildNode("op") is { } nullNodeOp && nullNodeOp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Op = null;
+            if (parseNode.GetChildNode("data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("data"); }
+            else if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("enumOptionKey") is null) { _explicitNullValueEnumOptionKey = default!; _explicitNullProperties?.Remove("enumOptionKey"); }
+            else if (parseNode.GetChildNode("enumOptionKey") is { } nullNodeEnumOptionKey && nullNodeEnumOptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOptionKey = null;
+            if (parseNode.GetChildNode("fieldKey") is null) { _explicitNullValueFieldKey = default!; _explicitNullProperties?.Remove("fieldKey"); }
+            else if (parseNode.GetChildNode("fieldKey") is { } nullNodeFieldKey && nullNodeFieldKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKey = null;
+            if (parseNode.GetChildNode("op") is null) { _explicitNullValueOp = default!; _explicitNullProperties?.Remove("op"); }
+            else if (parseNode.GetChildNode("op") is { } nullNodeOp && nullNodeOp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Op = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,28 +33,28 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
         /// <summary>The details of the updated classification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data _explicitNullValueData = default!;
 #endif
         /// <summary>The original label of the classification to change.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnumOptionKey { get => _explicitNullValueEnumOptionKey; set { _explicitNullValueEnumOptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKey"); else _explicitNullProperties?.Remove("enumOptionKey"); } }
+        public string? EnumOptionKey { get => _explicitNullValueEnumOptionKey; set { _explicitNullValueEnumOptionKey = value; AdditionalData?.Remove("enumOptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKey"); else _explicitNullProperties?.Remove("enumOptionKey"); } }
         private string? _explicitNullValueEnumOptionKey = default!;
 #nullable restore
 #else
-        public string EnumOptionKey { get => _explicitNullValueEnumOptionKey; set { _explicitNullValueEnumOptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKey"); else _explicitNullProperties?.Remove("enumOptionKey"); } }
+        public string EnumOptionKey { get => _explicitNullValueEnumOptionKey; set { _explicitNullValueEnumOptionKey = value; AdditionalData?.Remove("enumOptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumOptionKey"); else _explicitNullProperties?.Remove("enumOptionKey"); } }
         private string _explicitNullValueEnumOptionKey = default!;
 #endif
         /// <summary>Defines classifications available in the enterprise.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_fieldKey? FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_fieldKey? FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; AdditionalData?.Remove("fieldKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_fieldKey? _explicitNullValueFieldKey = default!;
         /// <summary>The type of change to perform on the classificationobject.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_op? Op { get => _explicitNullValueOp; set { _explicitNullValueOp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("op"); else _explicitNullProperties?.Remove("op"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_op? Op { get => _explicitNullValueOp; set { _explicitNullValueOp = value; AdditionalData?.Remove("op"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("op"); else _explicitNullProperties?.Remove("op"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_op? _explicitNullValueOp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate"/> and sets the default values.
@@ -79,8 +83,8 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
             {
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data>(global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data.CreateFromDiscriminatorValue); } },
                 { "enumOptionKey", n => { EnumOptionKey = n.GetStringValue(); } },
-                { "fieldKey", n => { FieldKey = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_fieldKey>(); } },
-                { "op", n => { Op = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_op>(); } },
+                { "fieldKey", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_fieldKey>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFieldKey = default; _explicitNullProperties?.Remove("fieldKey"); AdditionalData["fieldKey"] = unknown; } else { FieldKey = parsed; AdditionalData.Remove("fieldKey"); } } },
+                { "op", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_op>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOp = default; _explicitNullProperties?.Remove("op"); AdditionalData["op"] = unknown; } else { Op = parsed; AdditionalData.Remove("op"); } } },
             };
         }
         /// <summary>

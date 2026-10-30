@@ -19,7 +19,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("tagged_message") is { } nullNodeTaggedMessage && nullNodeTaggedMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaggedMessage = null;
+            if (parseNode.GetChildNode("tagged_message") is null) { _explicitNullValueTaggedMessage = default!; _explicitNullProperties?.Remove("tagged_message"); }
+            else if (parseNode.GetChildNode("tagged_message") is { } nullNodeTaggedMessage && nullNodeTaggedMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaggedMessage = null;
         }
 
         /// <summary>The string representing the comment text with@mentions included. @mention format is @[id:username]where `id` is user&apos;s Box ID and `username` istheir display name.</summary>

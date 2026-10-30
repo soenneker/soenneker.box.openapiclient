@@ -18,118 +18,133 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acceptance_requirements_status") is { } nullNodeAcceptanceRequirementsStatus && nullNodeAcceptanceRequirementsStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptanceRequirementsStatus = null;
-            if (parseNode.GetChildNode("accessible_by") is { } nullNodeAccessibleBy && nullNodeAccessibleBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessibleBy = null;
-            if (parseNode.GetChildNode("acknowledged_at") is { } nullNodeAcknowledgedAt && nullNodeAcknowledgedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcknowledgedAt = null;
-            if (parseNode.GetChildNode("app_item") is { } nullNodeAppItem && nullNodeAppItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppItem = null;
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
-            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("invite_email") is { } nullNodeInviteEmail && nullNodeInviteEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteEmail = null;
-            if (parseNode.GetChildNode("is_access_only") is { } nullNodeIsAccessOnly && nullNodeIsAccessOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessOnly = null;
-            if (parseNode.GetChildNode("item") is { } nullNodeItem && nullNodeItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Item = null;
-            if (parseNode.GetChildNode("modified_at") is { } nullNodeModifiedAt && nullNodeModifiedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAt = null;
-            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("acceptance_requirements_status") is null) { _explicitNullValueAcceptanceRequirementsStatus = default!; _explicitNullProperties?.Remove("acceptance_requirements_status"); }
+            else if (parseNode.GetChildNode("acceptance_requirements_status") is { } nullNodeAcceptanceRequirementsStatus && nullNodeAcceptanceRequirementsStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptanceRequirementsStatus = null;
+            if (parseNode.GetChildNode("accessible_by") is null) { _explicitNullValueAccessibleBy = default!; _explicitNullProperties?.Remove("accessible_by"); }
+            else if (parseNode.GetChildNode("accessible_by") is { } nullNodeAccessibleBy && nullNodeAccessibleBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessibleBy = null;
+            if (parseNode.GetChildNode("acknowledged_at") is null) { _explicitNullValueAcknowledgedAt = default!; _explicitNullProperties?.Remove("acknowledged_at"); }
+            else if (parseNode.GetChildNode("acknowledged_at") is { } nullNodeAcknowledgedAt && nullNodeAcknowledgedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcknowledgedAt = null;
+            if (parseNode.GetChildNode("app_item") is null) { _explicitNullValueAppItem = default!; _explicitNullProperties?.Remove("app_item"); }
+            else if (parseNode.GetChildNode("app_item") is { } nullNodeAppItem && nullNodeAppItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppItem = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("created_by") is null) { _explicitNullValueCreatedBy = default!; _explicitNullProperties?.Remove("created_by"); }
+            else if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("expires_at") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expires_at"); }
+            else if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("invite_email") is null) { _explicitNullValueInviteEmail = default!; _explicitNullProperties?.Remove("invite_email"); }
+            else if (parseNode.GetChildNode("invite_email") is { } nullNodeInviteEmail && nullNodeInviteEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteEmail = null;
+            if (parseNode.GetChildNode("is_access_only") is null) { _explicitNullValueIsAccessOnly = default!; _explicitNullProperties?.Remove("is_access_only"); }
+            else if (parseNode.GetChildNode("is_access_only") is { } nullNodeIsAccessOnly && nullNodeIsAccessOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessOnly = null;
+            if (parseNode.GetChildNode("item") is null) { _explicitNullValueItem = default!; _explicitNullProperties?.Remove("item"); }
+            else if (parseNode.GetChildNode("item") is { } nullNodeItem && nullNodeItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Item = null;
+            if (parseNode.GetChildNode("modified_at") is null) { _explicitNullValueModifiedAt = default!; _explicitNullProperties?.Remove("modified_at"); }
+            else if (parseNode.GetChildNode("modified_at") is { } nullNodeModifiedAt && nullNodeModifiedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAt = null;
+            if (parseNode.GetChildNode("role") is null) { _explicitNullValueRole = default!; _explicitNullProperties?.Remove("role"); }
+            else if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>The acceptance_requirements_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status? AcceptanceRequirementsStatus { get => _explicitNullValueAcceptanceRequirementsStatus; set { _explicitNullValueAcceptanceRequirementsStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptance_requirements_status"); else _explicitNullProperties?.Remove("acceptance_requirements_status"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status? AcceptanceRequirementsStatus { get => _explicitNullValueAcceptanceRequirementsStatus; set { _explicitNullValueAcceptanceRequirementsStatus = value; AdditionalData?.Remove("acceptance_requirements_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptance_requirements_status"); else _explicitNullProperties?.Remove("acceptance_requirements_status"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status? _explicitNullValueAcceptanceRequirementsStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status AcceptanceRequirementsStatus { get => _explicitNullValueAcceptanceRequirementsStatus; set { _explicitNullValueAcceptanceRequirementsStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptance_requirements_status"); else _explicitNullProperties?.Remove("acceptance_requirements_status"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status AcceptanceRequirementsStatus { get => _explicitNullValueAcceptanceRequirementsStatus; set { _explicitNullValueAcceptanceRequirementsStatus = value; AdditionalData?.Remove("acceptance_requirements_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptance_requirements_status"); else _explicitNullProperties?.Remove("acceptance_requirements_status"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status _explicitNullValueAcceptanceRequirementsStatus = default!;
 #endif
         /// <summary>The user or group that is granted access.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.CollaborationAccessGrantee? AccessibleBy { get => _explicitNullValueAccessibleBy; set { _explicitNullValueAccessibleBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible_by"); else _explicitNullProperties?.Remove("accessible_by"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CollaborationAccessGrantee? AccessibleBy { get => _explicitNullValueAccessibleBy; set { _explicitNullValueAccessibleBy = value; AdditionalData?.Remove("accessible_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible_by"); else _explicitNullProperties?.Remove("accessible_by"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CollaborationAccessGrantee? _explicitNullValueAccessibleBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.CollaborationAccessGrantee AccessibleBy { get => _explicitNullValueAccessibleBy; set { _explicitNullValueAccessibleBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible_by"); else _explicitNullProperties?.Remove("accessible_by"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CollaborationAccessGrantee AccessibleBy { get => _explicitNullValueAccessibleBy; set { _explicitNullValueAccessibleBy = value; AdditionalData?.Remove("accessible_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible_by"); else _explicitNullProperties?.Remove("accessible_by"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CollaborationAccessGrantee _explicitNullValueAccessibleBy = default!;
 #endif
         /// <summary>When the `status` of the collaboration object changed to`accepted` or `rejected`.</summary>
-        public DateTimeOffset? AcknowledgedAt { get => _explicitNullValueAcknowledgedAt; set { _explicitNullValueAcknowledgedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acknowledged_at"); else _explicitNullProperties?.Remove("acknowledged_at"); } }
+        public DateTimeOffset? AcknowledgedAt { get => _explicitNullValueAcknowledgedAt; set { _explicitNullValueAcknowledgedAt = value; AdditionalData?.Remove("acknowledged_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acknowledged_at"); else _explicitNullProperties?.Remove("acknowledged_at"); } }
         private DateTimeOffset? _explicitNullValueAcknowledgedAt = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The app_item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AppItem? AppItem { get => _explicitNullValueAppItem; set { _explicitNullValueAppItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_item"); else _explicitNullProperties?.Remove("app_item"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AppItem? AppItem { get => _explicitNullValueAppItem; set { _explicitNullValueAppItem = value; AdditionalData?.Remove("app_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_item"); else _explicitNullProperties?.Remove("app_item"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AppItem? _explicitNullValueAppItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AppItem AppItem { get => _explicitNullValueAppItem; set { _explicitNullValueAppItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_item"); else _explicitNullProperties?.Remove("app_item"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AppItem AppItem { get => _explicitNullValueAppItem; set { _explicitNullValueAppItem = value; AdditionalData?.Remove("app_item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_item"); else _explicitNullProperties?.Remove("app_item"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AppItem _explicitNullValueAppItem = default!;
 #endif
         /// <summary>When the collaboration object was created.</summary>
-        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserCollaborations? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UserCollaborations? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("created_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UserCollaborations? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserCollaborations CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UserCollaborations CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("created_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UserCollaborations _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>When the collaboration will expire, or `null` if no expirationdate is set.</summary>
-        public DateTimeOffset? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        public DateTimeOffset? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
         private DateTimeOffset? _explicitNullValueExpiresAt = default!;
         /// <summary>The unique identifier for this collaboration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The email address used to invite an unregistered collaborator, ifthey are not a registered user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InviteEmail { get => _explicitNullValueInviteEmail; set { _explicitNullValueInviteEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_email"); else _explicitNullProperties?.Remove("invite_email"); } }
+        public string? InviteEmail { get => _explicitNullValueInviteEmail; set { _explicitNullValueInviteEmail = value; AdditionalData?.Remove("invite_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_email"); else _explicitNullProperties?.Remove("invite_email"); } }
         private string? _explicitNullValueInviteEmail = default!;
 #nullable restore
 #else
-        public string InviteEmail { get => _explicitNullValueInviteEmail; set { _explicitNullValueInviteEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_email"); else _explicitNullProperties?.Remove("invite_email"); } }
+        public string InviteEmail { get => _explicitNullValueInviteEmail; set { _explicitNullValueInviteEmail = value; AdditionalData?.Remove("invite_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_email"); else _explicitNullProperties?.Remove("invite_email"); } }
         private string _explicitNullValueInviteEmail = default!;
 #endif
         /// <summary>If set to `true`, collaborators have access toshared items, but such items won&apos;t be visible in theAll Files list. Additionally, collaborators won&apos;tsee the path to the root folder for theshared item.</summary>
-        public bool? IsAccessOnly { get => _explicitNullValueIsAccessOnly; set { _explicitNullValueIsAccessOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_access_only"); else _explicitNullProperties?.Remove("is_access_only"); } }
+        public bool? IsAccessOnly { get => _explicitNullValueIsAccessOnly; set { _explicitNullValueIsAccessOnly = value; AdditionalData?.Remove("is_access_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_access_only"); else _explicitNullProperties?.Remove("is_access_only"); } }
         private bool? _explicitNullValueIsAccessOnly = default!;
         /// <summary>The item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.CollaborationItem? Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CollaborationItem? Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; AdditionalData?.Remove("item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CollaborationItem? _explicitNullValueItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.CollaborationItem Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.CollaborationItem Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; AdditionalData?.Remove("item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
         private global::Soenneker.Box.OpenApiClient.Models.CollaborationItem _explicitNullValueItem = default!;
 #endif
         /// <summary>When the collaboration object was last modified.</summary>
-        public DateTimeOffset? ModifiedAt { get => _explicitNullValueModifiedAt; set { _explicitNullValueModifiedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at"); else _explicitNullProperties?.Remove("modified_at"); } }
+        public DateTimeOffset? ModifiedAt { get => _explicitNullValueModifiedAt; set { _explicitNullValueModifiedAt = value; AdditionalData?.Remove("modified_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at"); else _explicitNullProperties?.Remove("modified_at"); } }
         private DateTimeOffset? _explicitNullValueModifiedAt = default!;
         /// <summary>The level of access granted.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Collaboration_role? _explicitNullValueRole = default!;
         /// <summary>The status of the collaboration invitation. If the statusis `pending`, `name` returns an empty string.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Collaboration_status? _explicitNullValueStatus = default!;
         /// <summary>The value will always be `collaboration`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Collaboration_type? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.Collaboration"/> and sets the default values.
@@ -168,9 +183,9 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "is_access_only", n => { IsAccessOnly = n.GetBoolValue(); } },
                 { "item", n => { Item = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.CollaborationItem>(global::Soenneker.Box.OpenApiClient.Models.CollaborationItem.CreateFromDiscriminatorValue); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_role>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_status>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_type>(); } },
+                { "role", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_role>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRole = default; _explicitNullProperties?.Remove("role"); AdditionalData["role"] = unknown; } else { Role = parsed; AdditionalData.Remove("role"); } } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_status>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

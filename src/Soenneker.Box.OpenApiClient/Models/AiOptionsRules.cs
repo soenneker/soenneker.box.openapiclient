@@ -18,23 +18,25 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("multi_select") is { } nullNodeMultiSelect && nullNodeMultiSelect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiSelect = null;
-            if (parseNode.GetChildNode("selectable_levels") is { } nullNodeSelectableLevels && nullNodeSelectableLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectableLevels = null;
+            if (parseNode.GetChildNode("multi_select") is null) { _explicitNullValueMultiSelect = default!; _explicitNullProperties?.Remove("multi_select"); }
+            else if (parseNode.GetChildNode("multi_select") is { } nullNodeMultiSelect && nullNodeMultiSelect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiSelect = null;
+            if (parseNode.GetChildNode("selectable_levels") is null) { _explicitNullValueSelectableLevels = default!; _explicitNullProperties?.Remove("selectable_levels"); }
+            else if (parseNode.GetChildNode("selectable_levels") is { } nullNodeSelectableLevels && nullNodeSelectableLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectableLevels = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the field is a multi-select field.If true, the field can have multiple values.</summary>
-        public bool? MultiSelect { get => _explicitNullValueMultiSelect; set { _explicitNullValueMultiSelect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_select"); else _explicitNullProperties?.Remove("multi_select"); } }
+        public bool? MultiSelect { get => _explicitNullValueMultiSelect; set { _explicitNullValueMultiSelect = value; AdditionalData?.Remove("multi_select"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_select"); else _explicitNullProperties?.Remove("multi_select"); } }
         private bool? _explicitNullValueMultiSelect = default!;
         /// <summary>The selectable levels for the field.This is used to limit the levels of the taxonomy that can be selected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? SelectableLevels { get => _explicitNullValueSelectableLevels; set { _explicitNullValueSelectableLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectable_levels"); else _explicitNullProperties?.Remove("selectable_levels"); } }
+        public List<int?>? SelectableLevels { get => _explicitNullValueSelectableLevels; set { _explicitNullValueSelectableLevels = value; AdditionalData?.Remove("selectable_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectable_levels"); else _explicitNullProperties?.Remove("selectable_levels"); } }
         private List<int?>? _explicitNullValueSelectableLevels = default!;
 #nullable restore
 #else
-        public List<int?> SelectableLevels { get => _explicitNullValueSelectableLevels; set { _explicitNullValueSelectableLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectable_levels"); else _explicitNullProperties?.Remove("selectable_levels"); } }
+        public List<int?> SelectableLevels { get => _explicitNullValueSelectableLevels; set { _explicitNullValueSelectableLevels = value; AdditionalData?.Remove("selectable_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectable_levels"); else _explicitNullProperties?.Remove("selectable_levels"); } }
         private List<int?> _explicitNullValueSelectableLevels = default!;
 #endif
         /// <summary>

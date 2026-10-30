@@ -18,8 +18,10 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowlist") is { } nullNodeAllowlist && nullNodeAllowlist.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Allowlist = null;
-            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("allowlist") is null) { _explicitNullValueAllowlist = default!; _explicitNullProperties?.Remove("allowlist"); }
+            else if (parseNode.GetChildNode("allowlist") is { } nullNodeAllowlist && nullNodeAllowlist.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Allowlist = null;
+            if (parseNode.GetChildNode("mode") is null) { _explicitNullValueMode = default!; _explicitNullProperties?.Remove("mode"); }
+            else if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The list of email and domain entries that are permitted to access theshared link when `mode` is `allowlist`. Anonymous users whoseemail matches an entry can request and verify a one-time-passcode.Because the entries carry recipient email addresses and the identityof the user who added them, this field is only returned to userswith owner, co-owner, or editor access on the item. For viewercollaborators and below the field is omitted.An allowlist contains at most 1000 entries, matching the limitenforced when setting the allowlist on a shared link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpAllowlistEntry>? Allowlist { get => _explicitNullValueAllowlist; set { _explicitNullValueAllowlist = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowlist"); else _explicitNullProperties?.Remove("allowlist"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpAllowlistEntry>? Allowlist { get => _explicitNullValueAllowlist; set { _explicitNullValueAllowlist = value; AdditionalData?.Remove("allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowlist"); else _explicitNullProperties?.Remove("allowlist"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpAllowlistEntry>? _explicitNullValueAllowlist = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpAllowlistEntry> Allowlist { get => _explicitNullValueAllowlist; set { _explicitNullValueAllowlist = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowlist"); else _explicitNullProperties?.Remove("allowlist"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpAllowlistEntry> Allowlist { get => _explicitNullValueAllowlist; set { _explicitNullValueAllowlist = value; AdditionalData?.Remove("allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowlist"); else _explicitNullProperties?.Remove("allowlist"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpAllowlistEntry> _explicitNullValueAllowlist = default!;
 #endif
         /// <summary>The current OTP enforcement mode for the shared link.* `none` - OTP enforcement is turned off. The shared link is accessible  without any one-time-passcode verification.* `open` - Any anonymous recipient can request a one-time-passcode to  any email address and access the shared link after verifying it.  Collaborators and registered Box users access the link without  being prompted.* `allowlist` - Anonymous recipients can request a one-time-passcode  only when they enter an email that matches an entry on the  `allowlist`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        public string? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
         private string? _explicitNullValueMode = default!;
 #nullable restore
 #else
-        public string Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        public string Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
         private string _explicitNullValueMode = default!;
 #endif
         /// <summary>

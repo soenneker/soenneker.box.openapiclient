@@ -18,13 +18,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("validation_type") is { } nullNodeValidationType && nullNodeValidationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationType = null;
+            if (parseNode.GetChildNode("validation_type") is null) { _explicitNullValueValidationType = default!; _explicitNullProperties?.Remove("validation_type"); }
+            else if (parseNode.GetChildNode("validation_type") is { } nullNodeValidationType && nullNodeValidationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Validates that the text input uses the European date format `DD/MM/YYYY`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation_validation_type? ValidationType { get => _explicitNullValueValidationType; set { _explicitNullValueValidationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_type"); else _explicitNullProperties?.Remove("validation_type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation_validation_type? ValidationType { get => _explicitNullValueValidationType; set { _explicitNullValueValidationType = value; AdditionalData?.Remove("validation_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_type"); else _explicitNullProperties?.Remove("validation_type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation_validation_type? _explicitNullValueValidationType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "validation_type", n => { ValidationType = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation_validation_type>(); } },
+                { "validation_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation_validation_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueValidationType = default; _explicitNullProperties?.Remove("validation_type"); AdditionalData["validation_type"] = unknown; } else { ValidationType = parsed; AdditionalData.Remove("validation_type"); } } },
             };
         }
         /// <summary>

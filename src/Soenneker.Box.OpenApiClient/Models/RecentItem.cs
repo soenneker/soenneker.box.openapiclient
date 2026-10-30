@@ -18,49 +18,54 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("interacted_at") is { } nullNodeInteractedAt && nullNodeInteractedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractedAt = null;
-            if (parseNode.GetChildNode("interaction_shared_link") is { } nullNodeInteractionSharedLink && nullNodeInteractionSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractionSharedLink = null;
-            if (parseNode.GetChildNode("interaction_type") is { } nullNodeInteractionType && nullNodeInteractionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractionType = null;
-            if (parseNode.GetChildNode("item") is { } nullNodeItem && nullNodeItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Item = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("interacted_at") is null) { _explicitNullValueInteractedAt = default!; _explicitNullProperties?.Remove("interacted_at"); }
+            else if (parseNode.GetChildNode("interacted_at") is { } nullNodeInteractedAt && nullNodeInteractedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractedAt = null;
+            if (parseNode.GetChildNode("interaction_shared_link") is null) { _explicitNullValueInteractionSharedLink = default!; _explicitNullProperties?.Remove("interaction_shared_link"); }
+            else if (parseNode.GetChildNode("interaction_shared_link") is { } nullNodeInteractionSharedLink && nullNodeInteractionSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractionSharedLink = null;
+            if (parseNode.GetChildNode("interaction_type") is null) { _explicitNullValueInteractionType = default!; _explicitNullProperties?.Remove("interaction_type"); }
+            else if (parseNode.GetChildNode("interaction_type") is { } nullNodeInteractionType && nullNodeInteractionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractionType = null;
+            if (parseNode.GetChildNode("item") is null) { _explicitNullValueItem = default!; _explicitNullProperties?.Remove("item"); }
+            else if (parseNode.GetChildNode("item") is { } nullNodeItem && nullNodeItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Item = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time of the most recent interaction.</summary>
-        public DateTimeOffset? InteractedAt { get => _explicitNullValueInteractedAt; set { _explicitNullValueInteractedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interacted_at"); else _explicitNullProperties?.Remove("interacted_at"); } }
+        public DateTimeOffset? InteractedAt { get => _explicitNullValueInteractedAt; set { _explicitNullValueInteractedAt = value; AdditionalData?.Remove("interacted_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interacted_at"); else _explicitNullProperties?.Remove("interacted_at"); } }
         private DateTimeOffset? _explicitNullValueInteractedAt = default!;
         /// <summary>If the item was accessed through a shared link it will appear here,otherwise this will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InteractionSharedLink { get => _explicitNullValueInteractionSharedLink; set { _explicitNullValueInteractionSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction_shared_link"); else _explicitNullProperties?.Remove("interaction_shared_link"); } }
+        public string? InteractionSharedLink { get => _explicitNullValueInteractionSharedLink; set { _explicitNullValueInteractionSharedLink = value; AdditionalData?.Remove("interaction_shared_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction_shared_link"); else _explicitNullProperties?.Remove("interaction_shared_link"); } }
         private string? _explicitNullValueInteractionSharedLink = default!;
 #nullable restore
 #else
-        public string InteractionSharedLink { get => _explicitNullValueInteractionSharedLink; set { _explicitNullValueInteractionSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction_shared_link"); else _explicitNullProperties?.Remove("interaction_shared_link"); } }
+        public string InteractionSharedLink { get => _explicitNullValueInteractionSharedLink; set { _explicitNullValueInteractionSharedLink = value; AdditionalData?.Remove("interaction_shared_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction_shared_link"); else _explicitNullProperties?.Remove("interaction_shared_link"); } }
         private string _explicitNullValueInteractionSharedLink = default!;
 #endif
         /// <summary>The most recent type of access the user performed onthe item.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.RecentItem_interaction_type? InteractionType { get => _explicitNullValueInteractionType; set { _explicitNullValueInteractionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction_type"); else _explicitNullProperties?.Remove("interaction_type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RecentItem_interaction_type? InteractionType { get => _explicitNullValueInteractionType; set { _explicitNullValueInteractionType = value; AdditionalData?.Remove("interaction_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interaction_type"); else _explicitNullProperties?.Remove("interaction_type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RecentItem_interaction_type? _explicitNullValueInteractionType = default!;
         /// <summary>The item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.RecentItemResource? Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RecentItemResource? Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; AdditionalData?.Remove("item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RecentItemResource? _explicitNullValueItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.RecentItemResource Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RecentItemResource Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; AdditionalData?.Remove("item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RecentItemResource _explicitNullValueItem = default!;
 #endif
         /// <summary>The value will always be `recent_item`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>
@@ -90,7 +95,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             {
                 { "interacted_at", n => { InteractedAt = n.GetDateTimeOffsetValue(); } },
                 { "interaction_shared_link", n => { InteractionSharedLink = n.GetStringValue(); } },
-                { "interaction_type", n => { InteractionType = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.RecentItem_interaction_type>(); } },
+                { "interaction_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.RecentItem_interaction_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInteractionType = default; _explicitNullProperties?.Remove("interaction_type"); AdditionalData["interaction_type"] = unknown; } else { InteractionType = parsed; AdditionalData.Remove("interaction_type"); } } },
                 { "item", n => { Item = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.RecentItemResource>(global::Soenneker.Box.OpenApiClient.Models.RecentItemResource.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };

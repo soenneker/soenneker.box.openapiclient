@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("classification") is { } nullNodeClassification && nullNodeClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Classification = null;
+            if (parseNode.GetChildNode("classification") is null) { _explicitNullValueClassification = default!; _explicitNullProperties?.Remove("classification"); }
+            else if (parseNode.GetChildNode("classification") is { } nullNodeClassification && nullNodeClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Classification = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications
         /// <summary>Additional information about the classification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig_classification? Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig_classification? Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; AdditionalData?.Remove("classification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig_classification? _explicitNullValueClassification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig_classification Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig_classification Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; AdditionalData?.Remove("classification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig_classification _explicitNullValueClassification = default!;
 #endif
         /// <summary>

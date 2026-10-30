@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pic_urls") is { } nullNodePicUrls && nullNodePicUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicUrls = null;
+            if (parseNode.GetChildNode("pic_urls") is null) { _explicitNullValuePicUrls = default!; _explicitNullProperties?.Remove("pic_urls"); }
+            else if (parseNode.GetChildNode("pic_urls") is { } nullNodePicUrls && nullNodePicUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicUrls = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>Represents an object with user avatar URLs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserAvatar_pic_urls? PicUrls { get => _explicitNullValuePicUrls; set { _explicitNullValuePicUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pic_urls"); else _explicitNullProperties?.Remove("pic_urls"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UserAvatar_pic_urls? PicUrls { get => _explicitNullValuePicUrls; set { _explicitNullValuePicUrls = value; AdditionalData?.Remove("pic_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pic_urls"); else _explicitNullProperties?.Remove("pic_urls"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UserAvatar_pic_urls? _explicitNullValuePicUrls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserAvatar_pic_urls PicUrls { get => _explicitNullValuePicUrls; set { _explicitNullValuePicUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pic_urls"); else _explicitNullProperties?.Remove("pic_urls"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.UserAvatar_pic_urls PicUrls { get => _explicitNullValuePicUrls; set { _explicitNullValuePicUrls = value; AdditionalData?.Remove("pic_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pic_urls"); else _explicitNullProperties?.Remove("pic_urls"); } }
         private global::Soenneker.Box.OpenApiClient.Models.UserAvatar_pic_urls _explicitNullValuePicUrls = default!;
 #endif
         /// <summary>

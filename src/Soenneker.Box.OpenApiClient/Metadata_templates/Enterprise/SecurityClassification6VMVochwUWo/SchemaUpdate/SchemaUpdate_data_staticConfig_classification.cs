@@ -18,8 +18,10 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("classificationDefinition") is { } nullNodeClassificationDefinition && nullNodeClassificationDefinition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClassificationDefinition = null;
-            if (parseNode.GetChildNode("colorID") is { } nullNodeColorID && nullNodeColorID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorID = null;
+            if (parseNode.GetChildNode("classificationDefinition") is null) { _explicitNullValueClassificationDefinition = default!; _explicitNullProperties?.Remove("classificationDefinition"); }
+            else if (parseNode.GetChildNode("classificationDefinition") is { } nullNodeClassificationDefinition && nullNodeClassificationDefinition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClassificationDefinition = null;
+            if (parseNode.GetChildNode("colorID") is null) { _explicitNullValueColorID = default!; _explicitNullProperties?.Remove("colorID"); }
+            else if (parseNode.GetChildNode("colorID") is { } nullNodeColorID && nullNodeColorID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorID = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
         /// <summary>A longer description of the classification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClassificationDefinition { get => _explicitNullValueClassificationDefinition; set { _explicitNullValueClassificationDefinition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classificationDefinition"); else _explicitNullProperties?.Remove("classificationDefinition"); } }
+        public string? ClassificationDefinition { get => _explicitNullValueClassificationDefinition; set { _explicitNullValueClassificationDefinition = value; AdditionalData?.Remove("classificationDefinition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classificationDefinition"); else _explicitNullProperties?.Remove("classificationDefinition"); } }
         private string? _explicitNullValueClassificationDefinition = default!;
 #nullable restore
 #else
-        public string ClassificationDefinition { get => _explicitNullValueClassificationDefinition; set { _explicitNullValueClassificationDefinition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classificationDefinition"); else _explicitNullProperties?.Remove("classificationDefinition"); } }
+        public string ClassificationDefinition { get => _explicitNullValueClassificationDefinition; set { _explicitNullValueClassificationDefinition = value; AdditionalData?.Remove("classificationDefinition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classificationDefinition"); else _explicitNullProperties?.Remove("classificationDefinition"); } }
         private string _explicitNullValueClassificationDefinition = default!;
 #endif
         /// <summary>An internal Box identifier used to assign a color toa classification label.Mapping between a `colorID` and a color may changewithout notice. Currently, the color mappings are asfollows.* `0`: Yellow.* `1`: Orange.* `2`: Watermelon red.* `3`: Purple rain.* `4`: Light blue.* `5`: Dark blue.* `6`: Light green.* `7`: Gray.</summary>
-        public long? ColorID { get => _explicitNullValueColorID; set { _explicitNullValueColorID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorID"); else _explicitNullProperties?.Remove("colorID"); } }
+        public long? ColorID { get => _explicitNullValueColorID; set { _explicitNullValueColorID = value; AdditionalData?.Remove("colorID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorID"); else _explicitNullProperties?.Remove("colorID"); } }
         private long? _explicitNullValueColorID = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data_staticConfig_classification"/> and sets the default values.

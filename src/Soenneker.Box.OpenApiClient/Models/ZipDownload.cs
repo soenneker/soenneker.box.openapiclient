@@ -18,10 +18,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("download_url") is { } nullNodeDownloadUrl && nullNodeDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadUrl = null;
-            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
-            if (parseNode.GetChildNode("name_conflicts") is { } nullNodeNameConflicts && nullNodeNameConflicts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameConflicts = null;
-            if (parseNode.GetChildNode("status_url") is { } nullNodeStatusUrl && nullNodeStatusUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusUrl = null;
+            if (parseNode.GetChildNode("download_url") is null) { _explicitNullValueDownloadUrl = default!; _explicitNullProperties?.Remove("download_url"); }
+            else if (parseNode.GetChildNode("download_url") is { } nullNodeDownloadUrl && nullNodeDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadUrl = null;
+            if (parseNode.GetChildNode("expires_at") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expires_at"); }
+            else if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("name_conflicts") is null) { _explicitNullValueNameConflicts = default!; _explicitNullProperties?.Remove("name_conflicts"); }
+            else if (parseNode.GetChildNode("name_conflicts") is { } nullNodeNameConflicts && nullNodeNameConflicts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameConflicts = null;
+            if (parseNode.GetChildNode("status_url") is null) { _explicitNullValueStatusUrl = default!; _explicitNullProperties?.Remove("status_url"); }
+            else if (parseNode.GetChildNode("status_url") is { } nullNodeStatusUrl && nullNodeStatusUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,34 +33,34 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The URL that can be used to download the `zip` archive. A `Get` request tothis URL will start streaming the items requested. By default, this URLis only valid for a few seconds, until the `expires_at` time, unless adownload is started after which it is valid for the duration of thedownload.It is important to note that the domain and path of this URL might changebetween API calls, and therefore it&apos;s important to use this URL as-is.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
+        public string? DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; AdditionalData?.Remove("download_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
         private string? _explicitNullValueDownloadUrl = default!;
 #nullable restore
 #else
-        public string DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
+        public string DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; AdditionalData?.Remove("download_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
         private string _explicitNullValueDownloadUrl = default!;
 #endif
         /// <summary>The time and date when this archive will expire. After this time the`status_url` and `download_url` will return an error.By default, these URLs are only valid for a few seconds, unless a downloadis started after which the `download_url` is valid for the duration of thedownload, and the `status_url` is valid for 12 hours from the start of thedownload.</summary>
-        public DateTimeOffset? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        public DateTimeOffset? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
         private DateTimeOffset? _explicitNullValueExpiresAt = default!;
         /// <summary>A list of conflicts that occurred when trying to create the archive. Thiswould occur when multiple items have been requested with thesame name.To solve these conflicts, the API will automatically rename an itemand return a mapping between the original item&apos;s name and its newname.For every conflict, both files will be renamed and therefore this listwill always be a multiple of 2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NameConflicts { get => _explicitNullValueNameConflicts; set { _explicitNullValueNameConflicts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_conflicts"); else _explicitNullProperties?.Remove("name_conflicts"); } }
+        public UntypedNode? NameConflicts { get => _explicitNullValueNameConflicts; set { _explicitNullValueNameConflicts = value; AdditionalData?.Remove("name_conflicts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_conflicts"); else _explicitNullProperties?.Remove("name_conflicts"); } }
         private UntypedNode? _explicitNullValueNameConflicts = default!;
 #nullable restore
 #else
-        public UntypedNode NameConflicts { get => _explicitNullValueNameConflicts; set { _explicitNullValueNameConflicts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_conflicts"); else _explicitNullProperties?.Remove("name_conflicts"); } }
+        public UntypedNode NameConflicts { get => _explicitNullValueNameConflicts; set { _explicitNullValueNameConflicts = value; AdditionalData?.Remove("name_conflicts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_conflicts"); else _explicitNullProperties?.Remove("name_conflicts"); } }
         private UntypedNode _explicitNullValueNameConflicts = default!;
 #endif
         /// <summary>The URL that can be used to get the status of the `zip` archive beingdownloaded. A `Get` request to this URL will return the number of filesin the archive as well as the number of items already downloaded orskipped. By default, this URL is only valid for a few seconds, until the`expires_at` time, unless a download is started after which the URL isvalid for 12 hours from the start of the download.It is important to note that the domain and path of this URL might changebetween API calls, and therefore it&apos;s important to use this URL as-is.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusUrl { get => _explicitNullValueStatusUrl; set { _explicitNullValueStatusUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_url"); else _explicitNullProperties?.Remove("status_url"); } }
+        public string? StatusUrl { get => _explicitNullValueStatusUrl; set { _explicitNullValueStatusUrl = value; AdditionalData?.Remove("status_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_url"); else _explicitNullProperties?.Remove("status_url"); } }
         private string? _explicitNullValueStatusUrl = default!;
 #nullable restore
 #else
-        public string StatusUrl { get => _explicitNullValueStatusUrl; set { _explicitNullValueStatusUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_url"); else _explicitNullProperties?.Remove("status_url"); } }
+        public string StatusUrl { get => _explicitNullValueStatusUrl; set { _explicitNullValueStatusUrl = value; AdditionalData?.Remove("status_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_url"); else _explicitNullProperties?.Remove("status_url"); } }
         private string _explicitNullValueStatusUrl = default!;
 #endif
         /// <summary>

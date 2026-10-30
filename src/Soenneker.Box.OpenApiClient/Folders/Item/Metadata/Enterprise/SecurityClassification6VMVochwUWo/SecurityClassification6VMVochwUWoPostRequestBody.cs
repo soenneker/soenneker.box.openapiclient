@@ -17,7 +17,8 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityC
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Box__Security__Classification__Key") is { } nullNodeBoxSecurityClassificationKey && nullNodeBoxSecurityClassificationKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxSecurityClassificationKey = null;
+            if (parseNode.GetChildNode("Box__Security__Classification__Key") is null) { _explicitNullValueBoxSecurityClassificationKey = default!; _explicitNullProperties?.Remove("Box__Security__Classification__Key"); }
+            else if (parseNode.GetChildNode("Box__Security__Classification__Key") is { } nullNodeBoxSecurityClassificationKey && nullNodeBoxSecurityClassificationKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxSecurityClassificationKey = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityC
         /// <summary>The name of the classification to apply to this folder.To list the available classifications in an enterprise,use the classification API to retrieve the[classification template](https://developer.box.com/reference/get-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema)which lists all available classification keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
+        public string? BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; AdditionalData?.Remove("Box__Security__Classification__Key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
         private string? _explicitNullValueBoxSecurityClassificationKey = default!;
 #nullable restore
 #else
-        public string BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
+        public string BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; AdditionalData?.Remove("Box__Security__Classification__Key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
         private string _explicitNullValueBoxSecurityClassificationKey = default!;
 #endif
         /// <summary>

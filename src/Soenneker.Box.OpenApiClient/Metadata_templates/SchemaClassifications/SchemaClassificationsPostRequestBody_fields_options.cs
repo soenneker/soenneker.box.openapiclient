@@ -18,8 +18,10 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
-            if (parseNode.GetChildNode("staticConfig") is { } nullNodeStaticConfig && nullNodeStaticConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StaticConfig = null;
+            if (parseNode.GetChildNode("key") is null) { _explicitNullValueKey = default!; _explicitNullProperties?.Remove("key"); }
+            else if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("staticConfig") is null) { _explicitNullValueStaticConfig = default!; _explicitNullProperties?.Remove("staticConfig"); }
+            else if (parseNode.GetChildNode("staticConfig") is { } nullNodeStaticConfig && nullNodeStaticConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StaticConfig = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications
         /// <summary>The display name and key this classification. Thiswill be show in the Box UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
         private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
         private string _explicitNullValueKey = default!;
 #endif
         /// <summary>Additional information about the classification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig? StaticConfig { get => _explicitNullValueStaticConfig; set { _explicitNullValueStaticConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("staticConfig"); else _explicitNullProperties?.Remove("staticConfig"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig? StaticConfig { get => _explicitNullValueStaticConfig; set { _explicitNullValueStaticConfig = value; AdditionalData?.Remove("staticConfig"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("staticConfig"); else _explicitNullProperties?.Remove("staticConfig"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig? _explicitNullValueStaticConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig StaticConfig { get => _explicitNullValueStaticConfig; set { _explicitNullValueStaticConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("staticConfig"); else _explicitNullProperties?.Remove("staticConfig"); } }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig StaticConfig { get => _explicitNullValueStaticConfig; set { _explicitNullValueStaticConfig = value; AdditionalData?.Remove("staticConfig"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("staticConfig"); else _explicitNullProperties?.Remove("staticConfig"); } }
         private global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields_options_staticConfig _explicitNullValueStaticConfig = default!;
 #endif
         /// <summary>

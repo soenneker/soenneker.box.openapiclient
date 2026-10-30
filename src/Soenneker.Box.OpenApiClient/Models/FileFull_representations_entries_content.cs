@@ -18,7 +18,8 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("url_template") is { } nullNodeUrlTemplate && nullNodeUrlTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlTemplate = null;
+            if (parseNode.GetChildNode("url_template") is null) { _explicitNullValueUrlTemplate = default!; _explicitNullProperties?.Remove("url_template"); }
+            else if (parseNode.GetChildNode("url_template") is { } nullNodeUrlTemplate && nullNodeUrlTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlTemplate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The download URL that can be used to fetch the representation.Make sure to make an authenticated API call to this endpoint.This URL is a template and will require the `{+asset_path}` tobe replaced by a path. In general, for unpaged representationsit can be replaced by an empty string.For paged representations, replace the `{+asset_path}` with thepage to request plus the extension for the file, for example`1.pdf`.When requesting the download URL the following additionalquery params can be passed along.* `set_content_disposition_type` - Sets the`Content-Disposition` header in the API response with thespecified disposition type of either `inline` or `attachment`.If not supplied, the `Content-Disposition` header is notincluded in the response.* `set_content_disposition_filename` - Allows the application to  define the representation&apos;s file name used in the  `Content-Disposition` header.  If not defined, the filename  is derived from the source file name in Box combined with the  extension of the representation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UrlTemplate { get => _explicitNullValueUrlTemplate; set { _explicitNullValueUrlTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_template"); else _explicitNullProperties?.Remove("url_template"); } }
+        public string? UrlTemplate { get => _explicitNullValueUrlTemplate; set { _explicitNullValueUrlTemplate = value; AdditionalData?.Remove("url_template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_template"); else _explicitNullProperties?.Remove("url_template"); } }
         private string? _explicitNullValueUrlTemplate = default!;
 #nullable restore
 #else
-        public string UrlTemplate { get => _explicitNullValueUrlTemplate; set { _explicitNullValueUrlTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_template"); else _explicitNullProperties?.Remove("url_template"); } }
+        public string UrlTemplate { get => _explicitNullValueUrlTemplate; set { _explicitNullValueUrlTemplate = value; AdditionalData?.Remove("url_template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_template"); else _explicitNullProperties?.Remove("url_template"); } }
         private string _explicitNullValueUrlTemplate = default!;
 #endif
         /// <summary>

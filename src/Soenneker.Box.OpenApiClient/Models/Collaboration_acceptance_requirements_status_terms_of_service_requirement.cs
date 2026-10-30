@@ -17,23 +17,25 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_accepted") is { } nullNodeIsAccepted && nullNodeIsAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccepted = null;
-            if (parseNode.GetChildNode("terms_of_service") is { } nullNodeTermsOfService && nullNodeTermsOfService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfService = null;
+            if (parseNode.GetChildNode("is_accepted") is null) { _explicitNullValueIsAccepted = default!; _explicitNullProperties?.Remove("is_accepted"); }
+            else if (parseNode.GetChildNode("is_accepted") is { } nullNodeIsAccepted && nullNodeIsAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccepted = null;
+            if (parseNode.GetChildNode("terms_of_service") is null) { _explicitNullValueTermsOfService = default!; _explicitNullProperties?.Remove("terms_of_service"); }
+            else if (parseNode.GetChildNode("terms_of_service") is { } nullNodeTermsOfService && nullNodeTermsOfService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfService = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether or not the terms of service have been accepted.  Thefield is `null` when there is no terms of service required.</summary>
-        public bool? IsAccepted { get => _explicitNullValueIsAccepted; set { _explicitNullValueIsAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_accepted"); else _explicitNullProperties?.Remove("is_accepted"); } }
+        public bool? IsAccepted { get => _explicitNullValueIsAccepted; set { _explicitNullValueIsAccepted = value; AdditionalData?.Remove("is_accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_accepted"); else _explicitNullProperties?.Remove("is_accepted"); } }
         private bool? _explicitNullValueIsAccepted = default!;
         /// <summary>The terms_of_service property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.TermsOfServiceBase? TermsOfService { get => _explicitNullValueTermsOfService; set { _explicitNullValueTermsOfService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service"); else _explicitNullProperties?.Remove("terms_of_service"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TermsOfServiceBase? TermsOfService { get => _explicitNullValueTermsOfService; set { _explicitNullValueTermsOfService = value; AdditionalData?.Remove("terms_of_service"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service"); else _explicitNullProperties?.Remove("terms_of_service"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TermsOfServiceBase? _explicitNullValueTermsOfService = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.TermsOfServiceBase TermsOfService { get => _explicitNullValueTermsOfService; set { _explicitNullValueTermsOfService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service"); else _explicitNullProperties?.Remove("terms_of_service"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TermsOfServiceBase TermsOfService { get => _explicitNullValueTermsOfService; set { _explicitNullValueTermsOfService = value; AdditionalData?.Remove("terms_of_service"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service"); else _explicitNullProperties?.Remove("terms_of_service"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TermsOfServiceBase _explicitNullValueTermsOfService = default!;
 #endif
         /// <summary>

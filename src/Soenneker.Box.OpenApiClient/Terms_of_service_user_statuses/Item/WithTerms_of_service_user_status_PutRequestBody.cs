@@ -17,13 +17,14 @@ namespace Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Item
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_accepted") is { } nullNodeIsAccepted && nullNodeIsAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccepted = null;
+            if (parseNode.GetChildNode("is_accepted") is null) { _explicitNullValueIsAccepted = default!; _explicitNullProperties?.Remove("is_accepted"); }
+            else if (parseNode.GetChildNode("is_accepted") is { } nullNodeIsAccepted && nullNodeIsAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccepted = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the user has accepted the terms.</summary>
-        public bool? IsAccepted { get => _explicitNullValueIsAccepted; set { _explicitNullValueIsAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_accepted"); else _explicitNullProperties?.Remove("is_accepted"); } }
+        public bool? IsAccepted { get => _explicitNullValueIsAccepted; set { _explicitNullValueIsAccepted = value; AdditionalData?.Remove("is_accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_accepted"); else _explicitNullProperties?.Remove("is_accepted"); } }
         private bool? _explicitNullValueIsAccepted = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Terms_of_service_user_statuses.Item.WithTerms_of_service_user_status_PutRequestBody"/> and sets the default values.

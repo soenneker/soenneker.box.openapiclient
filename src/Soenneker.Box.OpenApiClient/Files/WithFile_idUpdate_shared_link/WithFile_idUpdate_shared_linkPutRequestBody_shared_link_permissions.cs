@@ -17,21 +17,24 @@ namespace Soenneker.Box.OpenApiClient.Files.WithFile_idUpdate_shared_link
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("can_download") is { } nullNodeCanDownload && nullNodeCanDownload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanDownload = null;
-            if (parseNode.GetChildNode("can_edit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
-            if (parseNode.GetChildNode("can_preview") is { } nullNodeCanPreview && nullNodeCanPreview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanPreview = null;
+            if (parseNode.GetChildNode("can_download") is null) { _explicitNullValueCanDownload = default!; _explicitNullProperties?.Remove("can_download"); }
+            else if (parseNode.GetChildNode("can_download") is { } nullNodeCanDownload && nullNodeCanDownload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanDownload = null;
+            if (parseNode.GetChildNode("can_edit") is null) { _explicitNullValueCanEdit = default!; _explicitNullProperties?.Remove("can_edit"); }
+            else if (parseNode.GetChildNode("can_edit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
+            if (parseNode.GetChildNode("can_preview") is null) { _explicitNullValueCanPreview = default!; _explicitNullProperties?.Remove("can_preview"); }
+            else if (parseNode.GetChildNode("can_preview") is { } nullNodeCanPreview && nullNodeCanPreview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanPreview = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If the shared link allows for downloading of files.This can only be set when `access` is set to`open` or `company`.</summary>
-        public bool? CanDownload { get => _explicitNullValueCanDownload; set { _explicitNullValueCanDownload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_download"); else _explicitNullProperties?.Remove("can_download"); } }
+        public bool? CanDownload { get => _explicitNullValueCanDownload; set { _explicitNullValueCanDownload = value; AdditionalData?.Remove("can_download"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_download"); else _explicitNullProperties?.Remove("can_download"); } }
         private bool? _explicitNullValueCanDownload = default!;
         /// <summary>If the shared link allows for editing of files.This can only be set when `access` is set to`open` or `company`.This value can only be `true` is `can_download` isalso `true`.</summary>
-        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_edit"); else _explicitNullProperties?.Remove("can_edit"); } }
+        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; AdditionalData?.Remove("can_edit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_edit"); else _explicitNullProperties?.Remove("can_edit"); } }
         private bool? _explicitNullValueCanEdit = default!;
         /// <summary>If the shared link allows for previewing of files.This value is always `true`. For shared links on foldersthis also applies to any items in the folder.</summary>
-        public bool? CanPreview { get => _explicitNullValueCanPreview; set { _explicitNullValueCanPreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_preview"); else _explicitNullProperties?.Remove("can_preview"); } }
+        public bool? CanPreview { get => _explicitNullValueCanPreview; set { _explicitNullValueCanPreview = value; AdditionalData?.Remove("can_preview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_preview"); else _explicitNullProperties?.Remove("can_preview"); } }
         private bool? _explicitNullValueCanPreview = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Files.WithFile_idUpdate_shared_link.WithFile_idUpdate_shared_linkPutRequestBody_shared_link_permissions"/> and sets the default values.

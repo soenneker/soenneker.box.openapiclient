@@ -18,9 +18,12 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("hits") is { } nullNodeHits && nullNodeHits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hits = null;
-            if (parseNode.GetChildNode("misses") is { } nullNodeMisses && nullNodeMisses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Misses = null;
-            if (parseNode.GetChildNode("upload_session_id") is { } nullNodeUploadSessionId && nullNodeUploadSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadSessionId = null;
+            if (parseNode.GetChildNode("hits") is null) { _explicitNullValueHits = default!; _explicitNullProperties?.Remove("hits"); }
+            else if (parseNode.GetChildNode("hits") is { } nullNodeHits && nullNodeHits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hits = null;
+            if (parseNode.GetChildNode("misses") is null) { _explicitNullValueMisses = default!; _explicitNullProperties?.Remove("misses"); }
+            else if (parseNode.GetChildNode("misses") is { } nullNodeMisses && nullNodeMisses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Misses = null;
+            if (parseNode.GetChildNode("upload_session_id") is null) { _explicitNullValueUploadSessionId = default!; _explicitNullProperties?.Remove("upload_session_id"); }
+            else if (parseNode.GetChildNode("upload_session_id") is { } nullNodeUploadSessionId && nullNodeUploadSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadSessionId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>Parts that already exist on the server anddo not need to be uploaded again.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit>? Hits { get => _explicitNullValueHits; set { _explicitNullValueHits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hits"); else _explicitNullProperties?.Remove("hits"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit>? Hits { get => _explicitNullValueHits; set { _explicitNullValueHits = value; AdditionalData?.Remove("hits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hits"); else _explicitNullProperties?.Remove("hits"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit>? _explicitNullValueHits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit> Hits { get => _explicitNullValueHits; set { _explicitNullValueHits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hits"); else _explicitNullProperties?.Remove("hits"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit> Hits { get => _explicitNullValueHits; set { _explicitNullValueHits = value; AdditionalData?.Remove("hits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hits"); else _explicitNullProperties?.Remove("hits"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit> _explicitNullValueHits = default!;
 #endif
         /// <summary>Parts that do not exist on the server andneed to be uploaded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan>? Misses { get => _explicitNullValueMisses; set { _explicitNullValueMisses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("misses"); else _explicitNullProperties?.Remove("misses"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan>? Misses { get => _explicitNullValueMisses; set { _explicitNullValueMisses = value; AdditionalData?.Remove("misses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("misses"); else _explicitNullProperties?.Remove("misses"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan>? _explicitNullValueMisses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan> Misses { get => _explicitNullValueMisses; set { _explicitNullValueMisses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("misses"); else _explicitNullProperties?.Remove("misses"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan> Misses { get => _explicitNullValueMisses; set { _explicitNullValueMisses = value; AdditionalData?.Remove("misses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("misses"); else _explicitNullProperties?.Remove("misses"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan> _explicitNullValueMisses = default!;
 #endif
         /// <summary>The unique identifier for this upload session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadSessionId { get => _explicitNullValueUploadSessionId; set { _explicitNullValueUploadSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_session_id"); else _explicitNullProperties?.Remove("upload_session_id"); } }
+        public string? UploadSessionId { get => _explicitNullValueUploadSessionId; set { _explicitNullValueUploadSessionId = value; AdditionalData?.Remove("upload_session_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_session_id"); else _explicitNullProperties?.Remove("upload_session_id"); } }
         private string? _explicitNullValueUploadSessionId = default!;
 #nullable restore
 #else
-        public string UploadSessionId { get => _explicitNullValueUploadSessionId; set { _explicitNullValueUploadSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_session_id"); else _explicitNullProperties?.Remove("upload_session_id"); } }
+        public string UploadSessionId { get => _explicitNullValueUploadSessionId; set { _explicitNullValueUploadSessionId = value; AdditionalData?.Remove("upload_session_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_session_id"); else _explicitNullProperties?.Remove("upload_session_id"); } }
         private string _explicitNullValueUploadSessionId = default!;
 #endif
         /// <summary>

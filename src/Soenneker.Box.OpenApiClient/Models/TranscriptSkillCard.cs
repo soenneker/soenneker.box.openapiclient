@@ -18,69 +18,77 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
-            if (parseNode.GetChildNode("entries") is { } nullNodeEntries && nullNodeEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entries = null;
-            if (parseNode.GetChildNode("invocation") is { } nullNodeInvocation && nullNodeInvocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invocation = null;
-            if (parseNode.GetChildNode("skill") is { } nullNodeSkill && nullNodeSkill.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skill = null;
-            if (parseNode.GetChildNode("skill_card_title") is { } nullNodeSkillCardTitle && nullNodeSkillCardTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkillCardTitle = null;
-            if (parseNode.GetChildNode("skill_card_type") is { } nullNodeSkillCardType && nullNodeSkillCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkillCardType = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("duration") is null) { _explicitNullValueDuration = default!; _explicitNullProperties?.Remove("duration"); }
+            else if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
+            if (parseNode.GetChildNode("entries") is null) { _explicitNullValueEntries = default!; _explicitNullProperties?.Remove("entries"); }
+            else if (parseNode.GetChildNode("entries") is { } nullNodeEntries && nullNodeEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entries = null;
+            if (parseNode.GetChildNode("invocation") is null) { _explicitNullValueInvocation = default!; _explicitNullProperties?.Remove("invocation"); }
+            else if (parseNode.GetChildNode("invocation") is { } nullNodeInvocation && nullNodeInvocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invocation = null;
+            if (parseNode.GetChildNode("skill") is null) { _explicitNullValueSkill = default!; _explicitNullProperties?.Remove("skill"); }
+            else if (parseNode.GetChildNode("skill") is { } nullNodeSkill && nullNodeSkill.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skill = null;
+            if (parseNode.GetChildNode("skill_card_title") is null) { _explicitNullValueSkillCardTitle = default!; _explicitNullProperties?.Remove("skill_card_title"); }
+            else if (parseNode.GetChildNode("skill_card_title") is { } nullNodeSkillCardTitle && nullNodeSkillCardTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkillCardTitle = null;
+            if (parseNode.GetChildNode("skill_card_type") is null) { _explicitNullValueSkillCardType = default!; _explicitNullProperties?.Remove("skill_card_type"); }
+            else if (parseNode.GetChildNode("skill_card_type") is { } nullNodeSkillCardType && nullNodeSkillCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkillCardType = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The optional date and time this card was created at.</summary>
-        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>An optional total duration in seconds.Used with a `skill_card_type` of `transcript` or`timeline`.</summary>
-        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
         private int? _explicitNullValueDuration = default!;
         /// <summary>A list of entries for the card. This represents the individual entries ofthe transcription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries>? Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries>? Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; AdditionalData?.Remove("entries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries>? _explicitNullValueEntries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries> Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries> Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; AdditionalData?.Remove("entries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_entries> _explicitNullValueEntries = default!;
 #endif
         /// <summary>The invocation of this service, used to trackwhich instance of a service applied the metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_invocation? Invocation { get => _explicitNullValueInvocation; set { _explicitNullValueInvocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invocation"); else _explicitNullProperties?.Remove("invocation"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_invocation? Invocation { get => _explicitNullValueInvocation; set { _explicitNullValueInvocation = value; AdditionalData?.Remove("invocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invocation"); else _explicitNullProperties?.Remove("invocation"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_invocation? _explicitNullValueInvocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_invocation Invocation { get => _explicitNullValueInvocation; set { _explicitNullValueInvocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invocation"); else _explicitNullProperties?.Remove("invocation"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_invocation Invocation { get => _explicitNullValueInvocation; set { _explicitNullValueInvocation = value; AdditionalData?.Remove("invocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invocation"); else _explicitNullProperties?.Remove("invocation"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_invocation _explicitNullValueInvocation = default!;
 #endif
         /// <summary>The service that applied this metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill? Skill { get => _explicitNullValueSkill; set { _explicitNullValueSkill = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill"); else _explicitNullProperties?.Remove("skill"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill? Skill { get => _explicitNullValueSkill; set { _explicitNullValueSkill = value; AdditionalData?.Remove("skill"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill"); else _explicitNullProperties?.Remove("skill"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill? _explicitNullValueSkill = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill Skill { get => _explicitNullValueSkill; set { _explicitNullValueSkill = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill"); else _explicitNullProperties?.Remove("skill"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill Skill { get => _explicitNullValueSkill; set { _explicitNullValueSkill = value; AdditionalData?.Remove("skill"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill"); else _explicitNullProperties?.Remove("skill"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill _explicitNullValueSkill = default!;
 #endif
         /// <summary>The title of the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_title? SkillCardTitle { get => _explicitNullValueSkillCardTitle; set { _explicitNullValueSkillCardTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill_card_title"); else _explicitNullProperties?.Remove("skill_card_title"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_title? SkillCardTitle { get => _explicitNullValueSkillCardTitle; set { _explicitNullValueSkillCardTitle = value; AdditionalData?.Remove("skill_card_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill_card_title"); else _explicitNullProperties?.Remove("skill_card_title"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_title? _explicitNullValueSkillCardTitle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_title SkillCardTitle { get => _explicitNullValueSkillCardTitle; set { _explicitNullValueSkillCardTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill_card_title"); else _explicitNullProperties?.Remove("skill_card_title"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_title SkillCardTitle { get => _explicitNullValueSkillCardTitle; set { _explicitNullValueSkillCardTitle = value; AdditionalData?.Remove("skill_card_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill_card_title"); else _explicitNullProperties?.Remove("skill_card_title"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_title _explicitNullValueSkillCardTitle = default!;
 #endif
         /// <summary>The value will always be `transcript`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_type? SkillCardType { get => _explicitNullValueSkillCardType; set { _explicitNullValueSkillCardType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill_card_type"); else _explicitNullProperties?.Remove("skill_card_type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_type? SkillCardType { get => _explicitNullValueSkillCardType; set { _explicitNullValueSkillCardType = value; AdditionalData?.Remove("skill_card_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skill_card_type"); else _explicitNullProperties?.Remove("skill_card_type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_type? _explicitNullValueSkillCardType = default!;
         /// <summary>The value will always be `skill_card`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_type? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard"/> and sets the default values.
@@ -113,8 +121,8 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "invocation", n => { Invocation = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_invocation>(global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_invocation.CreateFromDiscriminatorValue); } },
                 { "skill", n => { Skill = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill>(global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill.CreateFromDiscriminatorValue); } },
                 { "skill_card_title", n => { SkillCardTitle = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_title>(global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_title.CreateFromDiscriminatorValue); } },
-                { "skill_card_type", n => { SkillCardType = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_type>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_type>(); } },
+                { "skill_card_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_skill_card_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSkillCardType = default; _explicitNullProperties?.Remove("skill_card_type"); AdditionalData["skill_card_type"] = unknown; } else { SkillCardType = parsed; AdditionalData.Remove("skill_card_type"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

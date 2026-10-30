@@ -18,13 +18,14 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Watermark
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("imprint") is { } nullNodeImprint && nullNodeImprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imprint = null;
+            if (parseNode.GetChildNode("imprint") is null) { _explicitNullValueImprint = default!; _explicitNullProperties?.Remove("imprint"); }
+            else if (parseNode.GetChildNode("imprint") is { } nullNodeImprint && nullNodeImprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imprint = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of watermark to apply.Currently only supports one option.</summary>
-        public global::Soenneker.Box.OpenApiClient.Files.Item.Watermark.WatermarkPutRequestBody_watermark_imprint? Imprint { get => _explicitNullValueImprint; set { _explicitNullValueImprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imprint"); else _explicitNullProperties?.Remove("imprint"); } }
+        public global::Soenneker.Box.OpenApiClient.Files.Item.Watermark.WatermarkPutRequestBody_watermark_imprint? Imprint { get => _explicitNullValueImprint; set { _explicitNullValueImprint = value; AdditionalData?.Remove("imprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imprint"); else _explicitNullProperties?.Remove("imprint"); } }
         private global::Soenneker.Box.OpenApiClient.Files.Item.Watermark.WatermarkPutRequestBody_watermark_imprint? _explicitNullValueImprint = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Files.Item.Watermark.WatermarkPutRequestBody_watermark"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Watermark
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "imprint", n => { Imprint = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Files.Item.Watermark.WatermarkPutRequestBody_watermark_imprint>(); } },
+                { "imprint", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Files.Item.Watermark.WatermarkPutRequestBody_watermark_imprint>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueImprint = default; _explicitNullProperties?.Remove("imprint"); AdditionalData["imprint"] = unknown; } else { Imprint = parsed; AdditionalData.Remove("imprint"); } } },
             };
         }
         /// <summary>

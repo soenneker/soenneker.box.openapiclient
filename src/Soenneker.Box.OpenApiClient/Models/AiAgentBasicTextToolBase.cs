@@ -18,9 +18,12 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("llm_endpoint_params") is { } nullNodeLlmEndpointParams && nullNodeLlmEndpointParams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LlmEndpointParams = null;
-            if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
-            if (parseNode.GetChildNode("num_tokens_for_completion") is { } nullNodeNumTokensForCompletion && nullNodeNumTokensForCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumTokensForCompletion = null;
+            if (parseNode.GetChildNode("llm_endpoint_params") is null) { _explicitNullValueLlmEndpointParams = default!; _explicitNullProperties?.Remove("llm_endpoint_params"); }
+            else if (parseNode.GetChildNode("llm_endpoint_params") is { } nullNodeLlmEndpointParams && nullNodeLlmEndpointParams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LlmEndpointParams = null;
+            if (parseNode.GetChildNode("model") is null) { _explicitNullValueModel = default!; _explicitNullProperties?.Remove("model"); }
+            else if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
+            if (parseNode.GetChildNode("num_tokens_for_completion") is null) { _explicitNullValueNumTokensForCompletion = default!; _explicitNullProperties?.Remove("num_tokens_for_completion"); }
+            else if (parseNode.GetChildNode("num_tokens_for_completion") is { } nullNodeNumTokensForCompletion && nullNodeNumTokensForCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumTokensForCompletion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The parameters for the LLM endpoint specific to a model.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams? LlmEndpointParams { get => _explicitNullValueLlmEndpointParams; set { _explicitNullValueLlmEndpointParams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("llm_endpoint_params"); else _explicitNullProperties?.Remove("llm_endpoint_params"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams? LlmEndpointParams { get => _explicitNullValueLlmEndpointParams; set { _explicitNullValueLlmEndpointParams = value; AdditionalData?.Remove("llm_endpoint_params"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("llm_endpoint_params"); else _explicitNullProperties?.Remove("llm_endpoint_params"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams? _explicitNullValueLlmEndpointParams = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams LlmEndpointParams { get => _explicitNullValueLlmEndpointParams; set { _explicitNullValueLlmEndpointParams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("llm_endpoint_params"); else _explicitNullProperties?.Remove("llm_endpoint_params"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams LlmEndpointParams { get => _explicitNullValueLlmEndpointParams; set { _explicitNullValueLlmEndpointParams = value; AdditionalData?.Remove("llm_endpoint_params"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("llm_endpoint_params"); else _explicitNullProperties?.Remove("llm_endpoint_params"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams _explicitNullValueLlmEndpointParams = default!;
 #endif
         /// <summary>The model used for the AI agent for basic text. For specific model values, see the [available models list](https://developer.box.com/guides/box-ai/ai-models).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        public string? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; AdditionalData?.Remove("model"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
         private string? _explicitNullValueModel = default!;
 #nullable restore
 #else
-        public string Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        public string Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; AdditionalData?.Remove("model"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
         private string _explicitNullValueModel = default!;
 #endif
         /// <summary>The number of tokens for completion.</summary>
-        public int? NumTokensForCompletion { get => _explicitNullValueNumTokensForCompletion; set { _explicitNullValueNumTokensForCompletion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_tokens_for_completion"); else _explicitNullProperties?.Remove("num_tokens_for_completion"); } }
+        public int? NumTokensForCompletion { get => _explicitNullValueNumTokensForCompletion; set { _explicitNullValueNumTokensForCompletion = value; AdditionalData?.Remove("num_tokens_for_completion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_tokens_for_completion"); else _explicitNullProperties?.Remove("num_tokens_for_completion"); } }
         private int? _explicitNullValueNumTokensForCompletion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AiAgentBasicTextToolBase"/> and sets the default values.

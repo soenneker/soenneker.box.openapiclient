@@ -18,13 +18,14 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_access_management_disabled") is { } nullNodeIsAccessManagementDisabled && nullNodeIsAccessManagementDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessManagementDisabled = null;
+            if (parseNode.GetChildNode("is_access_management_disabled") is null) { _explicitNullValueIsAccessManagementDisabled = default!; _explicitNullProperties?.Remove("is_access_management_disabled"); }
+            else if (parseNode.GetChildNode("is_access_management_disabled") is { } nullNodeIsAccessManagementDisabled && nullNodeIsAccessManagementDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessManagementDisabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether or not channel memberaccess to the underlying box itemshould be automatically managed.Depending on type of channel, access is managedthrough creating collaborations or shared links.</summary>
-        public bool? IsAccessManagementDisabled { get => _explicitNullValueIsAccessManagementDisabled; set { _explicitNullValueIsAccessManagementDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_access_management_disabled"); else _explicitNullProperties?.Remove("is_access_management_disabled"); } }
+        public bool? IsAccessManagementDisabled { get => _explicitNullValueIsAccessManagementDisabled; set { _explicitNullValueIsAccessManagementDisabled = value; AdditionalData?.Remove("is_access_management_disabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_access_management_disabled"); else _explicitNullProperties?.Remove("is_access_management_disabled"); } }
         private bool? _explicitNullValueIsAccessManagementDisabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackOptions"/> and sets the default values.

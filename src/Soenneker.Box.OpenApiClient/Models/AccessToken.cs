@@ -18,54 +18,60 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("access_token") is { } nullNodeAccessTokenProp && nullNodeAccessTokenProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessTokenProp = null;
-            if (parseNode.GetChildNode("expires_in") is { } nullNodeExpiresIn && nullNodeExpiresIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresIn = null;
-            if (parseNode.GetChildNode("issued_token_type") is { } nullNodeIssuedTokenType && nullNodeIssuedTokenType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuedTokenType = null;
-            if (parseNode.GetChildNode("refresh_token") is { } nullNodeRefreshToken && nullNodeRefreshToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefreshToken = null;
-            if (parseNode.GetChildNode("restricted_to") is { } nullNodeRestrictedTo && nullNodeRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictedTo = null;
-            if (parseNode.GetChildNode("token_type") is { } nullNodeTokenType && nullNodeTokenType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenType = null;
+            if (parseNode.GetChildNode("access_token") is null) { _explicitNullValueAccessTokenProp = default!; _explicitNullProperties?.Remove("access_token"); }
+            else if (parseNode.GetChildNode("access_token") is { } nullNodeAccessTokenProp && nullNodeAccessTokenProp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessTokenProp = null;
+            if (parseNode.GetChildNode("expires_in") is null) { _explicitNullValueExpiresIn = default!; _explicitNullProperties?.Remove("expires_in"); }
+            else if (parseNode.GetChildNode("expires_in") is { } nullNodeExpiresIn && nullNodeExpiresIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresIn = null;
+            if (parseNode.GetChildNode("issued_token_type") is null) { _explicitNullValueIssuedTokenType = default!; _explicitNullProperties?.Remove("issued_token_type"); }
+            else if (parseNode.GetChildNode("issued_token_type") is { } nullNodeIssuedTokenType && nullNodeIssuedTokenType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuedTokenType = null;
+            if (parseNode.GetChildNode("refresh_token") is null) { _explicitNullValueRefreshToken = default!; _explicitNullProperties?.Remove("refresh_token"); }
+            else if (parseNode.GetChildNode("refresh_token") is { } nullNodeRefreshToken && nullNodeRefreshToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefreshToken = null;
+            if (parseNode.GetChildNode("restricted_to") is null) { _explicitNullValueRestrictedTo = default!; _explicitNullProperties?.Remove("restricted_to"); }
+            else if (parseNode.GetChildNode("restricted_to") is { } nullNodeRestrictedTo && nullNodeRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictedTo = null;
+            if (parseNode.GetChildNode("token_type") is null) { _explicitNullValueTokenType = default!; _explicitNullProperties?.Remove("token_type"); }
+            else if (parseNode.GetChildNode("token_type") is { } nullNodeTokenType && nullNodeTokenType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenType = null;
         }
 
         /// <summary>The requested access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessTokenProp { get => _explicitNullValueAccessTokenProp; set { _explicitNullValueAccessTokenProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token"); else _explicitNullProperties?.Remove("access_token"); } }
+        public string? AccessTokenProp { get => _explicitNullValueAccessTokenProp; set { _explicitNullValueAccessTokenProp = value; AdditionalData?.Remove("access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token"); else _explicitNullProperties?.Remove("access_token"); } }
         private string? _explicitNullValueAccessTokenProp = default!;
 #nullable restore
 #else
-        public string AccessTokenProp { get => _explicitNullValueAccessTokenProp; set { _explicitNullValueAccessTokenProp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token"); else _explicitNullProperties?.Remove("access_token"); } }
+        public string AccessTokenProp { get => _explicitNullValueAccessTokenProp; set { _explicitNullValueAccessTokenProp = value; AdditionalData?.Remove("access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token"); else _explicitNullProperties?.Remove("access_token"); } }
         private string _explicitNullValueAccessTokenProp = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time in seconds by which this token will expire.</summary>
-        public long? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in"); else _explicitNullProperties?.Remove("expires_in"); } }
+        public long? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; AdditionalData?.Remove("expires_in"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in"); else _explicitNullProperties?.Remove("expires_in"); } }
         private long? _explicitNullValueExpiresIn = default!;
         /// <summary>The type of downscoped access token returned. This is onlyreturned if an access token has been downscoped.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.AccessToken_issued_token_type? IssuedTokenType { get => _explicitNullValueIssuedTokenType; set { _explicitNullValueIssuedTokenType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issued_token_type"); else _explicitNullProperties?.Remove("issued_token_type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AccessToken_issued_token_type? IssuedTokenType { get => _explicitNullValueIssuedTokenType; set { _explicitNullValueIssuedTokenType = value; AdditionalData?.Remove("issued_token_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issued_token_type"); else _explicitNullProperties?.Remove("issued_token_type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AccessToken_issued_token_type? _explicitNullValueIssuedTokenType = default!;
         /// <summary>The refresh token for this access token, which can be usedto request a new access token when the current one expires.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefreshToken { get => _explicitNullValueRefreshToken; set { _explicitNullValueRefreshToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refresh_token"); else _explicitNullProperties?.Remove("refresh_token"); } }
+        public string? RefreshToken { get => _explicitNullValueRefreshToken; set { _explicitNullValueRefreshToken = value; AdditionalData?.Remove("refresh_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refresh_token"); else _explicitNullProperties?.Remove("refresh_token"); } }
         private string? _explicitNullValueRefreshToken = default!;
 #nullable restore
 #else
-        public string RefreshToken { get => _explicitNullValueRefreshToken; set { _explicitNullValueRefreshToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refresh_token"); else _explicitNullProperties?.Remove("refresh_token"); } }
+        public string RefreshToken { get => _explicitNullValueRefreshToken; set { _explicitNullValueRefreshToken = value; AdditionalData?.Remove("refresh_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refresh_token"); else _explicitNullProperties?.Remove("refresh_token"); } }
         private string _explicitNullValueRefreshToken = default!;
 #endif
         /// <summary>The permissions that this access token permits,providing a list of resources (files, folders, etc)and the scopes permitted for each of those resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.ResourceScope>? RestrictedTo { get => _explicitNullValueRestrictedTo; set { _explicitNullValueRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_to"); else _explicitNullProperties?.Remove("restricted_to"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.ResourceScope>? RestrictedTo { get => _explicitNullValueRestrictedTo; set { _explicitNullValueRestrictedTo = value; AdditionalData?.Remove("restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_to"); else _explicitNullProperties?.Remove("restricted_to"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.ResourceScope>? _explicitNullValueRestrictedTo = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.ResourceScope> RestrictedTo { get => _explicitNullValueRestrictedTo; set { _explicitNullValueRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_to"); else _explicitNullProperties?.Remove("restricted_to"); } }
+        public List<global::Soenneker.Box.OpenApiClient.Models.ResourceScope> RestrictedTo { get => _explicitNullValueRestrictedTo; set { _explicitNullValueRestrictedTo = value; AdditionalData?.Remove("restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_to"); else _explicitNullProperties?.Remove("restricted_to"); } }
         private List<global::Soenneker.Box.OpenApiClient.Models.ResourceScope> _explicitNullValueRestrictedTo = default!;
 #endif
         /// <summary>The type of access token returned.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.AccessToken_token_type? TokenType { get => _explicitNullValueTokenType; set { _explicitNullValueTokenType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_type"); else _explicitNullProperties?.Remove("token_type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AccessToken_token_type? TokenType { get => _explicitNullValueTokenType; set { _explicitNullValueTokenType = value; AdditionalData?.Remove("token_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_type"); else _explicitNullProperties?.Remove("token_type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AccessToken_token_type? _explicitNullValueTokenType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AccessToken"/> and sets the default values.
@@ -94,10 +100,10 @@ namespace Soenneker.Box.OpenApiClient.Models
             {
                 { "access_token", n => { AccessTokenProp = n.GetStringValue(); } },
                 { "expires_in", n => { ExpiresIn = n.GetLongValue(); } },
-                { "issued_token_type", n => { IssuedTokenType = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.AccessToken_issued_token_type>(); } },
+                { "issued_token_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.AccessToken_issued_token_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIssuedTokenType = default; _explicitNullProperties?.Remove("issued_token_type"); AdditionalData["issued_token_type"] = unknown; } else { IssuedTokenType = parsed; AdditionalData.Remove("issued_token_type"); } } },
                 { "refresh_token", n => { RefreshToken = n.GetStringValue(); } },
                 { "restricted_to", n => { RestrictedTo = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.ResourceScope>(global::Soenneker.Box.OpenApiClient.Models.ResourceScope.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "token_type", n => { TokenType = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.AccessToken_token_type>(); } },
+                { "token_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.AccessToken_token_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTokenType = default; _explicitNullProperties?.Remove("token_type"); AdditionalData["token_type"] = unknown; } else { TokenType = parsed; AdditionalData.Remove("token_type"); } } },
             };
         }
         /// <summary>

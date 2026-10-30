@@ -18,64 +18,71 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("applied_at") is { } nullNodeAppliedAt && nullNodeAppliedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppliedAt = null;
-            if (parseNode.GetChildNode("disposition_at") is { } nullNodeDispositionAt && nullNodeDispositionAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DispositionAt = null;
-            if (parseNode.GetChildNode("file") is { } nullNodeFile && nullNodeFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) File = null;
-            if (parseNode.GetChildNode("file_version") is { } nullNodeFileVersion && nullNodeFileVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileVersion = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("winning_retention_policy") is { } nullNodeWinningRetentionPolicy && nullNodeWinningRetentionPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WinningRetentionPolicy = null;
+            if (parseNode.GetChildNode("applied_at") is null) { _explicitNullValueAppliedAt = default!; _explicitNullProperties?.Remove("applied_at"); }
+            else if (parseNode.GetChildNode("applied_at") is { } nullNodeAppliedAt && nullNodeAppliedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppliedAt = null;
+            if (parseNode.GetChildNode("disposition_at") is null) { _explicitNullValueDispositionAt = default!; _explicitNullProperties?.Remove("disposition_at"); }
+            else if (parseNode.GetChildNode("disposition_at") is { } nullNodeDispositionAt && nullNodeDispositionAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DispositionAt = null;
+            if (parseNode.GetChildNode("file") is null) { _explicitNullValueFile = default!; _explicitNullProperties?.Remove("file"); }
+            else if (parseNode.GetChildNode("file") is { } nullNodeFile && nullNodeFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) File = null;
+            if (parseNode.GetChildNode("file_version") is null) { _explicitNullValueFileVersion = default!; _explicitNullProperties?.Remove("file_version"); }
+            else if (parseNode.GetChildNode("file_version") is { } nullNodeFileVersion && nullNodeFileVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileVersion = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("winning_retention_policy") is null) { _explicitNullValueWinningRetentionPolicy = default!; _explicitNullProperties?.Remove("winning_retention_policy"); }
+            else if (parseNode.GetChildNode("winning_retention_policy") is { } nullNodeWinningRetentionPolicy && nullNodeWinningRetentionPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WinningRetentionPolicy = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When this file version retention object wascreated.</summary>
-        public DateTimeOffset? AppliedAt { get => _explicitNullValueAppliedAt; set { _explicitNullValueAppliedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_at"); else _explicitNullProperties?.Remove("applied_at"); } }
+        public DateTimeOffset? AppliedAt { get => _explicitNullValueAppliedAt; set { _explicitNullValueAppliedAt = value; AdditionalData?.Remove("applied_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied_at"); else _explicitNullProperties?.Remove("applied_at"); } }
         private DateTimeOffset? _explicitNullValueAppliedAt = default!;
         /// <summary>When the retention expires on this fileversion retention.</summary>
-        public DateTimeOffset? DispositionAt { get => _explicitNullValueDispositionAt; set { _explicitNullValueDispositionAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disposition_at"); else _explicitNullProperties?.Remove("disposition_at"); } }
+        public DateTimeOffset? DispositionAt { get => _explicitNullValueDispositionAt; set { _explicitNullValueDispositionAt = value; AdditionalData?.Remove("disposition_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disposition_at"); else _explicitNullProperties?.Remove("disposition_at"); } }
         private DateTimeOffset? _explicitNullValueDispositionAt = default!;
         /// <summary>The file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileMini? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.FileMini? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
         private global::Soenneker.Box.OpenApiClient.Models.FileMini? _explicitNullValueFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileMini File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.FileMini File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
         private global::Soenneker.Box.OpenApiClient.Models.FileMini _explicitNullValueFile = default!;
 #endif
         /// <summary>The file_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileVersionMini? FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.FileVersionMini? FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; AdditionalData?.Remove("file_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
         private global::Soenneker.Box.OpenApiClient.Models.FileVersionMini? _explicitNullValueFileVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileVersionMini FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.FileVersionMini FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; AdditionalData?.Remove("file_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
         private global::Soenneker.Box.OpenApiClient.Models.FileVersionMini _explicitNullValueFileVersion = default!;
 #endif
         /// <summary>The unique identifier for this file version retention.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The value will always be `file_version_retention`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.FileVersionRetention_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.FileVersionRetention_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.FileVersionRetention_type? _explicitNullValueType = default!;
         /// <summary>The winning_retention_policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini? WinningRetentionPolicy { get => _explicitNullValueWinningRetentionPolicy; set { _explicitNullValueWinningRetentionPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("winning_retention_policy"); else _explicitNullProperties?.Remove("winning_retention_policy"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini? WinningRetentionPolicy { get => _explicitNullValueWinningRetentionPolicy; set { _explicitNullValueWinningRetentionPolicy = value; AdditionalData?.Remove("winning_retention_policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("winning_retention_policy"); else _explicitNullProperties?.Remove("winning_retention_policy"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini? _explicitNullValueWinningRetentionPolicy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini WinningRetentionPolicy { get => _explicitNullValueWinningRetentionPolicy; set { _explicitNullValueWinningRetentionPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("winning_retention_policy"); else _explicitNullProperties?.Remove("winning_retention_policy"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini WinningRetentionPolicy { get => _explicitNullValueWinningRetentionPolicy; set { _explicitNullValueWinningRetentionPolicy = value; AdditionalData?.Remove("winning_retention_policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("winning_retention_policy"); else _explicitNullProperties?.Remove("winning_retention_policy"); } }
         private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini _explicitNullValueWinningRetentionPolicy = default!;
 #endif
         /// <summary>
@@ -108,7 +115,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "file", n => { File = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileMini>(global::Soenneker.Box.OpenApiClient.Models.FileMini.CreateFromDiscriminatorValue); } },
                 { "file_version", n => { FileVersion = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileVersionMini>(global::Soenneker.Box.OpenApiClient.Models.FileVersionMini.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.FileVersionRetention_type>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.FileVersionRetention_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "winning_retention_policy", n => { WinningRetentionPolicy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini>(global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini.CreateFromDiscriminatorValue); } },
             };
         }

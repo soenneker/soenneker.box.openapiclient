@@ -18,22 +18,28 @@ namespace Soenneker.Box.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("access_state") is { } nullNodeAccessState && nullNodeAccessState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessState = null;
-            if (parseNode.GetChildNode("basic_gen") is { } nullNodeBasicGen && nullNodeBasicGen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BasicGen = null;
-            if (parseNode.GetChildNode("custom_instructions") is { } nullNodeCustomInstructions && nullNodeCustomInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomInstructions = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("suggested_questions") is { } nullNodeSuggestedQuestions && nullNodeSuggestedQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedQuestions = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("access_state") is null) { _explicitNullValueAccessState = default!; _explicitNullProperties?.Remove("access_state"); }
+            else if (parseNode.GetChildNode("access_state") is { } nullNodeAccessState && nullNodeAccessState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessState = null;
+            if (parseNode.GetChildNode("basic_gen") is null) { _explicitNullValueBasicGen = default!; _explicitNullProperties?.Remove("basic_gen"); }
+            else if (parseNode.GetChildNode("basic_gen") is { } nullNodeBasicGen && nullNodeBasicGen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BasicGen = null;
+            if (parseNode.GetChildNode("custom_instructions") is null) { _explicitNullValueCustomInstructions = default!; _explicitNullProperties?.Remove("custom_instructions"); }
+            else if (parseNode.GetChildNode("custom_instructions") is { } nullNodeCustomInstructions && nullNodeCustomInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomInstructions = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("suggested_questions") is null) { _explicitNullValueSuggestedQuestions = default!; _explicitNullProperties?.Remove("suggested_questions"); }
+            else if (parseNode.GetChildNode("suggested_questions") is { } nullNodeSuggestedQuestions && nullNodeSuggestedQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedQuestions = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>The state of the AI Agent capability. Possible values are: `enabled` and `disabled`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessState { get => _explicitNullValueAccessState; set { _explicitNullValueAccessState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_state"); else _explicitNullProperties?.Remove("access_state"); } }
+        public string? AccessState { get => _explicitNullValueAccessState; set { _explicitNullValueAccessState = value; AdditionalData?.Remove("access_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_state"); else _explicitNullProperties?.Remove("access_state"); } }
         private string? _explicitNullValueAccessState = default!;
 #nullable restore
 #else
-        public string AccessState { get => _explicitNullValueAccessState; set { _explicitNullValueAccessState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_state"); else _explicitNullProperties?.Remove("access_state"); } }
+        public string AccessState { get => _explicitNullValueAccessState; set { _explicitNullValueAccessState = value; AdditionalData?.Remove("access_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_state"); else _explicitNullProperties?.Remove("access_state"); } }
         private string _explicitNullValueAccessState = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -41,45 +47,45 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>AI agent basic tool used to generate text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicGenToolResponse? BasicGen { get => _explicitNullValueBasicGen; set { _explicitNullValueBasicGen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basic_gen"); else _explicitNullProperties?.Remove("basic_gen"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicGenToolResponse? BasicGen { get => _explicitNullValueBasicGen; set { _explicitNullValueBasicGen = value; AdditionalData?.Remove("basic_gen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basic_gen"); else _explicitNullProperties?.Remove("basic_gen"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicGenToolResponse? _explicitNullValueBasicGen = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicGenToolResponse BasicGen { get => _explicitNullValueBasicGen; set { _explicitNullValueBasicGen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basic_gen"); else _explicitNullProperties?.Remove("basic_gen"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicGenToolResponse BasicGen { get => _explicitNullValueBasicGen; set { _explicitNullValueBasicGen = value; AdditionalData?.Remove("basic_gen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basic_gen"); else _explicitNullProperties?.Remove("basic_gen"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicGenToolResponse _explicitNullValueBasicGen = default!;
 #endif
         /// <summary>Custom instructions for the AI agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomInstructions { get => _explicitNullValueCustomInstructions; set { _explicitNullValueCustomInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_instructions"); else _explicitNullProperties?.Remove("custom_instructions"); } }
+        public string? CustomInstructions { get => _explicitNullValueCustomInstructions; set { _explicitNullValueCustomInstructions = value; AdditionalData?.Remove("custom_instructions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_instructions"); else _explicitNullProperties?.Remove("custom_instructions"); } }
         private string? _explicitNullValueCustomInstructions = default!;
 #nullable restore
 #else
-        public string CustomInstructions { get => _explicitNullValueCustomInstructions; set { _explicitNullValueCustomInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_instructions"); else _explicitNullProperties?.Remove("custom_instructions"); } }
+        public string CustomInstructions { get => _explicitNullValueCustomInstructions; set { _explicitNullValueCustomInstructions = value; AdditionalData?.Remove("custom_instructions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_instructions"); else _explicitNullProperties?.Remove("custom_instructions"); } }
         private string _explicitNullValueCustomInstructions = default!;
 #endif
         /// <summary>The description of the AI agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Suggested questions for the AI agent. If null, suggested question will be generated. If empty, no suggested questions will be displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SuggestedQuestions { get => _explicitNullValueSuggestedQuestions; set { _explicitNullValueSuggestedQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_questions"); else _explicitNullProperties?.Remove("suggested_questions"); } }
+        public List<string>? SuggestedQuestions { get => _explicitNullValueSuggestedQuestions; set { _explicitNullValueSuggestedQuestions = value; AdditionalData?.Remove("suggested_questions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_questions"); else _explicitNullProperties?.Remove("suggested_questions"); } }
         private List<string>? _explicitNullValueSuggestedQuestions = default!;
 #nullable restore
 #else
-        public List<string> SuggestedQuestions { get => _explicitNullValueSuggestedQuestions; set { _explicitNullValueSuggestedQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_questions"); else _explicitNullProperties?.Remove("suggested_questions"); } }
+        public List<string> SuggestedQuestions { get => _explicitNullValueSuggestedQuestions; set { _explicitNullValueSuggestedQuestions = value; AdditionalData?.Remove("suggested_questions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_questions"); else _explicitNullProperties?.Remove("suggested_questions"); } }
         private List<string> _explicitNullValueSuggestedQuestions = default!;
 #endif
         /// <summary>The type of AI agent used for generating text.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGenResponse_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGenResponse_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGenResponse_type? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGenResponse"/> and sets the default values.
@@ -111,7 +117,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "custom_instructions", n => { CustomInstructions = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "suggested_questions", n => { SuggestedQuestions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGenResponse_type>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGenResponse_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

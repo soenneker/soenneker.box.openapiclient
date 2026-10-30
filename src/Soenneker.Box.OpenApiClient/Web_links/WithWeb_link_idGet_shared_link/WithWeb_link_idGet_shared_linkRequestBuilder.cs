@@ -78,7 +78,7 @@ namespace Soenneker.Box.OpenApiClient.Web_links.WithWeb_link_idGet_shared_link
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Web_links.WithWeb_link_idGet_shared_link.WithWeb_link_idGet_shared_linkRequestBuilder.WithWeb_link_idGet_shared_linkRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.box.com/2.0", "/web_links/{web_link_id}#get_shared_link", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
