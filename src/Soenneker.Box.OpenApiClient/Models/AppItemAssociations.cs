@@ -12,34 +12,52 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AppItemAssociations : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("entries") is { } nullNodeEntries && nullNodeEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entries = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("next_marker") is { } nullNodeNextMarker && nullNodeNextMarker.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextMarker = null;
+            if (parseNode.GetChildNode("prev_marker") is { } nullNodePrevMarker && nullNodePrevMarker.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrevMarker = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The entries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.AppItemAssociation>? Entries { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AppItemAssociation>? Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AppItemAssociation>? _explicitNullValueEntries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.AppItemAssociation> Entries { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AppItemAssociation> Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AppItemAssociation> _explicitNullValueEntries = default!;
 #endif
         /// <summary>The limit that was used for these entries. This will be the same as the`limit` query parameter unless that value exceeded the maximum valueallowed. The maximum value varies by API.</summary>
-        public long? Limit { get; set; }
+        public long? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private long? _explicitNullValueLimit = default!;
         /// <summary>The marker for the start of the next page of results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextMarker { get; set; }
+        public string? NextMarker { get => _explicitNullValueNextMarker; set { _explicitNullValueNextMarker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_marker"); else _explicitNullProperties?.Remove("next_marker"); } }
+        private string? _explicitNullValueNextMarker = default!;
 #nullable restore
 #else
-        public string NextMarker { get; set; }
+        public string NextMarker { get => _explicitNullValueNextMarker; set { _explicitNullValueNextMarker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_marker"); else _explicitNullProperties?.Remove("next_marker"); } }
+        private string _explicitNullValueNextMarker = default!;
 #endif
         /// <summary>The marker for the start of the previous page of results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrevMarker { get; set; }
+        public string? PrevMarker { get => _explicitNullValuePrevMarker; set { _explicitNullValuePrevMarker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev_marker"); else _explicitNullProperties?.Remove("prev_marker"); } }
+        private string? _explicitNullValuePrevMarker = default!;
 #nullable restore
 #else
-        public string PrevMarker { get; set; }
+        public string PrevMarker { get => _explicitNullValuePrevMarker; set { _explicitNullValuePrevMarker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev_marker"); else _explicitNullProperties?.Remove("prev_marker"); } }
+        private string _explicitNullValuePrevMarker = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AppItemAssociations"/> and sets the default values.
@@ -56,7 +74,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.AppItemAssociations CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.AppItemAssociations();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AppItemAssociations(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteLongValue("limit", Limit);
             writer.WriteStringValue("next_marker", NextMarker);
             writer.WriteStringValue("prev_marker", PrevMarker);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -13,44 +13,67 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithFolder_PutRequestBody_shared_link : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access") is { } nullNodeAccess && nullNodeAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Access = null;
+            if (parseNode.GetChildNode("one_time_passcode") is { } nullNodeOneTimePasscode && nullNodeOneTimePasscode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneTimePasscode = null;
+            if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("unshared_at") is { } nullNodeUnsharedAt && nullNodeUnsharedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnsharedAt = null;
+            if (parseNode.GetChildNode("vanity_name") is { } nullNodeVanityName && nullNodeVanityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VanityName = null;
+        }
+
         /// <summary>The level of access for the shared link. This can berestricted to anyone with the link (`open`), only peoplewithin the company (`company`) and only those whohave been invited to the folder (`collaborators`).If not set, this field defaults to the access level specifiedby the enterprise admin. To create a shared link with thisdefault setting pass the `shared_link` object withno `access` field, for example `{ &quot;shared_link&quot;: {} }`.The `company` access level is only available to paidaccounts.</summary>
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_access? Access { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_access? Access { get => _explicitNullValueAccess; set { _explicitNullValueAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access"); else _explicitNullProperties?.Remove("access"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_access? _explicitNullValueAccess = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The one_time_passcode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable? OneTimePasscode { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable? OneTimePasscode { get => _explicitNullValueOneTimePasscode; set { _explicitNullValueOneTimePasscode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("one_time_passcode"); else _explicitNullProperties?.Remove("one_time_passcode"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable? _explicitNullValueOneTimePasscode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable OneTimePasscode { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable OneTimePasscode { get => _explicitNullValueOneTimePasscode; set { _explicitNullValueOneTimePasscode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("one_time_passcode"); else _explicitNullProperties?.Remove("one_time_passcode"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable _explicitNullValueOneTimePasscode = default!;
 #endif
         /// <summary>The password required to access the shared link. Set thepassword to `null` to remove it.Passwords must now be at least eight characterslong and include a number, upper case letter, ora non-numeric or non-alphabetic character.A password can only be set when `access` is set to `open`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Password { get; set; }
+        public string? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string? _explicitNullValuePassword = default!;
 #nullable restore
 #else
-        public string Password { get; set; }
+        public string Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string _explicitNullValuePassword = default!;
 #endif
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_permissions? Permissions { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_permissions? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_permissions? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_permissions Permissions { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_permissions Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_permissions _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The timestamp at which this shared link willexpire. This field can only be set byusers with paid accounts.</summary>
-        public DateTimeOffset? UnsharedAt { get; set; }
+        public DateTimeOffset? UnsharedAt { get => _explicitNullValueUnsharedAt; set { _explicitNullValueUnsharedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unshared_at"); else _explicitNullProperties?.Remove("unshared_at"); } }
+        private DateTimeOffset? _explicitNullValueUnsharedAt = default!;
         /// <summary>Defines a custom vanity name to use in the shared link URL,for example `https://app.box.com/v/my-shared-link`.Custom URLs should not be used when sharing sensitive contentas vanity URLs are a lot easier to guess than regular shared links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VanityName { get; set; }
+        public string? VanityName { get => _explicitNullValueVanityName; set { _explicitNullValueVanityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vanity_name"); else _explicitNullProperties?.Remove("vanity_name"); } }
+        private string? _explicitNullValueVanityName = default!;
 #nullable restore
 #else
-        public string VanityName { get; set; }
+        public string VanityName { get => _explicitNullValueVanityName; set { _explicitNullValueVanityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vanity_name"); else _explicitNullProperties?.Remove("vanity_name"); } }
+        private string _explicitNullValueVanityName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link"/> and sets the default values.
@@ -67,7 +90,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         public static global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +121,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link_permissions>("permissions", Permissions);
             writer.WriteDateTimeOffsetValue("unshared_at", UnsharedAt);
             writer.WriteStringValue("vanity_name", VanityName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

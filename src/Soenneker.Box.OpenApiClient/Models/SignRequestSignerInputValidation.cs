@@ -12,7 +12,12 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequestSignerInputValidation : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,53 +126,68 @@ namespace Soenneker.Box.OpenApiClient.Models
             var result = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation();
             if("SignRequestSignerInputCustomValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputCustomValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation();
+                
             }
             else if("SignRequestSignerInputDateAsiaValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputDateAsiaValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateAsiaValidation();
+                
             }
             else if("SignRequestSignerInputDateEUValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputDateEUValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation();
+                
             }
             else if("SignRequestSignerInputDateISOValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputDateISOValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateISOValidation();
+                
             }
             else if("SignRequestSignerInputDateUSValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputDateUSValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateUSValidation();
+                
             }
             else if("SignRequestSignerInputEmailValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputEmailValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputEmailValidation();
+                
             }
             else if("SignRequestSignerInputNumberWithCommaValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputNumberWithCommaValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputNumberWithCommaValidation();
+                
             }
             else if("SignRequestSignerInputNumberWithPeriodValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputNumberWithPeriodValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputNumberWithPeriodValidation();
+                
             }
             else if("SignRequestSignerInputSSNValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputSSNValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputSSNValidation();
+                
             }
             else if("SignRequestSignerInputZIP4Validation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputZIP4Validation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIP4Validation();
+                
             }
             else if("SignRequestSignerInputZIPJPValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputZIPJPValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation();
+                
             }
             else if("SignRequestSignerInputZIPValidation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SignRequestSignerInputZIPValidation = new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPValidation();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("validation_type") != null && (parseNode.GetChildNode("validation_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("email".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("validation_type") != null && (parseNode.GetChildNode("validation_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("custom".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("custom_regex") != null && parseNode.GetChildNode("custom_error_message") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("validation_type") != null && (parseNode.GetChildNode("validation_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("zip".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("validation_type") != null && (parseNode.GetChildNode("validation_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("zip_4".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("validation_type") != null && (parseNode.GetChildNode("validation_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("zip_jp".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("validation_type") != null && (parseNode.GetChildNode("validation_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("ssn".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            if (result.SignRequestSignerInputCustomValidation == null && result.SignRequestSignerInputDateAsiaValidation == null && result.SignRequestSignerInputDateEUValidation == null && result.SignRequestSignerInputDateISOValidation == null && result.SignRequestSignerInputDateUSValidation == null && result.SignRequestSignerInputEmailValidation == null && result.SignRequestSignerInputNumberWithCommaValidation == null && result.SignRequestSignerInputNumberWithPeriodValidation == null && result.SignRequestSignerInputSSNValidation == null && result.SignRequestSignerInputZIP4Validation == null && result.SignRequestSignerInputZIPJPValidation == null && result.SignRequestSignerInputZIPValidation == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.SignRequestSignerInputEmailValidation = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputEmailValidation(), parseNode);
+            if (result.SignRequestSignerInputCustomValidation == null && result.SignRequestSignerInputDateAsiaValidation == null && result.SignRequestSignerInputDateEUValidation == null && result.SignRequestSignerInputDateISOValidation == null && result.SignRequestSignerInputDateUSValidation == null && result.SignRequestSignerInputEmailValidation == null && result.SignRequestSignerInputNumberWithCommaValidation == null && result.SignRequestSignerInputNumberWithPeriodValidation == null && result.SignRequestSignerInputSSNValidation == null && result.SignRequestSignerInputZIP4Validation == null && result.SignRequestSignerInputZIPJPValidation == null && result.SignRequestSignerInputZIPValidation == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.SignRequestSignerInputCustomValidation = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation(), parseNode);
+            if (result.SignRequestSignerInputCustomValidation == null && result.SignRequestSignerInputDateAsiaValidation == null && result.SignRequestSignerInputDateEUValidation == null && result.SignRequestSignerInputDateISOValidation == null && result.SignRequestSignerInputDateUSValidation == null && result.SignRequestSignerInputEmailValidation == null && result.SignRequestSignerInputNumberWithCommaValidation == null && result.SignRequestSignerInputNumberWithPeriodValidation == null && result.SignRequestSignerInputSSNValidation == null && result.SignRequestSignerInputZIP4Validation == null && result.SignRequestSignerInputZIPJPValidation == null && result.SignRequestSignerInputZIPValidation == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.SignRequestSignerInputZIPValidation = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPValidation(), parseNode);
+            if (result.SignRequestSignerInputCustomValidation == null && result.SignRequestSignerInputDateAsiaValidation == null && result.SignRequestSignerInputDateEUValidation == null && result.SignRequestSignerInputDateISOValidation == null && result.SignRequestSignerInputDateUSValidation == null && result.SignRequestSignerInputEmailValidation == null && result.SignRequestSignerInputNumberWithCommaValidation == null && result.SignRequestSignerInputNumberWithPeriodValidation == null && result.SignRequestSignerInputSSNValidation == null && result.SignRequestSignerInputZIP4Validation == null && result.SignRequestSignerInputZIPJPValidation == null && result.SignRequestSignerInputZIPValidation == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5) result.SignRequestSignerInputZIP4Validation = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIP4Validation(), parseNode);
+            if (result.SignRequestSignerInputCustomValidation == null && result.SignRequestSignerInputDateAsiaValidation == null && result.SignRequestSignerInputDateEUValidation == null && result.SignRequestSignerInputDateISOValidation == null && result.SignRequestSignerInputDateUSValidation == null && result.SignRequestSignerInputEmailValidation == null && result.SignRequestSignerInputNumberWithCommaValidation == null && result.SignRequestSignerInputNumberWithPeriodValidation == null && result.SignRequestSignerInputSSNValidation == null && result.SignRequestSignerInputZIP4Validation == null && result.SignRequestSignerInputZIPJPValidation == null && result.SignRequestSignerInputZIPValidation == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5) result.SignRequestSignerInputZIPJPValidation = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation(), parseNode);
+            if (result.SignRequestSignerInputCustomValidation == null && result.SignRequestSignerInputDateAsiaValidation == null && result.SignRequestSignerInputDateEUValidation == null && result.SignRequestSignerInputDateISOValidation == null && result.SignRequestSignerInputDateUSValidation == null && result.SignRequestSignerInputEmailValidation == null && result.SignRequestSignerInputNumberWithCommaValidation == null && result.SignRequestSignerInputNumberWithPeriodValidation == null && result.SignRequestSignerInputSSNValidation == null && result.SignRequestSignerInputZIP4Validation == null && result.SignRequestSignerInputZIPJPValidation == null && result.SignRequestSignerInputZIPValidation == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4) result.SignRequestSignerInputSSNValidation = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputSSNValidation(), parseNode);
+            if (result.SignRequestSignerInputCustomValidation == null && result.SignRequestSignerInputDateAsiaValidation == null && result.SignRequestSignerInputDateEUValidation == null && result.SignRequestSignerInputDateISOValidation == null && result.SignRequestSignerInputDateUSValidation == null && result.SignRequestSignerInputEmailValidation == null && result.SignRequestSignerInputNumberWithCommaValidation == null && result.SignRequestSignerInputNumberWithPeriodValidation == null && result.SignRequestSignerInputSSNValidation == null && result.SignRequestSignerInputZIP4Validation == null && result.SignRequestSignerInputZIPJPValidation == null && result.SignRequestSignerInputZIPValidation == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -231,53 +251,80 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (SignRequestSignerInputCustomValidation != null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputCustomValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputCustomValidation); return; }
+            if (SignRequestSignerInputDateAsiaValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputDateAsiaValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputDateAsiaValidation); return; }
+            if (SignRequestSignerInputDateEUValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputDateEUValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputDateEUValidation); return; }
+            if (SignRequestSignerInputDateISOValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputDateISOValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputDateISOValidation); return; }
+            if (SignRequestSignerInputDateUSValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputDateUSValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputDateUSValidation); return; }
+            if (SignRequestSignerInputEmailValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputEmailValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputEmailValidation); return; }
+            if (SignRequestSignerInputNumberWithCommaValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputNumberWithCommaValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputNumberWithCommaValidation); return; }
+            if (SignRequestSignerInputNumberWithPeriodValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputNumberWithPeriodValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputNumberWithPeriodValidation); return; }
+            if (SignRequestSignerInputSSNValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputSSNValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputSSNValidation); return; }
+            if (SignRequestSignerInputZIP4Validation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIPJPValidation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputZIP4Validation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputZIP4Validation); return; }
+            if (SignRequestSignerInputZIPJPValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPValidation == null) { if (SignRequestSignerInputZIPJPValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputZIPJPValidation); return; }
+            if (SignRequestSignerInputZIPValidation != null && SignRequestSignerInputCustomValidation == null && SignRequestSignerInputDateAsiaValidation == null && SignRequestSignerInputDateEUValidation == null && SignRequestSignerInputDateISOValidation == null && SignRequestSignerInputDateUSValidation == null && SignRequestSignerInputEmailValidation == null && SignRequestSignerInputNumberWithCommaValidation == null && SignRequestSignerInputNumberWithPeriodValidation == null && SignRequestSignerInputSSNValidation == null && SignRequestSignerInputZIP4Validation == null && SignRequestSignerInputZIPJPValidation == null) { if (SignRequestSignerInputZIPValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SignRequestSignerInputZIPValidation); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(SignRequestSignerInputCustomValidation != null)
             {
+                if (SignRequestSignerInputCustomValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation>(null, SignRequestSignerInputCustomValidation);
             }
             else if(SignRequestSignerInputDateAsiaValidation != null)
             {
+                if (SignRequestSignerInputDateAsiaValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateAsiaValidation>(null, SignRequestSignerInputDateAsiaValidation);
             }
             else if(SignRequestSignerInputDateEUValidation != null)
             {
+                if (SignRequestSignerInputDateEUValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateEUValidation>(null, SignRequestSignerInputDateEUValidation);
             }
             else if(SignRequestSignerInputDateISOValidation != null)
             {
+                if (SignRequestSignerInputDateISOValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateISOValidation>(null, SignRequestSignerInputDateISOValidation);
             }
             else if(SignRequestSignerInputDateUSValidation != null)
             {
+                if (SignRequestSignerInputDateUSValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputDateUSValidation>(null, SignRequestSignerInputDateUSValidation);
             }
             else if(SignRequestSignerInputEmailValidation != null)
             {
+                if (SignRequestSignerInputEmailValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputEmailValidation>(null, SignRequestSignerInputEmailValidation);
             }
             else if(SignRequestSignerInputNumberWithCommaValidation != null)
             {
+                if (SignRequestSignerInputNumberWithCommaValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputNumberWithCommaValidation>(null, SignRequestSignerInputNumberWithCommaValidation);
             }
             else if(SignRequestSignerInputNumberWithPeriodValidation != null)
             {
+                if (SignRequestSignerInputNumberWithPeriodValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputNumberWithPeriodValidation>(null, SignRequestSignerInputNumberWithPeriodValidation);
             }
             else if(SignRequestSignerInputSSNValidation != null)
             {
+                if (SignRequestSignerInputSSNValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputSSNValidation>(null, SignRequestSignerInputSSNValidation);
             }
             else if(SignRequestSignerInputZIP4Validation != null)
             {
+                if (SignRequestSignerInputZIP4Validation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIP4Validation>(null, SignRequestSignerInputZIP4Validation);
             }
             else if(SignRequestSignerInputZIPJPValidation != null)
             {
+                if (SignRequestSignerInputZIPJPValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPJPValidation>(null, SignRequestSignerInputZIPJPValidation);
             }
             else if(SignRequestSignerInputZIPValidation != null)
             {
+                if (SignRequestSignerInputZIPValidation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputZIPValidation>(null, SignRequestSignerInputZIPValidation);
             }
         }

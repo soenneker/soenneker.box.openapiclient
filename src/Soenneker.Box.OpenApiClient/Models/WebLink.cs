@@ -13,88 +13,133 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WebLink : global::Soenneker.Box.OpenApiClient.Models.WebLinkMini, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("allowed_shared_link_access_levels") is { } nullNodeAllowedSharedLinkAccessLevels && nullNodeAllowedSharedLinkAccessLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedSharedLinkAccessLevels = null;
+            if (parseNode.GetChildNode("collections") is { } nullNodeCollections && nullNodeCollections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collections = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("item_status") is { } nullNodeItemStatus && nullNodeItemStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemStatus = null;
+            if (parseNode.GetChildNode("modified_at") is { } nullNodeModifiedAt && nullNodeModifiedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAt = null;
+            if (parseNode.GetChildNode("modified_by") is { } nullNodeModifiedBy && nullNodeModifiedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedBy = null;
+            if (parseNode.GetChildNode("owned_by") is { } nullNodeOwnedBy && nullNodeOwnedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnedBy = null;
+            if (parseNode.GetChildNode("parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
+            if (parseNode.GetChildNode("path_collection") is { } nullNodePathCollection && nullNodePathCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PathCollection = null;
+            if (parseNode.GetChildNode("purged_at") is { } nullNodePurgedAt && nullNodePurgedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurgedAt = null;
+            if (parseNode.GetChildNode("shared_link") is { } nullNodeSharedLink && nullNodeSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedLink = null;
+            if (parseNode.GetChildNode("trashed_at") is { } nullNodeTrashedAt && nullNodeTrashedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrashedAt = null;
+        }
+
         /// <summary>The shared link access levels the authenticated user is allowed touse when creating or updating a shared link for this web link.The list depends on item policy and user authorization, so it may benarrower than the levels available to the owner. An empty array meansno access level is available to this user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get => _explicitNullValueAllowedSharedLinkAccessLevels; set { _explicitNullValueAllowedSharedLinkAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_shared_link_access_levels"); else _explicitNullProperties?.Remove("allowed_shared_link_access_levels"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels?>? _explicitNullValueAllowedSharedLinkAccessLevels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels?> AllowedSharedLinkAccessLevels { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels?> AllowedSharedLinkAccessLevels { get => _explicitNullValueAllowedSharedLinkAccessLevels; set { _explicitNullValueAllowedSharedLinkAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_shared_link_access_levels"); else _explicitNullProperties?.Remove("allowed_shared_link_access_levels"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.WebLink_allowed_shared_link_access_levels?> _explicitNullValueAllowedSharedLinkAccessLevels = default!;
 #endif
         /// <summary>The collections that this web link belongs to.For more information, see the[collections guide](https://developer.box.com/guides/collections).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.Collection>? _explicitNullValueCollections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.Collection> _explicitNullValueCollections = default!;
 #endif
         /// <summary>When this file was created on Box’s servers.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini? CreatedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini CreatedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>The description accompanying the web link. This isvisible within the Box web application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Whether this item is deleted or not. Values include `active`,`trashed` if the file has been moved to the trash, and `deleted` ifthe file has been permanently deleted.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.WebLink_item_status? ItemStatus { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.WebLink_item_status? ItemStatus { get => _explicitNullValueItemStatus; set { _explicitNullValueItemStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_status"); else _explicitNullProperties?.Remove("item_status"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.WebLink_item_status? _explicitNullValueItemStatus = default!;
         /// <summary>When this file was last updated on the Boxservers.</summary>
-        public DateTimeOffset? ModifiedAt { get; set; }
+        public DateTimeOffset? ModifiedAt { get => _explicitNullValueModifiedAt; set { _explicitNullValueModifiedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at"); else _explicitNullProperties?.Remove("modified_at"); } }
+        private DateTimeOffset? _explicitNullValueModifiedAt = default!;
         /// <summary>The modified_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini? ModifiedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini? ModifiedBy { get => _explicitNullValueModifiedBy; set { _explicitNullValueModifiedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_by"); else _explicitNullProperties?.Remove("modified_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini? _explicitNullValueModifiedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini ModifiedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini ModifiedBy { get => _explicitNullValueModifiedBy; set { _explicitNullValueModifiedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_by"); else _explicitNullProperties?.Remove("modified_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini _explicitNullValueModifiedBy = default!;
 #endif
         /// <summary>The owned_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini? OwnedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini? OwnedBy { get => _explicitNullValueOwnedBy; set { _explicitNullValueOwnedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owned_by"); else _explicitNullProperties?.Remove("owned_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini? _explicitNullValueOwnedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini OwnedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini OwnedBy { get => _explicitNullValueOwnedBy; set { _explicitNullValueOwnedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owned_by"); else _explicitNullProperties?.Remove("owned_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini _explicitNullValueOwnedBy = default!;
 #endif
         /// <summary>The parent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FolderMini? Parent { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderMini? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderMini? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FolderMini Parent { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderMini Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderMini _explicitNullValueParent = default!;
 #endif
         /// <summary>The path_collection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.WebLink_path_collection? PathCollection { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.WebLink_path_collection? PathCollection { get => _explicitNullValuePathCollection; set { _explicitNullValuePathCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path_collection"); else _explicitNullProperties?.Remove("path_collection"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.WebLink_path_collection? _explicitNullValuePathCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.WebLink_path_collection PathCollection { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.WebLink_path_collection PathCollection { get => _explicitNullValuePathCollection; set { _explicitNullValuePathCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path_collection"); else _explicitNullProperties?.Remove("path_collection"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.WebLink_path_collection _explicitNullValuePathCollection = default!;
 #endif
         /// <summary>When this file will be permanently deleted.</summary>
-        public DateTimeOffset? PurgedAt { get; set; }
+        public DateTimeOffset? PurgedAt { get => _explicitNullValuePurgedAt; set { _explicitNullValuePurgedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purged_at"); else _explicitNullProperties?.Remove("purged_at"); } }
+        private DateTimeOffset? _explicitNullValuePurgedAt = default!;
         /// <summary>The shared_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link? SharedLink { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link? SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link? _explicitNullValueSharedLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link SharedLink { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link _explicitNullValueSharedLink = default!;
 #endif
         /// <summary>When this file was moved to the trash.</summary>
-        public DateTimeOffset? TrashedAt { get; set; }
+        public DateTimeOffset? TrashedAt { get => _explicitNullValueTrashedAt; set { _explicitNullValueTrashedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trashed_at"); else _explicitNullProperties?.Remove("trashed_at"); } }
+        private DateTimeOffset? _explicitNullValueTrashedAt = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -103,7 +148,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.WebLink CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.WebLink();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.WebLink(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -150,7 +195,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_path_collection>("path_collection", PathCollection);
             writer.WriteDateTimeOffsetValue("purged_at", PurgedAt);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLink_shared_link>("shared_link", SharedLink);
-            writer.WriteDateTimeOffsetValue("trashed_at", TrashedAt);
+            writer.WriteDateTimeOffsetValue("trashed_at", TrashedAt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

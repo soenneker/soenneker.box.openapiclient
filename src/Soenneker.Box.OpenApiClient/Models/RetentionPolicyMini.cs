@@ -13,31 +13,50 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RetentionPolicyMini : global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("disposition_action") is { } nullNodeDispositionAction && nullNodeDispositionAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DispositionAction = null;
+            if (parseNode.GetChildNode("max_extension_length") is { } nullNodeMaxExtensionLength && nullNodeMaxExtensionLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxExtensionLength = null;
+            if (parseNode.GetChildNode("policy_name") is { } nullNodePolicyName && nullNodePolicyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyName = null;
+            if (parseNode.GetChildNode("retention_length") is { } nullNodeRetentionLength && nullNodeRetentionLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetentionLength = null;
+        }
+
         /// <summary>The disposition action of the retention policy.This action can be `permanently_delete`, whichwill cause the content retained by the policyto be permanently deleted, or `remove_retention`,which will lift the retention policy from the content,allowing it to be deleted by users,once the retention policy has expired.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini_disposition_action? DispositionAction { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini_disposition_action? DispositionAction { get => _explicitNullValueDispositionAction; set { _explicitNullValueDispositionAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disposition_action"); else _explicitNullProperties?.Remove("disposition_action"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini_disposition_action? _explicitNullValueDispositionAction = default!;
         /// <summary>The maximum extension length of the retention date.This value specifies the duration in days for whichthe retention date of the file under policy can be extended.If the policy type is other than &apos;finite&apos; orthe disposition action is other than &apos;permanently delete&apos;,or the maximum extension length is undefined,this field will be set to &apos;none&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMaxExtensionLengthResponse? MaxExtensionLength { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMaxExtensionLengthResponse? MaxExtensionLength { get => _explicitNullValueMaxExtensionLength; set { _explicitNullValueMaxExtensionLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_extension_length"); else _explicitNullProperties?.Remove("max_extension_length"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMaxExtensionLengthResponse? _explicitNullValueMaxExtensionLength = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMaxExtensionLengthResponse MaxExtensionLength { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMaxExtensionLengthResponse MaxExtensionLength { get => _explicitNullValueMaxExtensionLength; set { _explicitNullValueMaxExtensionLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_extension_length"); else _explicitNullProperties?.Remove("max_extension_length"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMaxExtensionLengthResponse _explicitNullValueMaxExtensionLength = default!;
 #endif
         /// <summary>The name given to the retention policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyName { get; set; }
+        public string? PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
+        private string? _explicitNullValuePolicyName = default!;
 #nullable restore
 #else
-        public string PolicyName { get; set; }
+        public string PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
+        private string _explicitNullValuePolicyName = default!;
 #endif
         /// <summary>The length of the retention policy. This valuespecifies the duration in days that the retentionpolicy will be active for after being assigned tocontent.  If the policy has a `policy_type` of`indefinite`, the `retention_length` will also be`indefinite`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RetentionLength { get; set; }
+        public string? RetentionLength { get => _explicitNullValueRetentionLength; set { _explicitNullValueRetentionLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_length"); else _explicitNullProperties?.Remove("retention_length"); } }
+        private string? _explicitNullValueRetentionLength = default!;
 #nullable restore
 #else
-        public string RetentionLength { get; set; }
+        public string RetentionLength { get => _explicitNullValueRetentionLength; set { _explicitNullValueRetentionLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_length"); else _explicitNullProperties?.Remove("retention_length"); } }
+        private string _explicitNullValueRetentionLength = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +66,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,7 +93,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini_disposition_action>("disposition_action", DispositionAction);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMaxExtensionLengthResponse>("max_extension_length", MaxExtensionLength);
             writer.WriteStringValue("policy_name", PolicyName);
-            writer.WriteStringValue("retention_length", RetentionLength);
+            writer.WriteStringValue("retention_length", RetentionLength);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

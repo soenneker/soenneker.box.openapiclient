@@ -13,33 +13,54 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LegalHoldPolicyAssignment : global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("assigned_at") is { } nullNodeAssignedAt && nullNodeAssignedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedAt = null;
+            if (parseNode.GetChildNode("assigned_by") is { } nullNodeAssignedBy && nullNodeAssignedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedBy = null;
+            if (parseNode.GetChildNode("assigned_to") is { } nullNodeAssignedTo && nullNodeAssignedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedTo = null;
+            if (parseNode.GetChildNode("deleted_at") is { } nullNodeDeletedAt && nullNodeDeletedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeletedAt = null;
+            if (parseNode.GetChildNode("legal_hold_policy") is { } nullNodeLegalHoldPolicy && nullNodeLegalHoldPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalHoldPolicy = null;
+        }
+
         /// <summary>When the legal hold policy assignment object wascreated.</summary>
-        public DateTimeOffset? AssignedAt { get; set; }
+        public DateTimeOffset? AssignedAt { get => _explicitNullValueAssignedAt; set { _explicitNullValueAssignedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_at"); else _explicitNullProperties?.Remove("assigned_at"); } }
+        private DateTimeOffset? _explicitNullValueAssignedAt = default!;
         /// <summary>The assigned_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini? AssignedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini? AssignedBy { get => _explicitNullValueAssignedBy; set { _explicitNullValueAssignedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_by"); else _explicitNullProperties?.Remove("assigned_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini? _explicitNullValueAssignedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini AssignedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini AssignedBy { get => _explicitNullValueAssignedBy; set { _explicitNullValueAssignedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_by"); else _explicitNullProperties?.Remove("assigned_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini _explicitNullValueAssignedBy = default!;
 #endif
         /// <summary>The assigned_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem? AssignedTo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem? AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_to"); else _explicitNullProperties?.Remove("assigned_to"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem? _explicitNullValueAssignedTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem AssignedTo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_to"); else _explicitNullProperties?.Remove("assigned_to"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem _explicitNullValueAssignedTo = default!;
 #endif
         /// <summary>When the assignment release request was sent.(Because it can take time for an assignment to fullydelete, this isn&apos;t quite the same time that theassignment is fully deleted). If null, Assignmentwas not deleted.</summary>
-        public DateTimeOffset? DeletedAt { get; set; }
+        public DateTimeOffset? DeletedAt { get => _explicitNullValueDeletedAt; set { _explicitNullValueDeletedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleted_at"); else _explicitNullProperties?.Remove("deleted_at"); } }
+        private DateTimeOffset? _explicitNullValueDeletedAt = default!;
         /// <summary>The legal_hold_policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini? LegalHoldPolicy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini? LegalHoldPolicy { get => _explicitNullValueLegalHoldPolicy; set { _explicitNullValueLegalHoldPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_hold_policy"); else _explicitNullProperties?.Remove("legal_hold_policy"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini? _explicitNullValueLegalHoldPolicy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini LegalHoldPolicy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini LegalHoldPolicy { get => _explicitNullValueLegalHoldPolicy; set { _explicitNullValueLegalHoldPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_hold_policy"); else _explicitNullProperties?.Remove("legal_hold_policy"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini _explicitNullValueLegalHoldPolicy = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +70,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +99,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>("assigned_by", AssignedBy);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem>("assigned_to", AssignedTo);
             writer.WriteDateTimeOffsetValue("deleted_at", DeletedAt);
-            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini>("legal_hold_policy", LegalHoldPolicy);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini>("legal_hold_policy", LegalHoldPolicy);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

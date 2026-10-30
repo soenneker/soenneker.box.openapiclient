@@ -13,57 +13,92 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileVersion : global::Soenneker.Box.OpenApiClient.Models.FileVersionMini, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("modified_at") is { } nullNodeModifiedAt && nullNodeModifiedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAt = null;
+            if (parseNode.GetChildNode("modified_by") is { } nullNodeModifiedBy && nullNodeModifiedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedBy = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("purged_at") is { } nullNodePurgedAt && nullNodePurgedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurgedAt = null;
+            if (parseNode.GetChildNode("restored_at") is { } nullNodeRestoredAt && nullNodeRestoredAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestoredAt = null;
+            if (parseNode.GetChildNode("restored_by") is { } nullNodeRestoredBy && nullNodeRestoredBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestoredBy = null;
+            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("trashed_at") is { } nullNodeTrashedAt && nullNodeTrashedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrashedAt = null;
+            if (parseNode.GetChildNode("trashed_by") is { } nullNodeTrashedBy && nullNodeTrashedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrashedBy = null;
+            if (parseNode.GetChildNode("uploader_display_name") is { } nullNodeUploaderDisplayName && nullNodeUploaderDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploaderDisplayName = null;
+        }
+
         /// <summary>When the file version object was created.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>When the file version object was last updated.</summary>
-        public DateTimeOffset? ModifiedAt { get; set; }
+        public DateTimeOffset? ModifiedAt { get => _explicitNullValueModifiedAt; set { _explicitNullValueModifiedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at"); else _explicitNullProperties?.Remove("modified_at"); } }
+        private DateTimeOffset? _explicitNullValueModifiedAt = default!;
         /// <summary>The modified_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini? ModifiedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini? ModifiedBy { get => _explicitNullValueModifiedBy; set { _explicitNullValueModifiedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_by"); else _explicitNullProperties?.Remove("modified_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini? _explicitNullValueModifiedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini ModifiedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini ModifiedBy { get => _explicitNullValueModifiedBy; set { _explicitNullValueModifiedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_by"); else _explicitNullProperties?.Remove("modified_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini _explicitNullValueModifiedBy = default!;
 #endif
         /// <summary>The name of the file version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>When the file version object will be permanently deleted.</summary>
-        public DateTimeOffset? PurgedAt { get; set; }
+        public DateTimeOffset? PurgedAt { get => _explicitNullValuePurgedAt; set { _explicitNullValuePurgedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purged_at"); else _explicitNullProperties?.Remove("purged_at"); } }
+        private DateTimeOffset? _explicitNullValuePurgedAt = default!;
         /// <summary>When the file version was restored from the trash.</summary>
-        public DateTimeOffset? RestoredAt { get; set; }
+        public DateTimeOffset? RestoredAt { get => _explicitNullValueRestoredAt; set { _explicitNullValueRestoredAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restored_at"); else _explicitNullProperties?.Remove("restored_at"); } }
+        private DateTimeOffset? _explicitNullValueRestoredAt = default!;
         /// <summary>The restored_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini? RestoredBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini? RestoredBy { get => _explicitNullValueRestoredBy; set { _explicitNullValueRestoredBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restored_by"); else _explicitNullProperties?.Remove("restored_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini? _explicitNullValueRestoredBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini RestoredBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini RestoredBy { get => _explicitNullValueRestoredBy; set { _explicitNullValueRestoredBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restored_by"); else _explicitNullProperties?.Remove("restored_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini _explicitNullValueRestoredBy = default!;
 #endif
         /// <summary>Size of the file version in bytes.</summary>
-        public long? Size { get; set; }
+        public long? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private long? _explicitNullValueSize = default!;
         /// <summary>When the file version object was trashed.</summary>
-        public DateTimeOffset? TrashedAt { get; set; }
+        public DateTimeOffset? TrashedAt { get => _explicitNullValueTrashedAt; set { _explicitNullValueTrashedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trashed_at"); else _explicitNullProperties?.Remove("trashed_at"); } }
+        private DateTimeOffset? _explicitNullValueTrashedAt = default!;
         /// <summary>The trashed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini? TrashedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini? TrashedBy { get => _explicitNullValueTrashedBy; set { _explicitNullValueTrashedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trashed_by"); else _explicitNullProperties?.Remove("trashed_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini? _explicitNullValueTrashedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini TrashedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini TrashedBy { get => _explicitNullValueTrashedBy; set { _explicitNullValueTrashedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trashed_by"); else _explicitNullProperties?.Remove("trashed_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini _explicitNullValueTrashedBy = default!;
 #endif
         /// <summary>The uploader_display_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploaderDisplayName { get; set; }
+        public string? UploaderDisplayName { get => _explicitNullValueUploaderDisplayName; set { _explicitNullValueUploaderDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploader_display_name"); else _explicitNullProperties?.Remove("uploader_display_name"); } }
+        private string? _explicitNullValueUploaderDisplayName = default!;
 #nullable restore
 #else
-        public string UploaderDisplayName { get; set; }
+        public string UploaderDisplayName { get => _explicitNullValueUploaderDisplayName; set { _explicitNullValueUploaderDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploader_display_name"); else _explicitNullProperties?.Remove("uploader_display_name"); } }
+        private string _explicitNullValueUploaderDisplayName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -73,7 +108,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.FileVersion CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.FileVersion();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.FileVersion(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,7 +149,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteLongValue("size", Size);
             writer.WriteDateTimeOffsetValue("trashed_at", TrashedAt);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>("trashed_by", TrashedBy);
-            writer.WriteStringValue("uploader_display_name", UploaderDisplayName);
+            writer.WriteStringValue("uploader_display_name", UploaderDisplayName);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

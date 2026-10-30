@@ -12,66 +12,96 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MetadataQuery : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ancestor_folder_id") is { } nullNodeAncestorFolderId && nullNodeAncestorFolderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AncestorFolderId = null;
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("marker") is { } nullNodeMarker && nullNodeMarker.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Marker = null;
+            if (parseNode.GetChildNode("order_by") is { } nullNodeOrderBy && nullNodeOrderBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderBy = null;
+            if (parseNode.GetChildNode("query") is { } nullNodeQuery && nullNodeQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Query = null;
+            if (parseNode.GetChildNode("query_params") is { } nullNodeQueryParams && nullNodeQueryParams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryParams = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the folder that you are restricting the query to. Avalue of zero will return results from all folders you have accessto. A non-zero value will only return results found in the foldercorresponding to the ID or in any of its subfolders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AncestorFolderId { get; set; }
+        public string? AncestorFolderId { get => _explicitNullValueAncestorFolderId; set { _explicitNullValueAncestorFolderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ancestor_folder_id"); else _explicitNullProperties?.Remove("ancestor_folder_id"); } }
+        private string? _explicitNullValueAncestorFolderId = default!;
 #nullable restore
 #else
-        public string AncestorFolderId { get; set; }
+        public string AncestorFolderId { get => _explicitNullValueAncestorFolderId; set { _explicitNullValueAncestorFolderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ancestor_folder_id"); else _explicitNullProperties?.Remove("ancestor_folder_id"); } }
+        private string _explicitNullValueAncestorFolderId = default!;
 #endif
         /// <summary>By default, this endpoint returns only the most basic info about the items forwhich the query matches. This attribute can be used to specify a list ofadditional attributes to return for any item, including its metadata.This attribute takes a list of item fields, metadata template identifiers,or metadata template field identifiers.For example:* `created_by` will add the details of the user who created the item tothe response.* `metadata.&lt;scope&gt;.&lt;templateKey&gt;` will return the mini-representationof the metadata instance identified by the `scope` and `templateKey`.* `metadata.&lt;scope&gt;.&lt;templateKey&gt;.&lt;field&gt;` will return all the mini-representationof the metadata instance identified by the `scope` and `templateKey` plusthe field specified by the `field` name. Multiple fields for the same`scope` and `templateKey` can be defined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Fields { get; set; }
+        public List<string>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<string>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<string> Fields { get; set; }
+        public List<string> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<string> _explicitNullValueFields = default!;
 #endif
         /// <summary>Specifies the template used in the query. Must be in the form`scope.templateKey`. Not all templates can be used in this field,most notably the built-in, Box-provided classification templatescan not be used in a query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? From { get; set; }
+        public string? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private string? _explicitNullValueFrom = default!;
 #nullable restore
 #else
-        public string From { get; set; }
+        public string From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private string _explicitNullValueFrom = default!;
 #endif
         /// <summary>A value between 0 and 100 that indicates the maximum number of resultsto return for a single request. This only specifies a maximumboundary and will not guarantee the minimum number of resultsreturned.</summary>
-        public int? Limit { get; set; }
+        public int? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private int? _explicitNullValueLimit = default!;
         /// <summary>Marker to use for requesting the next page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Marker { get; set; }
+        public string? Marker { get => _explicitNullValueMarker; set { _explicitNullValueMarker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marker"); else _explicitNullProperties?.Remove("marker"); } }
+        private string? _explicitNullValueMarker = default!;
 #nullable restore
 #else
-        public string Marker { get; set; }
+        public string Marker { get => _explicitNullValueMarker; set { _explicitNullValueMarker = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marker"); else _explicitNullProperties?.Remove("marker"); } }
+        private string _explicitNullValueMarker = default!;
 #endif
         /// <summary>A list of template fields and directions to sort the metadata queryresults by.The ordering `direction` must be the same for each item in the array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_order_by>? OrderBy { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_order_by>? OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_order_by>? _explicitNullValueOrderBy = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_order_by> OrderBy { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_order_by> OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_order_by> _explicitNullValueOrderBy = default!;
 #endif
         /// <summary>The query to perform. A query is a logical expression that is very similarto a SQL `SELECT` statement. Values in the search query can be turned intoparameters specified in the `query_param` arguments list to prevent havingto manually insert search values into the query string.For example, a value of `:amount` would represent the `amount` value in`query_params` object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Query { get; set; }
+        public string? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
+        private string? _explicitNullValueQuery = default!;
 #nullable restore
 #else
-        public string Query { get; set; }
+        public string Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
+        private string _explicitNullValueQuery = default!;
 #endif
         /// <summary>Set of arguments corresponding to the parameters specified in the`query`. The type of each parameter used in the `query_params` must matchthe type of the corresponding metadata template field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_query_params? QueryParams { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_query_params? QueryParams { get => _explicitNullValueQueryParams; set { _explicitNullValueQueryParams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query_params"); else _explicitNullProperties?.Remove("query_params"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_query_params? _explicitNullValueQueryParams = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_query_params QueryParams { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_query_params QueryParams { get => _explicitNullValueQueryParams; set { _explicitNullValueQueryParams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query_params"); else _explicitNullProperties?.Remove("query_params"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_query_params _explicitNullValueQueryParams = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.MetadataQuery"/> and sets the default values.
@@ -89,7 +119,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.MetadataQuery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.MetadataQuery();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.MetadataQuery(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,6 +154,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_order_by>("order_by", OrderBy);
             writer.WriteStringValue("query", Query);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.MetadataQuery_query_params>("query_params", QueryParams);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

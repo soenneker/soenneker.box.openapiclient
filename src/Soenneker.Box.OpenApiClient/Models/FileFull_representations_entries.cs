@@ -12,48 +12,70 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileFull_representations_entries : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("info") is { } nullNodeInfo && nullNodeInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Info = null;
+            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("representation") is { } nullNodeRepresentation && nullNodeRepresentation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Representation = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object containing the URL that can be used to actually fetchthe representation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_content? Content { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_content? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_content? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_content Content { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_content Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_content _explicitNullValueContent = default!;
 #endif
         /// <summary>An object containing the URL that can be used to fetch more infoon this representation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_info? Info { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_info? Info { get => _explicitNullValueInfo; set { _explicitNullValueInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("info"); else _explicitNullProperties?.Remove("info"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_info? _explicitNullValueInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_info Info { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_info Info { get => _explicitNullValueInfo; set { _explicitNullValueInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("info"); else _explicitNullProperties?.Remove("info"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_info _explicitNullValueInfo = default!;
 #endif
         /// <summary>An object containing the size and type of this presentation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_properties? Properties { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_properties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_properties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_properties Properties { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_properties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_properties _explicitNullValueProperties = default!;
 #endif
         /// <summary>Indicates the file type of the returned representation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Representation { get; set; }
+        public string? Representation { get => _explicitNullValueRepresentation; set { _explicitNullValueRepresentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representation"); else _explicitNullProperties?.Remove("representation"); } }
+        private string? _explicitNullValueRepresentation = default!;
 #nullable restore
 #else
-        public string Representation { get; set; }
+        public string Representation { get => _explicitNullValueRepresentation; set { _explicitNullValueRepresentation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representation"); else _explicitNullProperties?.Remove("representation"); } }
+        private string _explicitNullValueRepresentation = default!;
 #endif
         /// <summary>An object containing the status of this representation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_status? Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_status? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_status Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_status Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_status _explicitNullValueStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_properties>("properties", Properties);
             writer.WriteStringValue("representation", Representation);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_representations_entries_status>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

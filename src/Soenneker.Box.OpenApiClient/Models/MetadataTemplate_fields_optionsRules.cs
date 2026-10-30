@@ -12,18 +12,30 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MetadataTemplate_fields_optionsRules : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("multiSelect") is { } nullNodeMultiSelect && nullNodeMultiSelect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiSelect = null;
+            if (parseNode.GetChildNode("selectableLevels") is { } nullNodeSelectableLevels && nullNodeSelectableLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectableLevels = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to allow users to select multiple values.</summary>
-        public bool? MultiSelect { get; set; }
+        public bool? MultiSelect { get => _explicitNullValueMultiSelect; set { _explicitNullValueMultiSelect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelect"); else _explicitNullProperties?.Remove("multiSelect"); } }
+        private bool? _explicitNullValueMultiSelect = default!;
         /// <summary>An array of integers defining which levels of the taxonomy areselectable by users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? SelectableLevels { get; set; }
+        public List<int?>? SelectableLevels { get => _explicitNullValueSelectableLevels; set { _explicitNullValueSelectableLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectableLevels"); else _explicitNullProperties?.Remove("selectableLevels"); } }
+        private List<int?>? _explicitNullValueSelectableLevels = default!;
 #nullable restore
 #else
-        public List<int?> SelectableLevels { get; set; }
+        public List<int?> SelectableLevels { get => _explicitNullValueSelectableLevels; set { _explicitNullValueSelectableLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectableLevels"); else _explicitNullProperties?.Remove("selectableLevels"); } }
+        private List<int?> _explicitNullValueSelectableLevels = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.MetadataTemplate_fields_optionsRules(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("multiSelect", MultiSelect);
             writer.WriteCollectionOfPrimitiveValues<int?>("selectableLevels", SelectableLevels);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

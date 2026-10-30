@@ -12,32 +12,48 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IntegrationMappingSlackCreateRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("box_item") is { } nullNodeBoxItem && nullNodeBoxItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxItem = null;
+            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("partner_item") is { } nullNodePartnerItem && nullNodePartnerItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerItem = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The box_item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingBoxItemSlack? BoxItem { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingBoxItemSlack? BoxItem { get => _explicitNullValueBoxItem; set { _explicitNullValueBoxItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_item"); else _explicitNullProperties?.Remove("box_item"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingBoxItemSlack? _explicitNullValueBoxItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingBoxItemSlack BoxItem { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingBoxItemSlack BoxItem { get => _explicitNullValueBoxItem; set { _explicitNullValueBoxItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_item"); else _explicitNullProperties?.Remove("box_item"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingBoxItemSlack _explicitNullValueBoxItem = default!;
 #endif
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackOptions? Options { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackOptions? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackOptions Options { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackOptions _explicitNullValueOptions = default!;
 #endif
         /// <summary>The partner_item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemSlack? PartnerItem { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemSlack? PartnerItem { get => _explicitNullValuePartnerItem; set { _explicitNullValuePartnerItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_item"); else _explicitNullProperties?.Remove("partner_item"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemSlack? _explicitNullValuePartnerItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemSlack PartnerItem { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemSlack PartnerItem { get => _explicitNullValuePartnerItem; set { _explicitNullValuePartnerItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_item"); else _explicitNullProperties?.Remove("partner_item"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemSlack _explicitNullValuePartnerItem = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackCreateRequest"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackCreateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackCreateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingBoxItemSlack>("box_item", BoxItem);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingSlackOptions>("options", Options);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemSlack>("partner_item", PartnerItem);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -13,159 +13,236 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileFull : global::Soenneker.Box.OpenApiClient.Models.FileObject, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("allowed_invitee_roles") is { } nullNodeAllowedInviteeRoles && nullNodeAllowedInviteeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedInviteeRoles = null;
+            if (parseNode.GetChildNode("allowed_shared_link_access_levels") is { } nullNodeAllowedSharedLinkAccessLevels && nullNodeAllowedSharedLinkAccessLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedSharedLinkAccessLevels = null;
+            if (parseNode.GetChildNode("authenticated_download_url") is { } nullNodeAuthenticatedDownloadUrl && nullNodeAuthenticatedDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticatedDownloadUrl = null;
+            if (parseNode.GetChildNode("classification") is { } nullNodeClassification && nullNodeClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Classification = null;
+            if (parseNode.GetChildNode("collections") is { } nullNodeCollections && nullNodeCollections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collections = null;
+            if (parseNode.GetChildNode("comment_count") is { } nullNodeCommentCount && nullNodeCommentCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentCount = null;
+            if (parseNode.GetChildNode("disposition_at") is { } nullNodeDispositionAt && nullNodeDispositionAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DispositionAt = null;
+            if (parseNode.GetChildNode("download_url") is { } nullNodeDownloadUrl && nullNodeDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadUrl = null;
+            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("expiring_embed_link") is { } nullNodeExpiringEmbedLink && nullNodeExpiringEmbedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiringEmbedLink = null;
+            if (parseNode.GetChildNode("extension") is { } nullNodeExtension && nullNodeExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extension = null;
+            if (parseNode.GetChildNode("has_collaborations") is { } nullNodeHasCollaborations && nullNodeHasCollaborations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCollaborations = null;
+            if (parseNode.GetChildNode("is_accessible_via_shared_link") is { } nullNodeIsAccessibleViaSharedLink && nullNodeIsAccessibleViaSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessibleViaSharedLink = null;
+            if (parseNode.GetChildNode("is_associated_with_app_item") is { } nullNodeIsAssociatedWithAppItem && nullNodeIsAssociatedWithAppItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAssociatedWithAppItem = null;
+            if (parseNode.GetChildNode("is_download_available") is { } nullNodeIsDownloadAvailable && nullNodeIsDownloadAvailable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDownloadAvailable = null;
+            if (parseNode.GetChildNode("is_externally_owned") is { } nullNodeIsExternallyOwned && nullNodeIsExternallyOwned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternallyOwned = null;
+            if (parseNode.GetChildNode("is_package") is { } nullNodeIsPackage && nullNodeIsPackage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPackage = null;
+            if (parseNode.GetChildNode("lock") is { } nullNodeLock && nullNodeLock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lock = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("representations") is { } nullNodeRepresentations && nullNodeRepresentations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Representations = null;
+            if (parseNode.GetChildNode("shared_link_permission_options") is { } nullNodeSharedLinkPermissionOptions && nullNodeSharedLinkPermissionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedLinkPermissionOptions = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("uploader_display_name") is { } nullNodeUploaderDisplayName && nullNodeUploaderDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploaderDisplayName = null;
+            if (parseNode.GetChildNode("version_number") is { } nullNodeVersionNumber && nullNodeVersionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionNumber = null;
+            if (parseNode.GetChildNode("watermark_info") is { } nullNodeWatermarkInfo && nullNodeWatermarkInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WatermarkInfo = null;
+        }
+
         /// <summary>A list of the types of roles that user can be invited atwhen sharing this file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles?>? AllowedInviteeRoles { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles?>? AllowedInviteeRoles { get => _explicitNullValueAllowedInviteeRoles; set { _explicitNullValueAllowedInviteeRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_invitee_roles"); else _explicitNullProperties?.Remove("allowed_invitee_roles"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles?>? _explicitNullValueAllowedInviteeRoles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles?> AllowedInviteeRoles { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles?> AllowedInviteeRoles { get => _explicitNullValueAllowedInviteeRoles; set { _explicitNullValueAllowedInviteeRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_invitee_roles"); else _explicitNullProperties?.Remove("allowed_invitee_roles"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_invitee_roles?> _explicitNullValueAllowedInviteeRoles = default!;
 #endif
         /// <summary>The shared link access levels the authenticated user is allowed touse when creating or updating a shared link for this file.The list depends on item policy and user authorization, so it may benarrower than the levels available to the owner. An empty array meansno access level is available to this user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get => _explicitNullValueAllowedSharedLinkAccessLevels; set { _explicitNullValueAllowedSharedLinkAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_shared_link_access_levels"); else _explicitNullProperties?.Remove("allowed_shared_link_access_levels"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels?>? _explicitNullValueAllowedSharedLinkAccessLevels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels?> AllowedSharedLinkAccessLevels { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels?> AllowedSharedLinkAccessLevels { get => _explicitNullValueAllowedSharedLinkAccessLevels; set { _explicitNullValueAllowedSharedLinkAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_shared_link_access_levels"); else _explicitNullProperties?.Remove("allowed_shared_link_access_levels"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileFull_allowed_shared_link_access_levels?> _explicitNullValueAllowedSharedLinkAccessLevels = default!;
 #endif
         /// <summary>A stable API URL for the file content endpoint,`/2.0/files/{id}/content`. Unlike `download_url`, authorization isevaluated when the URL is requested with a valid access token.This field is only returned for files, not folders or web links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthenticatedDownloadUrl { get; set; }
+        public string? AuthenticatedDownloadUrl { get => _explicitNullValueAuthenticatedDownloadUrl; set { _explicitNullValueAuthenticatedDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticated_download_url"); else _explicitNullProperties?.Remove("authenticated_download_url"); } }
+        private string? _explicitNullValueAuthenticatedDownloadUrl = default!;
 #nullable restore
 #else
-        public string AuthenticatedDownloadUrl { get; set; }
+        public string AuthenticatedDownloadUrl { get => _explicitNullValueAuthenticatedDownloadUrl; set { _explicitNullValueAuthenticatedDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticated_download_url"); else _explicitNullProperties?.Remove("authenticated_download_url"); } }
+        private string _explicitNullValueAuthenticatedDownloadUrl = default!;
 #endif
         /// <summary>The classification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_classification? Classification { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_classification? Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_classification? _explicitNullValueClassification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_classification Classification { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_classification Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_classification _explicitNullValueClassification = default!;
 #endif
         /// <summary>The collections that this file belongs to.For more information, see the[collections guide](https://developer.box.com/guides/collections).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.Collection>? _explicitNullValueCollections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.Collection> _explicitNullValueCollections = default!;
 #endif
         /// <summary>The number of comments on this file.</summary>
-        public int? CommentCount { get; set; }
+        public int? CommentCount { get => _explicitNullValueCommentCount; set { _explicitNullValueCommentCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_count"); else _explicitNullProperties?.Remove("comment_count"); } }
+        private int? _explicitNullValueCommentCount = default!;
         /// <summary>The retention expiration timestamp for the given file.</summary>
-        public DateTimeOffset? DispositionAt { get; set; }
+        public DateTimeOffset? DispositionAt { get => _explicitNullValueDispositionAt; set { _explicitNullValueDispositionAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disposition_at"); else _explicitNullProperties?.Remove("disposition_at"); } }
+        private DateTimeOffset? _explicitNullValueDispositionAt = default!;
         /// <summary>A pre-authorized, expiring URL for directly downloading the file&apos;scontent. Requires authentication and is valid only for the currentsession.This field is only returned for files, not folders or web links.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DownloadUrl { get; set; }
+        public string? DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
+        private string? _explicitNullValueDownloadUrl = default!;
 #nullable restore
 #else
-        public string DownloadUrl { get; set; }
+        public string DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
+        private string _explicitNullValueDownloadUrl = default!;
 #endif
         /// <summary>When the file will automatically be deleted.</summary>
-        public DateTimeOffset? ExpiresAt { get; set; }
+        public DateTimeOffset? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private DateTimeOffset? _explicitNullValueExpiresAt = default!;
         /// <summary>The expiring_embed_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ExpiringEmbedLink { get; set; }
+        public UntypedNode? ExpiringEmbedLink { get => _explicitNullValueExpiringEmbedLink; set { _explicitNullValueExpiringEmbedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiring_embed_link"); else _explicitNullProperties?.Remove("expiring_embed_link"); } }
+        private UntypedNode? _explicitNullValueExpiringEmbedLink = default!;
 #nullable restore
 #else
-        public UntypedNode ExpiringEmbedLink { get; set; }
+        public UntypedNode ExpiringEmbedLink { get => _explicitNullValueExpiringEmbedLink; set { _explicitNullValueExpiringEmbedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiring_embed_link"); else _explicitNullProperties?.Remove("expiring_embed_link"); } }
+        private UntypedNode _explicitNullValueExpiringEmbedLink = default!;
 #endif
         /// <summary>Indicates the (optional) file extension for this file. By default,this is set to an empty string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Extension { get; set; }
+        public string? Extension { get => _explicitNullValueExtension; set { _explicitNullValueExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extension"); else _explicitNullProperties?.Remove("extension"); } }
+        private string? _explicitNullValueExtension = default!;
 #nullable restore
 #else
-        public string Extension { get; set; }
+        public string Extension { get => _explicitNullValueExtension; set { _explicitNullValueExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extension"); else _explicitNullProperties?.Remove("extension"); } }
+        private string _explicitNullValueExtension = default!;
 #endif
         /// <summary>Specifies if this file has any other collaborators.</summary>
-        public bool? HasCollaborations { get; set; }
+        public bool? HasCollaborations { get => _explicitNullValueHasCollaborations; set { _explicitNullValueHasCollaborations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_collaborations"); else _explicitNullProperties?.Remove("has_collaborations"); } }
+        private bool? _explicitNullValueHasCollaborations = default!;
         /// <summary>Specifies if the file can be accessedvia the direct shared link or a shared linkto a parent folder.</summary>
-        public bool? IsAccessibleViaSharedLink { get; set; }
+        public bool? IsAccessibleViaSharedLink { get => _explicitNullValueIsAccessibleViaSharedLink; set { _explicitNullValueIsAccessibleViaSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_accessible_via_shared_link"); else _explicitNullProperties?.Remove("is_accessible_via_shared_link"); } }
+        private bool? _explicitNullValueIsAccessibleViaSharedLink = default!;
         /// <summary>This field will return true if the file or any ancestor of the fileis associated with at least one app item. Note that this will returntrue even if the context user does not have access to the app item(s)associated with the file.</summary>
-        public bool? IsAssociatedWithAppItem { get; set; }
+        public bool? IsAssociatedWithAppItem { get => _explicitNullValueIsAssociatedWithAppItem; set { _explicitNullValueIsAssociatedWithAppItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_associated_with_app_item"); else _explicitNullProperties?.Remove("is_associated_with_app_item"); } }
+        private bool? _explicitNullValueIsAssociatedWithAppItem = default!;
         /// <summary>Whether the file&apos;s binary content is eligible to be downloaded.This is a content-level flag and does not reflect whether thecurrent user is authorized to download the file. Use`permissions.can_download`, when available, for that.</summary>
-        public bool? IsDownloadAvailable { get; set; }
+        public bool? IsDownloadAvailable { get => _explicitNullValueIsDownloadAvailable; set { _explicitNullValueIsDownloadAvailable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_download_available"); else _explicitNullProperties?.Remove("is_download_available"); } }
+        private bool? _explicitNullValueIsDownloadAvailable = default!;
         /// <summary>Specifies if this file is owned by a user outside of theauthenticated enterprise.</summary>
-        public bool? IsExternallyOwned { get; set; }
+        public bool? IsExternallyOwned { get => _explicitNullValueIsExternallyOwned; set { _explicitNullValueIsExternallyOwned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_externally_owned"); else _explicitNullProperties?.Remove("is_externally_owned"); } }
+        private bool? _explicitNullValueIsExternallyOwned = default!;
         /// <summary>Indicates if the file is a package. Packages are commonly usedby Mac Applications and can include iWork files.</summary>
-        public bool? IsPackage { get; set; }
+        public bool? IsPackage { get => _explicitNullValueIsPackage; set { _explicitNullValueIsPackage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_package"); else _explicitNullProperties?.Remove("is_package"); } }
+        private bool? _explicitNullValueIsPackage = default!;
         /// <summary>The lock property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_lock? Lock { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_lock? Lock { get => _explicitNullValueLock; set { _explicitNullValueLock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock"); else _explicitNullProperties?.Remove("lock"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_lock? _explicitNullValueLock = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_lock Lock { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_lock Lock { get => _explicitNullValueLock; set { _explicitNullValueLock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock"); else _explicitNullProperties?.Remove("lock"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_lock _explicitNullValueLock = default!;
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Metadata { get; set; }
+        public UntypedNode? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private UntypedNode? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public UntypedNode Metadata { get; set; }
+        public UntypedNode Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private UntypedNode _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Permissions { get; set; }
+        public UntypedNode? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private UntypedNode? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public UntypedNode Permissions { get; set; }
+        public UntypedNode Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private UntypedNode _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The representations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations? Representations { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations? Representations { get => _explicitNullValueRepresentations; set { _explicitNullValueRepresentations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representations"); else _explicitNullProperties?.Remove("representations"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations? _explicitNullValueRepresentations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations Representations { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_representations Representations { get => _explicitNullValueRepresentations; set { _explicitNullValueRepresentations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("representations"); else _explicitNullProperties?.Remove("representations"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_representations _explicitNullValueRepresentations = default!;
 #endif
         /// <summary>A list of the types of roles that user can be invited atwhen sharing this file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_shared_link_permission_options?>? SharedLinkPermissionOptions { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_shared_link_permission_options?>? SharedLinkPermissionOptions { get => _explicitNullValueSharedLinkPermissionOptions; set { _explicitNullValueSharedLinkPermissionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link_permission_options"); else _explicitNullProperties?.Remove("shared_link_permission_options"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileFull_shared_link_permission_options?>? _explicitNullValueSharedLinkPermissionOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_shared_link_permission_options?> SharedLinkPermissionOptions { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileFull_shared_link_permission_options?> SharedLinkPermissionOptions { get => _explicitNullValueSharedLinkPermissionOptions; set { _explicitNullValueSharedLinkPermissionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link_permission_options"); else _explicitNullProperties?.Remove("shared_link_permission_options"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileFull_shared_link_permission_options?> _explicitNullValueSharedLinkPermissionOptions = default!;
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get; set; }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get; set; }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>The uploader_display_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploaderDisplayName { get; set; }
+        public string? UploaderDisplayName { get => _explicitNullValueUploaderDisplayName; set { _explicitNullValueUploaderDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploader_display_name"); else _explicitNullProperties?.Remove("uploader_display_name"); } }
+        private string? _explicitNullValueUploaderDisplayName = default!;
 #nullable restore
 #else
-        public string UploaderDisplayName { get; set; }
+        public string UploaderDisplayName { get => _explicitNullValueUploaderDisplayName; set { _explicitNullValueUploaderDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploader_display_name"); else _explicitNullProperties?.Remove("uploader_display_name"); } }
+        private string _explicitNullValueUploaderDisplayName = default!;
 #endif
         /// <summary>The version number of this file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VersionNumber { get; set; }
+        public string? VersionNumber { get => _explicitNullValueVersionNumber; set { _explicitNullValueVersionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version_number"); else _explicitNullProperties?.Remove("version_number"); } }
+        private string? _explicitNullValueVersionNumber = default!;
 #nullable restore
 #else
-        public string VersionNumber { get; set; }
+        public string VersionNumber { get => _explicitNullValueVersionNumber; set { _explicitNullValueVersionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version_number"); else _explicitNullProperties?.Remove("version_number"); } }
+        private string _explicitNullValueVersionNumber = default!;
 #endif
         /// <summary>The watermark_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info? WatermarkInfo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info? WatermarkInfo { get => _explicitNullValueWatermarkInfo; set { _explicitNullValueWatermarkInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watermark_info"); else _explicitNullProperties?.Remove("watermark_info"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info? _explicitNullValueWatermarkInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info WatermarkInfo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info WatermarkInfo { get => _explicitNullValueWatermarkInfo; set { _explicitNullValueWatermarkInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watermark_info"); else _explicitNullProperties?.Remove("watermark_info"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info _explicitNullValueWatermarkInfo = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -175,7 +252,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.FileFull CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.FileFull();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.FileFull(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -246,7 +323,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteStringValue("uploader_display_name", UploaderDisplayName);
             writer.WriteStringValue("version_number", VersionNumber);
-            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info>("watermark_info", WatermarkInfo);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info>("watermark_info", WatermarkInfo);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -68,6 +68,8 @@ namespace Soenneker.Box.OpenApiClient.Ai_agents
             {
                 { "400", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.AiMultipleAgentResponse>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.AiMultipleAgentResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -95,6 +97,8 @@ namespace Soenneker.Box.OpenApiClient.Ai_agents
             {
                 { "400", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.AiSingleAgentResponseFull>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.AiSingleAgentResponseFull.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

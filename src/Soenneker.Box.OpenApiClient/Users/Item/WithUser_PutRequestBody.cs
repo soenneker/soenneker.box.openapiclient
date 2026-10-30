@@ -12,118 +12,180 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
     #pragma warning disable CS1591
     public partial class WithUser_PutRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("can_see_managed_users") is { } nullNodeCanSeeManagedUsers && nullNodeCanSeeManagedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanSeeManagedUsers = null;
+            if (parseNode.GetChildNode("enterprise") is { } nullNodeEnterprise && nullNodeEnterprise.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enterprise = null;
+            if (parseNode.GetChildNode("external_app_user_id") is { } nullNodeExternalAppUserId && nullNodeExternalAppUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAppUserId = null;
+            if (parseNode.GetChildNode("is_collaborated_content_available_when_owner_inactive") is { } nullNodeIsCollaboratedContentAvailableWhenOwnerInactive && nullNodeIsCollaboratedContentAvailableWhenOwnerInactive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCollaboratedContentAvailableWhenOwnerInactive = null;
+            if (parseNode.GetChildNode("is_exempt_from_device_limits") is { } nullNodeIsExemptFromDeviceLimits && nullNodeIsExemptFromDeviceLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExemptFromDeviceLimits = null;
+            if (parseNode.GetChildNode("is_exempt_from_login_verification") is { } nullNodeIsExemptFromLoginVerification && nullNodeIsExemptFromLoginVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExemptFromLoginVerification = null;
+            if (parseNode.GetChildNode("is_external_collab_restricted") is { } nullNodeIsExternalCollabRestricted && nullNodeIsExternalCollabRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternalCollabRestricted = null;
+            if (parseNode.GetChildNode("is_password_reset_required") is { } nullNodeIsPasswordResetRequired && nullNodeIsPasswordResetRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPasswordResetRequired = null;
+            if (parseNode.GetChildNode("is_sync_enabled") is { } nullNodeIsSyncEnabled && nullNodeIsSyncEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSyncEnabled = null;
+            if (parseNode.GetChildNode("job_title") is { } nullNodeJobTitle && nullNodeJobTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobTitle = null;
+            if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("login") is { } nullNodeLogin && nullNodeLogin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Login = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notification_email") is { } nullNodeNotificationEmail && nullNodeNotificationEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationEmail = null;
+            if (parseNode.GetChildNode("notify") is { } nullNodeNotify && nullNodeNotify.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notify = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("space_amount") is { } nullNodeSpaceAmount && nullNodeSpaceAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpaceAmount = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("timezone") is { } nullNodeTimezone && nullNodeTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timezone = null;
+            if (parseNode.GetChildNode("tracking_codes") is { } nullNodeTrackingCodes && nullNodeTrackingCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingCodes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The user’s address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Address { get; set; }
+        public string? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private string? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public string Address { get; set; }
+        public string Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private string _explicitNullValueAddress = default!;
 #endif
         /// <summary>Whether the user can see other enterprise users in theircontact list.</summary>
-        public bool? CanSeeManagedUsers { get; set; }
+        public bool? CanSeeManagedUsers { get => _explicitNullValueCanSeeManagedUsers; set { _explicitNullValueCanSeeManagedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_see_managed_users"); else _explicitNullProperties?.Remove("can_see_managed_users"); } }
+        private bool? _explicitNullValueCanSeeManagedUsers = default!;
         /// <summary>Set this to `null` to roll the user out of the enterpriseand make them a free user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Enterprise { get; set; }
+        public string? Enterprise { get => _explicitNullValueEnterprise; set { _explicitNullValueEnterprise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise"); else _explicitNullProperties?.Remove("enterprise"); } }
+        private string? _explicitNullValueEnterprise = default!;
 #nullable restore
 #else
-        public string Enterprise { get; set; }
+        public string Enterprise { get => _explicitNullValueEnterprise; set { _explicitNullValueEnterprise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise"); else _explicitNullProperties?.Remove("enterprise"); } }
+        private string _explicitNullValueEnterprise = default!;
 #endif
         /// <summary>An external identifier for an app user, which can be used to lookup the user. This can be used to tie user IDs from externalidentity providers to Box users.Note: In order to update this field, you need to request a tokenusing the application that created the app user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalAppUserId { get; set; }
+        public string? ExternalAppUserId { get => _explicitNullValueExternalAppUserId; set { _explicitNullValueExternalAppUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_app_user_id"); else _explicitNullProperties?.Remove("external_app_user_id"); } }
+        private string? _explicitNullValueExternalAppUserId = default!;
 #nullable restore
 #else
-        public string ExternalAppUserId { get; set; }
+        public string ExternalAppUserId { get => _explicitNullValueExternalAppUserId; set { _explicitNullValueExternalAppUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_app_user_id"); else _explicitNullProperties?.Remove("external_app_user_id"); } }
+        private string _explicitNullValueExternalAppUserId = default!;
 #endif
         /// <summary>Whether collaborators can access content owned by the user whenthe user is inactive. This setting preserves existingcollaborator access and does not grant new permissions.</summary>
-        public bool? IsCollaboratedContentAvailableWhenOwnerInactive { get; set; }
+        public bool? IsCollaboratedContentAvailableWhenOwnerInactive { get => _explicitNullValueIsCollaboratedContentAvailableWhenOwnerInactive; set { _explicitNullValueIsCollaboratedContentAvailableWhenOwnerInactive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_collaborated_content_available_when_owner_inactive"); else _explicitNullProperties?.Remove("is_collaborated_content_available_when_owner_inactive"); } }
+        private bool? _explicitNullValueIsCollaboratedContentAvailableWhenOwnerInactive = default!;
         /// <summary>Whether to exempt the user from enterprise device limits.</summary>
-        public bool? IsExemptFromDeviceLimits { get; set; }
+        public bool? IsExemptFromDeviceLimits { get => _explicitNullValueIsExemptFromDeviceLimits; set { _explicitNullValueIsExemptFromDeviceLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_exempt_from_device_limits"); else _explicitNullProperties?.Remove("is_exempt_from_device_limits"); } }
+        private bool? _explicitNullValueIsExemptFromDeviceLimits = default!;
         /// <summary>Whether the user must use two-factor authentication.</summary>
-        public bool? IsExemptFromLoginVerification { get; set; }
+        public bool? IsExemptFromLoginVerification { get => _explicitNullValueIsExemptFromLoginVerification; set { _explicitNullValueIsExemptFromLoginVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_exempt_from_login_verification"); else _explicitNullProperties?.Remove("is_exempt_from_login_verification"); } }
+        private bool? _explicitNullValueIsExemptFromLoginVerification = default!;
         /// <summary>Whether the user is allowed to collaborate with users outsidetheir enterprise.</summary>
-        public bool? IsExternalCollabRestricted { get; set; }
+        public bool? IsExternalCollabRestricted { get => _explicitNullValueIsExternalCollabRestricted; set { _explicitNullValueIsExternalCollabRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_external_collab_restricted"); else _explicitNullProperties?.Remove("is_external_collab_restricted"); } }
+        private bool? _explicitNullValueIsExternalCollabRestricted = default!;
         /// <summary>Whether the user is required to reset their password.</summary>
-        public bool? IsPasswordResetRequired { get; set; }
+        public bool? IsPasswordResetRequired { get => _explicitNullValueIsPasswordResetRequired; set { _explicitNullValueIsPasswordResetRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_password_reset_required"); else _explicitNullProperties?.Remove("is_password_reset_required"); } }
+        private bool? _explicitNullValueIsPasswordResetRequired = default!;
         /// <summary>Whether the user can use Box Sync.</summary>
-        public bool? IsSyncEnabled { get; set; }
+        public bool? IsSyncEnabled { get => _explicitNullValueIsSyncEnabled; set { _explicitNullValueIsSyncEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_sync_enabled"); else _explicitNullProperties?.Remove("is_sync_enabled"); } }
+        private bool? _explicitNullValueIsSyncEnabled = default!;
         /// <summary>The user’s job title.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobTitle { get; set; }
+        public string? JobTitle { get => _explicitNullValueJobTitle; set { _explicitNullValueJobTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_title"); else _explicitNullProperties?.Remove("job_title"); } }
+        private string? _explicitNullValueJobTitle = default!;
 #nullable restore
 #else
-        public string JobTitle { get; set; }
+        public string JobTitle { get => _explicitNullValueJobTitle; set { _explicitNullValueJobTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_title"); else _explicitNullProperties?.Remove("job_title"); } }
+        private string _explicitNullValueJobTitle = default!;
 #endif
         /// <summary>The language of the user, formatted in modified version of the[ISO 639-1](https://developer.box.com/guides/api-calls/language-codes) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Language { get; set; }
+        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string? _explicitNullValueLanguage = default!;
 #nullable restore
 #else
-        public string Language { get; set; }
+        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string _explicitNullValueLanguage = default!;
 #endif
         /// <summary>The email address the user uses to log inNote: If the target user&apos;s email is not confirmed, then theprimary login address cannot be changed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Login { get; set; }
+        public string? Login { get => _explicitNullValueLogin; set { _explicitNullValueLogin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login"); else _explicitNullProperties?.Remove("login"); } }
+        private string? _explicitNullValueLogin = default!;
 #nullable restore
 #else
-        public string Login { get; set; }
+        public string Login { get => _explicitNullValueLogin; set { _explicitNullValueLogin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login"); else _explicitNullProperties?.Remove("login"); } }
+        private string _explicitNullValueLogin = default!;
 #endif
         /// <summary>The name of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>An alternate notification email address to which emailnotifications are sent. When it&apos;s confirmed, this will bethe email address to which notifications are sent instead ofto the primary email address.Set this value to `null` to remove the notification email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_notification_email? NotificationEmail { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_notification_email? NotificationEmail { get => _explicitNullValueNotificationEmail; set { _explicitNullValueNotificationEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_email"); else _explicitNullProperties?.Remove("notification_email"); } }
+        private global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_notification_email? _explicitNullValueNotificationEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_notification_email NotificationEmail { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_notification_email NotificationEmail { get => _explicitNullValueNotificationEmail; set { _explicitNullValueNotificationEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_email"); else _explicitNullProperties?.Remove("notification_email"); } }
+        private global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_notification_email _explicitNullValueNotificationEmail = default!;
 #endif
         /// <summary>Whether the user should receive an email when theyare rolled out of an enterprise.</summary>
-        public bool? Notify { get; set; }
+        public bool? Notify { get => _explicitNullValueNotify; set { _explicitNullValueNotify = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify"); else _explicitNullProperties?.Remove("notify"); } }
+        private bool? _explicitNullValueNotify = default!;
         /// <summary>The user’s phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Phone { get; set; }
+        public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public string Phone { get; set; }
+        public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string _explicitNullValuePhone = default!;
 #endif
         /// <summary>The user’s enterprise role.</summary>
-        public global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_role? Role { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_role? _explicitNullValueRole = default!;
         /// <summary>The user’s total available space in bytes. Set this to `-1` toindicate unlimited storage.</summary>
-        public long? SpaceAmount { get; set; }
+        public long? SpaceAmount { get => _explicitNullValueSpaceAmount; set { _explicitNullValueSpaceAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("space_amount"); else _explicitNullProperties?.Remove("space_amount"); } }
+        private long? _explicitNullValueSpaceAmount = default!;
         /// <summary>The user&apos;s account status.</summary>
-        public global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_status? Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_status? _explicitNullValueStatus = default!;
         /// <summary>The user&apos;s timezone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Timezone { get; set; }
+        public string? Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        private string? _explicitNullValueTimezone = default!;
 #nullable restore
 #else
-        public string Timezone { get; set; }
+        public string Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        private string _explicitNullValueTimezone = default!;
 #endif
         /// <summary>Tracking codes allow an admin to generate reports from theadmin console and assign an attribute to a specific groupof users. This setting must be enabled for an enterprise before itcan be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>? TrackingCodes { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>? TrackingCodes { get => _explicitNullValueTrackingCodes; set { _explicitNullValueTrackingCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_codes"); else _explicitNullProperties?.Remove("tracking_codes"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>? _explicitNullValueTrackingCodes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode> TrackingCodes { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode> TrackingCodes { get => _explicitNullValueTrackingCodes; set { _explicitNullValueTrackingCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_codes"); else _explicitNullProperties?.Remove("tracking_codes"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode> _explicitNullValueTrackingCodes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody"/> and sets the default values.
@@ -140,7 +202,7 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
         public static global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -203,6 +265,7 @@ namespace Soenneker.Box.OpenApiClient.Users.Item
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Users.Item.WithUser_PutRequestBody_status>("status", Status);
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>("tracking_codes", TrackingCodes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,24 +11,37 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
     #pragma warning disable CS1591
     public partial class Legal_hold_policy_assignmentsPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assign_to") is { } nullNodeAssignTo && nullNodeAssignTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignTo = null;
+            if (parseNode.GetChildNode("policy_id") is { } nullNodePolicyId && nullNodePolicyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The item to assign the policy to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody_assign_to? AssignTo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody_assign_to? AssignTo { get => _explicitNullValueAssignTo; set { _explicitNullValueAssignTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assign_to"); else _explicitNullProperties?.Remove("assign_to"); } }
+        private global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody_assign_to? _explicitNullValueAssignTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody_assign_to AssignTo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody_assign_to AssignTo { get => _explicitNullValueAssignTo; set { _explicitNullValueAssignTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assign_to"); else _explicitNullProperties?.Remove("assign_to"); } }
+        private global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody_assign_to _explicitNullValueAssignTo = default!;
 #endif
         /// <summary>The ID of the policy to assign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyId { get; set; }
+        public string? PolicyId { get => _explicitNullValuePolicyId; set { _explicitNullValuePolicyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_id"); else _explicitNullProperties?.Remove("policy_id"); } }
+        private string? _explicitNullValuePolicyId = default!;
 #nullable restore
 #else
-        public string PolicyId { get; set; }
+        public string PolicyId { get => _explicitNullValuePolicyId; set { _explicitNullValuePolicyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_id"); else _explicitNullProperties?.Remove("policy_id"); } }
+        private string _explicitNullValuePolicyId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
         public static global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsPostRequestBody_assign_to>("assign_to", AssignTo);
             writer.WriteStringValue("policy_id", PolicyId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

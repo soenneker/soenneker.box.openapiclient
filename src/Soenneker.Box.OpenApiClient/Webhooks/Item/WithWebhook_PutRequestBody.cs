@@ -11,32 +11,48 @@ namespace Soenneker.Box.OpenApiClient.Webhooks.Item
     #pragma warning disable CS1591
     public partial class WithWebhook_PutRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("target") is { } nullNodeTarget && nullNodeTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Target = null;
+            if (parseNode.GetChildNode("triggers") is { } nullNodeTriggers && nullNodeTriggers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Triggers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL that is notified by this webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Address { get; set; }
+        public string? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private string? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public string Address { get; set; }
+        public string Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private string _explicitNullValueAddress = default!;
 #endif
         /// <summary>The item that will trigger the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_target? Target { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_target? Target { get => _explicitNullValueTarget; set { _explicitNullValueTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target"); else _explicitNullProperties?.Remove("target"); } }
+        private global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_target? _explicitNullValueTarget = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_target Target { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_target Target { get => _explicitNullValueTarget; set { _explicitNullValueTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target"); else _explicitNullProperties?.Remove("target"); } }
+        private global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_target _explicitNullValueTarget = default!;
 #endif
         /// <summary>An array of event names that this webhook isto be triggered for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_triggers?>? Triggers { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_triggers?>? Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggers"); else _explicitNullProperties?.Remove("triggers"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_triggers?>? _explicitNullValueTriggers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_triggers?> Triggers { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_triggers?> Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggers"); else _explicitNullProperties?.Remove("triggers"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_triggers?> _explicitNullValueTriggers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Box.OpenApiClient.Webhooks.Item
         public static global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Box.OpenApiClient.Webhooks.Item
             writer.WriteStringValue("address", Address);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_target>("target", Target);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Box.OpenApiClient.Webhooks.Item.WithWebhook_PutRequestBody_triggers>("triggers", Triggers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

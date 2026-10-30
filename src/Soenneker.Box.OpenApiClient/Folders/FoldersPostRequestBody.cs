@@ -11,35 +11,53 @@ namespace Soenneker.Box.OpenApiClient.Folders
     #pragma warning disable CS1591
     public partial class FoldersPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("folder_upload_email") is { } nullNodeFolderUploadEmail && nullNodeFolderUploadEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderUploadEmail = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
+            if (parseNode.GetChildNode("sync_state") is { } nullNodeSyncState && nullNodeSyncState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncState = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The folder_upload_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email? FolderUploadEmail { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email? FolderUploadEmail { get => _explicitNullValueFolderUploadEmail; set { _explicitNullValueFolderUploadEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_upload_email"); else _explicitNullProperties?.Remove("folder_upload_email"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email? _explicitNullValueFolderUploadEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email FolderUploadEmail { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email FolderUploadEmail { get => _explicitNullValueFolderUploadEmail; set { _explicitNullValueFolderUploadEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_upload_email"); else _explicitNullProperties?.Remove("folder_upload_email"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email _explicitNullValueFolderUploadEmail = default!;
 #endif
         /// <summary>The name for the new folder.The following restrictions to folder names apply: names containingnon-printable ASCII characters, forward and backward slashes(`/`, `\`), names with trailing spaces, and names `.` and `..` arenot allowed.Folder names must be unique within their parent folder. The name check is case-insensitive,so a folder named `New Folder` cannot be created in a parent folder that already containsa folder named `new folder`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The parent folder to create the new folder within.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_parent? Parent { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_parent? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_parent? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_parent Parent { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_parent Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_parent _explicitNullValueParent = default!;
 #endif
         /// <summary>Specifies whether a folder should be synced to auser&apos;s device or not. This is used by Box Sync(discontinued) and is not used by Box Drive.</summary>
-        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_sync_state? SyncState { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_sync_state? SyncState { get => _explicitNullValueSyncState; set { _explicitNullValueSyncState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_state"); else _explicitNullProperties?.Remove("sync_state"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_sync_state? _explicitNullValueSyncState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Box.OpenApiClient.Folders
         public static global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Box.OpenApiClient.Folders
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_parent>("parent", Parent);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_sync_state>("sync_state", SyncState);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

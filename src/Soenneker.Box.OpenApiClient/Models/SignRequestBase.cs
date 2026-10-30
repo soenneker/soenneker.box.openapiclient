@@ -12,96 +12,141 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequestBase : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("are_reminders_enabled") is { } nullNodeAreRemindersEnabled && nullNodeAreRemindersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AreRemindersEnabled = null;
+            if (parseNode.GetChildNode("are_text_signatures_enabled") is { } nullNodeAreTextSignaturesEnabled && nullNodeAreTextSignaturesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AreTextSignaturesEnabled = null;
+            if (parseNode.GetChildNode("days_valid") is { } nullNodeDaysValid && nullNodeDaysValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysValid = null;
+            if (parseNode.GetChildNode("declined_redirect_url") is { } nullNodeDeclinedRedirectUrl && nullNodeDeclinedRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclinedRedirectUrl = null;
+            if (parseNode.GetChildNode("email_message") is { } nullNodeEmailMessage && nullNodeEmailMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessage = null;
+            if (parseNode.GetChildNode("email_subject") is { } nullNodeEmailSubject && nullNodeEmailSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSubject = null;
+            if (parseNode.GetChildNode("external_id") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("external_system_name") is { } nullNodeExternalSystemName && nullNodeExternalSystemName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSystemName = null;
+            if (parseNode.GetChildNode("is_document_preparation_needed") is { } nullNodeIsDocumentPreparationNeeded && nullNodeIsDocumentPreparationNeeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDocumentPreparationNeeded = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("prefill_tags") is { } nullNodePrefillTags && nullNodePrefillTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrefillTags = null;
+            if (parseNode.GetChildNode("redirect_url") is { } nullNodeRedirectUrl && nullNodeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrl = null;
+            if (parseNode.GetChildNode("request_flow") is { } nullNodeRequestFlow && nullNodeRequestFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestFlow = null;
+            if (parseNode.GetChildNode("template_id") is { } nullNodeTemplateId && nullNodeTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Reminds signers to sign a document on day 3, 8, 13 and 18. Reminders are only sent to outstanding signers.</summary>
-        public bool? AreRemindersEnabled { get; set; }
+        public bool? AreRemindersEnabled { get => _explicitNullValueAreRemindersEnabled; set { _explicitNullValueAreRemindersEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("are_reminders_enabled"); else _explicitNullProperties?.Remove("are_reminders_enabled"); } }
+        private bool? _explicitNullValueAreRemindersEnabled = default!;
         /// <summary>Disables the usage of signatures generated by typing (text).</summary>
-        public bool? AreTextSignaturesEnabled { get; set; }
+        public bool? AreTextSignaturesEnabled { get => _explicitNullValueAreTextSignaturesEnabled; set { _explicitNullValueAreTextSignaturesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("are_text_signatures_enabled"); else _explicitNullProperties?.Remove("are_text_signatures_enabled"); } }
+        private bool? _explicitNullValueAreTextSignaturesEnabled = default!;
         /// <summary>Set the number of days after which the created signature request will automatically expire if not completed. By default, we do not apply any expiration date on signature requests, and the signature request does not expire.</summary>
-        public int? DaysValid { get; set; }
+        public int? DaysValid { get => _explicitNullValueDaysValid; set { _explicitNullValueDaysValid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_valid"); else _explicitNullProperties?.Remove("days_valid"); } }
+        private int? _explicitNullValueDaysValid = default!;
         /// <summary>The uri that a signer will be redirected to after declining to sign a document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeclinedRedirectUrl { get; set; }
+        public string? DeclinedRedirectUrl { get => _explicitNullValueDeclinedRedirectUrl; set { _explicitNullValueDeclinedRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("declined_redirect_url"); else _explicitNullProperties?.Remove("declined_redirect_url"); } }
+        private string? _explicitNullValueDeclinedRedirectUrl = default!;
 #nullable restore
 #else
-        public string DeclinedRedirectUrl { get; set; }
+        public string DeclinedRedirectUrl { get => _explicitNullValueDeclinedRedirectUrl; set { _explicitNullValueDeclinedRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("declined_redirect_url"); else _explicitNullProperties?.Remove("declined_redirect_url"); } }
+        private string _explicitNullValueDeclinedRedirectUrl = default!;
 #endif
         /// <summary>Message to include in sign request email. The field is cleaned through sanitization of specific characters. However, some html tags are allowed. Links included in the message are also converted to hyperlinks in the email. The message may contain the following html tags including `a`, `abbr`, `acronym`, `b`, `blockquote`, `code`, `em`, `i`, `ul`, `li`, `ol`, and `strong`. Be aware that when the text to html ratio is too high, the email may end up in spam filters. Custom styles on these tags are not allowed. If this field is not passed, a default message will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailMessage { get; set; }
+        public string? EmailMessage { get => _explicitNullValueEmailMessage; set { _explicitNullValueEmailMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_message"); else _explicitNullProperties?.Remove("email_message"); } }
+        private string? _explicitNullValueEmailMessage = default!;
 #nullable restore
 #else
-        public string EmailMessage { get; set; }
+        public string EmailMessage { get => _explicitNullValueEmailMessage; set { _explicitNullValueEmailMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_message"); else _explicitNullProperties?.Remove("email_message"); } }
+        private string _explicitNullValueEmailMessage = default!;
 #endif
         /// <summary>Subject of sign request email. This is cleaned by sign request. If this field is not passed, a default subject will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailSubject { get; set; }
+        public string? EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_subject"); else _explicitNullProperties?.Remove("email_subject"); } }
+        private string? _explicitNullValueEmailSubject = default!;
 #nullable restore
 #else
-        public string EmailSubject { get; set; }
+        public string EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_subject"); else _explicitNullProperties?.Remove("email_subject"); } }
+        private string _explicitNullValueEmailSubject = default!;
 #endif
         /// <summary>This can be used to reference an ID in an external system that the sign request is related to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get; set; }
+        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        private string? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public string ExternalId { get; set; }
+        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        private string _explicitNullValueExternalId = default!;
 #endif
         /// <summary>Used as an optional system name to appear in the signature log next to the signers who have been assigned the `embed_url_external_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalSystemName { get; set; }
+        public string? ExternalSystemName { get => _explicitNullValueExternalSystemName; set { _explicitNullValueExternalSystemName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_system_name"); else _explicitNullProperties?.Remove("external_system_name"); } }
+        private string? _explicitNullValueExternalSystemName = default!;
 #nullable restore
 #else
-        public string ExternalSystemName { get; set; }
+        public string ExternalSystemName { get => _explicitNullValueExternalSystemName; set { _explicitNullValueExternalSystemName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_system_name"); else _explicitNullProperties?.Remove("external_system_name"); } }
+        private string _explicitNullValueExternalSystemName = default!;
 #endif
         /// <summary>Indicates if the sender should receive a `prepare_url` in the response to complete document preparation using the UI.</summary>
-        public bool? IsDocumentPreparationNeeded { get; set; }
+        public bool? IsDocumentPreparationNeeded { get => _explicitNullValueIsDocumentPreparationNeeded; set { _explicitNullValueIsDocumentPreparationNeeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_document_preparation_needed"); else _explicitNullProperties?.Remove("is_document_preparation_needed"); } }
+        private bool? _explicitNullValueIsDocumentPreparationNeeded = default!;
         /// <summary>Name of the signature request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>When a document contains sign-related tags in the content, you can prefill them using this `prefill_tags` by referencing the &apos;id&apos; of the tag as the `external_id` field of the prefill tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag>? PrefillTags { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag>? PrefillTags { get => _explicitNullValuePrefillTags; set { _explicitNullValuePrefillTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prefill_tags"); else _explicitNullProperties?.Remove("prefill_tags"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag>? _explicitNullValuePrefillTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag> PrefillTags { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag> PrefillTags { get => _explicitNullValuePrefillTags; set { _explicitNullValuePrefillTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prefill_tags"); else _explicitNullProperties?.Remove("prefill_tags"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag> _explicitNullValuePrefillTags = default!;
 #endif
         /// <summary>When specified, the signature request will be redirected to this url when a document is signed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectUrl { get; set; }
+        public string? RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_url"); else _explicitNullProperties?.Remove("redirect_url"); } }
+        private string? _explicitNullValueRedirectUrl = default!;
 #nullable restore
 #else
-        public string RedirectUrl { get; set; }
+        public string RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_url"); else _explicitNullProperties?.Remove("redirect_url"); } }
+        private string _explicitNullValueRedirectUrl = default!;
 #endif
         /// <summary>The flow type of the sign request. Values can include `standard` or `cfr11`.When not specified during creation, a default is chosen based on admin settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestFlow { get; set; }
+        public string? RequestFlow { get => _explicitNullValueRequestFlow; set { _explicitNullValueRequestFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_flow"); else _explicitNullProperties?.Remove("request_flow"); } }
+        private string? _explicitNullValueRequestFlow = default!;
 #nullable restore
 #else
-        public string RequestFlow { get; set; }
+        public string RequestFlow { get => _explicitNullValueRequestFlow; set { _explicitNullValueRequestFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_flow"); else _explicitNullProperties?.Remove("request_flow"); } }
+        private string _explicitNullValueRequestFlow = default!;
 #endif
         /// <summary>When a signature request is created from a template this field will indicate the id of that template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateId { get; set; }
+        public string? TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_id"); else _explicitNullProperties?.Remove("template_id"); } }
+        private string? _explicitNullValueTemplateId = default!;
 #nullable restore
 #else
-        public string TemplateId { get; set; }
+        public string TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_id"); else _explicitNullProperties?.Remove("template_id"); } }
+        private string _explicitNullValueTemplateId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestBase"/> and sets the default values.
@@ -119,7 +164,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.SignRequestBase CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.SignRequestBase();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestBase(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -166,6 +211,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("redirect_url", RedirectUrl);
             writer.WriteStringValue("request_flow", RequestFlow);
             writer.WriteStringValue("template_id", TemplateId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

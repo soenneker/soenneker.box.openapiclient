@@ -13,61 +13,100 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UserFull : global::Soenneker.Box.OpenApiClient.Models.User, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("can_see_managed_users") is { } nullNodeCanSeeManagedUsers && nullNodeCanSeeManagedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanSeeManagedUsers = null;
+            if (parseNode.GetChildNode("enterprise") is { } nullNodeEnterprise && nullNodeEnterprise.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enterprise = null;
+            if (parseNode.GetChildNode("external_app_user_id") is { } nullNodeExternalAppUserId && nullNodeExternalAppUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAppUserId = null;
+            if (parseNode.GetChildNode("hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
+            if (parseNode.GetChildNode("is_collaborated_content_available_when_owner_inactive") is { } nullNodeIsCollaboratedContentAvailableWhenOwnerInactive && nullNodeIsCollaboratedContentAvailableWhenOwnerInactive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCollaboratedContentAvailableWhenOwnerInactive = null;
+            if (parseNode.GetChildNode("is_exempt_from_device_limits") is { } nullNodeIsExemptFromDeviceLimits && nullNodeIsExemptFromDeviceLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExemptFromDeviceLimits = null;
+            if (parseNode.GetChildNode("is_exempt_from_login_verification") is { } nullNodeIsExemptFromLoginVerification && nullNodeIsExemptFromLoginVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExemptFromLoginVerification = null;
+            if (parseNode.GetChildNode("is_external_collab_restricted") is { } nullNodeIsExternalCollabRestricted && nullNodeIsExternalCollabRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternalCollabRestricted = null;
+            if (parseNode.GetChildNode("is_platform_access_only") is { } nullNodeIsPlatformAccessOnly && nullNodeIsPlatformAccessOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPlatformAccessOnly = null;
+            if (parseNode.GetChildNode("is_sync_enabled") is { } nullNodeIsSyncEnabled && nullNodeIsSyncEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSyncEnabled = null;
+            if (parseNode.GetChildNode("my_tags") is { } nullNodeMyTags && nullNodeMyTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MyTags = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("tracking_codes") is { } nullNodeTrackingCodes && nullNodeTrackingCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingCodes = null;
+        }
+
         /// <summary>Whether the user can see other enterprise users in their contact list.</summary>
-        public bool? CanSeeManagedUsers { get; set; }
+        public bool? CanSeeManagedUsers { get => _explicitNullValueCanSeeManagedUsers; set { _explicitNullValueCanSeeManagedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_see_managed_users"); else _explicitNullProperties?.Remove("can_see_managed_users"); } }
+        private bool? _explicitNullValueCanSeeManagedUsers = default!;
         /// <summary>The enterprise property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise? Enterprise { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise? Enterprise { get => _explicitNullValueEnterprise; set { _explicitNullValueEnterprise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise"); else _explicitNullProperties?.Remove("enterprise"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise? _explicitNullValueEnterprise = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise Enterprise { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise Enterprise { get => _explicitNullValueEnterprise; set { _explicitNullValueEnterprise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise"); else _explicitNullProperties?.Remove("enterprise"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserFull_enterprise _explicitNullValueEnterprise = default!;
 #endif
         /// <summary>An external identifier for an app user, which can be used to look upthe user. This can be used to tie user IDs from external identityproviders to Box users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalAppUserId { get; set; }
+        public string? ExternalAppUserId { get => _explicitNullValueExternalAppUserId; set { _explicitNullValueExternalAppUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_app_user_id"); else _explicitNullProperties?.Remove("external_app_user_id"); } }
+        private string? _explicitNullValueExternalAppUserId = default!;
 #nullable restore
 #else
-        public string ExternalAppUserId { get; set; }
+        public string ExternalAppUserId { get => _explicitNullValueExternalAppUserId; set { _explicitNullValueExternalAppUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_app_user_id"); else _explicitNullProperties?.Remove("external_app_user_id"); } }
+        private string _explicitNullValueExternalAppUserId = default!;
 #endif
         /// <summary>The root (protocol, subdomain, domain) of any links that need to begenerated for the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hostname { get; set; }
+        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostname"); else _explicitNullProperties?.Remove("hostname"); } }
+        private string? _explicitNullValueHostname = default!;
 #nullable restore
 #else
-        public string Hostname { get; set; }
+        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostname"); else _explicitNullProperties?.Remove("hostname"); } }
+        private string _explicitNullValueHostname = default!;
 #endif
         /// <summary>Whether collaborators can access content owned by the user when theuser is inactive. This setting preserves existing collaborator accessand does not grant new permissions.</summary>
-        public bool? IsCollaboratedContentAvailableWhenOwnerInactive { get; set; }
+        public bool? IsCollaboratedContentAvailableWhenOwnerInactive { get => _explicitNullValueIsCollaboratedContentAvailableWhenOwnerInactive; set { _explicitNullValueIsCollaboratedContentAvailableWhenOwnerInactive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_collaborated_content_available_when_owner_inactive"); else _explicitNullProperties?.Remove("is_collaborated_content_available_when_owner_inactive"); } }
+        private bool? _explicitNullValueIsCollaboratedContentAvailableWhenOwnerInactive = default!;
         /// <summary>Whether to exempt the user from Enterprise device limits.</summary>
-        public bool? IsExemptFromDeviceLimits { get; set; }
+        public bool? IsExemptFromDeviceLimits { get => _explicitNullValueIsExemptFromDeviceLimits; set { _explicitNullValueIsExemptFromDeviceLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_exempt_from_device_limits"); else _explicitNullProperties?.Remove("is_exempt_from_device_limits"); } }
+        private bool? _explicitNullValueIsExemptFromDeviceLimits = default!;
         /// <summary>Whether the user must use two-factor authentication.</summary>
-        public bool? IsExemptFromLoginVerification { get; set; }
+        public bool? IsExemptFromLoginVerification { get => _explicitNullValueIsExemptFromLoginVerification; set { _explicitNullValueIsExemptFromLoginVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_exempt_from_login_verification"); else _explicitNullProperties?.Remove("is_exempt_from_login_verification"); } }
+        private bool? _explicitNullValueIsExemptFromLoginVerification = default!;
         /// <summary>Whether the user is allowed to collaborate with users outside theirenterprise.</summary>
-        public bool? IsExternalCollabRestricted { get; set; }
+        public bool? IsExternalCollabRestricted { get => _explicitNullValueIsExternalCollabRestricted; set { _explicitNullValueIsExternalCollabRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_external_collab_restricted"); else _explicitNullProperties?.Remove("is_external_collab_restricted"); } }
+        private bool? _explicitNullValueIsExternalCollabRestricted = default!;
         /// <summary>Whether the user is an App User.</summary>
-        public bool? IsPlatformAccessOnly { get; set; }
+        public bool? IsPlatformAccessOnly { get => _explicitNullValueIsPlatformAccessOnly; set { _explicitNullValueIsPlatformAccessOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_platform_access_only"); else _explicitNullProperties?.Remove("is_platform_access_only"); } }
+        private bool? _explicitNullValueIsPlatformAccessOnly = default!;
         /// <summary>Whether the user can use Box Sync.</summary>
-        public bool? IsSyncEnabled { get; set; }
+        public bool? IsSyncEnabled { get => _explicitNullValueIsSyncEnabled; set { _explicitNullValueIsSyncEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_sync_enabled"); else _explicitNullProperties?.Remove("is_sync_enabled"); } }
+        private bool? _explicitNullValueIsSyncEnabled = default!;
         /// <summary>Tags for all files and folders owned by the user. Values returnedwill only contain tags that were set by the requester.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MyTags { get; set; }
+        public List<string>? MyTags { get => _explicitNullValueMyTags; set { _explicitNullValueMyTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("my_tags"); else _explicitNullProperties?.Remove("my_tags"); } }
+        private List<string>? _explicitNullValueMyTags = default!;
 #nullable restore
 #else
-        public List<string> MyTags { get; set; }
+        public List<string> MyTags { get => _explicitNullValueMyTags; set { _explicitNullValueMyTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("my_tags"); else _explicitNullProperties?.Remove("my_tags"); } }
+        private List<string> _explicitNullValueMyTags = default!;
 #endif
         /// <summary>The user’s enterprise role.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.UserFull_role? Role { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserFull_role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserFull_role? _explicitNullValueRole = default!;
         /// <summary>Tracking codes allow an admin to generate reports from theadmin console and assign an attribute to a specific groupof users. This setting must be enabled for an enterprisebefore it can be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>? TrackingCodes { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>? TrackingCodes { get => _explicitNullValueTrackingCodes; set { _explicitNullValueTrackingCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_codes"); else _explicitNullProperties?.Remove("tracking_codes"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>? _explicitNullValueTrackingCodes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode> TrackingCodes { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode> TrackingCodes { get => _explicitNullValueTrackingCodes; set { _explicitNullValueTrackingCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_codes"); else _explicitNullProperties?.Remove("tracking_codes"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.TrackingCode> _explicitNullValueTrackingCodes = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -77,7 +116,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.UserFull CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.UserFull();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.UserFull(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,7 +161,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteBoolValue("is_sync_enabled", IsSyncEnabled);
             writer.WriteCollectionOfPrimitiveValues<string>("my_tags", MyTags);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.UserFull_role>("role", Role);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>("tracking_codes", TrackingCodes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.TrackingCode>("tracking_codes", TrackingCodes);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

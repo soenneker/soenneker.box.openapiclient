@@ -11,16 +11,26 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Metadata.Enterprise.SecurityCla
     #pragma warning disable CS1591
     public partial class SecurityClassification6VMVochwUWoPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Box__Security__Classification__Key") is { } nullNodeBoxSecurityClassificationKey && nullNodeBoxSecurityClassificationKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxSecurityClassificationKey = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the classification to apply to this file.To list the available classifications in an enterprise,use the classification API to retrieve the[classification template](https://developer.box.com/reference/get-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema)which lists all available classification keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoxSecurityClassificationKey { get; set; }
+        public string? BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
+        private string? _explicitNullValueBoxSecurityClassificationKey = default!;
 #nullable restore
 #else
-        public string BoxSecurityClassificationKey { get; set; }
+        public string BoxSecurityClassificationKey { get => _explicitNullValueBoxSecurityClassificationKey; set { _explicitNullValueBoxSecurityClassificationKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Box__Security__Classification__Key"); else _explicitNullProperties?.Remove("Box__Security__Classification__Key"); } }
+        private string _explicitNullValueBoxSecurityClassificationKey = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Files.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWoPostRequestBody"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Metadata.Enterprise.SecurityCla
         public static global::Soenneker.Box.OpenApiClient.Files.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWoPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Files.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWoPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Files.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWoPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Metadata.Enterprise.SecurityCla
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Box__Security__Classification__Key", BoxSecurityClassificationKey);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

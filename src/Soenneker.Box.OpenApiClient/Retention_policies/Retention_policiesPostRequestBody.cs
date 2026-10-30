@@ -12,53 +12,84 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
     #pragma warning disable CS1591
     public partial class Retention_policiesPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("are_owners_notified") is { } nullNodeAreOwnersNotified && nullNodeAreOwnersNotified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AreOwnersNotified = null;
+            if (parseNode.GetChildNode("can_owner_extend_retention") is { } nullNodeCanOwnerExtendRetention && nullNodeCanOwnerExtendRetention.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanOwnerExtendRetention = null;
+            if (parseNode.GetChildNode("custom_notification_recipients") is { } nullNodeCustomNotificationRecipients && nullNodeCustomNotificationRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomNotificationRecipients = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("disposition_action") is { } nullNodeDispositionAction && nullNodeDispositionAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DispositionAction = null;
+            if (parseNode.GetChildNode("max_extension_length") is { } nullNodeMaxExtensionLength && nullNodeMaxExtensionLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxExtensionLength = null;
+            if (parseNode.GetChildNode("policy_name") is { } nullNodePolicyName && nullNodePolicyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyName = null;
+            if (parseNode.GetChildNode("policy_type") is { } nullNodePolicyType && nullNodePolicyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyType = null;
+            if (parseNode.GetChildNode("retention_length") is { } nullNodeRetentionLength && nullNodeRetentionLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetentionLength = null;
+            if (parseNode.GetChildNode("retention_type") is { } nullNodeRetentionType && nullNodeRetentionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetentionType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether owner and co-owners of a file are notifiedwhen the policy nears expiration.</summary>
-        public bool? AreOwnersNotified { get; set; }
+        public bool? AreOwnersNotified { get => _explicitNullValueAreOwnersNotified; set { _explicitNullValueAreOwnersNotified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("are_owners_notified"); else _explicitNullProperties?.Remove("are_owners_notified"); } }
+        private bool? _explicitNullValueAreOwnersNotified = default!;
         /// <summary>Whether the owner of a file will be allowed toextend the retention.</summary>
-        public bool? CanOwnerExtendRetention { get; set; }
+        public bool? CanOwnerExtendRetention { get => _explicitNullValueCanOwnerExtendRetention; set { _explicitNullValueCanOwnerExtendRetention = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_owner_extend_retention"); else _explicitNullProperties?.Remove("can_owner_extend_retention"); } }
+        private bool? _explicitNullValueCanOwnerExtendRetention = default!;
         /// <summary>A list of users notified whenthe retention policy duration is about to end.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.UserMini>? CustomNotificationRecipients { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UserMini>? CustomNotificationRecipients { get => _explicitNullValueCustomNotificationRecipients; set { _explicitNullValueCustomNotificationRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_notification_recipients"); else _explicitNullProperties?.Remove("custom_notification_recipients"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UserMini>? _explicitNullValueCustomNotificationRecipients = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.UserMini> CustomNotificationRecipients { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UserMini> CustomNotificationRecipients { get => _explicitNullValueCustomNotificationRecipients; set { _explicitNullValueCustomNotificationRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_notification_recipients"); else _explicitNullProperties?.Remove("custom_notification_recipients"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UserMini> _explicitNullValueCustomNotificationRecipients = default!;
 #endif
         /// <summary>The additional text description of the retention policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The disposition action of the retention policy.`permanently_delete` deletes the contentretained by the policy permanently.`remove_retention` lifts retention policyfrom the content, allowing it to be deletedby users once the retention policy has expired.</summary>
-        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_disposition_action? DispositionAction { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_disposition_action? DispositionAction { get => _explicitNullValueDispositionAction; set { _explicitNullValueDispositionAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disposition_action"); else _explicitNullProperties?.Remove("disposition_action"); } }
+        private global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_disposition_action? _explicitNullValueDispositionAction = default!;
         /// <summary>The maximum extension length of the retention date.This value specifies the duration in days for whichthe retention date of the file under policy can be extended.It can be specified only for the &apos;finite&apos; policy typewhere the disposition action is &apos;permanently delete&apos;,otherwise the server will return status 400.If this value is &apos;none&apos;, it won&apos;t be possible to extendthe retention.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.Retention_policies? MaxExtensionLength { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Retention_policies? MaxExtensionLength { get => _explicitNullValueMaxExtensionLength; set { _explicitNullValueMaxExtensionLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_extension_length"); else _explicitNullProperties?.Remove("max_extension_length"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Retention_policies? _explicitNullValueMaxExtensionLength = default!;
         /// <summary>The name for the retention policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyName { get; set; }
+        public string? PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
+        private string? _explicitNullValuePolicyName = default!;
 #nullable restore
 #else
-        public string PolicyName { get; set; }
+        public string PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
+        private string _explicitNullValuePolicyName = default!;
 #endif
         /// <summary>The type of the retention policy. A retentionpolicy type can either be `finite`, where aspecific amount of time to retain the content is knownupfront, or `indefinite`, where the amount of timeto retain the content is still unknown.</summary>
-        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_policy_type? PolicyType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_policy_type? PolicyType { get => _explicitNullValuePolicyType; set { _explicitNullValuePolicyType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_type"); else _explicitNullProperties?.Remove("policy_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_policy_type? _explicitNullValuePolicyType = default!;
         /// <summary>The length of the retention policy. This valuespecifies the duration in days that the retentionpolicy will be active for after being assigned tocontent.  If the policy has a `policy_type` of`indefinite`, the `retention_length` will also be`indefinite`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length? RetentionLength { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length? RetentionLength { get => _explicitNullValueRetentionLength; set { _explicitNullValueRetentionLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_length"); else _explicitNullProperties?.Remove("retention_length"); } }
+        private global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length? _explicitNullValueRetentionLength = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length RetentionLength { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length RetentionLength { get => _explicitNullValueRetentionLength; set { _explicitNullValueRetentionLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_length"); else _explicitNullProperties?.Remove("retention_length"); } }
+        private global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length _explicitNullValueRetentionLength = default!;
 #endif
         /// <summary>Specifies the retention type:* `modifiable`: You can modify the retention policy. For example,you can add or remove folders, shorten or lengthenthe policy duration, or delete the assignment.Use this type if your retention policyis not related to any regulatory purposes.* `non_modifiable`: You can modify the retention policyonly in a limited way: add a folder, lengthen the duration,retire the policy, change the disposition actionor notification settings. You cannot perform other actions,such as deleting the assignment or shortening thepolicy duration. Use this type to ensurecompliance with regulatory retention policies.</summary>
-        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_retention_type? RetentionType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_retention_type? RetentionType { get => _explicitNullValueRetentionType; set { _explicitNullValueRetentionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_type"); else _explicitNullProperties?.Remove("retention_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_retention_type? _explicitNullValueRetentionType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody"/> and sets the default values.
         /// </summary>
@@ -74,7 +105,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
         public static global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -113,6 +144,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_policy_type>("policy_type", PolicyType);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length>("retention_length", RetentionLength);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody_retention_type>("retention_type", RetentionType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
@@ -138,14 +170,18 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length CreateFromDiscriminatorValue(IParseNode parseNode)
             {
+            // A null union input must not initialize an object branch.
+            if (global::System.Object.ReferenceEquals(parseNode, null)) throw new global::System.ArgumentNullException(nameof(parseNode));
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return new global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length();
+
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Soenneker.Box.OpenApiClient.Retention_policies.Retention_policiesPostRequestBody.Retention_policiesPostRequestBody_retention_length();
-                if(parseNode.GetIntValue() is int integerValue)
+                if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int integerValue)
                 {
                     result.Integer = integerValue;
                 }
-                else if(parseNode.GetStringValue() is string stringValue)
+                else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;
                 }
@@ -165,6 +201,10 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
+            // Empty composed wrappers serialize as JSON null.
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (Integer == null && String == null) { writer.WriteNullValue(null); return; }
+
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {

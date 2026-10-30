@@ -11,32 +11,48 @@ namespace Soenneker.Box.OpenApiClient.Comments
     #pragma warning disable CS1591
     public partial class CommentsPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("item") is { } nullNodeItem && nullNodeItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Item = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("tagged_message") is { } nullNodeTaggedMessage && nullNodeTaggedMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaggedMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The item to attach the comment to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody_item? Item { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody_item? Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
+        private global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody_item? _explicitNullValueItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody_item Item { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody_item Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
+        private global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody_item _explicitNullValueItem = default!;
 #endif
         /// <summary>The text of the comment.To mention a user, use the `tagged_message`parameter instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The text of the comment, including `@[user_id:name]`somewhere in the message to mention another user, whichwill send them an email notification, letting them knowthey have been mentioned.The `user_id` is the target user&apos;s ID, where the `name`can be any custom phrase. In the Box UI this name willlink to the user&apos;s profile.If you are not mentioning another user, use `message`instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaggedMessage { get; set; }
+        public string? TaggedMessage { get => _explicitNullValueTaggedMessage; set { _explicitNullValueTaggedMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagged_message"); else _explicitNullProperties?.Remove("tagged_message"); } }
+        private string? _explicitNullValueTaggedMessage = default!;
 #nullable restore
 #else
-        public string TaggedMessage { get; set; }
+        public string TaggedMessage { get => _explicitNullValueTaggedMessage; set { _explicitNullValueTaggedMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagged_message"); else _explicitNullProperties?.Remove("tagged_message"); } }
+        private string _explicitNullValueTaggedMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Box.OpenApiClient.Comments
         public static global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Box.OpenApiClient.Comments
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Comments.CommentsPostRequestBody_item>("item", Item);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("tagged_message", TaggedMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,67 +12,97 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateAiAgent : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access_state") is { } nullNodeAccessState && nullNodeAccessState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessState = null;
+            if (parseNode.GetChildNode("allowed_entities") is { } nullNodeAllowedEntities && nullNodeAllowedEntities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedEntities = null;
+            if (parseNode.GetChildNode("ask") is { } nullNodeAsk && nullNodeAsk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ask = null;
+            if (parseNode.GetChildNode("extract") is { } nullNodeExtract && nullNodeExtract.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extract = null;
+            if (parseNode.GetChildNode("icon_reference") is { } nullNodeIconReference && nullNodeIconReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IconReference = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("text_gen") is { } nullNodeTextGen && nullNodeTextGen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextGen = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The state of the AI Agent. Possible values are: `enabled`, `disabled`, and `enabled_for_selected_users`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessState { get; set; }
+        public string? AccessState { get => _explicitNullValueAccessState; set { _explicitNullValueAccessState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_state"); else _explicitNullProperties?.Remove("access_state"); } }
+        private string? _explicitNullValueAccessState = default!;
 #nullable restore
 #else
-        public string AccessState { get; set; }
+        public string AccessState { get => _explicitNullValueAccessState; set { _explicitNullValueAccessState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_state"); else _explicitNullProperties?.Remove("access_state"); } }
+        private string _explicitNullValueAccessState = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of allowed users or groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiAgentAllowedEntity>? AllowedEntities { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiAgentAllowedEntity>? AllowedEntities { get => _explicitNullValueAllowedEntities; set { _explicitNullValueAllowedEntities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_entities"); else _explicitNullProperties?.Remove("allowed_entities"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AiAgentAllowedEntity>? _explicitNullValueAllowedEntities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiAgentAllowedEntity> AllowedEntities { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiAgentAllowedEntity> AllowedEntities { get => _explicitNullValueAllowedEntities; set { _explicitNullValueAllowedEntities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_entities"); else _explicitNullProperties?.Remove("allowed_entities"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AiAgentAllowedEntity> _explicitNullValueAllowedEntities = default!;
 #endif
         /// <summary>The AI agent to be used to handle queries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentAsk? Ask { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentAsk? Ask { get => _explicitNullValueAsk; set { _explicitNullValueAsk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ask"); else _explicitNullProperties?.Remove("ask"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentAsk? _explicitNullValueAsk = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentAsk Ask { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentAsk Ask { get => _explicitNullValueAsk; set { _explicitNullValueAsk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ask"); else _explicitNullProperties?.Remove("ask"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentAsk _explicitNullValueAsk = default!;
 #endif
         /// <summary>The AI agent to be used for metadata extraction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract? Extract { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract? Extract { get => _explicitNullValueExtract; set { _explicitNullValueExtract = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract"); else _explicitNullProperties?.Remove("extract"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract? _explicitNullValueExtract = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract Extract { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract Extract { get => _explicitNullValueExtract; set { _explicitNullValueExtract = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract"); else _explicitNullProperties?.Remove("extract"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract _explicitNullValueExtract = default!;
 #endif
         /// <summary>The icon reference of the AI Agent. It should have format of the URL `https://cdn01.boxcdn.net/app-assets/aistudio/avatars/&lt;file_name&gt;`where possible values of `file_name` are: `logo_boxAi.png`,`logo_stamp.png`,`logo_legal.png`,`logo_finance.png`,`logo_config.png`,`logo_handshake.png`,`logo_analytics.png`,`logo_classification.png`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IconReference { get; set; }
+        public string? IconReference { get => _explicitNullValueIconReference; set { _explicitNullValueIconReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_reference"); else _explicitNullProperties?.Remove("icon_reference"); } }
+        private string? _explicitNullValueIconReference = default!;
 #nullable restore
 #else
-        public string IconReference { get; set; }
+        public string IconReference { get => _explicitNullValueIconReference; set { _explicitNullValueIconReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_reference"); else _explicitNullProperties?.Remove("icon_reference"); } }
+        private string _explicitNullValueIconReference = default!;
 #endif
         /// <summary>The name of the AI Agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The AI agent to be used to generate text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGen? TextGen { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGen? TextGen { get => _explicitNullValueTextGen; set { _explicitNullValueTextGen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_gen"); else _explicitNullProperties?.Remove("text_gen"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGen? _explicitNullValueTextGen = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGen TextGen { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGen TextGen { get => _explicitNullValueTextGen; set { _explicitNullValueTextGen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_gen"); else _explicitNullProperties?.Remove("text_gen"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGen _explicitNullValueTextGen = default!;
 #endif
         /// <summary>The type of agent used to handle queries.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.CreateAiAgent_type? Type { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.CreateAiAgent_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.CreateAiAgent_type? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.CreateAiAgent"/> and sets the default values.
         /// </summary>
@@ -88,7 +118,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.CreateAiAgent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.CreateAiAgent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.CreateAiAgent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -123,6 +153,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentTextGen>("text_gen", TextGen);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.CreateAiAgent_type>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,59 +12,86 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AiStudioAgentExtract : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access_state") is { } nullNodeAccessState && nullNodeAccessState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessState = null;
+            if (parseNode.GetChildNode("basic_image") is { } nullNodeBasicImage && nullNodeBasicImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BasicImage = null;
+            if (parseNode.GetChildNode("basic_text") is { } nullNodeBasicText && nullNodeBasicText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BasicText = null;
+            if (parseNode.GetChildNode("custom_instructions") is { } nullNodeCustomInstructions && nullNodeCustomInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomInstructions = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("long_text") is { } nullNodeLongText && nullNodeLongText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongText = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The state of the AI Agent capability. Possible values are: `enabled` and `disabled`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessState { get; set; }
+        public string? AccessState { get => _explicitNullValueAccessState; set { _explicitNullValueAccessState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_state"); else _explicitNullProperties?.Remove("access_state"); } }
+        private string? _explicitNullValueAccessState = default!;
 #nullable restore
 #else
-        public string AccessState { get; set; }
+        public string AccessState { get => _explicitNullValueAccessState; set { _explicitNullValueAccessState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_state"); else _explicitNullProperties?.Remove("access_state"); } }
+        private string _explicitNullValueAccessState = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>AI agent processor used to handle basic text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool? BasicImage { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool? BasicImage { get => _explicitNullValueBasicImage; set { _explicitNullValueBasicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basic_image"); else _explicitNullProperties?.Remove("basic_image"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool? _explicitNullValueBasicImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool BasicImage { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool BasicImage { get => _explicitNullValueBasicImage; set { _explicitNullValueBasicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basic_image"); else _explicitNullProperties?.Remove("basic_image"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool _explicitNullValueBasicImage = default!;
 #endif
         /// <summary>AI agent processor used to handle basic text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool? BasicText { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool? BasicText { get => _explicitNullValueBasicText; set { _explicitNullValueBasicText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basic_text"); else _explicitNullProperties?.Remove("basic_text"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool? _explicitNullValueBasicText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool BasicText { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool BasicText { get => _explicitNullValueBasicText; set { _explicitNullValueBasicText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basic_text"); else _explicitNullProperties?.Remove("basic_text"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentBasicTextTool _explicitNullValueBasicText = default!;
 #endif
         /// <summary>Custom instructions for the AI agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomInstructions { get; set; }
+        public string? CustomInstructions { get => _explicitNullValueCustomInstructions; set { _explicitNullValueCustomInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_instructions"); else _explicitNullProperties?.Remove("custom_instructions"); } }
+        private string? _explicitNullValueCustomInstructions = default!;
 #nullable restore
 #else
-        public string CustomInstructions { get; set; }
+        public string CustomInstructions { get => _explicitNullValueCustomInstructions; set { _explicitNullValueCustomInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_instructions"); else _explicitNullProperties?.Remove("custom_instructions"); } }
+        private string _explicitNullValueCustomInstructions = default!;
 #endif
         /// <summary>The description of the AI agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>AI agent processor used to to handle longer text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentLongTextTool? LongText { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentLongTextTool? LongText { get => _explicitNullValueLongText; set { _explicitNullValueLongText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_text"); else _explicitNullProperties?.Remove("long_text"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentLongTextTool? _explicitNullValueLongText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentLongTextTool LongText { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentLongTextTool LongText { get => _explicitNullValueLongText; set { _explicitNullValueLongText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_text"); else _explicitNullProperties?.Remove("long_text"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentLongTextTool _explicitNullValueLongText = default!;
 #endif
         /// <summary>The type of AI agent to be used for metadata extraction.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract_type? Type { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract_type? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract"/> and sets the default values.
         /// </summary>
@@ -80,7 +107,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -113,6 +140,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentLongTextTool>("long_text", LongText);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.AiStudioAgentExtract_type>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,27 +11,47 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications
     #pragma warning disable CS1591
     public partial class SchemaClassificationsPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("copyInstanceOnItemCopy") is { } nullNodeCopyInstanceOnItemCopy && nullNodeCopyInstanceOnItemCopy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CopyInstanceOnItemCopy = null;
+            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("hidden") is { } nullNodeHidden && nullNodeHidden.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hidden = null;
+            if (parseNode.GetChildNode("scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
+            if (parseNode.GetChildNode("templateKey") is { } nullNodeTemplateKey && nullNodeTemplateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateKey = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if classifications arecopied along when the file or folder iscopied.</summary>
-        public bool? CopyInstanceOnItemCopy { get; set; }
+        public bool? CopyInstanceOnItemCopy { get => _explicitNullValueCopyInstanceOnItemCopy; set { _explicitNullValueCopyInstanceOnItemCopy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyInstanceOnItemCopy"); else _explicitNullProperties?.Remove("copyInstanceOnItemCopy"); } }
+        private bool? _explicitNullValueCopyInstanceOnItemCopy = default!;
         /// <summary>The name of thetemplate as shown in web and mobile interfaces.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_displayName? DisplayName { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_displayName? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_displayName? _explicitNullValueDisplayName = default!;
         /// <summary>The classification template requires exactlyone field, which holdsall the valid classification values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields>? Fields { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields> Fields { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_fields> _explicitNullValueFields = default!;
 #endif
         /// <summary>Determines if the classification template ishidden or available on web and mobiledevices.</summary>
-        public bool? Hidden { get; set; }
+        public bool? Hidden { get => _explicitNullValueHidden; set { _explicitNullValueHidden = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hidden"); else _explicitNullProperties?.Remove("hidden"); } }
+        private bool? _explicitNullValueHidden = default!;
         /// <summary>The scope in which to create the classifications. This shouldbe `enterprise` or `enterprise_{id}` where `id` is the uniqueID of the enterprise.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_scope? Scope { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_scope? Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_scope? _explicitNullValueScope = default!;
         /// <summary>Defines the list of metadata templates.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_templateKey? TemplateKey { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_templateKey? TemplateKey { get => _explicitNullValueTemplateKey; set { _explicitNullValueTemplateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateKey"); else _explicitNullProperties?.Remove("templateKey"); } }
+        private global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_templateKey? _explicitNullValueTemplateKey = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody"/> and sets the default values.
         /// </summary>
@@ -47,7 +67,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications
         public static global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +98,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_scope>("scope", Scope);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.SchemaClassifications.SchemaClassificationsPostRequestBody_templateKey>("templateKey", TemplateKey);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

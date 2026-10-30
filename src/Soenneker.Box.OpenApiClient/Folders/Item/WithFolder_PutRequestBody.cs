@@ -11,72 +11,108 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
     #pragma warning disable CS1591
     public partial class WithFolder_PutRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("can_non_owners_invite") is { } nullNodeCanNonOwnersInvite && nullNodeCanNonOwnersInvite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanNonOwnersInvite = null;
+            if (parseNode.GetChildNode("can_non_owners_view_collaborators") is { } nullNodeCanNonOwnersViewCollaborators && nullNodeCanNonOwnersViewCollaborators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanNonOwnersViewCollaborators = null;
+            if (parseNode.GetChildNode("collections") is { } nullNodeCollections && nullNodeCollections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collections = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("folder_upload_email") is { } nullNodeFolderUploadEmail && nullNodeFolderUploadEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderUploadEmail = null;
+            if (parseNode.GetChildNode("is_collaboration_restricted_to_enterprise") is { } nullNodeIsCollaborationRestrictedToEnterprise && nullNodeIsCollaborationRestrictedToEnterprise.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCollaborationRestrictedToEnterprise = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
+            if (parseNode.GetChildNode("shared_link") is { } nullNodeSharedLink && nullNodeSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedLink = null;
+            if (parseNode.GetChildNode("sync_state") is { } nullNodeSyncState && nullNodeSyncState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncState = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies if users who are not the ownerof the folder can invite new collaborators to the folder.</summary>
-        public bool? CanNonOwnersInvite { get; set; }
+        public bool? CanNonOwnersInvite { get => _explicitNullValueCanNonOwnersInvite; set { _explicitNullValueCanNonOwnersInvite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_non_owners_invite"); else _explicitNullProperties?.Remove("can_non_owners_invite"); } }
+        private bool? _explicitNullValueCanNonOwnersInvite = default!;
         /// <summary>Restricts collaborators who are not the owner ofthis folder from viewing other collaborations onthis folder.It also restricts non-owners from inviting newcollaborators.When setting this field to `false`, it is requiredto also set `can_non_owners_invite_collaborators` to`false` if it has not already been set.</summary>
-        public bool? CanNonOwnersViewCollaborators { get; set; }
+        public bool? CanNonOwnersViewCollaborators { get => _explicitNullValueCanNonOwnersViewCollaborators; set { _explicitNullValueCanNonOwnersViewCollaborators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_non_owners_view_collaborators"); else _explicitNullProperties?.Remove("can_non_owners_view_collaborators"); } }
+        private bool? _explicitNullValueCanNonOwnersViewCollaborators = default!;
         /// <summary>An array of collections to make this foldera member of. Currentlywe only support the `favorites` collection.To get the ID for a collection, use the[List all collections][1] endpoint.Passing an empty array `[]` or `null` will removethe folder from all collections.[1]: https://developer.box.com/reference/get-collections</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_collections>? Collections { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_collections>? Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_collections>? _explicitNullValueCollections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_collections> Collections { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_collections> Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_collections> _explicitNullValueCollections = default!;
 #endif
         /// <summary>The optional description of this folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The folder_upload_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email? FolderUploadEmail { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email? FolderUploadEmail { get => _explicitNullValueFolderUploadEmail; set { _explicitNullValueFolderUploadEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_upload_email"); else _explicitNullProperties?.Remove("folder_upload_email"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email? _explicitNullValueFolderUploadEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email FolderUploadEmail { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email FolderUploadEmail { get => _explicitNullValueFolderUploadEmail; set { _explicitNullValueFolderUploadEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_upload_email"); else _explicitNullProperties?.Remove("folder_upload_email"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_folder_upload_email _explicitNullValueFolderUploadEmail = default!;
 #endif
         /// <summary>Specifies if new invites to this folder are restricted to userswithin the enterprise. This does not affect existingcollaborations.</summary>
-        public bool? IsCollaborationRestrictedToEnterprise { get; set; }
+        public bool? IsCollaborationRestrictedToEnterprise { get => _explicitNullValueIsCollaborationRestrictedToEnterprise; set { _explicitNullValueIsCollaborationRestrictedToEnterprise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_collaboration_restricted_to_enterprise"); else _explicitNullProperties?.Remove("is_collaboration_restricted_to_enterprise"); } }
+        private bool? _explicitNullValueIsCollaborationRestrictedToEnterprise = default!;
         /// <summary>The optional new name for this folder.The following restrictions to folder names apply: names containingnon-printable ASCII characters, forward and backward slashes(`/`, `\`), names with trailing spaces, and names `.` and `..` arenot allowed.Folder names must be unique within their parent folder. The name check is case-insensitive,so a folder named `New Folder` cannot be created in a parent folder that already containsa folder named `new folder`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The parent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_parent? Parent { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_parent? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_parent? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_parent Parent { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_parent Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_parent _explicitNullValueParent = default!;
 #endif
         /// <summary>The shared_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link? SharedLink { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link? SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link? _explicitNullValueSharedLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link SharedLink { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link _explicitNullValueSharedLink = default!;
 #endif
         /// <summary>Specifies whether a folder should be synced to auser&apos;s device or not. This is used by Box Sync(discontinued) and is not used by Box Drive.</summary>
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_sync_state? SyncState { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_sync_state? SyncState { get => _explicitNullValueSyncState; set { _explicitNullValueSyncState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_state"); else _explicitNullProperties?.Remove("sync_state"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_sync_state? _explicitNullValueSyncState = default!;
         /// <summary>The tags for this item. These tags are shown inthe Box web app and mobile apps next to an item.To add or remove a tag, retrieve the item&apos;s current tags,modify them, and then update this field.There is a limit of 100 tags per item, and 10,000unique tags per enterprise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get; set; }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get; set; }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody"/> and sets the default values.
@@ -93,7 +129,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
         public static global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -134,6 +170,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_shared_link>("shared_link", SharedLink);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Folders.Item.WithFolder_PutRequestBody_sync_state>("sync_state", SyncState);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

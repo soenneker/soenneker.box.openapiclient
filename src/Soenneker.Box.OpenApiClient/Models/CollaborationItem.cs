@@ -12,7 +12,12 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CollaborationItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.FileMini"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,17 +54,20 @@ namespace Soenneker.Box.OpenApiClient.Models
             var result = new global::Soenneker.Box.OpenApiClient.Models.CollaborationItem();
             if("File--Mini".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.FileMini = new global::Soenneker.Box.OpenApiClient.Models.FileMini();
+                
             }
             else if("Folder--Mini".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.FolderMini = new global::Soenneker.Box.OpenApiClient.Models.FolderMini();
+                
             }
             else if("WebLink--Mini".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.WebLinkMini = new global::Soenneker.Box.OpenApiClient.Models.WebLinkMini();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.FileMini == null && result.FolderMini == null && result.WebLinkMini == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,17 +95,26 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (FileMini == null && FolderMini == null && WebLinkMini == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (FileMini != null && FolderMini == null && WebLinkMini == null) { if (FileMini is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FileMini); return; }
+            if (FolderMini != null && FileMini == null && WebLinkMini == null) { if (FolderMini is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FolderMini); return; }
+            if (WebLinkMini != null && FileMini == null && FolderMini == null) { if (WebLinkMini is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, WebLinkMini); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(FileMini != null)
             {
+                if (FileMini is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileMini>(null, FileMini);
             }
             else if(FolderMini != null)
             {
+                if (FolderMini is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FolderMini>(null, FolderMini);
             }
             else if(WebLinkMini != null)
             {
+                if (WebLinkMini is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.WebLinkMini>(null, WebLinkMini);
             }
         }

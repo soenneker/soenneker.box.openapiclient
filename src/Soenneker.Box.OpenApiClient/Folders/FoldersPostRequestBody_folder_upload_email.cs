@@ -12,9 +12,18 @@ namespace Soenneker.Box.OpenApiClient.Folders
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FoldersPostRequestBody_folder_upload_email : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access") is { } nullNodeAccess && nullNodeAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Access = null;
+        }
+
         /// <summary>When this parameter has been set, users can email filesto the email address that has been automaticallycreated for this folder.To create an email address, set this property either whencreating or updating the folder.When set to `collaborators`, only emails from registered emailaddresses for collaborators will be accepted. This includesany email aliases a user might have registered.When set to `open` it will accept emails from any emailaddress.</summary>
-        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email_access? Access { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email_access? Access { get => _explicitNullValueAccess; set { _explicitNullValueAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access"); else _explicitNullProperties?.Remove("access"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email_access? _explicitNullValueAccess = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
@@ -32,7 +41,7 @@ namespace Soenneker.Box.OpenApiClient.Folders
         public static global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,6 +62,7 @@ namespace Soenneker.Box.OpenApiClient.Folders
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email_access>("access", Access);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

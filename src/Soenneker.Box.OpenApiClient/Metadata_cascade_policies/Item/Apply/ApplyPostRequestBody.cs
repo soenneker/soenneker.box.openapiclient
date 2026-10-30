@@ -11,11 +11,20 @@ namespace Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply
     #pragma warning disable CS1591
     public partial class ApplyPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conflict_resolution") is { } nullNodeConflictResolution && nullNodeConflictResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictResolution = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Describes the desired behavior when dealing with the conflictwhere a metadata template already has an instance appliedto a child.* `none` will preserve the existing value on the file* `overwrite` will force-apply the templates values over  any existing values.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution? ConflictResolution { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution? ConflictResolution { get => _explicitNullValueConflictResolution; set { _explicitNullValueConflictResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflict_resolution"); else _explicitNullProperties?.Remove("conflict_resolution"); } }
+        private global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution? _explicitNullValueConflictResolution = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody"/> and sets the default values.
         /// </summary>
@@ -31,7 +40,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply
         public static global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,6 +61,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Item.Apply.ApplyPostRequestBody_conflict_resolution>("conflict_resolution", ConflictResolution);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,19 +12,36 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ZipDownloadStatus : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("downloaded_file_count") is { } nullNodeDownloadedFileCount && nullNodeDownloadedFileCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadedFileCount = null;
+            if (parseNode.GetChildNode("skipped_file_count") is { } nullNodeSkippedFileCount && nullNodeSkippedFileCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkippedFileCount = null;
+            if (parseNode.GetChildNode("skipped_folder_count") is { } nullNodeSkippedFolderCount && nullNodeSkippedFolderCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkippedFolderCount = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("total_file_count") is { } nullNodeTotalFileCount && nullNodeTotalFileCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalFileCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of files that have already been downloaded.</summary>
-        public int? DownloadedFileCount { get; set; }
+        public int? DownloadedFileCount { get => _explicitNullValueDownloadedFileCount; set { _explicitNullValueDownloadedFileCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloaded_file_count"); else _explicitNullProperties?.Remove("downloaded_file_count"); } }
+        private int? _explicitNullValueDownloadedFileCount = default!;
         /// <summary>The number of files that have been skipped as they could not bedownloaded. In many cases this is due to permission issues that havesurfaced between the creation of the request for the archive and thearchive being downloaded.</summary>
-        public int? SkippedFileCount { get; set; }
+        public int? SkippedFileCount { get => _explicitNullValueSkippedFileCount; set { _explicitNullValueSkippedFileCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipped_file_count"); else _explicitNullProperties?.Remove("skipped_file_count"); } }
+        private int? _explicitNullValueSkippedFileCount = default!;
         /// <summary>The number of folders that have been skipped as they could not bedownloaded. In many cases this is due to permission issues that havesurfaced between the creation of the request for the archive and thearchive being downloaded.</summary>
-        public int? SkippedFolderCount { get; set; }
+        public int? SkippedFolderCount { get => _explicitNullValueSkippedFolderCount; set { _explicitNullValueSkippedFolderCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipped_folder_count"); else _explicitNullProperties?.Remove("skipped_folder_count"); } }
+        private int? _explicitNullValueSkippedFolderCount = default!;
         /// <summary>The state of the archive being downloaded.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.ZipDownloadStatus_state? State { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.ZipDownloadStatus_state? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.ZipDownloadStatus_state? _explicitNullValueState = default!;
         /// <summary>The total number of files in the archive.</summary>
-        public int? TotalFileCount { get; set; }
+        public int? TotalFileCount { get => _explicitNullValueTotalFileCount; set { _explicitNullValueTotalFileCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_file_count"); else _explicitNullProperties?.Remove("total_file_count"); } }
+        private int? _explicitNullValueTotalFileCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.ZipDownloadStatus"/> and sets the default values.
         /// </summary>
@@ -41,7 +58,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.ZipDownloadStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.ZipDownloadStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.ZipDownloadStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +87,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteIntValue("skipped_folder_count", SkippedFolderCount);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.ZipDownloadStatus_state>("state", State);
             writer.WriteIntValue("total_file_count", TotalFileCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

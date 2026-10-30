@@ -11,21 +11,35 @@ namespace Soenneker.Box.OpenApiClient.Terms_of_services
     #pragma warning disable CS1591
     public partial class Terms_of_servicesPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("tos_type") is { } nullNodeTosType && nullNodeTosType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TosType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether this terms of service is active.</summary>
-        public global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody_status? Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody_status? _explicitNullValueStatus = default!;
         /// <summary>The terms of service text to display to users.The text can be set to empty if the `status` is set to `disabled`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get; set; }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get; set; }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private string _explicitNullValueText = default!;
 #endif
         /// <summary>The type of user to set the terms ofservice for.</summary>
-        public global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody_tos_type? TosType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody_tos_type? TosType { get => _explicitNullValueTosType; set { _explicitNullValueTosType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tos_type"); else _explicitNullProperties?.Remove("tos_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody_tos_type? _explicitNullValueTosType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Box.OpenApiClient.Terms_of_services
         public static global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Box.OpenApiClient.Terms_of_services
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody_status>("status", Status);
             writer.WriteStringValue("text", Text);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Terms_of_services.Terms_of_servicesPostRequestBody_tos_type>("tos_type", TosType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

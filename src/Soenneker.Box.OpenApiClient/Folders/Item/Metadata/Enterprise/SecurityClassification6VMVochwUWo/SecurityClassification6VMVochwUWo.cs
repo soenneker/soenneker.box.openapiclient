@@ -12,20 +12,34 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityC
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SecurityClassification6VMVochwUWo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("op") is { } nullNodeOp && nullNodeOp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Op = null;
+            if (parseNode.GetChildNode("path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The value will always be `replace`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo_op? Op { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo_op? Op { get => _explicitNullValueOp; set { _explicitNullValueOp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("op"); else _explicitNullProperties?.Remove("op"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo_op? _explicitNullValueOp = default!;
         /// <summary>Defines classificationsavailable in the enterprise.</summary>
-        public global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo_path? Path { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo_path? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        private global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo_path? _explicitNullValuePath = default!;
         /// <summary>The name of the classification to apply to this folder.To list the available classifications in an enterprise,use the classification API to retrieve the[classification template](https://developer.box.com/reference/get-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema)which lists all available classification keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string _explicitNullValueValue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo"/> and sets the default values.
@@ -42,7 +56,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityC
         public static global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityC
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo_op>("op", Op);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Folders.Item.Metadata.Enterprise.SecurityClassification6VMVochwUWo.SecurityClassification6VMVochwUWo_path>("path", Path);
             writer.WriteStringValue("value", Value);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

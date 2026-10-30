@@ -12,7 +12,12 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AiLlmEndpointParams : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsAWS"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,21 +62,32 @@ namespace Soenneker.Box.OpenApiClient.Models
             var result = new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams();
             if("AiLlmEndpointParamsAWS".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AiLlmEndpointParamsAWS = new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsAWS();
+                
             }
             else if("AiLlmEndpointParamsGoogle".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AiLlmEndpointParamsGoogle = new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsGoogle();
+                
             }
             else if("AiLlmEndpointParamsIBM".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AiLlmEndpointParamsIBM = new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsIBM();
+                
             }
             else if("AiLlmEndpointParamsOpenAi".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AiLlmEndpointParamsOpenAi = new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsOpenAi();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("openai_params".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("google_params".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("aws_params".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("ibm_params".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            if (result.AiLlmEndpointParamsAWS == null && result.AiLlmEndpointParamsGoogle == null && result.AiLlmEndpointParamsIBM == null && result.AiLlmEndpointParamsOpenAi == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.AiLlmEndpointParamsOpenAi = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsOpenAi(), parseNode);
+            if (result.AiLlmEndpointParamsAWS == null && result.AiLlmEndpointParamsGoogle == null && result.AiLlmEndpointParamsIBM == null && result.AiLlmEndpointParamsOpenAi == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.AiLlmEndpointParamsGoogle = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsGoogle(), parseNode);
+            if (result.AiLlmEndpointParamsAWS == null && result.AiLlmEndpointParamsGoogle == null && result.AiLlmEndpointParamsIBM == null && result.AiLlmEndpointParamsOpenAi == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.AiLlmEndpointParamsAWS = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsAWS(), parseNode);
+            if (result.AiLlmEndpointParamsAWS == null && result.AiLlmEndpointParamsGoogle == null && result.AiLlmEndpointParamsIBM == null && result.AiLlmEndpointParamsOpenAi == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.AiLlmEndpointParamsIBM = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsIBM(), parseNode);
+            if (result.AiLlmEndpointParamsAWS == null && result.AiLlmEndpointParamsGoogle == null && result.AiLlmEndpointParamsIBM == null && result.AiLlmEndpointParamsOpenAi == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,21 +119,32 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AiLlmEndpointParamsAWS == null && AiLlmEndpointParamsGoogle == null && AiLlmEndpointParamsIBM == null && AiLlmEndpointParamsOpenAi == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AiLlmEndpointParamsAWS != null && AiLlmEndpointParamsGoogle == null && AiLlmEndpointParamsIBM == null && AiLlmEndpointParamsOpenAi == null) { if (AiLlmEndpointParamsAWS is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AiLlmEndpointParamsAWS); return; }
+            if (AiLlmEndpointParamsGoogle != null && AiLlmEndpointParamsAWS == null && AiLlmEndpointParamsIBM == null && AiLlmEndpointParamsOpenAi == null) { if (AiLlmEndpointParamsGoogle is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AiLlmEndpointParamsGoogle); return; }
+            if (AiLlmEndpointParamsIBM != null && AiLlmEndpointParamsAWS == null && AiLlmEndpointParamsGoogle == null && AiLlmEndpointParamsOpenAi == null) { if (AiLlmEndpointParamsIBM is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AiLlmEndpointParamsIBM); return; }
+            if (AiLlmEndpointParamsOpenAi != null && AiLlmEndpointParamsAWS == null && AiLlmEndpointParamsGoogle == null && AiLlmEndpointParamsIBM == null) { if (AiLlmEndpointParamsOpenAi is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AiLlmEndpointParamsOpenAi); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AiLlmEndpointParamsAWS != null)
             {
+                if (AiLlmEndpointParamsAWS is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsAWS>(null, AiLlmEndpointParamsAWS);
             }
             else if(AiLlmEndpointParamsGoogle != null)
             {
+                if (AiLlmEndpointParamsGoogle is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsGoogle>(null, AiLlmEndpointParamsGoogle);
             }
             else if(AiLlmEndpointParamsIBM != null)
             {
+                if (AiLlmEndpointParamsIBM is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsIBM>(null, AiLlmEndpointParamsIBM);
             }
             else if(AiLlmEndpointParamsOpenAi != null)
             {
+                if (AiLlmEndpointParamsOpenAi is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParamsOpenAi>(null, AiLlmEndpointParamsOpenAi);
             }
         }

@@ -12,7 +12,14 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Schema_data : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
@@ -30,7 +37,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema
         public static global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,6 +56,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

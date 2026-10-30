@@ -12,7 +12,12 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SkillCard : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.KeywordSkillCard"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,21 +62,32 @@ namespace Soenneker.Box.OpenApiClient.Models
             var result = new global::Soenneker.Box.OpenApiClient.Models.SkillCard();
             if("KeywordSkillCard".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.KeywordSkillCard = new global::Soenneker.Box.OpenApiClient.Models.KeywordSkillCard();
+                
             }
             else if("StatusSkillCard".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.StatusSkillCard = new global::Soenneker.Box.OpenApiClient.Models.StatusSkillCard();
+                
             }
             else if("TimelineSkillCard".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TimelineSkillCard = new global::Soenneker.Box.OpenApiClient.Models.TimelineSkillCard();
+                
             }
             else if("TranscriptSkillCard".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TranscriptSkillCard = new global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("skill_card".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("skill_card_type") != null && (parseNode.GetChildNode("skill_card_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag3 && ("keyword".Equals(tag3.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("skill") != null && parseNode.GetChildNode("invocation") != null && parseNode.GetChildNode("entries") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("skill_card".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("skill_card_type") != null && (parseNode.GetChildNode("skill_card_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag3 && ("timeline".Equals(tag3.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("skill") != null && parseNode.GetChildNode("invocation") != null && parseNode.GetChildNode("entries") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("skill_card".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("skill_card_type") != null && (parseNode.GetChildNode("skill_card_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag3 && ("transcript".Equals(tag3.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("skill") != null && parseNode.GetChildNode("invocation") != null && parseNode.GetChildNode("entries") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("skill_card".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("skill_card_type") != null && (parseNode.GetChildNode("skill_card_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag3 && ("status".Equals(tag3.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("skill") != null && parseNode.GetChildNode("invocation") != null && parseNode.GetChildNode("status") != null))();
+            if (result.KeywordSkillCard == null && result.StatusSkillCard == null && result.TimelineSkillCard == null && result.TranscriptSkillCard == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.KeywordSkillCard = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.KeywordSkillCard(), parseNode);
+            if (result.KeywordSkillCard == null && result.StatusSkillCard == null && result.TimelineSkillCard == null && result.TranscriptSkillCard == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.TimelineSkillCard = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.TimelineSkillCard(), parseNode);
+            if (result.KeywordSkillCard == null && result.StatusSkillCard == null && result.TimelineSkillCard == null && result.TranscriptSkillCard == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.TranscriptSkillCard = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard(), parseNode);
+            if (result.KeywordSkillCard == null && result.StatusSkillCard == null && result.TimelineSkillCard == null && result.TranscriptSkillCard == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.StatusSkillCard = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.StatusSkillCard(), parseNode);
+            if (result.KeywordSkillCard == null && result.StatusSkillCard == null && result.TimelineSkillCard == null && result.TranscriptSkillCard == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,21 +119,32 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (KeywordSkillCard == null && StatusSkillCard == null && TimelineSkillCard == null && TranscriptSkillCard == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (KeywordSkillCard != null && StatusSkillCard == null && TimelineSkillCard == null && TranscriptSkillCard == null) { if (KeywordSkillCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, KeywordSkillCard); return; }
+            if (StatusSkillCard != null && KeywordSkillCard == null && TimelineSkillCard == null && TranscriptSkillCard == null) { if (StatusSkillCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, StatusSkillCard); return; }
+            if (TimelineSkillCard != null && KeywordSkillCard == null && StatusSkillCard == null && TranscriptSkillCard == null) { if (TimelineSkillCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TimelineSkillCard); return; }
+            if (TranscriptSkillCard != null && KeywordSkillCard == null && StatusSkillCard == null && TimelineSkillCard == null) { if (TranscriptSkillCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TranscriptSkillCard); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(KeywordSkillCard != null)
             {
+                if (KeywordSkillCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.KeywordSkillCard>(null, KeywordSkillCard);
             }
             else if(StatusSkillCard != null)
             {
+                if (StatusSkillCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.StatusSkillCard>(null, StatusSkillCard);
             }
             else if(TimelineSkillCard != null)
             {
+                if (TimelineSkillCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.TimelineSkillCard>(null, TimelineSkillCard);
             }
             else if(TranscriptSkillCard != null)
             {
+                if (TranscriptSkillCard is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.TranscriptSkillCard>(null, TranscriptSkillCard);
             }
         }

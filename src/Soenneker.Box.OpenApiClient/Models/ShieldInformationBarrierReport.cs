@@ -13,36 +13,59 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShieldInformationBarrierReport : global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReportBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("shield_information_barrier") is { } nullNodeShieldInformationBarrier && nullNodeShieldInformationBarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldInformationBarrier = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>ISO date time string when thisshield information barrier report object was created.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserBase? CreatedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserBase? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserBase? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserBase CreatedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserBase CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserBase _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>The details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReportDetails? Details { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReportDetails? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReportDetails? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReportDetails Details { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReportDetails Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReportDetails _explicitNullValueDetails = default!;
 #endif
         /// <summary>The shield_information_barrier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReference? ShieldInformationBarrier { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReference? ShieldInformationBarrier { get => _explicitNullValueShieldInformationBarrier; set { _explicitNullValueShieldInformationBarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shield_information_barrier"); else _explicitNullProperties?.Remove("shield_information_barrier"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReference? _explicitNullValueShieldInformationBarrier = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReference ShieldInformationBarrier { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReference ShieldInformationBarrier { get => _explicitNullValueShieldInformationBarrier; set { _explicitNullValueShieldInformationBarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shield_information_barrier"); else _explicitNullProperties?.Remove("shield_information_barrier"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReference _explicitNullValueShieldInformationBarrier = default!;
 #endif
         /// <summary>Status of the shield information report.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReport_status? Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReport_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReport_status? _explicitNullValueStatus = default!;
         /// <summary>ISO date time string when thisshield information barrier report was updated.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -51,7 +74,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,7 +105,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReportDetails>("details", Details);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReference>("shield_information_barrier", ShieldInformationBarrier);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierReport_status>("status", Status);
-            writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
+            writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

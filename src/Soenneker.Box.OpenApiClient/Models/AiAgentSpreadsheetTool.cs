@@ -12,27 +12,42 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AiAgentSpreadsheetTool : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("llm_endpoint_params") is { } nullNodeLlmEndpointParams && nullNodeLlmEndpointParams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LlmEndpointParams = null;
+            if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
+            if (parseNode.GetChildNode("num_tokens_for_completion") is { } nullNodeNumTokensForCompletion && nullNodeNumTokensForCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumTokensForCompletion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The parameters for the LLM endpoint specific to a model.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams? LlmEndpointParams { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams? LlmEndpointParams { get => _explicitNullValueLlmEndpointParams; set { _explicitNullValueLlmEndpointParams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("llm_endpoint_params"); else _explicitNullProperties?.Remove("llm_endpoint_params"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams? _explicitNullValueLlmEndpointParams = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams LlmEndpointParams { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams LlmEndpointParams { get => _explicitNullValueLlmEndpointParams; set { _explicitNullValueLlmEndpointParams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("llm_endpoint_params"); else _explicitNullProperties?.Remove("llm_endpoint_params"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams _explicitNullValueLlmEndpointParams = default!;
 #endif
         /// <summary>The model used for the AI agent for spreadsheets. For specific model values, see the [available models list](https://developer.box.com/guides/box-ai/ai-models).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Model { get; set; }
+        public string? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        private string? _explicitNullValueModel = default!;
 #nullable restore
 #else
-        public string Model { get; set; }
+        public string Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        private string _explicitNullValueModel = default!;
 #endif
         /// <summary>The number of tokens for completion.</summary>
-        public int? NumTokensForCompletion { get; set; }
+        public int? NumTokensForCompletion { get => _explicitNullValueNumTokensForCompletion; set { _explicitNullValueNumTokensForCompletion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_tokens_for_completion"); else _explicitNullProperties?.Remove("num_tokens_for_completion"); } }
+        private int? _explicitNullValueNumTokensForCompletion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AiAgentSpreadsheetTool"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.AiAgentSpreadsheetTool CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.AiAgentSpreadsheetTool();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiAgentSpreadsheetTool(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiLlmEndpointParams>("llm_endpoint_params", LlmEndpointParams);
             writer.WriteStringValue("model", Model);
             writer.WriteIntValue("num_tokens_for_completion", NumTokensForCompletion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

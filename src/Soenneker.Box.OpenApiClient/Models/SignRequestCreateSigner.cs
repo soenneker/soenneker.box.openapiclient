@@ -12,82 +12,123 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequestCreateSigner : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("declined_redirect_url") is { } nullNodeDeclinedRedirectUrl && nullNodeDeclinedRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclinedRedirectUrl = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("embed_url_external_user_id") is { } nullNodeEmbedUrlExternalUserId && nullNodeEmbedUrlExternalUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmbedUrlExternalUserId = null;
+            if (parseNode.GetChildNode("is_in_person") is { } nullNodeIsInPerson && nullNodeIsInPerson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsInPerson = null;
+            if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("login_required") is { } nullNodeLoginRequired && nullNodeLoginRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginRequired = null;
+            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
+            if (parseNode.GetChildNode("redirect_url") is { } nullNodeRedirectUrl && nullNodeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrl = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("signer_group_id") is { } nullNodeSignerGroupId && nullNodeSignerGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerGroupId = null;
+            if (parseNode.GetChildNode("suppress_notifications") is { } nullNodeSuppressNotifications && nullNodeSuppressNotifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuppressNotifications = null;
+            if (parseNode.GetChildNode("verification_phone_number") is { } nullNodeVerificationPhoneNumber && nullNodeVerificationPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationPhoneNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL that a signer will be redirectto after declining to sign a document.Defining this URL overrides default or globaldeclined redirect URL settings for a specific signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeclinedRedirectUrl { get; set; }
+        public string? DeclinedRedirectUrl { get => _explicitNullValueDeclinedRedirectUrl; set { _explicitNullValueDeclinedRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("declined_redirect_url"); else _explicitNullProperties?.Remove("declined_redirect_url"); } }
+        private string? _explicitNullValueDeclinedRedirectUrl = default!;
 #nullable restore
 #else
-        public string DeclinedRedirectUrl { get; set; }
+        public string DeclinedRedirectUrl { get => _explicitNullValueDeclinedRedirectUrl; set { _explicitNullValueDeclinedRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("declined_redirect_url"); else _explicitNullProperties?.Remove("declined_redirect_url"); } }
+        private string _explicitNullValueDeclinedRedirectUrl = default!;
 #endif
         /// <summary>Email address of the signer.The email address of the signer is required when making signature requests, except when using templates that are configured to include emails.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>User ID for the signer in an external application responsiblefor authentication when accessing the embed URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmbedUrlExternalUserId { get; set; }
+        public string? EmbedUrlExternalUserId { get => _explicitNullValueEmbedUrlExternalUserId; set { _explicitNullValueEmbedUrlExternalUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embed_url_external_user_id"); else _explicitNullProperties?.Remove("embed_url_external_user_id"); } }
+        private string? _explicitNullValueEmbedUrlExternalUserId = default!;
 #nullable restore
 #else
-        public string EmbedUrlExternalUserId { get; set; }
+        public string EmbedUrlExternalUserId { get => _explicitNullValueEmbedUrlExternalUserId; set { _explicitNullValueEmbedUrlExternalUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embed_url_external_user_id"); else _explicitNullProperties?.Remove("embed_url_external_user_id"); } }
+        private string _explicitNullValueEmbedUrlExternalUserId = default!;
 #endif
         /// <summary>Used in combination with an embed URL for a sender. After thesender signs, they are redirected to the next `in_person` signer.</summary>
-        public bool? IsInPerson { get; set; }
+        public bool? IsInPerson { get => _explicitNullValueIsInPerson; set { _explicitNullValueIsInPerson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_in_person"); else _explicitNullProperties?.Remove("is_in_person"); } }
+        private bool? _explicitNullValueIsInPerson = default!;
         /// <summary>The language of the user, formatted in modified version of the[ISO 639-1](https://developer.box.com/guides/api-calls/language-codes) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Language { get; set; }
+        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string? _explicitNullValueLanguage = default!;
 #nullable restore
 #else
-        public string Language { get; set; }
+        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string _explicitNullValueLanguage = default!;
 #endif
         /// <summary>If set to true, the signer will need to log in to a Box accountbefore signing the request. If the signer does not havean existing account, they will have the option to createa free Box account.</summary>
-        public bool? LoginRequired { get; set; }
+        public bool? LoginRequired { get => _explicitNullValueLoginRequired; set { _explicitNullValueLoginRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_required"); else _explicitNullProperties?.Remove("login_required"); } }
+        private bool? _explicitNullValueLoginRequired = default!;
         /// <summary>Order of the signer.</summary>
-        public int? Order { get; set; }
+        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        private int? _explicitNullValueOrder = default!;
         /// <summary>If set, the signer is required to enter the password before they are ableto sign a document. This field is write only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Password { get; set; }
+        public string? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string? _explicitNullValuePassword = default!;
 #nullable restore
 #else
-        public string Password { get; set; }
+        public string Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string _explicitNullValuePassword = default!;
 #endif
         /// <summary>The URL that a signer will be redirectedto after signing a document. Defining this URLoverrides default or global redirect URLsettings for a specific signer.If no declined redirect URL is specified,this URL will be used for decline actions as well.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectUrl { get; set; }
+        public string? RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_url"); else _explicitNullProperties?.Remove("redirect_url"); } }
+        private string? _explicitNullValueRedirectUrl = default!;
 #nullable restore
 #else
-        public string RedirectUrl { get; set; }
+        public string RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_url"); else _explicitNullProperties?.Remove("redirect_url"); } }
+        private string _explicitNullValueRedirectUrl = default!;
 #endif
         /// <summary>Defines the role of the signer in the signature request. A `signer`must sign the document and an `approver` must approve the document. A`final_copy_reader` only receives the final signed document and signinglog.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner_role? Role { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner_role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner_role? _explicitNullValueRole = default!;
         /// <summary>If set, signers who have the same value will be assigned to the same input and to the same signer group.A signer group is not a Box Group. It is an entity that belongs to a Sign Request and can only beused/accessed within this Sign Request. A signer group is expected to have more than one signer.If the provided value is only used for one signer, this value will be ignored and request will be handledas it was intended for an individual signer. The value provided can be any string and only used todetermine which signers belongs to same group. A successful response will provide a generated UUID valueinstead for signers in the same signer group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignerGroupId { get; set; }
+        public string? SignerGroupId { get => _explicitNullValueSignerGroupId; set { _explicitNullValueSignerGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_group_id"); else _explicitNullProperties?.Remove("signer_group_id"); } }
+        private string? _explicitNullValueSignerGroupId = default!;
 #nullable restore
 #else
-        public string SignerGroupId { get; set; }
+        public string SignerGroupId { get => _explicitNullValueSignerGroupId; set { _explicitNullValueSignerGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_group_id"); else _explicitNullProperties?.Remove("signer_group_id"); } }
+        private string _explicitNullValueSignerGroupId = default!;
 #endif
         /// <summary>If true, no emails about the sign request are sent.The `embed_url_external_user_id` parameter is required when using`suppress_notifications` for a signer.</summary>
-        public bool? SuppressNotifications { get; set; }
+        public bool? SuppressNotifications { get => _explicitNullValueSuppressNotifications; set { _explicitNullValueSuppressNotifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suppress_notifications"); else _explicitNullProperties?.Remove("suppress_notifications"); } }
+        private bool? _explicitNullValueSuppressNotifications = default!;
         /// <summary>If set, this phone number will be used to verify the signervia two-factor authentication before they are able to sign the document.Cannot be selected in combination with `login_required`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationPhoneNumber { get; set; }
+        public string? VerificationPhoneNumber { get => _explicitNullValueVerificationPhoneNumber; set { _explicitNullValueVerificationPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_phone_number"); else _explicitNullProperties?.Remove("verification_phone_number"); } }
+        private string? _explicitNullValueVerificationPhoneNumber = default!;
 #nullable restore
 #else
-        public string VerificationPhoneNumber { get; set; }
+        public string VerificationPhoneNumber { get => _explicitNullValueVerificationPhoneNumber; set { _explicitNullValueVerificationPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_phone_number"); else _explicitNullProperties?.Remove("verification_phone_number"); } }
+        private string _explicitNullValueVerificationPhoneNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner"/> and sets the default values.
@@ -105,7 +146,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -150,6 +191,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("signer_group_id", SignerGroupId);
             writer.WriteBoolValue("suppress_notifications", SuppressNotifications);
             writer.WriteStringValue("verification_phone_number", VerificationPhoneNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

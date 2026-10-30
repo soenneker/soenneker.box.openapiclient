@@ -13,52 +13,86 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RetentionPolicy : global::Soenneker.Box.OpenApiClient.Models.RetentionPolicyMini, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("are_owners_notified") is { } nullNodeAreOwnersNotified && nullNodeAreOwnersNotified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AreOwnersNotified = null;
+            if (parseNode.GetChildNode("assignment_counts") is { } nullNodeAssignmentCounts && nullNodeAssignmentCounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignmentCounts = null;
+            if (parseNode.GetChildNode("can_owner_extend_retention") is { } nullNodeCanOwnerExtendRetention && nullNodeCanOwnerExtendRetention.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanOwnerExtendRetention = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("custom_notification_recipients") is { } nullNodeCustomNotificationRecipients && nullNodeCustomNotificationRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomNotificationRecipients = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("modified_at") is { } nullNodeModifiedAt && nullNodeModifiedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAt = null;
+            if (parseNode.GetChildNode("policy_type") is { } nullNodePolicyType && nullNodePolicyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyType = null;
+            if (parseNode.GetChildNode("retention_type") is { } nullNodeRetentionType && nullNodeRetentionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetentionType = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Determines if owners and co-owners of itemsunder the policy are notified whenthe retention duration is about to end.</summary>
-        public bool? AreOwnersNotified { get; set; }
+        public bool? AreOwnersNotified { get => _explicitNullValueAreOwnersNotified; set { _explicitNullValueAreOwnersNotified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("are_owners_notified"); else _explicitNullProperties?.Remove("are_owners_notified"); } }
+        private bool? _explicitNullValueAreOwnersNotified = default!;
         /// <summary>Counts the retention policy assignments for each item type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_assignment_counts? AssignmentCounts { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_assignment_counts? AssignmentCounts { get => _explicitNullValueAssignmentCounts; set { _explicitNullValueAssignmentCounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignment_counts"); else _explicitNullProperties?.Remove("assignment_counts"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_assignment_counts? _explicitNullValueAssignmentCounts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_assignment_counts AssignmentCounts { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_assignment_counts AssignmentCounts { get => _explicitNullValueAssignmentCounts; set { _explicitNullValueAssignmentCounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignment_counts"); else _explicitNullProperties?.Remove("assignment_counts"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_assignment_counts _explicitNullValueAssignmentCounts = default!;
 #endif
         /// <summary>Determines if the owner of items under the policycan extend the retention when the originalretention duration is about to end.</summary>
-        public bool? CanOwnerExtendRetention { get; set; }
+        public bool? CanOwnerExtendRetention { get => _explicitNullValueCanOwnerExtendRetention; set { _explicitNullValueCanOwnerExtendRetention = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_owner_extend_retention"); else _explicitNullProperties?.Remove("can_owner_extend_retention"); } }
+        private bool? _explicitNullValueCanOwnerExtendRetention = default!;
         /// <summary>When the retention policy object was created.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini? CreatedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.UserMini CreatedBy { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.UserMini CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.UserMini _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>A list of users notified when the retention policy duration is about to end.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.UserMini>? CustomNotificationRecipients { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UserMini>? CustomNotificationRecipients { get => _explicitNullValueCustomNotificationRecipients; set { _explicitNullValueCustomNotificationRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_notification_recipients"); else _explicitNullProperties?.Remove("custom_notification_recipients"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UserMini>? _explicitNullValueCustomNotificationRecipients = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.UserMini> CustomNotificationRecipients { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UserMini> CustomNotificationRecipients { get => _explicitNullValueCustomNotificationRecipients; set { _explicitNullValueCustomNotificationRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_notification_recipients"); else _explicitNullProperties?.Remove("custom_notification_recipients"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UserMini> _explicitNullValueCustomNotificationRecipients = default!;
 #endif
         /// <summary>The additional text description of the retention policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>When the retention policy object was last modified.</summary>
-        public DateTimeOffset? ModifiedAt { get; set; }
+        public DateTimeOffset? ModifiedAt { get => _explicitNullValueModifiedAt; set { _explicitNullValueModifiedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at"); else _explicitNullProperties?.Remove("modified_at"); } }
+        private DateTimeOffset? _explicitNullValueModifiedAt = default!;
         /// <summary>The type of the retention policy. A retentionpolicy type can either be `finite`, where aspecific amount of time to retain the content is knownupfront, or `indefinite`, where the amount of timeto retain the content is still unknown.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_policy_type? PolicyType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_policy_type? PolicyType { get => _explicitNullValuePolicyType; set { _explicitNullValuePolicyType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_type"); else _explicitNullProperties?.Remove("policy_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_policy_type? _explicitNullValuePolicyType = default!;
         /// <summary>Specifies the retention type:* `modifiable`: You can modify the retention policy. For example, you can add or remove folders, shorten or lengthen the policy duration, or delete the assignment. Use this type if your retention policy is not related to any regulatory purposes.* `non-modifiable`: You can modify the retention policy only in a limited way: add a folder, lengthen the duration, retire the policy, change the disposition action or notification settings. You cannot perform other actions, such as deleting the assignment or shortening the policy duration. Use this type to ensure compliance with regulatory retention policies.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_retention_type? RetentionType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_retention_type? RetentionType { get => _explicitNullValueRetentionType; set { _explicitNullValueRetentionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_type"); else _explicitNullProperties?.Remove("retention_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_retention_type? _explicitNullValueRetentionType = default!;
         /// <summary>The status of the retention policy. The status ofa policy will be `active`, unless explicitly retired by anadministrator, in which case the status will be `retired`.Once a policy has been retired, it cannot becomeactive again.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_status? Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_status? _explicitNullValueStatus = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -67,7 +101,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,7 +142,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("modified_at", ModifiedAt);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_policy_type>("policy_type", PolicyType);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_retention_type>("retention_type", RetentionType);
-            writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.RetentionPolicy_status>("status", Status);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

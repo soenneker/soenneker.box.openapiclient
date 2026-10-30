@@ -12,7 +12,12 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AiAgent : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.AiAgentAsk"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,21 +62,32 @@ namespace Soenneker.Box.OpenApiClient.Models
             var result = new global::Soenneker.Box.OpenApiClient.Models.AiAgent();
             if("AiAgentAsk".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AiAgentAsk = new global::Soenneker.Box.OpenApiClient.Models.AiAgentAsk();
+                
             }
             else if("AiAgentExtract".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AiAgentExtract = new global::Soenneker.Box.OpenApiClient.Models.AiAgentExtract();
+                
             }
             else if("AiAgentExtractStructured".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AiAgentExtractStructured = new global::Soenneker.Box.OpenApiClient.Models.AiAgentExtractStructured();
+                
             }
             else if("AiAgentTextGen".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AiAgentTextGen = new global::Soenneker.Box.OpenApiClient.Models.AiAgentTextGen();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("ai_agent_ask".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("ai_agent_text_gen".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("ai_agent_extract".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("ai_agent_extract_structured".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal)))))();
+            if (result.AiAgentAsk == null && result.AiAgentExtract == null && result.AiAgentExtractStructured == null && result.AiAgentTextGen == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.AiAgentAsk = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiAgentAsk(), parseNode);
+            if (result.AiAgentAsk == null && result.AiAgentExtract == null && result.AiAgentExtractStructured == null && result.AiAgentTextGen == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.AiAgentTextGen = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiAgentTextGen(), parseNode);
+            if (result.AiAgentAsk == null && result.AiAgentExtract == null && result.AiAgentExtractStructured == null && result.AiAgentTextGen == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.AiAgentExtract = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiAgentExtract(), parseNode);
+            if (result.AiAgentAsk == null && result.AiAgentExtract == null && result.AiAgentExtractStructured == null && result.AiAgentTextGen == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.AiAgentExtractStructured = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiAgentExtractStructured(), parseNode);
+            if (result.AiAgentAsk == null && result.AiAgentExtract == null && result.AiAgentExtractStructured == null && result.AiAgentTextGen == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,21 +119,32 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AiAgentAsk == null && AiAgentExtract == null && AiAgentExtractStructured == null && AiAgentTextGen == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AiAgentAsk != null && AiAgentExtract == null && AiAgentExtractStructured == null && AiAgentTextGen == null) { if (AiAgentAsk is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AiAgentAsk); return; }
+            if (AiAgentExtract != null && AiAgentAsk == null && AiAgentExtractStructured == null && AiAgentTextGen == null) { if (AiAgentExtract is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AiAgentExtract); return; }
+            if (AiAgentExtractStructured != null && AiAgentAsk == null && AiAgentExtract == null && AiAgentTextGen == null) { if (AiAgentExtractStructured is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AiAgentExtractStructured); return; }
+            if (AiAgentTextGen != null && AiAgentAsk == null && AiAgentExtract == null && AiAgentExtractStructured == null) { if (AiAgentTextGen is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AiAgentTextGen); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AiAgentAsk != null)
             {
+                if (AiAgentAsk is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiAgentAsk>(null, AiAgentAsk);
             }
             else if(AiAgentExtract != null)
             {
+                if (AiAgentExtract is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiAgentExtract>(null, AiAgentExtract);
             }
             else if(AiAgentExtractStructured != null)
             {
+                if (AiAgentExtractStructured is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiAgentExtractStructured>(null, AiAgentExtractStructured);
             }
             else if(AiAgentTextGen != null)
             {
+                if (AiAgentTextGen is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiAgentTextGen>(null, AiAgentTextGen);
             }
         }

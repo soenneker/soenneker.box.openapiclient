@@ -13,29 +13,51 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IntegrationMappingTeams : global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("box_item") is { } nullNodeBoxItem && nullNodeBoxItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxItem = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("integration_type") is { } nullNodeIntegrationType && nullNodeIntegrationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationType = null;
+            if (parseNode.GetChildNode("is_overridden_by_manual_mapping") is { } nullNodeIsOverriddenByManualMapping && nullNodeIsOverriddenByManualMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOverriddenByManualMapping = null;
+            if (parseNode.GetChildNode("modified_at") is { } nullNodeModifiedAt && nullNodeModifiedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAt = null;
+            if (parseNode.GetChildNode("partner_item") is { } nullNodePartnerItem && nullNodePartnerItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerItem = null;
+        }
+
         /// <summary>The box_item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FolderReference? BoxItem { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderReference? BoxItem { get => _explicitNullValueBoxItem; set { _explicitNullValueBoxItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_item"); else _explicitNullProperties?.Remove("box_item"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderReference? _explicitNullValueBoxItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FolderReference BoxItem { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderReference BoxItem { get => _explicitNullValueBoxItem; set { _explicitNullValueBoxItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_item"); else _explicitNullProperties?.Remove("box_item"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderReference _explicitNullValueBoxItem = default!;
 #endif
         /// <summary>When the integration mapping object was created.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>Identifies the Box partner app,with which the mapping is associated.Supports Slack and Teams.(part of the composite key together with `id`).</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingTeams_integration_type? IntegrationType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingTeams_integration_type? IntegrationType { get => _explicitNullValueIntegrationType; set { _explicitNullValueIntegrationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_type"); else _explicitNullProperties?.Remove("integration_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingTeams_integration_type? _explicitNullValueIntegrationType = default!;
         /// <summary>Identifies whether the mapping hasbeen manually set by the team owner from UI for channels(as opposed to being automatically created).</summary>
-        public bool? IsOverriddenByManualMapping { get; set; }
+        public bool? IsOverriddenByManualMapping { get => _explicitNullValueIsOverriddenByManualMapping; set { _explicitNullValueIsOverriddenByManualMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_overridden_by_manual_mapping"); else _explicitNullProperties?.Remove("is_overridden_by_manual_mapping"); } }
+        private bool? _explicitNullValueIsOverriddenByManualMapping = default!;
         /// <summary>When the integration mapping object was last modified.</summary>
-        public DateTimeOffset? ModifiedAt { get; set; }
+        public DateTimeOffset? ModifiedAt { get => _explicitNullValueModifiedAt; set { _explicitNullValueModifiedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at"); else _explicitNullProperties?.Remove("modified_at"); } }
+        private DateTimeOffset? _explicitNullValueModifiedAt = default!;
         /// <summary>Mapped item object for Teams.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemTeams? PartnerItem { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemTeams? PartnerItem { get => _explicitNullValuePartnerItem; set { _explicitNullValuePartnerItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_item"); else _explicitNullProperties?.Remove("partner_item"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemTeams? _explicitNullValuePartnerItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemTeams PartnerItem { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemTeams PartnerItem { get => _explicitNullValuePartnerItem; set { _explicitNullValuePartnerItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_item"); else _explicitNullProperties?.Remove("partner_item"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemTeams _explicitNullValuePartnerItem = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +67,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingTeams CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingTeams();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingTeams(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,7 +98,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingTeams_integration_type>("integration_type", IntegrationType);
             writer.WriteBoolValue("is_overridden_by_manual_mapping", IsOverriddenByManualMapping);
             writer.WriteDateTimeOffsetValue("modified_at", ModifiedAt);
-            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemTeams>("partner_item", PartnerItem);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.IntegrationMappingPartnerItemTeams>("partner_item", PartnerItem);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

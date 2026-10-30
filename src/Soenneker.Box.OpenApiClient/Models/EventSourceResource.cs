@@ -12,7 +12,12 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventSourceResource : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Box.OpenApiClient.Models.AppItemEventSource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,29 +78,36 @@ namespace Soenneker.Box.OpenApiClient.Models
             var result = new global::Soenneker.Box.OpenApiClient.Models.EventSourceResource();
             if("AppItemEventSource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppItemEventSource = new global::Soenneker.Box.OpenApiClient.Models.AppItemEventSource();
+                
             }
             else if("EventSource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.EventSource = new global::Soenneker.Box.OpenApiClient.Models.EventSource();
+                
             }
             else if("File".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.File = new global::Soenneker.Box.OpenApiClient.Models.FileObject();
+                
             }
             else if("Folder".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Folder = new global::Soenneker.Box.OpenApiClient.Models.Folder();
+                
             }
             else if("GenericSource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GenericSource = new global::Soenneker.Box.OpenApiClient.Models.GenericSource();
+                
             }
             else if("User".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.User = new global::Soenneker.Box.OpenApiClient.Models.User();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("item_type") != null && (parseNode.GetChildNode("item_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("file".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "folder".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("item_id") != null && parseNode.GetChildNode("item_name") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("id") != null && parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag2 && ("app_item".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("app_item_type") != null))();
+            if (result.AppItemEventSource == null && result.EventSource == null && result.File == null && result.Folder == null && result.GenericSource == null && result.User == null && matchesUnionBranch0 && !matchesUnionBranch1) result.EventSource = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.EventSource(), parseNode);
+            if (result.AppItemEventSource == null && result.EventSource == null && result.File == null && result.Folder == null && result.GenericSource == null && result.User == null && matchesUnionBranch1 && !matchesUnionBranch0) result.AppItemEventSource = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AppItemEventSource(), parseNode);
+            if (result.AppItemEventSource == null && result.EventSource == null && result.File == null && result.Folder == null && result.GenericSource == null && result.User == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -135,29 +147,44 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AppItemEventSource == null && EventSource == null && File == null && Folder == null && GenericSource == null && User == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AppItemEventSource != null && EventSource == null && File == null && Folder == null && GenericSource == null && User == null) { if (AppItemEventSource is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppItemEventSource); return; }
+            if (EventSource != null && AppItemEventSource == null && File == null && Folder == null && GenericSource == null && User == null) { if (EventSource is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, EventSource); return; }
+            if (File != null && AppItemEventSource == null && EventSource == null && Folder == null && GenericSource == null && User == null) { if (File is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, File); return; }
+            if (Folder != null && AppItemEventSource == null && EventSource == null && File == null && GenericSource == null && User == null) { if (Folder is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Folder); return; }
+            if (GenericSource != null && AppItemEventSource == null && EventSource == null && File == null && Folder == null && User == null) { if (GenericSource is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GenericSource); return; }
+            if (User != null && AppItemEventSource == null && EventSource == null && File == null && Folder == null && GenericSource == null) { if (User is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, User); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AppItemEventSource != null)
             {
+                if (AppItemEventSource is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AppItemEventSource>(null, AppItemEventSource);
             }
             else if(EventSource != null)
             {
+                if (EventSource is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.EventSource>(null, EventSource);
             }
             else if(File != null)
             {
+                if (File is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileObject>(null, File);
             }
             else if(Folder != null)
             {
+                if (Folder is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.Folder>(null, Folder);
             }
             else if(GenericSource != null)
             {
+                if (GenericSource is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.GenericSource>(null, GenericSource);
             }
             else if(User != null)
             {
+                if (User is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.User>(null, User);
             }
         }

@@ -12,24 +12,37 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ZipDownloadRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("download_file_name") is { } nullNodeDownloadFileName && nullNodeDownloadFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadFileName = null;
+            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The optional name of the `zip` archive. This name will be appended by the`.zip` file extension, for example `January Financials.zip`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DownloadFileName { get; set; }
+        public string? DownloadFileName { get => _explicitNullValueDownloadFileName; set { _explicitNullValueDownloadFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_file_name"); else _explicitNullProperties?.Remove("download_file_name"); } }
+        private string? _explicitNullValueDownloadFileName = default!;
 #nullable restore
 #else
-        public string DownloadFileName { get; set; }
+        public string DownloadFileName { get => _explicitNullValueDownloadFileName; set { _explicitNullValueDownloadFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_file_name"); else _explicitNullProperties?.Remove("download_file_name"); } }
+        private string _explicitNullValueDownloadFileName = default!;
 #endif
         /// <summary>A list of items to add to the `zip` archive. These canbe folders or files.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest_items>? Items { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest_items>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest_items>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest_items> Items { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest_items> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest_items> _explicitNullValueItems = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("download_file_name", DownloadFileName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.ZipDownloadRequest_items>("items", Items);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

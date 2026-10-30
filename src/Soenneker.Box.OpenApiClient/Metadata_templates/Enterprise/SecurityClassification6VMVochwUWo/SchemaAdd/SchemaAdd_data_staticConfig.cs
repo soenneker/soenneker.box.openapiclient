@@ -12,16 +12,26 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SchemaAdd_data_staticConfig : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("classification") is { } nullNodeClassification && nullNodeClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Classification = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Additional details for the classification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig_classification? Classification { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig_classification? Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
+        private global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig_classification? _explicitNullValueClassification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig_classification Classification { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig_classification Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
+        private global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig_classification _explicitNullValueClassification = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
         public static global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaAdd.SchemaAdd_data_staticConfig_classification>("classification", Classification);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

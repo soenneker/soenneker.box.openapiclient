@@ -13,21 +13,35 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AiAgentBasicTextTool : global::Soenneker.Box.OpenApiClient.Models.AiAgentBasicTextToolBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("prompt_template") is { } nullNodePromptTemplate && nullNodePromptTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromptTemplate = null;
+            if (parseNode.GetChildNode("system_message") is { } nullNodeSystemMessage && nullNodeSystemMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemMessage = null;
+        }
+
         /// <summary>The prompt template contains contextual information of the request and the user prompt.When passing `prompt_template` parameters, you **must include** inputs for `{user_question}` and `{content}`.`{current_date}` is optional, depending on the use.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PromptTemplate { get; set; }
+        public string? PromptTemplate { get => _explicitNullValuePromptTemplate; set { _explicitNullValuePromptTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt_template"); else _explicitNullProperties?.Remove("prompt_template"); } }
+        private string? _explicitNullValuePromptTemplate = default!;
 #nullable restore
 #else
-        public string PromptTemplate { get; set; }
+        public string PromptTemplate { get => _explicitNullValuePromptTemplate; set { _explicitNullValuePromptTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt_template"); else _explicitNullProperties?.Remove("prompt_template"); } }
+        private string _explicitNullValuePromptTemplate = default!;
 #endif
         /// <summary>System messages try to help the LLM &quot;understand&quot; its role and what it is supposed to do.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SystemMessage { get; set; }
+        public string? SystemMessage { get => _explicitNullValueSystemMessage; set { _explicitNullValueSystemMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_message"); else _explicitNullProperties?.Remove("system_message"); } }
+        private string? _explicitNullValueSystemMessage = default!;
 #nullable restore
 #else
-        public string SystemMessage { get; set; }
+        public string SystemMessage { get => _explicitNullValueSystemMessage; set { _explicitNullValueSystemMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_message"); else _explicitNullProperties?.Remove("system_message"); } }
+        private string _explicitNullValueSystemMessage = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +51,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.AiAgentBasicTextTool CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.AiAgentBasicTextTool();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiAgentBasicTextTool(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +74,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteStringValue("prompt_template", PromptTemplate);
-            writer.WriteStringValue("system_message", SystemMessage);
+            writer.WriteStringValue("system_message", SystemMessage);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

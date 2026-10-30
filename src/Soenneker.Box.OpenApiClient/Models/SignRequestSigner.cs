@@ -13,13 +13,26 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequestSigner : global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
+            if (parseNode.GetChildNode("iframeable_embed_url") is { } nullNodeIframeableEmbedUrl && nullNodeIframeableEmbedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IframeableEmbedUrl = null;
+            if (parseNode.GetChildNode("signer_decision") is { } nullNodeSignerDecision && nullNodeSignerDecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerDecision = null;
+        }
+
         /// <summary>Attachments that the signer uploaded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerAttachment>? Attachments { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerAttachment>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerAttachment>? _explicitNullValueAttachments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerAttachment> Attachments { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerAttachment> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerAttachment> _explicitNullValueAttachments = default!;
 #endif
         /// <summary>URL to direct a signer to for signing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,10 +47,12 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>This URL is specifically designed forsigning documents within an HTML `iframe` tag.It will be returned in the responseonly if the `embed_url_external_user_id`parameter was passed in the`create Box Sign request` call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IframeableEmbedUrl { get; set; }
+        public string? IframeableEmbedUrl { get => _explicitNullValueIframeableEmbedUrl; set { _explicitNullValueIframeableEmbedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframeable_embed_url"); else _explicitNullProperties?.Remove("iframeable_embed_url"); } }
+        private string? _explicitNullValueIframeableEmbedUrl = default!;
 #nullable restore
 #else
-        public string IframeableEmbedUrl { get; set; }
+        public string IframeableEmbedUrl { get => _explicitNullValueIframeableEmbedUrl; set { _explicitNullValueIframeableEmbedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframeable_embed_url"); else _explicitNullProperties?.Remove("iframeable_embed_url"); } }
+        private string _explicitNullValueIframeableEmbedUrl = default!;
 #endif
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +65,12 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>Final decision made by the signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner_signer_decision? SignerDecision { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner_signer_decision? SignerDecision { get => _explicitNullValueSignerDecision; set { _explicitNullValueSignerDecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_decision"); else _explicitNullProperties?.Remove("signer_decision"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner_signer_decision? _explicitNullValueSignerDecision = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner_signer_decision SignerDecision { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner_signer_decision SignerDecision { get => _explicitNullValueSignerDecision; set { _explicitNullValueSignerDecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_decision"); else _explicitNullProperties?.Remove("signer_decision"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner_signer_decision _explicitNullValueSignerDecision = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +80,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,7 +108,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             base.Serialize(writer);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerAttachment>("attachments", Attachments);
             writer.WriteStringValue("iframeable_embed_url", IframeableEmbedUrl);
-            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner_signer_decision>("signer_decision", SignerDecision);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner_signer_decision>("signer_decision", SignerDecision);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

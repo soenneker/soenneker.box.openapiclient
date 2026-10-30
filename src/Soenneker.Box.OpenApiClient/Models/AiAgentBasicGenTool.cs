@@ -13,13 +13,24 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AiAgentBasicGenTool : global::Soenneker.Box.OpenApiClient.Models.AiAgentLongTextToolTextGen, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("content_template") is { } nullNodeContentTemplate && nullNodeContentTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentTemplate = null;
+        }
+
         /// <summary>How the content should be included in a request to the LLM.Input for `{content}` is optional, depending on the use.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentTemplate { get; set; }
+        public string? ContentTemplate { get => _explicitNullValueContentTemplate; set { _explicitNullValueContentTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_template"); else _explicitNullProperties?.Remove("content_template"); } }
+        private string? _explicitNullValueContentTemplate = default!;
 #nullable restore
 #else
-        public string ContentTemplate { get; set; }
+        public string ContentTemplate { get => _explicitNullValueContentTemplate; set { _explicitNullValueContentTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_template"); else _explicitNullProperties?.Remove("content_template"); } }
+        private string _explicitNullValueContentTemplate = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -29,7 +40,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.AiAgentBasicGenTool CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.AiAgentBasicGenTool();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiAgentBasicGenTool(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +61,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteStringValue("content_template", ContentTemplate);
+            writer.WriteStringValue("content_template", ContentTemplate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

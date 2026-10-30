@@ -12,70 +12,109 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Folder_shared_link : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access") is { } nullNodeAccess && nullNodeAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Access = null;
+            if (parseNode.GetChildNode("download_count") is { } nullNodeDownloadCount && nullNodeDownloadCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadCount = null;
+            if (parseNode.GetChildNode("download_url") is { } nullNodeDownloadUrl && nullNodeDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadUrl = null;
+            if (parseNode.GetChildNode("effective_access") is { } nullNodeEffectiveAccess && nullNodeEffectiveAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveAccess = null;
+            if (parseNode.GetChildNode("effective_permission") is { } nullNodeEffectivePermission && nullNodeEffectivePermission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectivePermission = null;
+            if (parseNode.GetChildNode("is_password_enabled") is { } nullNodeIsPasswordEnabled && nullNodeIsPasswordEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPasswordEnabled = null;
+            if (parseNode.GetChildNode("one_time_passcode") is { } nullNodeOneTimePasscode && nullNodeOneTimePasscode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneTimePasscode = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("preview_count") is { } nullNodePreviewCount && nullNodePreviewCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewCount = null;
+            if (parseNode.GetChildNode("unshared_at") is { } nullNodeUnsharedAt && nullNodeUnsharedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnsharedAt = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("vanity_name") is { } nullNodeVanityName && nullNodeVanityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VanityName = null;
+            if (parseNode.GetChildNode("vanity_url") is { } nullNodeVanityUrl && nullNodeVanityUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VanityUrl = null;
+        }
+
         /// <summary>The access level for this shared link.* `open` - provides access to this item to anyone with this link* `company` - only provides access to this item to people the same company* `collaborators` - only provides access to this item to people who are   collaborators on this itemIf this field is omitted when creating the shared link, the access levelwill be set to the default access level specified by the enterprise admin.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_access? Access { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_access? Access { get => _explicitNullValueAccess; set { _explicitNullValueAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access"); else _explicitNullProperties?.Remove("access"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_access? _explicitNullValueAccess = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of times this item has been downloaded.</summary>
-        public int? DownloadCount { get; set; }
+        public int? DownloadCount { get => _explicitNullValueDownloadCount; set { _explicitNullValueDownloadCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_count"); else _explicitNullProperties?.Remove("download_count"); } }
+        private int? _explicitNullValueDownloadCount = default!;
         /// <summary>A URL that can be used to download the file. This URL can be used ina browser to download the file. This URL includes the fileextension so that the file will be saved with the right file type.This property will be `null` for folders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DownloadUrl { get; set; }
+        public string? DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
+        private string? _explicitNullValueDownloadUrl = default!;
 #nullable restore
 #else
-        public string DownloadUrl { get; set; }
+        public string DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
+        private string _explicitNullValueDownloadUrl = default!;
 #endif
         /// <summary>The effective access level for the shared link. This can be a morerestrictive access level than the value in the `access` field when theenterprise settings restrict the allowed access levels.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_effective_access? EffectiveAccess { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_effective_access? EffectiveAccess { get => _explicitNullValueEffectiveAccess; set { _explicitNullValueEffectiveAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_access"); else _explicitNullProperties?.Remove("effective_access"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_effective_access? _explicitNullValueEffectiveAccess = default!;
         /// <summary>The effective permissions for this shared link.These result in the more restrictive combination ofthe share link permissions and the item permissions setby the administrator, the owner, and any ancestor itemsuch as a folder.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_effective_permission? EffectivePermission { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_effective_permission? EffectivePermission { get => _explicitNullValueEffectivePermission; set { _explicitNullValueEffectivePermission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_permission"); else _explicitNullProperties?.Remove("effective_permission"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_effective_permission? _explicitNullValueEffectivePermission = default!;
         /// <summary>Defines if the shared link requires a password to access the item.</summary>
-        public bool? IsPasswordEnabled { get; set; }
+        public bool? IsPasswordEnabled { get => _explicitNullValueIsPasswordEnabled; set { _explicitNullValueIsPasswordEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_password_enabled"); else _explicitNullProperties?.Remove("is_password_enabled"); } }
+        private bool? _explicitNullValueIsPasswordEnabled = default!;
         /// <summary>The one_time_passcode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_one_time_passcode? OneTimePasscode { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_one_time_passcode? OneTimePasscode { get => _explicitNullValueOneTimePasscode; set { _explicitNullValueOneTimePasscode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("one_time_passcode"); else _explicitNullProperties?.Remove("one_time_passcode"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_one_time_passcode? _explicitNullValueOneTimePasscode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_one_time_passcode OneTimePasscode { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_one_time_passcode OneTimePasscode { get => _explicitNullValueOneTimePasscode; set { _explicitNullValueOneTimePasscode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("one_time_passcode"); else _explicitNullProperties?.Remove("one_time_passcode"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_one_time_passcode _explicitNullValueOneTimePasscode = default!;
 #endif
         /// <summary>Defines if this link allows a user to preview, edit, and download an item.These permissions refer to the shared link only anddo not supersede permissions applied to the item itself.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_permissions? Permissions { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_permissions? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_permissions? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_permissions Permissions { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_permissions Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_permissions _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The number of times this item has been previewed.</summary>
-        public int? PreviewCount { get; set; }
+        public int? PreviewCount { get => _explicitNullValuePreviewCount; set { _explicitNullValuePreviewCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview_count"); else _explicitNullProperties?.Remove("preview_count"); } }
+        private int? _explicitNullValuePreviewCount = default!;
         /// <summary>The date and time when this link will be unshared. This field can only beset by users with paid accounts.</summary>
-        public DateTimeOffset? UnsharedAt { get; set; }
+        public DateTimeOffset? UnsharedAt { get => _explicitNullValueUnsharedAt; set { _explicitNullValueUnsharedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unshared_at"); else _explicitNullProperties?.Remove("unshared_at"); } }
+        private DateTimeOffset? _explicitNullValueUnsharedAt = default!;
         /// <summary>The URL that can be used to access the item on Box.This URL will display the item in Box&apos;s preview UI where the filecan be downloaded if allowed.This URL will continue to work even when a custom `vanity_url`has been set for this shared link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The custom name of a shared link, as used in the `vanity_url` field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VanityName { get; set; }
+        public string? VanityName { get => _explicitNullValueVanityName; set { _explicitNullValueVanityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vanity_name"); else _explicitNullProperties?.Remove("vanity_name"); } }
+        private string? _explicitNullValueVanityName = default!;
 #nullable restore
 #else
-        public string VanityName { get; set; }
+        public string VanityName { get => _explicitNullValueVanityName; set { _explicitNullValueVanityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vanity_name"); else _explicitNullProperties?.Remove("vanity_name"); } }
+        private string _explicitNullValueVanityName = default!;
 #endif
         /// <summary>The &quot;Custom URL&quot; that can also be used to preview the item on Box.  CustomURLs can only be created or modified in the Box Web application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VanityUrl { get; set; }
+        public string? VanityUrl { get => _explicitNullValueVanityUrl; set { _explicitNullValueVanityUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vanity_url"); else _explicitNullProperties?.Remove("vanity_url"); } }
+        private string? _explicitNullValueVanityUrl = default!;
 #nullable restore
 #else
-        public string VanityUrl { get; set; }
+        public string VanityUrl { get => _explicitNullValueVanityUrl; set { _explicitNullValueVanityUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vanity_url"); else _explicitNullProperties?.Remove("vanity_url"); } }
+        private string _explicitNullValueVanityUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link"/> and sets the default values.
@@ -92,7 +131,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -137,6 +176,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("vanity_name", VanityName);
             writer.WriteStringValue("vanity_url", VanityUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

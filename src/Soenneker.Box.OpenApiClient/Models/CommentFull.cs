@@ -13,13 +13,24 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CommentFull : global::Soenneker.Box.OpenApiClient.Models.Comment, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("tagged_message") is { } nullNodeTaggedMessage && nullNodeTaggedMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaggedMessage = null;
+        }
+
         /// <summary>The string representing the comment text with@mentions included. @mention format is @[id:username]where `id` is user&apos;s Box ID and `username` istheir display name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaggedMessage { get; set; }
+        public string? TaggedMessage { get => _explicitNullValueTaggedMessage; set { _explicitNullValueTaggedMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagged_message"); else _explicitNullProperties?.Remove("tagged_message"); } }
+        private string? _explicitNullValueTaggedMessage = default!;
 #nullable restore
 #else
-        public string TaggedMessage { get; set; }
+        public string TaggedMessage { get => _explicitNullValueTaggedMessage; set { _explicitNullValueTaggedMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagged_message"); else _explicitNullProperties?.Remove("tagged_message"); } }
+        private string _explicitNullValueTaggedMessage = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -29,7 +40,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.CommentFull CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.CommentFull();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.CommentFull(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +61,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteStringValue("tagged_message", TaggedMessage);
+            writer.WriteStringValue("tagged_message", TaggedMessage);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

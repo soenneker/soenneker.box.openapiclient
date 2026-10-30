@@ -12,16 +12,26 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit
     #pragma warning disable CS1591
     public partial class CommitPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("parts") is { } nullNodeParts && nullNodeParts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The list details for the uploaded parts.Each entry can include `sha1` or `sha512`. Include `sha512`on every entry or on none of them. A request where onlysome entries include `sha512` is rejected.Include parts that the server already has, returned as`hits` by the [`Plan upload session`](https://developer.box.com/reference/post-files-upload-sessions-id-plan)endpoint. Use the `part_id`, `offset`, and `size` from theplan response. If the other entries include `sha512`,include the `sha512` value from the plan response.Otherwise, leave the hash out of these entries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart>? Parts { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart>? Parts { get => _explicitNullValueParts; set { _explicitNullValueParts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parts"); else _explicitNullProperties?.Remove("parts"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UploadPart>? _explicitNullValueParts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart> Parts { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPart> Parts { get => _explicitNullValueParts; set { _explicitNullValueParts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parts"); else _explicitNullProperties?.Remove("parts"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UploadPart> _explicitNullValueParts = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit.CommitPostRequestBody"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit
         public static global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit.CommitPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit.CommitPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit.CommitPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Upload_sessions.Item.Commit
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.UploadPart>("parts", Parts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

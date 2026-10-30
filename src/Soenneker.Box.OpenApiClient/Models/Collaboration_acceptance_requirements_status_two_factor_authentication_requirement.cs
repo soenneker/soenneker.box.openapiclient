@@ -11,13 +11,24 @@ namespace Soenneker.Box.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Collaboration_acceptance_requirements_status_two_factor_authentication_requirement : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enterprise_has_two_factor_auth_enabled") is { } nullNodeEnterpriseHasTwoFactorAuthEnabled && nullNodeEnterpriseHasTwoFactorAuthEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnterpriseHasTwoFactorAuthEnabled = null;
+            if (parseNode.GetChildNode("user_has_two_factor_authentication_enabled") is { } nullNodeUserHasTwoFactorAuthenticationEnabled && nullNodeUserHasTwoFactorAuthenticationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserHasTwoFactorAuthenticationEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether or not the enterprise that owns the content requirestwo-factor authentication to be enabled in order tocollaborate on the content.</summary>
-        public bool? EnterpriseHasTwoFactorAuthEnabled { get; set; }
+        public bool? EnterpriseHasTwoFactorAuthEnabled { get => _explicitNullValueEnterpriseHasTwoFactorAuthEnabled; set { _explicitNullValueEnterpriseHasTwoFactorAuthEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_has_two_factor_auth_enabled"); else _explicitNullProperties?.Remove("enterprise_has_two_factor_auth_enabled"); } }
+        private bool? _explicitNullValueEnterpriseHasTwoFactorAuthEnabled = default!;
         /// <summary>Whether or not the user has two-factor authenticationenabled. The field is `null` when two-factorauthentication is not required.</summary>
-        public bool? UserHasTwoFactorAuthenticationEnabled { get; set; }
+        public bool? UserHasTwoFactorAuthenticationEnabled { get => _explicitNullValueUserHasTwoFactorAuthenticationEnabled; set { _explicitNullValueUserHasTwoFactorAuthenticationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_has_two_factor_authentication_enabled"); else _explicitNullProperties?.Remove("user_has_two_factor_authentication_enabled"); } }
+        private bool? _explicitNullValueUserHasTwoFactorAuthenticationEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enterprise_has_two_factor_auth_enabled", EnterpriseHasTwoFactorAuthEnabled);
             writer.WriteBoolValue("user_has_two_factor_authentication_enabled", UserHasTwoFactorAuthenticationEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

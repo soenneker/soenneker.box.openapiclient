@@ -11,13 +11,24 @@ namespace Soenneker.Box.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Collaboration_acceptance_requirements_status_strong_password_requirement : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enterprise_has_strong_password_required_for_external_users") is { } nullNodeEnterpriseHasStrongPasswordRequiredForExternalUsers && nullNodeEnterpriseHasStrongPasswordRequiredForExternalUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnterpriseHasStrongPasswordRequiredForExternalUsers = null;
+            if (parseNode.GetChildNode("user_has_strong_password") is { } nullNodeUserHasStrongPassword && nullNodeUserHasStrongPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserHasStrongPassword = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether or not the enterprise that owns the content requiresa strong password to collaborate on the content, or enforcesan exposed password detection for the external collaborators.</summary>
-        public bool? EnterpriseHasStrongPasswordRequiredForExternalUsers { get; set; }
+        public bool? EnterpriseHasStrongPasswordRequiredForExternalUsers { get => _explicitNullValueEnterpriseHasStrongPasswordRequiredForExternalUsers; set { _explicitNullValueEnterpriseHasStrongPasswordRequiredForExternalUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_has_strong_password_required_for_external_users"); else _explicitNullProperties?.Remove("enterprise_has_strong_password_required_for_external_users"); } }
+        private bool? _explicitNullValueEnterpriseHasStrongPasswordRequiredForExternalUsers = default!;
         /// <summary>Whether or not the user has a strong and not exposed password setfor their account. The field is `null` when a strong password isnot required.</summary>
-        public bool? UserHasStrongPassword { get; set; }
+        public bool? UserHasStrongPassword { get => _explicitNullValueUserHasStrongPassword; set { _explicitNullValueUserHasStrongPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_has_strong_password"); else _explicitNullProperties?.Remove("user_has_strong_password"); } }
+        private bool? _explicitNullValueUserHasStrongPassword = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enterprise_has_strong_password_required_for_external_users", EnterpriseHasStrongPasswordRequiredForExternalUsers);
             writer.WriteBoolValue("user_has_strong_password", UserHasStrongPassword);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,17 +11,32 @@ namespace Soenneker.Box.OpenApiClient.Collaborations.Item
     #pragma warning disable CS1591
     public partial class WithCollaboration_PutRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("can_view_path") is { } nullNodeCanViewPath && nullNodeCanViewPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanViewPath = null;
+            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if the invited users can see the entire parent path tothe associated folder. The user will not gain privileges in anyparent folder and therefore can not see content the user is notcollaborated on.Be aware that this meaningfully increases the time required to load theinvitee&apos;s **All Files** page. We recommend you limit the number ofcollaborations with `can_view_path` enabled to 1,000 per user.Only an owner or co-owners can invite collaborators with a `can_view_path` of`true`. Only an owner can update `can_view_path` on existing collaborations.`can_view_path` can only be used for folder collaborations.When you delete a folder with `can_view_path=true`, collaborators may still see the parent path. For instructions on how to remove this, see [Even though a folder invited via can_view_path is deleted, the path remains displayed](https://support.box.com/hc/en-us/articles/37472814319891-Even-though-a-folder-invited-via-can-view-path-is-deleted-the-path-remains-displayed).</summary>
-        public bool? CanViewPath { get; set; }
+        public bool? CanViewPath { get => _explicitNullValueCanViewPath; set { _explicitNullValueCanViewPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_view_path"); else _explicitNullProperties?.Remove("can_view_path"); } }
+        private bool? _explicitNullValueCanViewPath = default!;
         /// <summary>Update the expiration date for the collaboration. At this date,the collaboration will be automatically removed from the item.This feature will only work if the **Automatically remove invitedcollaborators: Allow folder owners to extend the expiry date**setting has been enabled in the **Enterprise Settings**of the **Admin Console**. When the setting is not enabled,collaborations can not have an expiry date and a value for thisfield will be result in an error.Additionally, a collaboration can only be given anexpiration if it was created after the **Automatically removeinvited collaborator** setting was enabled.</summary>
-        public DateTimeOffset? ExpiresAt { get; set; }
+        public DateTimeOffset? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private DateTimeOffset? _explicitNullValueExpiresAt = default!;
         /// <summary>The level of access granted.</summary>
-        public global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody_role? Role { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody_role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody_role? _explicitNullValueRole = default!;
         /// <summary>Set the status of a `pending` collaboration invitation,effectively accepting, or rejecting the invite.</summary>
-        public global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody_status? Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody_status? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Box.OpenApiClient.Collaborations.Item
         public static global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Box.OpenApiClient.Collaborations.Item
             writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody_role>("role", Role);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Collaborations.Item.WithCollaboration_PutRequestBody_status>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

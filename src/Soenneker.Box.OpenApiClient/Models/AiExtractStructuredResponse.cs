@@ -12,50 +12,74 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AiExtractStructuredResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ai_agent_info") is { } nullNodeAiAgentInfo && nullNodeAiAgentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiAgentInfo = null;
+            if (parseNode.GetChildNode("answer") is { } nullNodeAnswer && nullNodeAnswer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Answer = null;
+            if (parseNode.GetChildNode("completion_reason") is { } nullNodeCompletionReason && nullNodeCompletionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletionReason = null;
+            if (parseNode.GetChildNode("confidence_score") is { } nullNodeConfidenceScore && nullNodeConfidenceScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfidenceScore = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("reference") is { } nullNodeReference && nullNodeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The information on the models and processors used in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiAgentInfo? AiAgentInfo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiAgentInfo? AiAgentInfo { get => _explicitNullValueAiAgentInfo; set { _explicitNullValueAiAgentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_agent_info"); else _explicitNullProperties?.Remove("ai_agent_info"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiAgentInfo? _explicitNullValueAiAgentInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiAgentInfo AiAgentInfo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiAgentInfo AiAgentInfo { get => _explicitNullValueAiAgentInfo; set { _explicitNullValueAiAgentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_agent_info"); else _explicitNullProperties?.Remove("ai_agent_info"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiAgentInfo _explicitNullValueAiAgentInfo = default!;
 #endif
         /// <summary>AI extract response.The content of this response may vary depending onthe requested configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractResponse? Answer { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractResponse? Answer { get => _explicitNullValueAnswer; set { _explicitNullValueAnswer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer"); else _explicitNullProperties?.Remove("answer"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractResponse? _explicitNullValueAnswer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractResponse Answer { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractResponse Answer { get => _explicitNullValueAnswer; set { _explicitNullValueAnswer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answer"); else _explicitNullProperties?.Remove("answer"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractResponse _explicitNullValueAnswer = default!;
 #endif
         /// <summary>The reason the response finishes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompletionReason { get; set; }
+        public string? CompletionReason { get => _explicitNullValueCompletionReason; set { _explicitNullValueCompletionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completion_reason"); else _explicitNullProperties?.Remove("completion_reason"); } }
+        private string? _explicitNullValueCompletionReason = default!;
 #nullable restore
 #else
-        public string CompletionReason { get; set; }
+        public string CompletionReason { get => _explicitNullValueCompletionReason; set { _explicitNullValueCompletionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completion_reason"); else _explicitNullProperties?.Remove("completion_reason"); } }
+        private string _explicitNullValueCompletionReason = default!;
 #endif
         /// <summary>The confidence score levels and numeric values for each extracted field as a JSON dictionary. This can be empty if no field could be extracted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_confidence_score? ConfidenceScore { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_confidence_score? ConfidenceScore { get => _explicitNullValueConfidenceScore; set { _explicitNullValueConfidenceScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidence_score"); else _explicitNullProperties?.Remove("confidence_score"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_confidence_score? _explicitNullValueConfidenceScore = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_confidence_score ConfidenceScore { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_confidence_score ConfidenceScore { get => _explicitNullValueConfidenceScore; set { _explicitNullValueConfidenceScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidence_score"); else _explicitNullProperties?.Remove("confidence_score"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_confidence_score _explicitNullValueConfidenceScore = default!;
 #endif
         /// <summary>The ISO date formatted timestamp of when the answer to the prompt was created.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The reference for each extracted field as a JSON dictionary. This can be empty if no field could be extracted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_reference? Reference { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_reference? Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_reference? _explicitNullValueReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_reference Reference { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_reference Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_reference _explicitNullValueReference = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse"/> and sets the default values.
@@ -72,7 +96,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,6 +127,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_confidence_score>("confidence_score", ConfidenceScore);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredResponse_reference>("reference", Reference);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

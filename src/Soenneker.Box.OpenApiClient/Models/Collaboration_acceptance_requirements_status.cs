@@ -11,32 +11,48 @@ namespace Soenneker.Box.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Collaboration_acceptance_requirements_status : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("strong_password_requirement") is { } nullNodeStrongPasswordRequirement && nullNodeStrongPasswordRequirement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StrongPasswordRequirement = null;
+            if (parseNode.GetChildNode("terms_of_service_requirement") is { } nullNodeTermsOfServiceRequirement && nullNodeTermsOfServiceRequirement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfServiceRequirement = null;
+            if (parseNode.GetChildNode("two_factor_authentication_requirement") is { } nullNodeTwoFactorAuthenticationRequirement && nullNodeTwoFactorAuthenticationRequirement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwoFactorAuthenticationRequirement = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The strong_password_requirement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement? StrongPasswordRequirement { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement? StrongPasswordRequirement { get => _explicitNullValueStrongPasswordRequirement; set { _explicitNullValueStrongPasswordRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strong_password_requirement"); else _explicitNullProperties?.Remove("strong_password_requirement"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement? _explicitNullValueStrongPasswordRequirement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement StrongPasswordRequirement { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement StrongPasswordRequirement { get => _explicitNullValueStrongPasswordRequirement; set { _explicitNullValueStrongPasswordRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strong_password_requirement"); else _explicitNullProperties?.Remove("strong_password_requirement"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement _explicitNullValueStrongPasswordRequirement = default!;
 #endif
         /// <summary>The terms_of_service_requirement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_terms_of_service_requirement? TermsOfServiceRequirement { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_terms_of_service_requirement? TermsOfServiceRequirement { get => _explicitNullValueTermsOfServiceRequirement; set { _explicitNullValueTermsOfServiceRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service_requirement"); else _explicitNullProperties?.Remove("terms_of_service_requirement"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_terms_of_service_requirement? _explicitNullValueTermsOfServiceRequirement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_terms_of_service_requirement TermsOfServiceRequirement { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_terms_of_service_requirement TermsOfServiceRequirement { get => _explicitNullValueTermsOfServiceRequirement; set { _explicitNullValueTermsOfServiceRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms_of_service_requirement"); else _explicitNullProperties?.Remove("terms_of_service_requirement"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_terms_of_service_requirement _explicitNullValueTermsOfServiceRequirement = default!;
 #endif
         /// <summary>The two_factor_authentication_requirement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement? TwoFactorAuthenticationRequirement { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement? TwoFactorAuthenticationRequirement { get => _explicitNullValueTwoFactorAuthenticationRequirement; set { _explicitNullValueTwoFactorAuthenticationRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("two_factor_authentication_requirement"); else _explicitNullProperties?.Remove("two_factor_authentication_requirement"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement? _explicitNullValueTwoFactorAuthenticationRequirement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement TwoFactorAuthenticationRequirement { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement TwoFactorAuthenticationRequirement { get => _explicitNullValueTwoFactorAuthenticationRequirement; set { _explicitNullValueTwoFactorAuthenticationRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("two_factor_authentication_requirement"); else _explicitNullProperties?.Remove("two_factor_authentication_requirement"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement _explicitNullValueTwoFactorAuthenticationRequirement = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_strong_password_requirement>("strong_password_requirement", StrongPasswordRequirement);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_terms_of_service_requirement>("terms_of_service_requirement", TermsOfServiceRequirement);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status_two_factor_authentication_requirement>("two_factor_authentication_requirement", TwoFactorAuthenticationRequirement);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

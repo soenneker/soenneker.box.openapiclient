@@ -12,15 +12,28 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileFull_watermark_info : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_watermarked") is { } nullNodeIsWatermarked && nullNodeIsWatermarked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWatermarked = null;
+            if (parseNode.GetChildNode("is_watermarked_by_access_policy") is { } nullNodeIsWatermarkedByAccessPolicy && nullNodeIsWatermarkedByAccessPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWatermarkedByAccessPolicy = null;
+            if (parseNode.GetChildNode("is_watermark_inherited") is { } nullNodeIsWatermarkInherited && nullNodeIsWatermarkInherited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWatermarkInherited = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies if this item has a watermark applied.</summary>
-        public bool? IsWatermarked { get; set; }
+        public bool? IsWatermarked { get => _explicitNullValueIsWatermarked; set { _explicitNullValueIsWatermarked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_watermarked"); else _explicitNullProperties?.Remove("is_watermarked"); } }
+        private bool? _explicitNullValueIsWatermarked = default!;
         /// <summary>Specifies if the watermark is enforced by an access policy.</summary>
-        public bool? IsWatermarkedByAccessPolicy { get; set; }
+        public bool? IsWatermarkedByAccessPolicy { get => _explicitNullValueIsWatermarkedByAccessPolicy; set { _explicitNullValueIsWatermarkedByAccessPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_watermarked_by_access_policy"); else _explicitNullProperties?.Remove("is_watermarked_by_access_policy"); } }
+        private bool? _explicitNullValueIsWatermarkedByAccessPolicy = default!;
         /// <summary>Specifies if the watermark is inherited from any parent folder in the hierarchy.</summary>
-        public bool? IsWatermarkInherited { get; set; }
+        public bool? IsWatermarkInherited { get => _explicitNullValueIsWatermarkInherited; set { _explicitNullValueIsWatermarkInherited = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_watermark_inherited"); else _explicitNullProperties?.Remove("is_watermark_inherited"); } }
+        private bool? _explicitNullValueIsWatermarkInherited = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.FileFull_watermark_info(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteBoolValue("is_watermarked", IsWatermarked);
             writer.WriteBoolValue("is_watermarked_by_access_policy", IsWatermarkedByAccessPolicy);
             writer.WriteBoolValue("is_watermark_inherited", IsWatermarkInherited);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

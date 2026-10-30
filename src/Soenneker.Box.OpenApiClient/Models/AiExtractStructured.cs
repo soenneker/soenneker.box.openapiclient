@@ -12,52 +12,78 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AiExtractStructured : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ai_agent") is { } nullNodeAiAgent && nullNodeAiAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiAgent = null;
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("include_confidence_score") is { } nullNodeIncludeConfidenceScore && nullNodeIncludeConfidenceScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeConfidenceScore = null;
+            if (parseNode.GetChildNode("include_reference") is { } nullNodeIncludeReference && nullNodeIncludeReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeReference = null;
+            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("metadata_template") is { } nullNodeMetadataTemplate && nullNodeMetadataTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetadataTemplate = null;
+            if (parseNode.GetChildNode("taxonomy_sources") is { } nullNodeTaxonomySources && nullNodeTaxonomySources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxonomySources = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ai_agent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredAgent? AiAgent { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredAgent? AiAgent { get => _explicitNullValueAiAgent; set { _explicitNullValueAiAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_agent"); else _explicitNullProperties?.Remove("ai_agent"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredAgent? _explicitNullValueAiAgent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredAgent AiAgent { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredAgent AiAgent { get => _explicitNullValueAiAgent; set { _explicitNullValueAiAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_agent"); else _explicitNullProperties?.Remove("ai_agent"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractStructuredAgent _explicitNullValueAiAgent = default!;
 #endif
         /// <summary>The fields to be extracted from the provided items.For your request to work, you must provide either `metadata_template` or `fields`, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields>? Fields { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields> Fields { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_fields> _explicitNullValueFields = default!;
 #endif
         /// <summary>A flag to indicate whether confidence scores for every extracted field should be returned. Estimates the likelihood that an extracted metadata field value is accurate and correct. Displays a numerical and categorical confidence score to help users and automated systems quickly determine extraction reliability.</summary>
-        public bool? IncludeConfidenceScore { get; set; }
+        public bool? IncludeConfidenceScore { get => _explicitNullValueIncludeConfidenceScore; set { _explicitNullValueIncludeConfidenceScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_confidence_score"); else _explicitNullProperties?.Remove("include_confidence_score"); } }
+        private bool? _explicitNullValueIncludeConfidenceScore = default!;
         /// <summary>A flag to indicate whether references for every extracted field should be returned. References and bounding boxes show where the agent extracted the metadata from. They help you check for accuracy and fix any mistakes. References are short, exact quotes from the original document used to verify results. Bounding boxes highlight the specific areas on the page where that text is found.</summary>
-        public bool? IncludeReference { get; set; }
+        public bool? IncludeReference { get => _explicitNullValueIncludeReference; set { _explicitNullValueIncludeReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_reference"); else _explicitNullProperties?.Remove("include_reference"); } }
+        private bool? _explicitNullValueIncludeReference = default!;
         /// <summary>The items to be processed by the LLM. Currently you can use files only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiItemBase>? Items { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiItemBase>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AiItemBase>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiItemBase> Items { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiItemBase> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AiItemBase> _explicitNullValueItems = default!;
 #endif
         /// <summary>The metadata template containing the fields to extract.For your request to work, you must provide either `metadata_template` or `fields`, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template? MetadataTemplate { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template? MetadataTemplate { get => _explicitNullValueMetadataTemplate; set { _explicitNullValueMetadataTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_template"); else _explicitNullProperties?.Remove("metadata_template"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template? _explicitNullValueMetadataTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template MetadataTemplate { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template MetadataTemplate { get => _explicitNullValueMetadataTemplate; set { _explicitNullValueMetadataTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_template"); else _explicitNullProperties?.Remove("metadata_template"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template _explicitNullValueMetadataTemplate = default!;
 #endif
         /// <summary>The taxonomy sources to be used for the structured extraction. They can either be an existing file or a taxonomy.For your request to work, `fields` must also be provided. `taxonomy_sources` is not supported with `metadata_template`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource>? TaxonomySources { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource>? TaxonomySources { get => _explicitNullValueTaxonomySources; set { _explicitNullValueTaxonomySources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxonomy_sources"); else _explicitNullProperties?.Remove("taxonomy_sources"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource>? _explicitNullValueTaxonomySources = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource> TaxonomySources { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource> TaxonomySources { get => _explicitNullValueTaxonomySources; set { _explicitNullValueTaxonomySources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxonomy_sources"); else _explicitNullProperties?.Remove("taxonomy_sources"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource> _explicitNullValueTaxonomySources = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured"/> and sets the default values.
@@ -74,7 +100,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -107,6 +133,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiItemBase>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiExtractStructured_metadata_template>("metadata_template", MetadataTemplate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiTaxonomySource>("taxonomy_sources", TaxonomySources);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

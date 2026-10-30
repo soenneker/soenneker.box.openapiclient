@@ -13,31 +13,50 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequestCreateRequest : global::Soenneker.Box.OpenApiClient.Models.SignRequestBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("parent_folder") is { } nullNodeParentFolder && nullNodeParentFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentFolder = null;
+            if (parseNode.GetChildNode("signature_color") is { } nullNodeSignatureColor && nullNodeSignatureColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureColor = null;
+            if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
+            if (parseNode.GetChildNode("source_files") is { } nullNodeSourceFiles && nullNodeSourceFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFiles = null;
+        }
+
         /// <summary>The parent_folder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FolderMini? ParentFolder { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderMini? ParentFolder { get => _explicitNullValueParentFolder; set { _explicitNullValueParentFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_folder"); else _explicitNullProperties?.Remove("parent_folder"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderMini? _explicitNullValueParentFolder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FolderMini ParentFolder { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderMini ParentFolder { get => _explicitNullValueParentFolder; set { _explicitNullValueParentFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_folder"); else _explicitNullProperties?.Remove("parent_folder"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderMini _explicitNullValueParentFolder = default!;
 #endif
         /// <summary>Force a specific color for the signature (blue, black, or red).</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateRequest_signature_color? SignatureColor { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateRequest_signature_color? SignatureColor { get => _explicitNullValueSignatureColor; set { _explicitNullValueSignatureColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_color"); else _explicitNullProperties?.Remove("signature_color"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateRequest_signature_color? _explicitNullValueSignatureColor = default!;
         /// <summary>Array of signers for the signature request. 35 is themax number of signers permitted.**Note**: It may happen that some signers belong to conflicting [segments](https://developer.box.com/reference/resources/shield-information-barrier-segment-member) (user groups).This means that due to the security policies, users are assigned to segments to prevent exchanges or communication that could lead to ethical conflicts.In such a case, an attempt to send the sign request will result in an error.Read more about [segments and ethical walls](https://support.box.com/hc/en-us/articles/9920431507603-Understanding-Information-Barriers#h_01GFVJEHQA06N7XEZ4GCZ9GFAQ).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner>? Signers { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner>? _explicitNullValueSigners = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner> Signers { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner> _explicitNullValueSigners = default!;
 #endif
         /// <summary>List of files to create a signing document from. This is currently limited to ten files. Only the ID and type fields are required for each file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileBase>? SourceFiles { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileBase>? SourceFiles { get => _explicitNullValueSourceFiles; set { _explicitNullValueSourceFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_files"); else _explicitNullProperties?.Remove("source_files"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileBase>? _explicitNullValueSourceFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileBase> SourceFiles { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileBase> SourceFiles { get => _explicitNullValueSourceFiles; set { _explicitNullValueSourceFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_files"); else _explicitNullProperties?.Remove("source_files"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileBase> _explicitNullValueSourceFiles = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +66,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,7 +93,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FolderMini>("parent_folder", ParentFolder);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateRequest_signature_color>("signature_color", SignatureColor);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner>("signers", Signers);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.FileBase>("source_files", SourceFiles);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.FileBase>("source_files", SourceFiles);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,43 +12,64 @@ namespace Soenneker.Box.OpenApiClient.Workflows.Item.Start
     #pragma warning disable CS1591
     public partial class StartPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("flow") is { } nullNodeFlow && nullNodeFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flow = null;
+            if (parseNode.GetChildNode("folder") is { } nullNodeFolder && nullNodeFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Folder = null;
+            if (parseNode.GetChildNode("outcomes") is { } nullNodeOutcomes && nullNodeOutcomes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outcomes = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The array of files for which the workflow should start. All filesmust be in the workflow&apos;s configured folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_files>? Files { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_files>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_files>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_files> Files { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_files> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_files> _explicitNullValueFiles = default!;
 #endif
         /// <summary>The flow that will be triggered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_flow? Flow { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_flow? Flow { get => _explicitNullValueFlow; set { _explicitNullValueFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow"); else _explicitNullProperties?.Remove("flow"); } }
+        private global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_flow? _explicitNullValueFlow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_flow Flow { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_flow Flow { get => _explicitNullValueFlow; set { _explicitNullValueFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow"); else _explicitNullProperties?.Remove("flow"); } }
+        private global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_flow _explicitNullValueFlow = default!;
 #endif
         /// <summary>The folder object for which the workflow is configured.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_folder? Folder { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_folder? Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
+        private global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_folder? _explicitNullValueFolder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_folder Folder { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_folder Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
+        private global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_folder _explicitNullValueFolder = default!;
 #endif
         /// <summary>A configurable outcome the workflow should complete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.Outcome>? Outcomes { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.Outcome>? Outcomes { get => _explicitNullValueOutcomes; set { _explicitNullValueOutcomes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcomes"); else _explicitNullProperties?.Remove("outcomes"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.Outcome>? _explicitNullValueOutcomes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.Outcome> Outcomes { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.Outcome> Outcomes { get => _explicitNullValueOutcomes; set { _explicitNullValueOutcomes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcomes"); else _explicitNullProperties?.Remove("outcomes"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.Outcome> _explicitNullValueOutcomes = default!;
 #endif
         /// <summary>The type of the parameters object.</summary>
-        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_type? Type { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_type? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody"/> and sets the default values.
         /// </summary>
@@ -64,7 +85,7 @@ namespace Soenneker.Box.OpenApiClient.Workflows.Item.Start
         public static global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Box.OpenApiClient.Workflows.Item.Start
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_folder>("folder", Folder);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.Outcome>("outcomes", Outcomes);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_type>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

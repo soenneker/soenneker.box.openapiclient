@@ -11,16 +11,26 @@ namespace Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets
     #pragma warning disable CS1591
     public partial class Collaboration_whitelist_exempt_targetsPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The user to exempt.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody_user? User { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody_user? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody_user? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody_user User { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody_user User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody_user _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets
         public static global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Collaboration_whitelist_exempt_targets.Collaboration_whitelist_exempt_targetsPostRequestBody_user>("user", User);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

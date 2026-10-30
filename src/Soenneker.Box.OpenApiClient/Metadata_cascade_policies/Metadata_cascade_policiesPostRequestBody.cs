@@ -11,26 +11,41 @@ namespace Soenneker.Box.OpenApiClient.Metadata_cascade_policies
     #pragma warning disable CS1591
     public partial class Metadata_cascade_policiesPostRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("folder_id") is { } nullNodeFolderId && nullNodeFolderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderId = null;
+            if (parseNode.GetChildNode("scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
+            if (parseNode.GetChildNode("templateKey") is { } nullNodeTemplateKey && nullNodeTemplateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateKey = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the folder to apply the policy to. This folder willneed to already have an instance of the targeted metadatatemplate applied to it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FolderId { get; set; }
+        public string? FolderId { get => _explicitNullValueFolderId; set { _explicitNullValueFolderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_id"); else _explicitNullProperties?.Remove("folder_id"); } }
+        private string? _explicitNullValueFolderId = default!;
 #nullable restore
 #else
-        public string FolderId { get; set; }
+        public string FolderId { get => _explicitNullValueFolderId; set { _explicitNullValueFolderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_id"); else _explicitNullProperties?.Remove("folder_id"); } }
+        private string _explicitNullValueFolderId = default!;
 #endif
         /// <summary>The scope of the targeted metadata template. This template willneed to already have an instance applied to the targeted folder.</summary>
-        public global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Metadata_cascade_policiesPostRequestBody_scope? Scope { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Metadata_cascade_policiesPostRequestBody_scope? Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Metadata_cascade_policiesPostRequestBody_scope? _explicitNullValueScope = default!;
         /// <summary>The key of the targeted metadata template. This template willneed to already have an instance applied to the targeted folder.In many cases the template key is automatically derivedof its display name, for example `Contract Template` wouldbecome `contractTemplate`. In some cases the creator of thetemplate will have provided its own template key.Please [list the templates for an enterprise][list], orget all instances on a [file][file] or [folder][folder]to inspect a template&apos;s key.[list]: https://developer.box.com/reference/get-metadata-templates-enterprise[file]: https://developer.box.com/reference/get-files-id-metadata[folder]: https://developer.box.com/reference/get-folders-id-metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateKey { get; set; }
+        public string? TemplateKey { get => _explicitNullValueTemplateKey; set { _explicitNullValueTemplateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateKey"); else _explicitNullProperties?.Remove("templateKey"); } }
+        private string? _explicitNullValueTemplateKey = default!;
 #nullable restore
 #else
-        public string TemplateKey { get; set; }
+        public string TemplateKey { get => _explicitNullValueTemplateKey; set { _explicitNullValueTemplateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateKey"); else _explicitNullProperties?.Remove("templateKey"); } }
+        private string _explicitNullValueTemplateKey = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Metadata_cascade_policiesPostRequestBody"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_cascade_policies
         public static global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Metadata_cascade_policiesPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Metadata_cascade_policiesPostRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Metadata_cascade_policiesPostRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_cascade_policies
             writer.WriteStringValue("folder_id", FolderId);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Metadata_cascade_policies.Metadata_cascade_policiesPostRequestBody_scope>("scope", Scope);
             writer.WriteStringValue("templateKey", TemplateKey);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

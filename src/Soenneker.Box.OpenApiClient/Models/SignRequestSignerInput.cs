@@ -13,31 +13,55 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequestSignerInput : global::Soenneker.Box.OpenApiClient.Models.SignRequestPrefillTag, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("content_type") is { } nullNodeContentType && nullNodeContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentType = null;
+            if (parseNode.GetChildNode("is_validated") is { } nullNodeIsValidated && nullNodeIsValidated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsValidated = null;
+            if (parseNode.GetChildNode("page_index") is { } nullNodePageIndex && nullNodePageIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageIndex = null;
+            if (parseNode.GetChildNode("read_only") is { } nullNodeReadOnly && nullNodeReadOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadOnly = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("validation") is { } nullNodeValidation && nullNodeValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Validation = null;
+        }
+
         /// <summary>Content type of input.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_content_type? ContentType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_content_type? ContentType { get => _explicitNullValueContentType; set { _explicitNullValueContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_type"); else _explicitNullProperties?.Remove("content_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_content_type? _explicitNullValueContentType = default!;
         /// <summary>Indicates whether the signer&apos;s input has been validated through re-authentication.Applicable only for signature or initial content types in a `cfr11` request flow.The value is `null` for standard request flows or non-applicable input types.</summary>
-        public bool? IsValidated { get; set; }
+        public bool? IsValidated { get => _explicitNullValueIsValidated; set { _explicitNullValueIsValidated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_validated"); else _explicitNullProperties?.Remove("is_validated"); } }
+        private bool? _explicitNullValueIsValidated = default!;
         /// <summary>Index of page that the input is on.</summary>
-        public int? PageIndex { get; set; }
+        public int? PageIndex { get => _explicitNullValuePageIndex; set { _explicitNullValuePageIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_index"); else _explicitNullProperties?.Remove("page_index"); } }
+        private int? _explicitNullValuePageIndex = default!;
         /// <summary>Indicates whether this input is read-only (cannot be modified by signers).</summary>
-        public bool? ReadOnly { get; set; }
+        public bool? ReadOnly { get => _explicitNullValueReadOnly; set { _explicitNullValueReadOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_only"); else _explicitNullProperties?.Remove("read_only"); } }
+        private bool? _explicitNullValueReadOnly = default!;
         /// <summary>The reason for the signer&apos;s input, applicable to signature or initial content typesin a `cfr11` request flow. The value is `null` when not applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reason { get; set; }
+        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public string Reason { get; set; }
+        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string _explicitNullValueReason = default!;
 #endif
         /// <summary>Type of input.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_type? Type { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_type? _explicitNullValueType = default!;
         /// <summary>Specifies the formatting rules that signers must follow for text field inputs.If set, this validation is mandatory.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation? Validation { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation? Validation { get => _explicitNullValueValidation; set { _explicitNullValueValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation"); else _explicitNullProperties?.Remove("validation"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation? _explicitNullValueValidation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation Validation { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation Validation { get => _explicitNullValueValidation; set { _explicitNullValueValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation"); else _explicitNullProperties?.Remove("validation"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation _explicitNullValueValidation = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +71,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,7 +104,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteBoolValue("read_only", ReadOnly);
             writer.WriteStringValue("reason", Reason);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInput_type>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation>("validation", Validation);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputValidation>("validation", Validation);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

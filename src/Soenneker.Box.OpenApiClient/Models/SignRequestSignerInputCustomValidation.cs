@@ -12,27 +12,42 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequestSignerInputCustomValidation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_error_message") is { } nullNodeCustomErrorMessage && nullNodeCustomErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomErrorMessage = null;
+            if (parseNode.GetChildNode("custom_regex") is { } nullNodeCustomRegex && nullNodeCustomRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomRegex = null;
+            if (parseNode.GetChildNode("validation_type") is { } nullNodeValidationType && nullNodeValidationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Error message shown if input fails custom regular expression validation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomErrorMessage { get; set; }
+        public string? CustomErrorMessage { get => _explicitNullValueCustomErrorMessage; set { _explicitNullValueCustomErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_error_message"); else _explicitNullProperties?.Remove("custom_error_message"); } }
+        private string? _explicitNullValueCustomErrorMessage = default!;
 #nullable restore
 #else
-        public string CustomErrorMessage { get; set; }
+        public string CustomErrorMessage { get => _explicitNullValueCustomErrorMessage; set { _explicitNullValueCustomErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_error_message"); else _explicitNullProperties?.Remove("custom_error_message"); } }
+        private string _explicitNullValueCustomErrorMessage = default!;
 #endif
         /// <summary>Regular expression used for validation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomRegex { get; set; }
+        public string? CustomRegex { get => _explicitNullValueCustomRegex; set { _explicitNullValueCustomRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_regex"); else _explicitNullProperties?.Remove("custom_regex"); } }
+        private string? _explicitNullValueCustomRegex = default!;
 #nullable restore
 #else
-        public string CustomRegex { get; set; }
+        public string CustomRegex { get => _explicitNullValueCustomRegex; set { _explicitNullValueCustomRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_regex"); else _explicitNullProperties?.Remove("custom_regex"); } }
+        private string _explicitNullValueCustomRegex = default!;
 #endif
         /// <summary>Defines the validation format for the text input as custom.A custom regular expression is used for validation.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation_validation_type? ValidationType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation_validation_type? ValidationType { get => _explicitNullValueValidationType; set { _explicitNullValueValidationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_type"); else _explicitNullProperties?.Remove("validation_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation_validation_type? _explicitNullValueValidationType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("custom_error_message", CustomErrorMessage);
             writer.WriteStringValue("custom_regex", CustomRegex);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerInputCustomValidation_validation_type>("validation_type", ValidationType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

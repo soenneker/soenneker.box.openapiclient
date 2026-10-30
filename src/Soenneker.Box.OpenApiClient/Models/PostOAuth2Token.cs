@@ -12,105 +12,153 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostOAuth2Token : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actor_token") is { } nullNodeActorToken && nullNodeActorToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorToken = null;
+            if (parseNode.GetChildNode("actor_token_type") is { } nullNodeActorTokenType && nullNodeActorTokenType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorTokenType = null;
+            if (parseNode.GetChildNode("assertion") is { } nullNodeAssertion && nullNodeAssertion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Assertion = null;
+            if (parseNode.GetChildNode("box_shared_link") is { } nullNodeBoxSharedLink && nullNodeBoxSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxSharedLink = null;
+            if (parseNode.GetChildNode("box_subject_id") is { } nullNodeBoxSubjectId && nullNodeBoxSubjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxSubjectId = null;
+            if (parseNode.GetChildNode("box_subject_type") is { } nullNodeBoxSubjectType && nullNodeBoxSubjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoxSubjectType = null;
+            if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
+            if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
+            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("grant_type") is { } nullNodeGrantType && nullNodeGrantType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrantType = null;
+            if (parseNode.GetChildNode("refresh_token") is { } nullNodeRefreshToken && nullNodeRefreshToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefreshToken = null;
+            if (parseNode.GetChildNode("resource") is { } nullNodeResource && nullNodeResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resource = null;
+            if (parseNode.GetChildNode("scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
+            if (parseNode.GetChildNode("subject_token") is { } nullNodeSubjectToken && nullNodeSubjectToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubjectToken = null;
+            if (parseNode.GetChildNode("subject_token_type") is { } nullNodeSubjectTokenType && nullNodeSubjectTokenType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubjectTokenType = null;
+        }
+
         /// <summary>The token used to create an annotator token.This is a JWT assertion.Used in combination with `urn:ietf:params:oauth:grant-type:token-exchange`as the `grant_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActorToken { get; set; }
+        public string? ActorToken { get => _explicitNullValueActorToken; set { _explicitNullValueActorToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_token"); else _explicitNullProperties?.Remove("actor_token"); } }
+        private string? _explicitNullValueActorToken = default!;
 #nullable restore
 #else
-        public string ActorToken { get; set; }
+        public string ActorToken { get => _explicitNullValueActorToken; set { _explicitNullValueActorToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_token"); else _explicitNullProperties?.Remove("actor_token"); } }
+        private string _explicitNullValueActorToken = default!;
 #endif
         /// <summary>The type of `actor_token` passed in.Used in combination with `urn:ietf:params:oauth:grant-type:token-exchange`as the `grant_type`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_actor_token_type? ActorTokenType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_actor_token_type? ActorTokenType { get => _explicitNullValueActorTokenType; set { _explicitNullValueActorTokenType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_token_type"); else _explicitNullProperties?.Remove("actor_token_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_actor_token_type? _explicitNullValueActorTokenType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JWT assertion for which to request a new access token.Used in combination with `urn:ietf:params:oauth:grant-type:jwt-bearer`as the `grant_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Assertion { get; set; }
+        public string? Assertion { get => _explicitNullValueAssertion; set { _explicitNullValueAssertion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assertion"); else _explicitNullProperties?.Remove("assertion"); } }
+        private string? _explicitNullValueAssertion = default!;
 #nullable restore
 #else
-        public string Assertion { get; set; }
+        public string Assertion { get => _explicitNullValueAssertion; set { _explicitNullValueAssertion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assertion"); else _explicitNullProperties?.Remove("assertion"); } }
+        private string _explicitNullValueAssertion = default!;
 #endif
         /// <summary>Full URL of the shared link on the file or folderthat the token should be generated for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoxSharedLink { get; set; }
+        public string? BoxSharedLink { get => _explicitNullValueBoxSharedLink; set { _explicitNullValueBoxSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_shared_link"); else _explicitNullProperties?.Remove("box_shared_link"); } }
+        private string? _explicitNullValueBoxSharedLink = default!;
 #nullable restore
 #else
-        public string BoxSharedLink { get; set; }
+        public string BoxSharedLink { get => _explicitNullValueBoxSharedLink; set { _explicitNullValueBoxSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_shared_link"); else _explicitNullProperties?.Remove("box_shared_link"); } }
+        private string _explicitNullValueBoxSharedLink = default!;
 #endif
         /// <summary>Used in combination with `client_credentials` as the `grant_type`.Value is determined by `box_subject_type`. If `user` use user ID and if`enterprise` use enterprise ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoxSubjectId { get; set; }
+        public string? BoxSubjectId { get => _explicitNullValueBoxSubjectId; set { _explicitNullValueBoxSubjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_subject_id"); else _explicitNullProperties?.Remove("box_subject_id"); } }
+        private string? _explicitNullValueBoxSubjectId = default!;
 #nullable restore
 #else
-        public string BoxSubjectId { get; set; }
+        public string BoxSubjectId { get => _explicitNullValueBoxSubjectId; set { _explicitNullValueBoxSubjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_subject_id"); else _explicitNullProperties?.Remove("box_subject_id"); } }
+        private string _explicitNullValueBoxSubjectId = default!;
 #endif
         /// <summary>Used in combination with `client_credentials` as the `grant_type`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_box_subject_type? BoxSubjectType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_box_subject_type? BoxSubjectType { get => _explicitNullValueBoxSubjectType; set { _explicitNullValueBoxSubjectType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("box_subject_type"); else _explicitNullProperties?.Remove("box_subject_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_box_subject_type? _explicitNullValueBoxSubjectType = default!;
         /// <summary>The Client ID of the application requesting an access token.Used in combination with `authorization_code`, `client_credentials`, or`urn:ietf:params:oauth:grant-type:jwt-bearer` as the `grant_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientId { get; set; }
+        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        private string? _explicitNullValueClientId = default!;
 #nullable restore
 #else
-        public string ClientId { get; set; }
+        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        private string _explicitNullValueClientId = default!;
 #endif
         /// <summary>The client secret of the application requesting an access token.Used in combination with `authorization_code`, `client_credentials`, or`urn:ietf:params:oauth:grant-type:jwt-bearer` as the `grant_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientSecret { get; set; }
+        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        private string? _explicitNullValueClientSecret = default!;
 #nullable restore
 #else
-        public string ClientSecret { get; set; }
+        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>The client-side authorization code passed to your application byBox in the browser redirect after the user has successfullygranted your application permission to make API calls on theirbehalf.Used in combination with `authorization_code` as the `grant_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get; set; }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get; set; }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private string _explicitNullValueCode = default!;
 #endif
         /// <summary>The type of request being made, either using a client-side obtainedauthorization code, a refresh token, a JWT assertion, client credentialsgrant or another access token for the purpose of downscoping a token.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_grant_type? GrantType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_grant_type? GrantType { get => _explicitNullValueGrantType; set { _explicitNullValueGrantType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grant_type"); else _explicitNullProperties?.Remove("grant_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_grant_type? _explicitNullValueGrantType = default!;
         /// <summary>A refresh token used to get a new access token with.Used in combination with `refresh_token` as the `grant_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefreshToken { get; set; }
+        public string? RefreshToken { get => _explicitNullValueRefreshToken; set { _explicitNullValueRefreshToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refresh_token"); else _explicitNullProperties?.Remove("refresh_token"); } }
+        private string? _explicitNullValueRefreshToken = default!;
 #nullable restore
 #else
-        public string RefreshToken { get; set; }
+        public string RefreshToken { get => _explicitNullValueRefreshToken; set { _explicitNullValueRefreshToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refresh_token"); else _explicitNullProperties?.Remove("refresh_token"); } }
+        private string _explicitNullValueRefreshToken = default!;
 #endif
         /// <summary>Full URL for the file that the token should be generated for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Resource { get; set; }
+        public string? Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
+        private string? _explicitNullValueResource = default!;
 #nullable restore
 #else
-        public string Resource { get; set; }
+        public string Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
+        private string _explicitNullValueResource = default!;
 #endif
         /// <summary>The space-delimited list of scopes that you want apply to thenew access token.The `subject_token` will need to have all of these scopes orthe call will error with **401 Unauthorized**..</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Scope { get; set; }
+        public string? Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private string? _explicitNullValueScope = default!;
 #nullable restore
 #else
-        public string Scope { get; set; }
+        public string Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private string _explicitNullValueScope = default!;
 #endif
         /// <summary>The token to exchange for a downscoped token. This can be a regularaccess token, a JWT assertion, or an app token.Used in combination with `urn:ietf:params:oauth:grant-type:token-exchange`as the `grant_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubjectToken { get; set; }
+        public string? SubjectToken { get => _explicitNullValueSubjectToken; set { _explicitNullValueSubjectToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject_token"); else _explicitNullProperties?.Remove("subject_token"); } }
+        private string? _explicitNullValueSubjectToken = default!;
 #nullable restore
 #else
-        public string SubjectToken { get; set; }
+        public string SubjectToken { get => _explicitNullValueSubjectToken; set { _explicitNullValueSubjectToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject_token"); else _explicitNullProperties?.Remove("subject_token"); } }
+        private string _explicitNullValueSubjectToken = default!;
 #endif
         /// <summary>The type of `subject_token` passed in.Used in combination with `urn:ietf:params:oauth:grant-type:token-exchange`as the `grant_type`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_subject_token_type? SubjectTokenType { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_subject_token_type? SubjectTokenType { get => _explicitNullValueSubjectTokenType; set { _explicitNullValueSubjectTokenType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject_token_type"); else _explicitNullProperties?.Remove("subject_token_type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_subject_token_type? _explicitNullValueSubjectTokenType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token"/> and sets the default values.
         /// </summary>
@@ -126,7 +174,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -175,6 +223,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteStringValue("scope", Scope);
             writer.WriteStringValue("subject_token", SubjectToken);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_subject_token_type>("subject_token_type", SubjectTokenType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

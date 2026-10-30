@@ -13,85 +13,133 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FolderFull : global::Soenneker.Box.OpenApiClient.Models.Folder, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("allowed_invitee_roles") is { } nullNodeAllowedInviteeRoles && nullNodeAllowedInviteeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedInviteeRoles = null;
+            if (parseNode.GetChildNode("allowed_shared_link_access_levels") is { } nullNodeAllowedSharedLinkAccessLevels && nullNodeAllowedSharedLinkAccessLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedSharedLinkAccessLevels = null;
+            if (parseNode.GetChildNode("can_non_owners_invite") is { } nullNodeCanNonOwnersInvite && nullNodeCanNonOwnersInvite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanNonOwnersInvite = null;
+            if (parseNode.GetChildNode("can_non_owners_view_collaborators") is { } nullNodeCanNonOwnersViewCollaborators && nullNodeCanNonOwnersViewCollaborators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanNonOwnersViewCollaborators = null;
+            if (parseNode.GetChildNode("classification") is { } nullNodeClassification && nullNodeClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Classification = null;
+            if (parseNode.GetChildNode("collections") is { } nullNodeCollections && nullNodeCollections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collections = null;
+            if (parseNode.GetChildNode("has_collaborations") is { } nullNodeHasCollaborations && nullNodeHasCollaborations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCollaborations = null;
+            if (parseNode.GetChildNode("is_accessible_via_shared_link") is { } nullNodeIsAccessibleViaSharedLink && nullNodeIsAccessibleViaSharedLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessibleViaSharedLink = null;
+            if (parseNode.GetChildNode("is_associated_with_app_item") is { } nullNodeIsAssociatedWithAppItem && nullNodeIsAssociatedWithAppItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAssociatedWithAppItem = null;
+            if (parseNode.GetChildNode("is_collaboration_restricted_to_enterprise") is { } nullNodeIsCollaborationRestrictedToEnterprise && nullNodeIsCollaborationRestrictedToEnterprise.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCollaborationRestrictedToEnterprise = null;
+            if (parseNode.GetChildNode("is_externally_owned") is { } nullNodeIsExternallyOwned && nullNodeIsExternallyOwned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternallyOwned = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("sync_state") is { } nullNodeSyncState && nullNodeSyncState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncState = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("watermark_info") is { } nullNodeWatermarkInfo && nullNodeWatermarkInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WatermarkInfo = null;
+        }
+
         /// <summary>A list of the types of roles that user can be invited atwhen sharing this folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_invitee_roles?>? AllowedInviteeRoles { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_invitee_roles?>? AllowedInviteeRoles { get => _explicitNullValueAllowedInviteeRoles; set { _explicitNullValueAllowedInviteeRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_invitee_roles"); else _explicitNullProperties?.Remove("allowed_invitee_roles"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_invitee_roles?>? _explicitNullValueAllowedInviteeRoles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_invitee_roles?> AllowedInviteeRoles { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_invitee_roles?> AllowedInviteeRoles { get => _explicitNullValueAllowedInviteeRoles; set { _explicitNullValueAllowedInviteeRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_invitee_roles"); else _explicitNullProperties?.Remove("allowed_invitee_roles"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_invitee_roles?> _explicitNullValueAllowedInviteeRoles = default!;
 #endif
         /// <summary>The shared link access levels the authenticated user is allowed touse when creating or updating a shared link for this folder.The list depends on item policy and user authorization. For somefolders, like the root folder, this is always empty as sharing isnot allowed at that level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_shared_link_access_levels?>? AllowedSharedLinkAccessLevels { get => _explicitNullValueAllowedSharedLinkAccessLevels; set { _explicitNullValueAllowedSharedLinkAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_shared_link_access_levels"); else _explicitNullProperties?.Remove("allowed_shared_link_access_levels"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_shared_link_access_levels?>? _explicitNullValueAllowedSharedLinkAccessLevels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_shared_link_access_levels?> AllowedSharedLinkAccessLevels { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_shared_link_access_levels?> AllowedSharedLinkAccessLevels { get => _explicitNullValueAllowedSharedLinkAccessLevels; set { _explicitNullValueAllowedSharedLinkAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_shared_link_access_levels"); else _explicitNullProperties?.Remove("allowed_shared_link_access_levels"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FolderFull_allowed_shared_link_access_levels?> _explicitNullValueAllowedSharedLinkAccessLevels = default!;
 #endif
         /// <summary>The can_non_owners_invite property</summary>
-        public bool? CanNonOwnersInvite { get; set; }
+        public bool? CanNonOwnersInvite { get => _explicitNullValueCanNonOwnersInvite; set { _explicitNullValueCanNonOwnersInvite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_non_owners_invite"); else _explicitNullProperties?.Remove("can_non_owners_invite"); } }
+        private bool? _explicitNullValueCanNonOwnersInvite = default!;
         /// <summary>Specifies if collaborators who are not ownersof this folder are restricted from viewing othercollaborations on this folder.It also restricts non-owners from inviting newcollaborators.</summary>
-        public bool? CanNonOwnersViewCollaborators { get; set; }
+        public bool? CanNonOwnersViewCollaborators { get => _explicitNullValueCanNonOwnersViewCollaborators; set { _explicitNullValueCanNonOwnersViewCollaborators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_non_owners_view_collaborators"); else _explicitNullProperties?.Remove("can_non_owners_view_collaborators"); } }
+        private bool? _explicitNullValueCanNonOwnersViewCollaborators = default!;
         /// <summary>The classification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification? Classification { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification? Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification? _explicitNullValueClassification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification Classification { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification Classification { get => _explicitNullValueClassification; set { _explicitNullValueClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("classification"); else _explicitNullProperties?.Remove("classification"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderFull_classification _explicitNullValueClassification = default!;
 #endif
         /// <summary>The collections that this folder belongs to.For more information, see the[collections guide](https://developer.box.com/guides/collections).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection>? Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.Collection>? _explicitNullValueCollections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.Collection> Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.Collection> _explicitNullValueCollections = default!;
 #endif
         /// <summary>Specifies if this folder has any other collaborators.</summary>
-        public bool? HasCollaborations { get; set; }
+        public bool? HasCollaborations { get => _explicitNullValueHasCollaborations; set { _explicitNullValueHasCollaborations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_collaborations"); else _explicitNullProperties?.Remove("has_collaborations"); } }
+        private bool? _explicitNullValueHasCollaborations = default!;
         /// <summary>Specifies if the folder can be accessedwith the direct shared link or a shared linkto a parent folder.</summary>
-        public bool? IsAccessibleViaSharedLink { get; set; }
+        public bool? IsAccessibleViaSharedLink { get => _explicitNullValueIsAccessibleViaSharedLink; set { _explicitNullValueIsAccessibleViaSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_accessible_via_shared_link"); else _explicitNullProperties?.Remove("is_accessible_via_shared_link"); } }
+        private bool? _explicitNullValueIsAccessibleViaSharedLink = default!;
         /// <summary>This field will return true if the folder or any ancestor of thefolder is associated with at least one app item. Note that this willreturn true even if the context user does not have access to theapp item(s) associated with the folder.</summary>
-        public bool? IsAssociatedWithAppItem { get; set; }
+        public bool? IsAssociatedWithAppItem { get => _explicitNullValueIsAssociatedWithAppItem; set { _explicitNullValueIsAssociatedWithAppItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_associated_with_app_item"); else _explicitNullProperties?.Remove("is_associated_with_app_item"); } }
+        private bool? _explicitNullValueIsAssociatedWithAppItem = default!;
         /// <summary>The is_collaboration_restricted_to_enterprise property</summary>
-        public bool? IsCollaborationRestrictedToEnterprise { get; set; }
+        public bool? IsCollaborationRestrictedToEnterprise { get => _explicitNullValueIsCollaborationRestrictedToEnterprise; set { _explicitNullValueIsCollaborationRestrictedToEnterprise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_collaboration_restricted_to_enterprise"); else _explicitNullProperties?.Remove("is_collaboration_restricted_to_enterprise"); } }
+        private bool? _explicitNullValueIsCollaborationRestrictedToEnterprise = default!;
         /// <summary>Specifies if this folder is owned by a user outside of theauthenticated enterprise.</summary>
-        public bool? IsExternallyOwned { get; set; }
+        public bool? IsExternallyOwned { get => _explicitNullValueIsExternallyOwned; set { _explicitNullValueIsExternallyOwned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_externally_owned"); else _explicitNullProperties?.Remove("is_externally_owned"); } }
+        private bool? _explicitNullValueIsExternallyOwned = default!;
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Metadata { get; set; }
+        public UntypedNode? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private UntypedNode? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public UntypedNode Metadata { get; set; }
+        public UntypedNode Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private UntypedNode _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Permissions { get; set; }
+        public UntypedNode? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private UntypedNode? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public UntypedNode Permissions { get; set; }
+        public UntypedNode Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private UntypedNode _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The sync_state property</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_sync_state? SyncState { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_sync_state? SyncState { get => _explicitNullValueSyncState; set { _explicitNullValueSyncState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_state"); else _explicitNullProperties?.Remove("sync_state"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderFull_sync_state? _explicitNullValueSyncState = default!;
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get; set; }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get; set; }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>The watermark_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_watermark_info? WatermarkInfo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_watermark_info? WatermarkInfo { get => _explicitNullValueWatermarkInfo; set { _explicitNullValueWatermarkInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watermark_info"); else _explicitNullProperties?.Remove("watermark_info"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderFull_watermark_info? _explicitNullValueWatermarkInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_watermark_info WatermarkInfo { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderFull_watermark_info WatermarkInfo { get => _explicitNullValueWatermarkInfo; set { _explicitNullValueWatermarkInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watermark_info"); else _explicitNullProperties?.Remove("watermark_info"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderFull_watermark_info _explicitNullValueWatermarkInfo = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -101,7 +149,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.FolderFull CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.FolderFull();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.FolderFull(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -152,7 +200,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("permissions", Permissions);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.FolderFull_sync_state>("sync_state", SyncState);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FolderFull_watermark_info>("watermark_info", WatermarkInfo);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FolderFull_watermark_info>("watermark_info", WatermarkInfo);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

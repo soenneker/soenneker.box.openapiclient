@@ -12,32 +12,48 @@ namespace Soenneker.Box.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UploadSessionPlanResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("hits") is { } nullNodeHits && nullNodeHits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hits = null;
+            if (parseNode.GetChildNode("misses") is { } nullNodeMisses && nullNodeMisses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Misses = null;
+            if (parseNode.GetChildNode("upload_session_id") is { } nullNodeUploadSessionId && nullNodeUploadSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadSessionId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Parts that already exist on the server anddo not need to be uploaded again.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit>? Hits { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit>? Hits { get => _explicitNullValueHits; set { _explicitNullValueHits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hits"); else _explicitNullProperties?.Remove("hits"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit>? _explicitNullValueHits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit> Hits { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit> Hits { get => _explicitNullValueHits; set { _explicitNullValueHits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hits"); else _explicitNullProperties?.Remove("hits"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit> _explicitNullValueHits = default!;
 #endif
         /// <summary>Parts that do not exist on the server andneed to be uploaded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan>? Misses { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan>? Misses { get => _explicitNullValueMisses; set { _explicitNullValueMisses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("misses"); else _explicitNullProperties?.Remove("misses"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan>? _explicitNullValueMisses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan> Misses { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan> Misses { get => _explicitNullValueMisses; set { _explicitNullValueMisses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("misses"); else _explicitNullProperties?.Remove("misses"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan> _explicitNullValueMisses = default!;
 #endif
         /// <summary>The unique identifier for this upload session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadSessionId { get; set; }
+        public string? UploadSessionId { get => _explicitNullValueUploadSessionId; set { _explicitNullValueUploadSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_session_id"); else _explicitNullProperties?.Remove("upload_session_id"); } }
+        private string? _explicitNullValueUploadSessionId = default!;
 #nullable restore
 #else
-        public string UploadSessionId { get; set; }
+        public string UploadSessionId { get => _explicitNullValueUploadSessionId; set { _explicitNullValueUploadSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_session_id"); else _explicitNullProperties?.Remove("upload_session_id"); } }
+        private string _explicitNullValueUploadSessionId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Models.UploadSessionPlanResponse"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static global::Soenneker.Box.OpenApiClient.Models.UploadSessionPlanResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.UploadSessionPlanResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.UploadSessionPlanResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlanHit>("hits", Hits);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.UploadPartPlan>("misses", Misses);
             writer.WriteStringValue("upload_session_id", UploadSessionId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

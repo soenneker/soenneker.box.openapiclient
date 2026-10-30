@@ -11,42 +11,63 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
     #pragma warning disable CS1591
     public partial class WithSkill_PutRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("file") is { } nullNodeFile && nullNodeFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) File = null;
+            if (parseNode.GetChildNode("file_version") is { } nullNodeFileVersion && nullNodeFileVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileVersion = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The file to assign the cards to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file? File { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file? _explicitNullValueFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file File { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file _explicitNullValueFile = default!;
 #endif
         /// <summary>The optional file version to assign the cards to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version? FileVersion { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version? FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version? _explicitNullValueFileVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version FileVersion { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version FileVersion { get => _explicitNullValueFileVersion; set { _explicitNullValueFileVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_version"); else _explicitNullProperties?.Remove("file_version"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version _explicitNullValueFileVersion = default!;
 #endif
         /// <summary>The metadata to set for this skill. This is a list ofBox Skills cards. These cards will overwrite any existing Boxskill cards on the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata? Metadata { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata Metadata { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Defines the status of this invocation. Set this to `success` when setting Skill cards.</summary>
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status? Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status? _explicitNullValueStatus = default!;
         /// <summary>A descriptor that defines what items are affected by this call.Set this to the default values when setting a card to a `success`state, and leave it out in most other situations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage? Usage { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage? _explicitNullValueUsage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage Usage { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        private global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage _explicitNullValueUsage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
         public static global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_status>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_usage>("usage", Usage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

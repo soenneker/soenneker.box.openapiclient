@@ -13,18 +13,47 @@ namespace Soenneker.Box.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignRequest : global::Soenneker.Box.OpenApiClient.Models.SignRequestBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("auto_expire_at") is { } nullNodeAutoExpireAt && nullNodeAutoExpireAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoExpireAt = null;
+            if (parseNode.GetChildNode("collaborator_level") is { } nullNodeCollaboratorLevel && nullNodeCollaboratorLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollaboratorLevel = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("finished_at") is { } nullNodeFinishedAt && nullNodeFinishedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinishedAt = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("parent_folder") is { } nullNodeParentFolder && nullNodeParentFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentFolder = null;
+            if (parseNode.GetChildNode("prepare_url") is { } nullNodePrepareUrl && nullNodePrepareUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepareUrl = null;
+            if (parseNode.GetChildNode("sender_email") is { } nullNodeSenderEmail && nullNodeSenderEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderEmail = null;
+            if (parseNode.GetChildNode("sender_id") is { } nullNodeSenderId && nullNodeSenderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderId = null;
+            if (parseNode.GetChildNode("short_id") is { } nullNodeShortId && nullNodeShortId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortId = null;
+            if (parseNode.GetChildNode("signature_color") is { } nullNodeSignatureColor && nullNodeSignatureColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureColor = null;
+            if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
+            if (parseNode.GetChildNode("sign_files") is { } nullNodeSignFiles && nullNodeSignFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignFiles = null;
+            if (parseNode.GetChildNode("signing_log") is { } nullNodeSigningLog && nullNodeSigningLog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningLog = null;
+            if (parseNode.GetChildNode("source_files") is { } nullNodeSourceFiles && nullNodeSourceFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFiles = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Uses `days_valid` to calculate the date and time, in GMT, the sign request will expire if unsigned.</summary>
-        public DateTimeOffset? AutoExpireAt { get; set; }
+        public DateTimeOffset? AutoExpireAt { get => _explicitNullValueAutoExpireAt; set { _explicitNullValueAutoExpireAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_expire_at"); else _explicitNullProperties?.Remove("auto_expire_at"); } }
+        private DateTimeOffset? _explicitNullValueAutoExpireAt = default!;
         /// <summary>The collaborator level of the user to the sign request. Values can include &quot;owner&quot;, &quot;editor&quot;, and &quot;viewer&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CollaboratorLevel { get; set; }
+        public string? CollaboratorLevel { get => _explicitNullValueCollaboratorLevel; set { _explicitNullValueCollaboratorLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collaborator_level"); else _explicitNullProperties?.Remove("collaborator_level"); } }
+        private string? _explicitNullValueCollaboratorLevel = default!;
 #nullable restore
 #else
-        public string CollaboratorLevel { get; set; }
+        public string CollaboratorLevel { get => _explicitNullValueCollaboratorLevel; set { _explicitNullValueCollaboratorLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collaborator_level"); else _explicitNullProperties?.Remove("collaborator_level"); } }
+        private string _explicitNullValueCollaboratorLevel = default!;
 #endif
         /// <summary>Timestamp marking when the sign request was created.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>When the sign request is in an error state, identifies the specificreason. Null when no error code applies.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,93 +63,117 @@ namespace Soenneker.Box.OpenApiClient.Models
         public string ErrorCode { get; private set; }
 #endif
         /// <summary>Timestamp indicating when all signing actions completed.</summary>
-        public DateTimeOffset? FinishedAt { get; set; }
+        public DateTimeOffset? FinishedAt { get => _explicitNullValueFinishedAt; set { _explicitNullValueFinishedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finished_at"); else _explicitNullProperties?.Remove("finished_at"); } }
+        private DateTimeOffset? _explicitNullValueFinishedAt = default!;
         /// <summary>Box Sign request ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The parent_folder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FolderMini? ParentFolder { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderMini? ParentFolder { get => _explicitNullValueParentFolder; set { _explicitNullValueParentFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_folder"); else _explicitNullProperties?.Remove("parent_folder"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderMini? _explicitNullValueParentFolder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FolderMini ParentFolder { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FolderMini ParentFolder { get => _explicitNullValueParentFolder; set { _explicitNullValueParentFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_folder"); else _explicitNullProperties?.Remove("parent_folder"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FolderMini _explicitNullValueParentFolder = default!;
 #endif
         /// <summary>This URL is returned if `is_document_preparation_needed` isset to `true` in the request. The parameter is used to preparethe signature requestusing the UI. The signature request is notsent until the preparationphase is complete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrepareUrl { get; set; }
+        public string? PrepareUrl { get => _explicitNullValuePrepareUrl; set { _explicitNullValuePrepareUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepare_url"); else _explicitNullProperties?.Remove("prepare_url"); } }
+        private string? _explicitNullValuePrepareUrl = default!;
 #nullable restore
 #else
-        public string PrepareUrl { get; set; }
+        public string PrepareUrl { get => _explicitNullValuePrepareUrl; set { _explicitNullValuePrepareUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepare_url"); else _explicitNullProperties?.Remove("prepare_url"); } }
+        private string _explicitNullValuePrepareUrl = default!;
 #endif
         /// <summary>The email address of the sender of the sign request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderEmail { get; set; }
+        public string? SenderEmail { get => _explicitNullValueSenderEmail; set { _explicitNullValueSenderEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_email"); else _explicitNullProperties?.Remove("sender_email"); } }
+        private string? _explicitNullValueSenderEmail = default!;
 #nullable restore
 #else
-        public string SenderEmail { get; set; }
+        public string SenderEmail { get => _explicitNullValueSenderEmail; set { _explicitNullValueSenderEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_email"); else _explicitNullProperties?.Remove("sender_email"); } }
+        private string _explicitNullValueSenderEmail = default!;
 #endif
         /// <summary>The user ID of the sender of the sign request.</summary>
-        public int? SenderId { get; set; }
+        public int? SenderId { get => _explicitNullValueSenderId; set { _explicitNullValueSenderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_id"); else _explicitNullProperties?.Remove("sender_id"); } }
+        private int? _explicitNullValueSenderId = default!;
         /// <summary>Short identifier for the sign request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShortId { get; set; }
+        public string? ShortId { get => _explicitNullValueShortId; set { _explicitNullValueShortId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_id"); else _explicitNullProperties?.Remove("short_id"); } }
+        private string? _explicitNullValueShortId = default!;
 #nullable restore
 #else
-        public string ShortId { get; set; }
+        public string ShortId { get => _explicitNullValueShortId; set { _explicitNullValueShortId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_id"); else _explicitNullProperties?.Remove("short_id"); } }
+        private string _explicitNullValueShortId = default!;
 #endif
         /// <summary>Force a specific color for the signature (blue, black, or red).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignatureColor { get; set; }
+        public string? SignatureColor { get => _explicitNullValueSignatureColor; set { _explicitNullValueSignatureColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_color"); else _explicitNullProperties?.Remove("signature_color"); } }
+        private string? _explicitNullValueSignatureColor = default!;
 #nullable restore
 #else
-        public string SignatureColor { get; set; }
+        public string SignatureColor { get => _explicitNullValueSignatureColor; set { _explicitNullValueSignatureColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_color"); else _explicitNullProperties?.Remove("signature_color"); } }
+        private string _explicitNullValueSignatureColor = default!;
 #endif
         /// <summary>Array of signers for the signature request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner>? Signers { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner>? _explicitNullValueSigners = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner> Signers { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.SignRequestSigner> _explicitNullValueSigners = default!;
 #endif
         /// <summary>List of files that will be signed, which are copies of the originalsource files. A new version of these files are created as signers signand can be downloaded at any point in the signing process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequest_sign_files? SignFiles { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequest_sign_files? SignFiles { get => _explicitNullValueSignFiles; set { _explicitNullValueSignFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_files"); else _explicitNullProperties?.Remove("sign_files"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequest_sign_files? _explicitNullValueSignFiles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequest_sign_files SignFiles { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequest_sign_files SignFiles { get => _explicitNullValueSignFiles; set { _explicitNullValueSignFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_files"); else _explicitNullProperties?.Remove("sign_files"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequest_sign_files _explicitNullValueSignFiles = default!;
 #endif
         /// <summary>The signing_log property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Box.OpenApiClient.Models.FileMini? SigningLog { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileMini? SigningLog { get => _explicitNullValueSigningLog; set { _explicitNullValueSigningLog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_log"); else _explicitNullProperties?.Remove("signing_log"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileMini? _explicitNullValueSigningLog = default!;
 #nullable restore
 #else
-        public global::Soenneker.Box.OpenApiClient.Models.FileMini SigningLog { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.FileMini SigningLog { get => _explicitNullValueSigningLog; set { _explicitNullValueSigningLog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_log"); else _explicitNullProperties?.Remove("signing_log"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.FileMini _explicitNullValueSigningLog = default!;
 #endif
         /// <summary>List of files to create a signing document from. This is currently limited to ten files. Only the ID and type fields are required for each file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileBase>? SourceFiles { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileBase>? SourceFiles { get => _explicitNullValueSourceFiles; set { _explicitNullValueSourceFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_files"); else _explicitNullProperties?.Remove("source_files"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileBase>? _explicitNullValueSourceFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Box.OpenApiClient.Models.FileBase> SourceFiles { get; set; }
+        public List<global::Soenneker.Box.OpenApiClient.Models.FileBase> SourceFiles { get => _explicitNullValueSourceFiles; set { _explicitNullValueSourceFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_files"); else _explicitNullProperties?.Remove("source_files"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.FileBase> _explicitNullValueSourceFiles = default!;
 #endif
         /// <summary>Describes the status of the signature request.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequest_status? Status { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequest_status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequest_status? _explicitNullValueStatus = default!;
         /// <summary>The value will always be `sign-request`.</summary>
-        public global::Soenneker.Box.OpenApiClient.Models.SignRequest_type? Type { get; set; }
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequest_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequest_type? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -129,7 +182,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public static new global::Soenneker.Box.OpenApiClient.Models.SignRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Box.OpenApiClient.Models.SignRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.SignRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -183,7 +236,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.FileMini>("signing_log", SigningLog);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.FileBase>("source_files", SourceFiles);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequest_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequest_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequest_type>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

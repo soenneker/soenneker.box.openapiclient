@@ -66,11 +66,11 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Content
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Box.OpenApiClient.Models.Files?> PostAsync(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Content.ContentRequestBuilder.ContentRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Box.OpenApiClient.Models.Files?> PostAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Content.ContentRequestBuilder.ContentRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Box.OpenApiClient.Models.Files> PostAsync(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Content.ContentRequestBuilder.ContentRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Box.OpenApiClient.Models.Files> PostAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Content.ContentRequestBuilder.ContentRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -109,11 +109,11 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Content
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Content.ContentRequestBuilder.ContentRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Content.ContentRequestBuilder.ContentRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(MultipartBody body, Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Content.ContentRequestBuilder.ContentRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Files.Item.Content.ContentRequestBuilder.ContentRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
