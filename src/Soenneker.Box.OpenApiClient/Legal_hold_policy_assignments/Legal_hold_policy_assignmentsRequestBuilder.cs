@@ -108,7 +108,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Legal_hold_policy_assignmentsRequestBuilder.Legal_hold_policy_assignmentsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/legal_hold_policy_assignments?policy_id={policy_id}{&assign_to_id*,assign_to_type*,fields,limit*,marker*}", RequestAdapter.BaseUrl, "https://api.box.com/2.0", "/legal_hold_policy_assignments", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/legal_hold_policy_assignments?policy_id={policy_id}{&assign_to_id*,assign_to_type*,fields,limit*,marker*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -129,7 +129,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.box.com/2.0", "/legal_hold_policy_assignments", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -70,7 +70,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Item.File_ve
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments.Item.File_versions_on_hold.File_versions_on_holdRequestBuilder.File_versions_on_holdRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.box.com/2.0", "/legal_hold_policy_assignments/{legal_hold_policy_assignment_id}/file_versions_on_hold", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -72,7 +72,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policy_assignments.Item.File_ver
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Item.File_versions_under_retention.File_versions_under_retentionRequestBuilder.File_versions_under_retentionRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.box.com/2.0", "/retention_policy_assignments/{retention_policy_assignment_id}/file_versions_under_retention", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
