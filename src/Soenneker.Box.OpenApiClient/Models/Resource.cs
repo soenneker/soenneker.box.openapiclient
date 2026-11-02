@@ -54,6 +54,14 @@ namespace Soenneker.Box.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            bool? matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0 != false) matchingUnionBranches++;
+            if (matchesUnionBranch1 != false) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.FileMini == null && result.FolderMini == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.FileMini = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.FileMini(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 == true && matchingUnionBranches == 1) result.FolderMini = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Box.OpenApiClient.Models.FolderMini(), parseNode);
             if (result.FileMini == null && result.FolderMini == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
