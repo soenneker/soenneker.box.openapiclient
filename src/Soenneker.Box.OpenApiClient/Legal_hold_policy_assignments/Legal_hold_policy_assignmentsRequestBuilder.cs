@@ -70,7 +70,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignments>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignments.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Assign a legal hold to an item type of: file, file version, folder, user, ownership, or interactions.
+        /// Assign a legal hold to an item type of: file, file version, folder, user, ownership, interactions, or metadata template.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignment"/></returns>
         /// <param name="body">The request body</param>
@@ -114,7 +114,7 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
             return requestInfo;
         }
         /// <summary>
-        /// Assign a legal hold to an item type of: file, file version, folder, user, ownership, or interactions.
+        /// Assign a legal hold to an item type of: file, file version, folder, user, ownership, interactions, or metadata template.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -26,6 +26,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             else if (parseNode.GetChildNode("folder") is { } nullNodeFolder && nullNodeFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Folder = null;
             if (parseNode.GetChildNode("interactions") is null) { _explicitNullValueInteractions = default!; _explicitNullProperties?.Remove("interactions"); }
             else if (parseNode.GetChildNode("interactions") is { } nullNodeInteractions && nullNodeInteractions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interactions = null;
+            if (parseNode.GetChildNode("metadata_template") is null) { _explicitNullValueMetadataTemplate = default!; _explicitNullProperties?.Remove("metadata_template"); }
+            else if (parseNode.GetChildNode("metadata_template") is { } nullNodeMetadataTemplate && nullNodeMetadataTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetadataTemplate = null;
             if (parseNode.GetChildNode("ownership") is null) { _explicitNullValueOwnership = default!; _explicitNullProperties?.Remove("ownership"); }
             else if (parseNode.GetChildNode("ownership") is { } nullNodeOwnership && nullNodeOwnership.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ownership = null;
             if (parseNode.GetChildNode("user") is null) { _explicitNullValueUser = default!; _explicitNullProperties?.Remove("user"); }
@@ -46,6 +48,9 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>The number of users this policy is applied to with the `interactions` type assignment.</summary>
         public long? Interactions { get => _explicitNullValueInteractions; set { _explicitNullValueInteractions = value; AdditionalData?.Remove("interactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interactions"); else _explicitNullProperties?.Remove("interactions"); } }
         private long? _explicitNullValueInteractions = default!;
+        /// <summary>The number of metadata templates this policy is applied to.</summary>
+        public long? MetadataTemplate { get => _explicitNullValueMetadataTemplate; set { _explicitNullValueMetadataTemplate = value; AdditionalData?.Remove("metadata_template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_template"); else _explicitNullProperties?.Remove("metadata_template"); } }
+        private long? _explicitNullValueMetadataTemplate = default!;
         /// <summary>The number of users this policy is applied to with the `ownership` type assignment.</summary>
         public long? Ownership { get => _explicitNullValueOwnership; set { _explicitNullValueOwnership = value; AdditionalData?.Remove("ownership"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership"); else _explicitNullProperties?.Remove("ownership"); } }
         private long? _explicitNullValueOwnership = default!;
@@ -81,6 +86,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "file_version", n => { FileVersion = n.GetLongValue(); } },
                 { "folder", n => { Folder = n.GetLongValue(); } },
                 { "interactions", n => { Interactions = n.GetLongValue(); } },
+                { "metadata_template", n => { MetadataTemplate = n.GetLongValue(); } },
                 { "ownership", n => { Ownership = n.GetLongValue(); } },
                 { "user", n => { User = n.GetLongValue(); } },
             };
@@ -96,6 +102,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteLongValue("file_version", FileVersion);
             writer.WriteLongValue("folder", Folder);
             writer.WriteLongValue("interactions", Interactions);
+            writer.WriteLongValue("metadata_template", MetadataTemplate);
             writer.WriteLongValue("ownership", Ownership);
             writer.WriteLongValue("user", User);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

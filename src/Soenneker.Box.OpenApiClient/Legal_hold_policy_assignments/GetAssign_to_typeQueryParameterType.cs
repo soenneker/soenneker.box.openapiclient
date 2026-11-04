@@ -32,5 +32,9 @@ namespace Soenneker.Box.OpenApiClient.Legal_hold_policy_assignments
         #pragma warning disable CS1591
         Interactions,
         #pragma warning restore CS1591
+        [EnumMember(Value = "metadata_template")]
+        #pragma warning disable CS1591
+        Metadata_template,
+        #pragma warning restore CS1591
     }
 }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Box.OpenApiClient.Models
 {
     /// <summary>
-    /// Legal Hold Assignments are used to assign Legal HoldPolicies to an item type of: Users, Folders, Files, File Versions, Ownership, or Interactions.Creating a Legal Hold Assignment puts a holdon the File-Versions that belong to the Assignment&apos;s&apos;apply-to&apos; entity.
+    /// Legal Hold Assignments are used to assign Legal HoldPolicies to an item type of: Users, Folders, Files, File Versions, Ownership, Interactions, or Metadata Templates.Creating a Legal Hold Assignment puts a holdon the File-Versions that belong to the Assignment&apos;s&apos;apply-to&apos; entity.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LegalHoldPolicyAssignment : global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentBase, IParsable
@@ -27,6 +27,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             else if (parseNode.GetChildNode("assigned_to") is { } nullNodeAssignedTo && nullNodeAssignedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedTo = null;
             if (parseNode.GetChildNode("deleted_at") is null) { _explicitNullValueDeletedAt = default!; _explicitNullProperties?.Remove("deleted_at"); }
             else if (parseNode.GetChildNode("deleted_at") is { } nullNodeDeletedAt && nullNodeDeletedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeletedAt = null;
+            if (parseNode.GetChildNode("filter_fields") is null) { _explicitNullValueFilterFields = default!; _explicitNullProperties?.Remove("filter_fields"); }
+            else if (parseNode.GetChildNode("filter_fields") is { } nullNodeFilterFields && nullNodeFilterFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilterFields = null;
             if (parseNode.GetChildNode("legal_hold_policy") is null) { _explicitNullValueLegalHoldPolicy = default!; _explicitNullProperties?.Remove("legal_hold_policy"); }
             else if (parseNode.GetChildNode("legal_hold_policy") is { } nullNodeLegalHoldPolicy && nullNodeLegalHoldPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalHoldPolicy = null;
         }
@@ -57,6 +59,16 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>When the assignment release request was sent.(Because it can take time for an assignment to fullydelete, this isn&apos;t quite the same time that theassignment is fully deleted). If null, Assignmentwas not deleted.</summary>
         public DateTimeOffset? DeletedAt { get => _explicitNullValueDeletedAt; set { _explicitNullValueDeletedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleted_at"); else _explicitNullProperties?.Remove("deleted_at"); } }
         private DateTimeOffset? _explicitNullValueDeletedAt = default!;
+        /// <summary>List of metadata template field filters. Only present when `assigned_to.type` is `metadata_template`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentFilterField>? FilterFields { get => _explicitNullValueFilterFields; set { _explicitNullValueFilterFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_fields"); else _explicitNullProperties?.Remove("filter_fields"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentFilterField>? _explicitNullValueFilterFields = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentFilterField> FilterFields { get => _explicitNullValueFilterFields; set { _explicitNullValueFilterFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter_fields"); else _explicitNullProperties?.Remove("filter_fields"); } }
+        private List<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentFilterField> _explicitNullValueFilterFields = default!;
+#endif
         /// <summary>The legal_hold_policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,6 +101,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "assigned_by", n => { AssignedBy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>(global::Soenneker.Box.OpenApiClient.Models.UserMini.CreateFromDiscriminatorValue); } },
                 { "assigned_to", n => { AssignedTo = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem>(global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem.CreateFromDiscriminatorValue); } },
                 { "deleted_at", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
+                { "filter_fields", n => { FilterFields = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentFilterField>(global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentFilterField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "legal_hold_policy", n => { LegalHoldPolicy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini>(global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini.CreateFromDiscriminatorValue); } },
             };
         }
@@ -104,6 +117,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>("assigned_by", AssignedBy);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignedItem>("assigned_to", AssignedTo);
             writer.WriteDateTimeOffsetValue("deleted_at", DeletedAt);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyAssignmentFilterField>("filter_fields", FilterFields);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.LegalHoldPolicyMini>("legal_hold_policy", LegalHoldPolicy);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
