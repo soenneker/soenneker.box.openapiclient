@@ -42,6 +42,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             else if (parseNode.GetChildNode("signer_group_id") is { } nullNodeSignerGroupId && nullNodeSignerGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerGroupId = null;
             if (parseNode.GetChildNode("suppress_notifications") is null) { _explicitNullValueSuppressNotifications = default!; _explicitNullProperties?.Remove("suppress_notifications"); }
             else if (parseNode.GetChildNode("suppress_notifications") is { } nullNodeSuppressNotifications && nullNodeSuppressNotifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuppressNotifications = null;
+            if (parseNode.GetChildNode("verification_method") is null) { _explicitNullValueVerificationMethod = default!; _explicitNullProperties?.Remove("verification_method"); }
+            else if (parseNode.GetChildNode("verification_method") is { } nullNodeVerificationMethod && nullNodeVerificationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationMethod = null;
             if (parseNode.GetChildNode("verification_phone_number") is null) { _explicitNullValueVerificationPhoneNumber = default!; _explicitNullProperties?.Remove("verification_phone_number"); }
             else if (parseNode.GetChildNode("verification_phone_number") is { } nullNodeVerificationPhoneNumber && nullNodeVerificationPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationPhoneNumber = null;
         }
@@ -133,6 +135,16 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <summary>If true, no emails about the sign request are sent.The `embed_url_external_user_id` parameter is required when using`suppress_notifications` for a signer.</summary>
         public bool? SuppressNotifications { get => _explicitNullValueSuppressNotifications; set { _explicitNullValueSuppressNotifications = value; AdditionalData?.Remove("suppress_notifications"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suppress_notifications"); else _explicitNullProperties?.Remove("suppress_notifications"); } }
         private bool? _explicitNullValueSuppressNotifications = default!;
+        /// <summary>The verification method for the signer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerVerificationMethod? VerificationMethod { get => _explicitNullValueVerificationMethod; set { _explicitNullValueVerificationMethod = value; AdditionalData?.Remove("verification_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_method"); else _explicitNullProperties?.Remove("verification_method"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerVerificationMethod? _explicitNullValueVerificationMethod = default!;
+#nullable restore
+#else
+        public global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerVerificationMethod VerificationMethod { get => _explicitNullValueVerificationMethod; set { _explicitNullValueVerificationMethod = value; AdditionalData?.Remove("verification_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_method"); else _explicitNullProperties?.Remove("verification_method"); } }
+        private global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerVerificationMethod _explicitNullValueVerificationMethod = default!;
+#endif
         /// <summary>If set, this phone number will be used to verify the signervia two-factor authentication before they are able to sign the document.Cannot be selected in combination with `login_required`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -181,6 +193,7 @@ namespace Soenneker.Box.OpenApiClient.Models
                 { "role", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner_role>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRole = default; _explicitNullProperties?.Remove("role"); AdditionalData["role"] = unknown; } else { Role = parsed; AdditionalData.Remove("role"); } } },
                 { "signer_group_id", n => { SignerGroupId = n.GetStringValue(); } },
                 { "suppress_notifications", n => { SuppressNotifications = n.GetBoolValue(); } },
+                { "verification_method", n => { VerificationMethod = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerVerificationMethod>(global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerVerificationMethod.CreateFromDiscriminatorValue); } },
                 { "verification_phone_number", n => { VerificationPhoneNumber = n.GetStringValue(); } },
             };
         }
@@ -203,6 +216,7 @@ namespace Soenneker.Box.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestCreateSigner_role>("role", Role);
             writer.WriteStringValue("signer_group_id", SignerGroupId);
             writer.WriteBoolValue("suppress_notifications", SuppressNotifications);
+            writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.SignRequestSignerVerificationMethod>("verification_method", VerificationMethod);
             writer.WriteStringValue("verification_phone_number", VerificationPhoneNumber);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
