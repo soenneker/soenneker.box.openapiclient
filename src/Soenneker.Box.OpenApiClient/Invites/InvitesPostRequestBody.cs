@@ -21,6 +21,8 @@ namespace Soenneker.Box.OpenApiClient.Invites
             else if (parseNode.GetChildNode("actionable_by") is { } nullNodeActionableBy && nullNodeActionableBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionableBy = null;
             if (parseNode.GetChildNode("enterprise") is null) { _explicitNullValueEnterprise = default!; _explicitNullProperties?.Remove("enterprise"); }
             else if (parseNode.GetChildNode("enterprise") is { } nullNodeEnterprise && nullNodeEnterprise.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enterprise = null;
+            if (parseNode.GetChildNode("is_auto_roll_in_enabled") is null) { _explicitNullValueIsAutoRollInEnabled = default!; _explicitNullProperties?.Remove("is_auto_roll_in_enabled"); }
+            else if (parseNode.GetChildNode("is_auto_roll_in_enabled") is { } nullNodeIsAutoRollInEnabled && nullNodeIsAutoRollInEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAutoRollInEnabled = null;
         }
 
         /// <summary>The user to invite.</summary>
@@ -45,12 +47,16 @@ namespace Soenneker.Box.OpenApiClient.Invites
         public global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody_enterprise Enterprise { get => _explicitNullValueEnterprise; set { _explicitNullValueEnterprise = value; AdditionalData?.Remove("enterprise"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise"); else _explicitNullProperties?.Remove("enterprise"); } }
         private global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody_enterprise _explicitNullValueEnterprise = default!;
 #endif
+        /// <summary>If set to `true`, the user is added to the enterpriseautomatically after 14 days instead of having to accept theinvite. Only unmanaged users can be invited this way.Availability depends on the enterprise&apos;s plan.</summary>
+        public bool? IsAutoRollInEnabled { get => _explicitNullValueIsAutoRollInEnabled; set { _explicitNullValueIsAutoRollInEnabled = value; AdditionalData?.Remove("is_auto_roll_in_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_auto_roll_in_enabled"); else _explicitNullProperties?.Remove("is_auto_roll_in_enabled"); } }
+        private bool? _explicitNullValueIsAutoRollInEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody"/> and sets the default values.
         /// </summary>
         public InvitesPostRequestBody()
         {
             AdditionalData = new Dictionary<string, object>();
+            IsAutoRollInEnabled = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -72,6 +78,7 @@ namespace Soenneker.Box.OpenApiClient.Invites
             {
                 { "actionable_by", n => { ActionableBy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody_actionable_by>(global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody_actionable_by.CreateFromDiscriminatorValue); } },
                 { "enterprise", n => { Enterprise = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody_enterprise>(global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody_enterprise.CreateFromDiscriminatorValue); } },
+                { "is_auto_roll_in_enabled", n => { IsAutoRollInEnabled = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -83,6 +90,7 @@ namespace Soenneker.Box.OpenApiClient.Invites
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody_actionable_by>("actionable_by", ActionableBy);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Invites.InvitesPostRequestBody_enterprise>("enterprise", Enterprise);
+            writer.WriteBoolValue("is_auto_roll_in_enabled", IsAutoRollInEnabled);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

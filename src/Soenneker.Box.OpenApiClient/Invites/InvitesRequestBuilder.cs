@@ -47,12 +47,13 @@ namespace Soenneker.Box.OpenApiClient.Invites
         {
         }
         /// <summary>
-        /// Invites an existing external user to join an enterprise.The existing user can not be part of another enterprise andmust already have a Box account. Once invited, the user will receive anemail and are prompted to accept the invitation within theBox web application.This method requires the &quot;Manage An Enterprise&quot; scope enabled forthe application, which can be enabled within the developer console.
+        /// Invites an existing external user to join an enterprise.The user must already have a Box account and cannot bepart of another enterprise. Once invited, the user receivesan email and is prompted to accept the invitation inthe Box web application.If `is_auto_roll_in_enabled` is set to `true`, the user does not have toaccept the invitation and is added to the enterprise automatically after14 days. Only unmanaged users can be invited this way. An unmanaged useris a free user whose email domain matches one of the enterprise&apos;sdomains. Availability depends on the enterprise&apos;s plan.This method requires the &quot;Manage An Enterprise&quot; scope enabled forthe application, which can be enabled within the developer console.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Box.OpenApiClient.Models.Invite"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Box.OpenApiClient.Models.ClientError">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,13 +69,14 @@ namespace Soenneker.Box.OpenApiClient.Invites
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "400", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.Box.OpenApiClient.Models.ClientError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Box.OpenApiClient.Models.Invite>(requestInfo, global::Soenneker.Box.OpenApiClient.Models.Invite.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Invites an existing external user to join an enterprise.The existing user can not be part of another enterprise andmust already have a Box account. Once invited, the user will receive anemail and are prompted to accept the invitation within theBox web application.This method requires the &quot;Manage An Enterprise&quot; scope enabled forthe application, which can be enabled within the developer console.
+        /// Invites an existing external user to join an enterprise.The user must already have a Box account and cannot bepart of another enterprise. Once invited, the user receivesan email and is prompted to accept the invitation inthe Box web application.If `is_auto_roll_in_enabled` is set to `true`, the user does not have toaccept the invitation and is added to the enterprise automatically after14 days. Only unmanaged users can be invited this way. An unmanaged useris a free user whose email domain matches one of the enterprise&apos;sdomains. Availability depends on the enterprise&apos;s plan.This method requires the &quot;Manage An Enterprise&quot; scope enabled forthe application, which can be enabled within the developer console.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +107,7 @@ namespace Soenneker.Box.OpenApiClient.Invites
             return new global::Soenneker.Box.OpenApiClient.Invites.InvitesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Invites an existing external user to join an enterprise.The existing user can not be part of another enterprise andmust already have a Box account. Once invited, the user will receive anemail and are prompted to accept the invitation within theBox web application.This method requires the &quot;Manage An Enterprise&quot; scope enabled forthe application, which can be enabled within the developer console.
+        /// Invites an existing external user to join an enterprise.The user must already have a Box account and cannot bepart of another enterprise. Once invited, the user receivesan email and is prompted to accept the invitation inthe Box web application.If `is_auto_roll_in_enabled` is set to `true`, the user does not have toaccept the invitation and is added to the enterprise automatically after14 days. Only unmanaged users can be invited this way. An unmanaged useris a free user whose email domain matches one of the enterprise&apos;sdomains. Availability depends on the enterprise&apos;s plan.This method requires the &quot;Manage An Enterprise&quot; scope enabled forthe application, which can be enabled within the developer console.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class InvitesRequestBuilderPostQueryParameters 

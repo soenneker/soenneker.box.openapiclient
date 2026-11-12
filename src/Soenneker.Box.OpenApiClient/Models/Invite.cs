@@ -20,6 +20,8 @@ namespace Soenneker.Box.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("actionable_by") is null) { _explicitNullValueActionableBy = default!; _explicitNullProperties?.Remove("actionable_by"); }
             else if (parseNode.GetChildNode("actionable_by") is { } nullNodeActionableBy && nullNodeActionableBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionableBy = null;
+            if (parseNode.GetChildNode("auto_roll_in_at") is null) { _explicitNullValueAutoRollInAt = default!; _explicitNullProperties?.Remove("auto_roll_in_at"); }
+            else if (parseNode.GetChildNode("auto_roll_in_at") is { } nullNodeAutoRollInAt && nullNodeAutoRollInAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoRollInAt = null;
             if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
             else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
@@ -28,6 +30,8 @@ namespace Soenneker.Box.OpenApiClient.Models
             else if (parseNode.GetChildNode("invited_by") is { } nullNodeInvitedBy && nullNodeInvitedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedBy = null;
             if (parseNode.GetChildNode("invited_to") is null) { _explicitNullValueInvitedTo = default!; _explicitNullProperties?.Remove("invited_to"); }
             else if (parseNode.GetChildNode("invited_to") is { } nullNodeInvitedTo && nullNodeInvitedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedTo = null;
+            if (parseNode.GetChildNode("is_auto_roll_in") is null) { _explicitNullValueIsAutoRollIn = default!; _explicitNullProperties?.Remove("is_auto_roll_in"); }
+            else if (parseNode.GetChildNode("is_auto_roll_in") is { } nullNodeIsAutoRollIn && nullNodeIsAutoRollIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAutoRollIn = null;
             if (parseNode.GetChildNode("modified_at") is null) { _explicitNullValueModifiedAt = default!; _explicitNullProperties?.Remove("modified_at"); }
             else if (parseNode.GetChildNode("modified_at") is { } nullNodeModifiedAt && nullNodeModifiedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAt = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
@@ -48,6 +52,9 @@ namespace Soenneker.Box.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The date and time when the user is added to the enterpriseautomatically, or `null` if the user has to accept the invite.</summary>
+        public DateTimeOffset? AutoRollInAt { get => _explicitNullValueAutoRollInAt; set { _explicitNullValueAutoRollInAt = value; AdditionalData?.Remove("auto_roll_in_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_roll_in_at"); else _explicitNullProperties?.Remove("auto_roll_in_at"); } }
+        private DateTimeOffset? _explicitNullValueAutoRollInAt = default!;
         /// <summary>When the invite was created.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
@@ -81,6 +88,9 @@ namespace Soenneker.Box.OpenApiClient.Models
         public global::Soenneker.Box.OpenApiClient.Models.Invite_invited_to InvitedTo { get => _explicitNullValueInvitedTo; set { _explicitNullValueInvitedTo = value; AdditionalData?.Remove("invited_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_to"); else _explicitNullProperties?.Remove("invited_to"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Invite_invited_to _explicitNullValueInvitedTo = default!;
 #endif
+        /// <summary>Whether the user is added to the enterprise automatically, withouthaving to accept the invite. When `true`, `auto_roll_in_at` containsthe date and time of the roll-in.</summary>
+        public bool? IsAutoRollIn { get => _explicitNullValueIsAutoRollIn; set { _explicitNullValueIsAutoRollIn = value; AdditionalData?.Remove("is_auto_roll_in"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_auto_roll_in"); else _explicitNullProperties?.Remove("is_auto_roll_in"); } }
+        private bool? _explicitNullValueIsAutoRollIn = default!;
         /// <summary>When the invite was modified.</summary>
         public DateTimeOffset? ModifiedAt { get => _explicitNullValueModifiedAt; set { _explicitNullValueModifiedAt = value; AdditionalData?.Remove("modified_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at"); else _explicitNullProperties?.Remove("modified_at"); } }
         private DateTimeOffset? _explicitNullValueModifiedAt = default!;
@@ -123,10 +133,12 @@ namespace Soenneker.Box.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actionable_by", n => { ActionableBy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>(global::Soenneker.Box.OpenApiClient.Models.UserMini.CreateFromDiscriminatorValue); } },
+                { "auto_roll_in_at", n => { AutoRollInAt = n.GetDateTimeOffsetValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invited_by", n => { InvitedBy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>(global::Soenneker.Box.OpenApiClient.Models.UserMini.CreateFromDiscriminatorValue); } },
                 { "invited_to", n => { InvitedTo = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.Invite_invited_to>(global::Soenneker.Box.OpenApiClient.Models.Invite_invited_to.CreateFromDiscriminatorValue); } },
+                { "is_auto_roll_in", n => { IsAutoRollIn = n.GetBoolValue(); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Invite_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
@@ -140,10 +152,12 @@ namespace Soenneker.Box.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>("actionable_by", ActionableBy);
+            writer.WriteDateTimeOffsetValue("auto_roll_in_at", AutoRollInAt);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.UserMini>("invited_by", InvitedBy);
             writer.WriteObjectValue<global::Soenneker.Box.OpenApiClient.Models.Invite_invited_to>("invited_to", InvitedTo);
+            writer.WriteBoolValue("is_auto_roll_in", IsAutoRollIn);
             writer.WriteDateTimeOffsetValue("modified_at", ModifiedAt);
             writer.WriteStringValue("status", Status);
             writer.WriteEnumValue<global::Soenneker.Box.OpenApiClient.Models.Invite_type>("type", Type);
