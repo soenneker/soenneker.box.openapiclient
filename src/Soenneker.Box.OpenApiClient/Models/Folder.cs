@@ -163,7 +163,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         public global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link SharedLink { get => _explicitNullValueSharedLink; set { _explicitNullValueSharedLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_link"); else _explicitNullProperties?.Remove("shared_link"); } }
         private global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link _explicitNullValueSharedLink = default!;
 #endif
-        /// <summary>The folder size in bytes.Be careful parsing this integer as itsvalue can get very large.</summary>
+        /// <summary>The folder size in bytes.This includes the files in the folder and its subfolders, along withtheir previous versions. Files in Trash are not included. After a filewith many versions is moved to Trash, the value can take several daysto reflect the change.Be careful parsing this integer as itsvalue can get very large.</summary>
         public long? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
         private long? _explicitNullValueSize = default!;
         /// <summary>The time at which this folder was put in the trash.</summary>
