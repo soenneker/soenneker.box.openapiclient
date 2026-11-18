@@ -125,7 +125,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "$canEdit", n => { CanEdit = n.GetBoolValue(); } },
                 { "cards", n => { Cards = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.SkillCard>(global::Soenneker.Box.OpenApiClient.Models.SkillCard.CreateFromDiscriminatorValue)?.AsList(); } },

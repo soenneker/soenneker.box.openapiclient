@@ -85,7 +85,7 @@ namespace Soenneker.Box.OpenApiClient.Group_memberships
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "configurable_permissions", n => { ConfigurablePermissions = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions>(global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_configurable_permissions.CreateFromDiscriminatorValue); } },
                 { "group", n => { Group = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group>(global::Soenneker.Box.OpenApiClient.Group_memberships.Group_membershipsPostRequestBody_group.CreateFromDiscriminatorValue); } },

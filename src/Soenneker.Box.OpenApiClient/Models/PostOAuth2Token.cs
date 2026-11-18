@@ -197,7 +197,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "actor_token", n => { ActorToken = n.GetStringValue(); } },
                 { "actor_token_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.PostOAuth2Token_actor_token_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueActorTokenType = default; _explicitNullProperties?.Remove("actor_token_type"); AdditionalData["actor_token_type"] = unknown; } else { ActorTokenType = parsed; AdditionalData.Remove("actor_token_type"); } } },

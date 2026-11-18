@@ -169,7 +169,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "acceptance_requirements_status", n => { AcceptanceRequirementsStatus = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status>(global::Soenneker.Box.OpenApiClient.Models.Collaboration_acceptance_requirements_status.CreateFromDiscriminatorValue); } },
                 { "accessible_by", n => { AccessibleBy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.CollaborationAccessGrantee>(global::Soenneker.Box.OpenApiClient.Models.CollaborationAccessGrantee.CreateFromDiscriminatorValue); } },

@@ -92,7 +92,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policy_assignments
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "assign_to", n => { AssignTo = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_assign_to>(global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_assign_to.CreateFromDiscriminatorValue); } },
                 { "filter_fields", n => { FilterFields = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_filter_fields>(global::Soenneker.Box.OpenApiClient.Retention_policy_assignments.Retention_policy_assignmentsPostRequestBody_filter_fields.CreateFromDiscriminatorValue)?.AsList(); } },

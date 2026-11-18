@@ -72,7 +72,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "collection_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Collection_collection_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCollectionType = default; _explicitNullProperties?.Remove("collection_type"); AdditionalData["collection_type"] = unknown; } else { CollectionType = parsed; AdditionalData.Remove("collection_type"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },

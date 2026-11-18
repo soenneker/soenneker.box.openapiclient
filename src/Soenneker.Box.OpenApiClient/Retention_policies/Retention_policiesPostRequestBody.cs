@@ -123,7 +123,7 @@ namespace Soenneker.Box.OpenApiClient.Retention_policies
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "are_owners_notified", n => { AreOwnersNotified = n.GetBoolValue(); } },
                 { "can_owner_extend_retention", n => { CanOwnerExtendRetention = n.GetBoolValue(); } },

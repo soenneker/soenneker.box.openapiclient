@@ -86,7 +86,7 @@ namespace Soenneker.Box.OpenApiClient.Shield_information_barrier_segment_members
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "shield_information_barrier", n => { ShieldInformationBarrier = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierBase>(global::Soenneker.Box.OpenApiClient.Models.ShieldInformationBarrierBase.CreateFromDiscriminatorValue); } },
                 { "shield_information_barrier_segment", n => { ShieldInformationBarrierSegment = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Shield_information_barrier_segment_members.Shield_information_barrier_segment_membersPostRequestBody_shield_information_barrier_segment>(global::Soenneker.Box.OpenApiClient.Shield_information_barrier_segment_members.Shield_information_barrier_segment_membersPostRequestBody_shield_information_barrier_segment.CreateFromDiscriminatorValue); } },

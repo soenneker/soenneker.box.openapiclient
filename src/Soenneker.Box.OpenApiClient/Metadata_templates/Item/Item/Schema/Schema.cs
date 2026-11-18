@@ -134,7 +134,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data>(global::Soenneker.Box.OpenApiClient.Metadata_templates.Item.Item.Schema.Schema_data.CreateFromDiscriminatorValue); } },
                 { "enumOptionKey", n => { EnumOptionKey = n.GetStringValue(); } },

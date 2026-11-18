@@ -98,7 +98,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "app_item_type", n => { AppItemType = n.GetStringValue(); } },
                 { "group", n => { Group = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.GroupMini>(global::Soenneker.Box.OpenApiClient.Models.GroupMini.CreateFromDiscriminatorValue); } },

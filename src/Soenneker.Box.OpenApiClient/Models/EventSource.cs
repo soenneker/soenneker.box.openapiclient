@@ -110,7 +110,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "classification", n => { Classification = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.EventSource_classification>(global::Soenneker.Box.OpenApiClient.Models.EventSource_classification.CreateFromDiscriminatorValue); } },
                 { "item_id", n => { ItemId = n.GetStringValue(); } },

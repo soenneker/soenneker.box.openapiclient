@@ -85,7 +85,7 @@ namespace Soenneker.Box.OpenApiClient.Folders
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "folder_upload_email", n => { FolderUploadEmail = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email>(global::Soenneker.Box.OpenApiClient.Folders.FoldersPostRequestBody_folder_upload_email.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },

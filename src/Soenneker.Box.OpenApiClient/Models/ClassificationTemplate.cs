@@ -106,7 +106,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "copyInstanceOnItemCopy", n => { CopyInstanceOnItemCopy = n.GetBoolValue(); } },
                 { "displayName", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.ClassificationTemplate_displayName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDisplayName = default; _explicitNullProperties?.Remove("displayName"); AdditionalData["displayName"] = unknown; } else { DisplayName = parsed; AdditionalData.Remove("displayName"); } } },

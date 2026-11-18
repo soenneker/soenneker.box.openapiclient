@@ -79,7 +79,7 @@ namespace Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClas
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data>(global::Soenneker.Box.OpenApiClient.Metadata_templates.Enterprise.SecurityClassification6VMVochwUWo.SchemaUpdate.SchemaUpdate_data.CreateFromDiscriminatorValue); } },
                 { "enumOptionKey", n => { EnumOptionKey = n.GetStringValue(); } },

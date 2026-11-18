@@ -88,7 +88,7 @@ namespace Soenneker.Box.OpenApiClient.Collaborations
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "accessible_by", n => { AccessibleBy = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Collaborations.CollaborationsPostRequestBody_accessible_by>(global::Soenneker.Box.OpenApiClient.Collaborations.CollaborationsPostRequestBody_accessible_by.CreateFromDiscriminatorValue); } },
                 { "can_view_path", n => { CanViewPath = n.GetBoolValue(); } },

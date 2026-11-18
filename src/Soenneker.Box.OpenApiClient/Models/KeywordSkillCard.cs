@@ -108,7 +108,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "entries", n => { Entries = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.KeywordSkillCard_entries>(global::Soenneker.Box.OpenApiClient.Models.KeywordSkillCard_entries.CreateFromDiscriminatorValue)?.AsList(); } },

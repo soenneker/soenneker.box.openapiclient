@@ -98,7 +98,7 @@ namespace Soenneker.Box.OpenApiClient.Workflows.Item.Start
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_files>(global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_files.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "flow", n => { Flow = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_flow>(global::Soenneker.Box.OpenApiClient.Workflows.Item.Start.StartPostRequestBody_flow.CreateFromDiscriminatorValue); } },

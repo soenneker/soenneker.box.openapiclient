@@ -152,7 +152,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "access", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.Folder_shared_link_access>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccess = default; _explicitNullProperties?.Remove("access"); AdditionalData["access"] = unknown; } else { Access = parsed; AdditionalData.Remove("access"); } } },
                 { "download_count", n => { DownloadCount = n.GetIntValue(); } },

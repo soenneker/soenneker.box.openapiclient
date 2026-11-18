@@ -85,7 +85,7 @@ namespace Soenneker.Box.OpenApiClient.Tasks
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "action", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Tasks.TasksPostRequestBody_action>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("action"); AdditionalData["action"] = unknown; } else { Action = parsed; AdditionalData.Remove("action"); } } },
                 { "completion_rule", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Tasks.TasksPostRequestBody_completion_rule>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCompletionRule = default; _explicitNullProperties?.Remove("completion_rule"); AdditionalData["completion_rule"] = unknown; } else { CompletionRule = parsed; AdditionalData.Remove("completion_rule"); } } },

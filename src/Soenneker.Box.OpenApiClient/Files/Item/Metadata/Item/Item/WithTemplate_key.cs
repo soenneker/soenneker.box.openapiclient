@@ -87,7 +87,7 @@ namespace Soenneker.Box.OpenApiClient.Files.Item.Metadata.Item.Item
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "from", n => { From = n.GetStringValue(); } },
                 { "op", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Files.Item.Metadata.Item.Item.WithTemplate_key_op>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOp = default; _explicitNullProperties?.Remove("op"); AdditionalData["op"] = unknown; } else { Op = parsed; AdditionalData.Remove("op"); } } },

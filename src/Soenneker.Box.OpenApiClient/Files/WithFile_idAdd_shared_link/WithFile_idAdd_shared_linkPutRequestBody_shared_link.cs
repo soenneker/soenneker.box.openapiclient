@@ -104,7 +104,7 @@ namespace Soenneker.Box.OpenApiClient.Files.WithFile_idAdd_shared_link
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "access", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Files.WithFile_idAdd_shared_link.WithFile_idAdd_shared_linkPutRequestBody_shared_link_access>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccess = default; _explicitNullProperties?.Remove("access"); AdditionalData["access"] = unknown; } else { Access = parsed; AdditionalData.Remove("access"); } } },
                 { "one_time_passcode", n => { OneTimePasscode = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable>(global::Soenneker.Box.OpenApiClient.Models.SharedLinkOtpWritable.CreateFromDiscriminatorValue); } },

@@ -94,7 +94,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "app_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Box.OpenApiClient.Models.FileFull_lock_app_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAppType = default; _explicitNullProperties?.Remove("app_type"); AdditionalData["app_type"] = unknown; } else { AppType = parsed; AdditionalData.Remove("app_type"); } } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },

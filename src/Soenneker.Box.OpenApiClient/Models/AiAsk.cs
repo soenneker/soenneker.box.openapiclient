@@ -103,7 +103,7 @@ namespace Soenneker.Box.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "ai_agent", n => { AiAgent = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Models.AiAskAgent>(global::Soenneker.Box.OpenApiClient.Models.AiAskAgent.CreateFromDiscriminatorValue); } },
                 { "dialogue_history", n => { DialogueHistory = n.GetCollectionOfObjectValues<global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory>(global::Soenneker.Box.OpenApiClient.Models.AiDialogueHistory.CreateFromDiscriminatorValue)?.AsList(); } },

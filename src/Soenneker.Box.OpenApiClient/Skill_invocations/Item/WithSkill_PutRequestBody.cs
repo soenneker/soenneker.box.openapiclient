@@ -97,7 +97,7 @@ namespace Soenneker.Box.OpenApiClient.Skill_invocations.Item
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "file", n => { File = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file>(global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file.CreateFromDiscriminatorValue); } },
                 { "file_version", n => { FileVersion = n.GetObjectValue<global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version>(global::Soenneker.Box.OpenApiClient.Skill_invocations.Item.WithSkill_PutRequestBody_file_version.CreateFromDiscriminatorValue); } },
