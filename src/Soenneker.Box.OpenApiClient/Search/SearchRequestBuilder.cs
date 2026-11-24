@@ -22,7 +22,7 @@ namespace Soenneker.Box.OpenApiClient.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/search{?ancestor_folder_ids,content_types,created_at_range,deleted_at_range*,deleted_user_ids*,direction*,fields,file_extensions,include_recent_shared_links*,limit*,mdfilters*,offset*,owner_user_ids,query*,recent_updater_user_ids,scope*,size_range,sort*,trash_content*,type*,updated_at_range}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/search{?ancestor_folder_ids,content_types,created_at_range,deleted_at_range*,deleter_user_ids*,direction*,fields,file_extensions,include_recent_shared_links*,limit*,mdfilters*,offset*,owner_user_ids,query*,recent_updater_user_ids,scope*,size_range,sort*,trash_content*,type*,updated_at_range}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Box.OpenApiClient.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/search{?ancestor_folder_ids,content_types,created_at_range,deleted_at_range*,deleted_user_ids*,direction*,fields,file_extensions,include_recent_shared_links*,limit*,mdfilters*,offset*,owner_user_ids,query*,recent_updater_user_ids,scope*,size_range,sort*,trash_content*,type*,updated_at_range}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/search{?ancestor_folder_ids,content_types,created_at_range,deleted_at_range*,deleter_user_ids*,direction*,fields,file_extensions,include_recent_shared_links*,limit*,mdfilters*,offset*,owner_user_ids,query*,recent_updater_user_ids,scope*,size_range,sort*,trash_content*,type*,updated_at_range}", rawUrl)
         {
         }
         /// <summary>
@@ -139,12 +139,12 @@ namespace Soenneker.Box.OpenApiClient.Search
             /// <summary>Limits the search results to items that were deleted by the givenlist of users, defined as a list of comma separated user IDs.The `trash_content` parameter needs to be set to `trashed_only`.If searching in trash is not performed, an empty result setis returned. The items need to be owned or shared withthe currently authenticated user for them to show up in the searchresults.If the user does not have access to any files owned byany of the users, an empty result set is returned.Data available from 2023-02-01 onwards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("deleted_user_ids")]
-            public string[]? DeletedUserIds { get; set; }
+            [QueryParameter("deleter_user_ids")]
+            public string[]? DeleterUserIds { get; set; }
 #nullable restore
 #else
-            [QueryParameter("deleted_user_ids")]
-            public string[] DeletedUserIds { get; set; }
+            [QueryParameter("deleter_user_ids")]
+            public string[] DeleterUserIds { get; set; }
 #endif
             /// <summary>Defines the direction in which search results are ordered. This APIdefaults to returning items in descending (`DESC`) order unless thisparameter is explicitly specified.When results are sorted by `relevance` the ordering is locked to returningitems in descending order of relevance, and this parameter is ignored.</summary>
             [QueryParameter("direction")]
